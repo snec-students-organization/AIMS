@@ -371,4 +371,160 @@
 
 
 
+{{-- ================= WHY CHOOSE US ================= --}}
+<section class="py-16 lg:py-24 bg-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6" data-aos="fade-up">
+                Why Parents Trust AIMS CDC
+            </h2>
+            <p class="text-lg text-gray-600" data-aos="fade-up" data-aos-delay="100">
+                We go beyond traditional therapy to provide a holistic ecosystem for your child's growth.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="p-6 bg-teal-50 rounded-2xl border border-teal-100" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-12 h-12 bg-teal-500 text-white rounded-lg flex items-center justify-center text-2xl mb-4">🏆</div>
+                <h3 class="font-bold text-lg mb-2 text-gray-900">Expert Team</h3>
+                <p class="text-gray-600 text-sm">Highly qualified and RCI certified professionals dedicated to your child.</p>
+            </div>
+            <div class="p-6 bg-pink-50 rounded-2xl border border-pink-100" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-12 h-12 bg-pink-500 text-white rounded-lg flex items-center justify-center text-2xl mb-4">🔬</div>
+                <h3 class="font-bold text-lg mb-2 text-gray-900">Evidence Based</h3>
+                <p class="text-gray-600 text-sm">Scientific approach to therapy with proven methodologies and tracking.</p>
+            </div>
+            <div class="p-6 bg-blue-50 rounded-2xl border border-blue-100" data-aos="fade-up" data-aos-delay="300">
+                <div class="w-12 h-12 bg-blue-500 text-white rounded-lg flex items-center justify-center text-2xl mb-4">🏰</div>
+                <h3 class="font-bold text-lg mb-2 text-gray-900">World Class Facility</h3>
+                <p class="text-gray-600 text-sm">Child-friendly, safe, and stimulating environment for optimal learning.</p>
+            </div>
+            <div class="p-6 bg-orange-50 rounded-2xl border border-orange-100" data-aos="fade-up" data-aos-delay="400">
+                <div class="w-12 h-12 bg-orange-500 text-white rounded-lg flex items-center justify-center text-2xl mb-4">🤝</div>
+                <h3 class="font-bold text-lg mb-2 text-gray-900">Parent Support</h3>
+                <p class="text-gray-600 text-sm">Regular counseling, training workships, and support groups for families.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{-- ================= TESTIMONIALS ================= --}}
+<section class="py-16 lg:py-24 bg-gradient-to-br from-teal-900 to-slate-900 text-white relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16" data-aos="fade-up">Stories of Hope & Success</h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            {{-- Testimonial 1 --}}
+            <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/10" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex gap-1 text-yellow-400 mb-4">★★★★★</div>
+                <p class="text-gray-200 italic mb-6">
+                    "The change we've seen in our son is miraculous. The therapists here are not just professionals; they are angels. Highly recommended!"
+                </p>
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center font-bold">JD</div>
+                    <div>
+                        <div class="font-semibold">John Doe</div>
+                        <div class="text-xs text-gray-400">Parent of Ryan, 5 yrs</div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Testimonial 2 --}}
+            <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/10" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex gap-1 text-yellow-400 mb-4">★★★★★</div>
+                <p class="text-gray-200 italic mb-6">
+                    "AIMS CDC provided us with the guidance we desperately needed. Their early intervention program is top-notch."
+                </p>
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center font-bold">SM</div>
+                    <div>
+                        <div class="font-semibold">Sarah M.</div>
+                        <div class="text-xs text-gray-400">Mother of 3 yr old</div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Testimonial 3 --}}
+            <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/10" data-aos="fade-up" data-aos-delay="300">
+                <div class="flex gap-1 text-yellow-400 mb-4">★★★★★</div>
+                <p class="text-gray-200 italic mb-6">
+                    "Professional, caring, and result-oriented. We travel 50km just to come here because it's worth it."
+                </p>
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center font-bold">RK</div>
+                    <div>
+                        <div class="font-semibold">Rajesh K.</div>
+                        <div class="text-xs text-gray-400">Father</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{-- ================= FAQ SECTION ================= --}}
+<section class="py-16 lg:py-24 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-12" data-aos="fade-up">Frequently Asked Questions</h2>
+        
+        <div class="space-y-4" data-aos="fade-up">
+            <details class="bg-white rounded-xl shadow-sm overflow-hidden group">
+                <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+                    <h3 class="font-semibold text-lg text-gray-900">How do I know if my child needs therapy?</h3>
+                    <span class="text-teal-500 text-2xl group-open:rotate-45 transition-transform duration-300">+</span>
+                </summary>
+                <div class="px-6 pb-6 text-gray-600">
+                    If you notice delays in speech, motor skills, social interaction, or behavior compared to other children of the same age, it's best to consult a professional. Early intervention yields the best results.
+                </div>
+            </details>
+            
+            <details class="bg-white rounded-xl shadow-sm overflow-hidden group">
+                <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+                    <h3 class="font-semibold text-lg text-gray-900">Do you offer online consultations?</h3>
+                    <span class="text-teal-500 text-2xl group-open:rotate-45 transition-transform duration-300">+</span>
+                </summary>
+                <div class="px-6 pb-6 text-gray-600">
+                    Yes, we offer tele-therapy and online parent counseling sessions for families who cannot visit our center physically.
+                </div>
+            </details>
+            
+            <details class="bg-white rounded-xl shadow-sm overflow-hidden group">
+                <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+                    <h3 class="font-semibold text-lg text-gray-900">What ages do you treat?</h3>
+                    <span class="text-teal-500 text-2xl group-open:rotate-45 transition-transform duration-300">+</span>
+                </summary>
+                <div class="px-6 pb-6 text-gray-600">
+                    We work with children from infancy (Early Intervention) up to adolescence (18 years), providing age-appropriate therapies and support.
+                </div>
+            </details>
+        </div>
+    </div>
+</section>
+
+{{-- ================= FINAL CTA ================= --}}
+<section class="py-20 bg-white relative">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gradient-to-r from-teal-500 to-pink-500 rounded-3xl p-8 sm:p-16 text-center text-white relative overflow-hidden shadow-2xl" data-aos="zoom-in">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+            <div class="absolute bottom-0 left-0 w-40 h-40 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+            
+            <div class="relative z-10">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-6">Take the First Step Today</h2>
+                <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">
+                    Your child's potential is limitless. Let us help them unlock it. Schedule an assessment with our experts.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/contact" class="bg-white text-teal-600 font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition-colors shadow-lg">
+                        Book Appointment
+                    </a>
+                    <a href="tel:+918891810022" class="bg-transparent border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-white/10 transition-colors">
+                        Call +91 88918 10022
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 @endsection
