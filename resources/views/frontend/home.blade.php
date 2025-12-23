@@ -299,6 +299,68 @@
         });
     </script>
 @endpush
+
+{{-- ================= FEATURE STRIP (UNDER HERO) ================= --}}
+<section class="bg-white py-14 border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-10 text-center">
+
+            {{-- Item 1 --}}
+            <div class="flex flex-col items-center">
+                <img src="{{ asset('images/icons/sleep.svg') }}"
+                     alt="Sleep & Wellbeing Care"
+                     class="w-14 h-14 mb-4">
+                <p class="text-gray-700 font-medium text-sm">
+                    Sleep & Wellbeing Care
+                </p>
+            </div>
+
+            {{-- Item 2 --}}
+            <div class="flex flex-col items-center">
+                <img src="{{ asset('images/icons/remedial.svg') }}"
+                     alt="Remedial Education"
+                     class="w-14 h-14 mb-4">
+                <p class="text-gray-700 font-medium text-sm">
+                    Remedial Education
+                </p>
+            </div>
+
+            {{-- Item 3 --}}
+            <div class="flex flex-col items-center">
+                <img src="{{ asset('images/icons/adhd.svg') }}"
+                     alt="ADHD Care"
+                     class="w-14 h-14 mb-4">
+                <p class="text-gray-700 font-medium text-sm">
+                    ADHD Care
+                </p>
+            </div>
+
+            {{-- Item 4 --}}
+            <div class="flex flex-col items-center">
+                <img src="{{ asset('images/icons/skill.svg') }}"
+                     alt="Skill Training"
+                     class="w-14 h-14 mb-4">
+                <p class="text-gray-700 font-medium text-sm">
+                    Skill Training
+                </p>
+            </div>
+
+            {{-- Item 5 --}}
+            <div class="flex flex-col items-center">
+                <img src="{{ asset('images/icons/mental.svg') }}"
+                     alt="Child & Adolescent Mental Health"
+                     class="w-14 h-14 mb-4">
+                <p class="text-gray-700 font-medium text-sm">
+                    Child & Adolescent<br> Mental Health
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
 {{-- ================= ABOUT US SECTION ================= --}}
 <section class="py-16 lg:py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
     {{-- Background pattern --}}
