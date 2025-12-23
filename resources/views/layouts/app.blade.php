@@ -126,7 +126,7 @@
     <div id="loading-overlay" class="fixed inset-0 bg-white z-50 flex items-center justify-center transition-opacity duration-300">
         <div class="text-center">
             <div class="loading-spinner"></div>
-            <p class="mt-4 text-gray-600 font-medium">Loading AIMS CDC...</p>
+            <p class="mt-4 text-gray-600 font-medium">Loading GEMS...</p>
         </div>
     </div>
     

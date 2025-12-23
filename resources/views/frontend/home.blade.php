@@ -142,7 +142,7 @@
             <div data-aos="fade-left">
                 <div class="inline-flex items-center gap-2 text-pink-600 font-semibold mb-4">
                     <span class="w-8 h-0.5 bg-pink-500"></span>
-                    Our Story
+                    About us
                 </div>
                 
                 <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
@@ -194,9 +194,9 @@
                 <div class="bg-gradient-to-r from-white to-gray-50 p-6 rounded-2xl shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="400">
                     <div class="flex items-center gap-4">
                         <div class="relative">
-                            <img src="{{ asset('images/image2.jpg') }}" 
+                            <img src="{{ asset('images/image.jpg') }}" 
                                  class="w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg"
-                                 alt="Smitha K">
+                                 alt="mushtaq">
                             <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-gradient-to-br from-teal-500 to-teal-600 rounded-full flex items-center justify-center">
                                 <span class="text-white text-sm">👑</span>
                             </div>
@@ -204,7 +204,7 @@
                         <div class="flex-1">
                             <div class="flex justify-between items-start">
                                 <div>
-                                    <p class="font-bold text-gray-900 text-xl">Smitha K</p>
+                                    <p class="font-bold text-gray-900 text-xl">Mushtaq</p>
                                     <p class="text-teal-600 font-medium">Founder & CEO</p>
                                 </div>
                                 <span class="text-2xl text-yellow-500">"</span>

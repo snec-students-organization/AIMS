@@ -6,14 +6,11 @@
             <div class="flex items-center">
                 <a href="/" class="flex items-center gap-2 group">
                     <div class="relative">
-                        <img src="{{ asset('images/image3.jpg') }}" 
+                        <img src="{{ asset('images/Logo.png') }}" 
                              alt="AIMS CDC Logo" 
                              class="h-10 lg:h-12 w-auto transition-transform duration-300 group-hover:scale-105">
                     </div>
-                    <div class="hidden md:block">
-                        <h1 class="text-lg font-bold text-gray-900 leading-tight">AIMS CDC</h1>
-                        <p class="text-xs text-gray-500 leading-none">Child Development Centre</p>
-                    </div>
+                    
                 </a>
             </div>
 
@@ -51,7 +48,7 @@
                     </div>
                     <div class="text-left">
                         <p class="text-xs text-gray-500 leading-none">Call Now</p>
-                        <p class="font-semibold text-gray-900 text-sm group-hover:text-teal-600">+91 88918 10022</p>
+                        <p class="font-semibold text-gray-900 text-sm group-hover:text-teal-600">+91 8086497941</p>
                     </div>
                 </a>
                 
