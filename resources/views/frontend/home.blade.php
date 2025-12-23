@@ -3,91 +3,302 @@
 @section('content')
 
 {{-- ================= HERO SECTION ================= --}}
-<section class="relative overflow-hidden bg-gradient-to-br from-white via-blue-50 to-teal-50 pt-8 lg:pt-12">
-    {{-- Background decorative elements --}}
-    <div class="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-pink-100/30 to-transparent rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-    <div class="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-teal-100/20 to-transparent rounded-full translate-x-1/3 translate-y-1/3"></div>
-    
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-24 grid lg:grid-cols-2 gap-8 lg:gap-16 items-center relative z-10">
-        {{-- LEFT CONTENT --}}
-        <div class="order-2 lg:order-1" data-aos="fade-right">
-            <div class="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6" data-aos="fade-up" data-aos-delay="100">
-                <span class="w-2 h-2 bg-white rounded-full"></span>
-                Trusted by 1000+ Families
-            </div>
-            
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight tracking-tight" data-aos="fade-up" data-aos-delay="200">
-                Nurturing <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-pink-500">Every Child's</span> Unique Journey
-            </h1>
-            
-            <p class="mt-6 text-lg sm:text-xl text-gray-600 leading-relaxed max-w-2xl" data-aos="fade-up" data-aos-delay="300">
-                Kerala's premier child development center offering comprehensive therapies, personalized care, and evidence-based programs for children's holistic growth.
-            </p>
-            
-            <div class="mt-10 flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="400">
-                <a href="/contact" class="relative group">
-                    <div class="absolute -inset-1 bg-gradient-to-r from-teal-500 to-teal-600 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
-                    <button class="relative bg-gradient-to-r from-teal-500 to-teal-600 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-                        Book Free Consultation
-                    </button>
-                </a>
-                <a href="/about" class="relative group border-2 border-teal-500 text-teal-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-teal-50 transition-all duration-300">
-                    <span class="relative z-10">Learn More</span>
-                </a>
-            </div>
-            
-            {{-- Stats --}}
-            <div class="mt-16 grid grid-cols-2 md:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="500">
-                <div class="text-center">
-                    <div class="text-3xl font-bold text-teal-600">10+</div>
-                    <div class="text-sm text-gray-500 mt-1">Years Experience</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl font-bold text-pink-600">5000+</div>
-                    <div class="text-sm text-gray-500 mt-1">Children Helped</div>
-                </div>
-                <div class="text-center md:col-span-1 col-span-2">
-                    <div class="text-3xl font-bold text-blue-600">98%</div>
-                    <div class="text-sm text-gray-500 mt-1">Parent Satisfaction</div>
-                </div>
-            </div>
-        </div>
+@push('head')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-teal: #006684;
+            --secondary-orange: #e99e5a;
+            --text-dark: #1a1a1a;
+            --soft-bg: #f8fafc;
+        }
 
-        {{-- RIGHT IMAGE WITH FLOATING ELEMENTS --}}
-        <div class="order-1 lg:order-2 relative min-h-[400px] lg:min-h-[500px]">
-            {{-- Main image container --}}
-            <div class="relative z-10" data-aos="fade-left" data-aos-delay="300">
-                <div class="relative w-full max-w-md lg:max-w-lg mx-auto">
-                    <img src="{{ asset('images/image1.png') }}" 
-                         alt="Happy child at AIMS CDC"
-                         class="rounded-3xl shadow-2xl w-full h-auto object-cover">
-                    
-                    {{-- Floating badge --}}
-                    <div class="absolute -top-4 -right-4 bg-white p-4 rounded-2xl shadow-xl">
-                        <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
-                                <span class="text-white text-2xl">★</span>
-                            </div>
-                            <div>
-                                <div class="font-bold text-gray-900">4.9/5</div>
-                                <div class="text-xs text-gray-500">Rating</div>
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .hero-section {
+            background-color: var(--soft-bg);
+            overflow: visible;
+        }
+
+        .hero-title {
+            color: var(--primary-teal);
+            font-weight: 800;
+            line-height: 1.1;
+        }
+
+        .btn-orange {
+            background-color: var(--secondary-orange);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-orange:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(233, 158, 90, 0.3);
+            background-color: #d88d4a;
+        }
+
+        .organic-shape-container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .organic-image-mask {
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            min-height: 500px;
+            object-fit: cover;
+            background: #fff;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .dept-menu-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            width: 320px;
+            position: absolute;
+            top: 20px;
+            left: -100px;
+            z-index: 50;
+        }
+
+        @media (max-width: 1024px) {
+            .dept-menu-card {
+                position: static;
+                width: 100%;
+                margin-bottom: 2rem;
+                left: 0;
+            }
+            .organic-image-mask {
+                min-height: 400px;
+            }
+        }
+
+        .dept-item {
+            padding: 0.85rem 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--primary-teal);
+            font-size: 0.95rem;
+            font-weight: 500;
+            border-bottom: 1px solid #f1f5f9;
+            transition: background 0.2s;
+            cursor: pointer;
+        }
+
+        .dept-item:last-child {
+            border-bottom: none;
+        }
+
+        .dept-item:hover {
+            background: #f8fafc;
+        }
+
+        .dept-item.active {
+            color: var(--secondary-orange);
+        }
+
+        .sub-menu-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: absolute;
+            left: 102%;
+            top: 0;
+            width: 240px;
+            padding: 1rem;
+            display: none;
+        }
+
+        .dept-item:hover .sub-menu-card {
+            display: block;
+        }
+
+        .sub-menu-item {
+            padding: 0.5rem 0;
+            color: #4b5563;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .sub-menu-item:hover {
+            color: var(--primary-teal);
+        }
+
+        .swiper-pagination-hero {
+            position: absolute;
+            bottom: 40px !important;
+            left: 0 !important;
+            text-align: left !important;
+        }
+
+        .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background: var(--primary-teal);
+            opacity: 0.2;
+        }
+
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+            width: 30px;
+            border-radius: 6px;
+        }
+    </style>
+@endpush
+
+{{-- ================= HERO SECTION ================= --}}
+<section class="hero-section pt-20 pb-32 lg:pt-32 lg:pb-48 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+        <div class="swiper heroSwiper overflow-visible">
+            <div class="swiper-wrapper">
+
+                {{-- SLIDE 1 --}}
+                <div class="swiper-slide">
+                    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+                        {{-- LEFT CONTENT --}}
+                        <div class="z-20">
+                            <h1 class="hero-title text-5xl lg:text-7xl mb-8">
+                                Precision Care for<br>
+                                the Human<br>
+                                Experience
+                            </h1>
+
+                            <p class="text-gray-600 text-lg lg:text-xl leading-relaxed mb-10 max-w-lg">
+                                Betterly Wellness reimagines wellbeing through a thoughtful blend of
+                                advanced science and genuine emotional understanding.
+                            </p>
+
+                            <a href="/contact" class="btn-orange text-lg">
+                                Talk To Us
+                            </a>
+                        </div>
+
+                        {{-- RIGHT IMAGE --}}
+                        <div class="organic-shape-container">
+                            <div class="organic-image-mask">
+                                <img src="{{ asset('images/image2.jpg') }}"
+                                     class="w-full h-full object-cover"
+                                     alt="Wellness Experience">
                             </div>
                         </div>
+
                     </div>
                 </div>
+
+                {{-- SLIDE 2 --}}
+                <div class="swiper-slide">
+                    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+                        <div class="z-20">
+                            <h1 class="hero-title text-5xl lg:text-7xl mb-8">
+                                Empowering<br>
+                                Potential with<br>
+                                Expert Guidance
+                            </h1>
+
+                            <p class="text-gray-600 text-lg lg:text-xl leading-relaxed mb-10 max-w-lg">
+                                Join over 1000 families who trust our certified therapists
+                                for holistic developmental care.
+                            </p>
+
+                            <a href="/contact" class="btn-orange text-lg">
+                                Book Assessment
+                            </a>
+                        </div>
+
+                        <div class="organic-shape-container">
+                            <div class="organic-image-mask">
+                                <img src="{{ asset('images/image1.png') }}"
+                                     class="w-full h-full object-cover"
+                                     alt="Expert Care">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                {{-- ✅ SLIDE 3 (NEW) --}}
+                <div class="swiper-slide">
+                    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+                        <div class="z-20">
+                            <h1 class="hero-title text-5xl lg:text-7xl mb-8">
+                                Supporting Every<br>
+                                Child’s Growth<br>
+                                Journey
+                            </h1>
+
+                            <p class="text-gray-600 text-lg lg:text-xl leading-relaxed mb-10 max-w-lg">
+                                From early intervention to specialized therapies,
+                                we walk alongside families at every stage of development.
+                            </p>
+
+                            <a href="/services" class="btn-orange text-lg">
+                                Explore Services
+                            </a>
+                        </div>
+
+                        <div class="organic-shape-container">
+                            <div class="organic-image-mask">
+                                <img src="{{ asset('images/image4.jpg') }}"
+                                     class="w-full h-full object-cover"
+                                     alt="Child Development Care">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
-            
-            {{-- Floating elements --}}
-            <div class="absolute -bottom-6 -left-6 w-72 h-72 bg-gradient-to-br from-pink-300/30 to-pink-400/20 rounded-[40%] animate-float"></div>
-            <div class="absolute top-10 -right-6 w-64 h-64 bg-gradient-to-tr from-teal-300/30 to-blue-400/20 rounded-[45%] animate-float-delayed"></div>
-            
-            {{-- Small floating dots --}}
-            <div class="absolute top-20 left-4 w-4 h-4 bg-yellow-400 rounded-full animate-bounce"></div>
-            <div class="absolute bottom-20 right-8 w-3 h-3 bg-blue-400 rounded-full animate-bounce-delayed"></div>
+
+            {{-- PAGINATION --}}
+            <div class="swiper-pagination-hero swiper-pagination"></div>
         </div>
     </div>
 </section>
 
+
+
+@push('scripts')
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var swiper = new Swiper(".heroSwiper", {
+                direction: "horizontal",
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                effect: "slide",
+                speed: 1000,
+            });
+        });
+    </script>
+@endpush
 {{-- ================= ABOUT US SECTION ================= --}}
 <section class="py-16 lg:py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
     {{-- Background pattern --}}
@@ -103,7 +314,7 @@
                 <div class="relative">
                     {{-- Main image --}}
                     <div class="relative rounded-3xl overflow-hidden shadow-2xl">
-                        <img src="{{ asset('images/image2.jpg') }}" 
+                        <img src="{{ asset('images/image5.jpg') }}" 
                              alt="AIMS CDC Team"
                              class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
