@@ -159,11 +159,18 @@
             width: 30px;
             border-radius: 6px;
         }
+        /* Feature strip modern lift */
+.feature-strip {
+    position: relative;
+    z-index: 5;
+}
+
     </style>
 @endpush
 
 {{-- ================= HERO SECTION ================= --}}
-<section class="hero-section pt-20 pb-32 lg:pt-32 lg:pb-48 px-4 sm:px-6 lg:px-8">
+<section class="hero-section pt-20 pb-40 lg:pt-32 lg:pb-56 px-4 sm:px-6 lg:px-8">
+
     <div class="max-w-7xl mx-auto">
         <div class="swiper heroSwiper overflow-visible">
             <div class="swiper-wrapper">
@@ -301,7 +308,9 @@
 @endpush
 
 {{-- ================= FEATURE STRIP (UNDER HERO) ================= --}}
-<section class="bg-white py-14 border-t border-gray-100">
+<section class="feature-strip bg-white py-14 mt-16 lg:mt-20 border-t border-gray-100">
+
+
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-10 text-center">
