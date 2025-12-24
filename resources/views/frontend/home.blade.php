@@ -29,6 +29,58 @@
             line-height: 1.1;
         }
 
+        @media (max-width: 1023px) {
+            .hero-section {
+                background: #f0fbff; 
+                padding: 0 !important;
+                min-height: 85vh;
+            }
+            .hero-section .swiper-slide {
+                min-height: 85vh;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding-top: 4rem;
+                overflow: hidden;
+            }
+            .mobile-slide-bg {
+                position: absolute;
+                inset: 0;
+                background-size: cover;
+                background-position: center 85%;
+                background-repeat: no-repeat;
+                z-index: 1;
+            }
+            .mobile-slide-overlay {
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(to bottom, #f0fbff 0%, #f0fbff 20%, rgba(240, 251, 255, 0.3) 50%, transparent 100%);
+                z-index: 2;
+            }
+            .hero-title {
+                font-size: 2.25rem !important;
+                margin-bottom: 1.25rem !important;
+                text-align: center;
+                color: #006684 !important;
+                position: relative;
+                z-index: 10;
+                padding: 0 1.5rem;
+                line-height: 1.2;
+            }
+            .hero-description {
+                font-size: 1rem !important;
+                margin-bottom: 2.5rem !important;
+                text-align: center;
+                color: #4a5568 !important;
+                position: relative;
+                z-index: 10;
+                padding: 0 2rem;
+                max-width: 100%;
+                line-height: 1.6;
+            }
+        }
+
         .btn-orange {
             background-color: var(--secondary-orange);
             color: white;
@@ -84,7 +136,12 @@
                 left: 0;
             }
             .organic-image-mask {
-                min-height: 400px;
+                min-height: 350px;
+                border-radius: 40px;
+                margin-top: 2rem;
+            }
+            .organic-shape-container {
+                padding: 0 10px;
             }
         }
 
@@ -159,17 +216,64 @@
             width: 30px;
             border-radius: 6px;
         }
+
+        @media (max-width: 1023px) {
+            .hero-section {
+                background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%);
+            }
+            .swiper-pagination-hero {
+                left: 0 !important;
+                right: 0 !important;
+                text-align: center !important;
+                bottom: 20px !important;
+            }
+        }
         /* Feature strip modern lift */
 .feature-strip {
     position: relative;
     z-index: 5;
+}
+/* Add to your existing styles */
+.organic-image-mask-mobile {
+    border-radius: 24px;
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    position: relative;
+}
+
+/* Adjust pagination position for mobile */
+@media (max-width: 1023px) {
+    .swiper-pagination-hero {
+        position: relative !important;
+        margin-top: 2rem;
+        bottom: 0 !important;
+    }
+    
+    .hero-title {
+        text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    
+    .btn-orange {
+        position: relative;
+        z-index: 10;
+    }
+}
+
+/* Ensure proper stacking */
+.hero-section .swiper-slide {
+    display: flex;
+    align-items: center;
 }
 
     </style>
 @endpush
 
 {{-- ================= HERO SECTION ================= --}}
-<section class="hero-section pt-20 pb-40 lg:pt-32 lg:pb-56 px-4 sm:px-6 lg:px-8">
+<section class="hero-section pt-10 pb-20 lg:pt-32 lg:pb-56 px-4 sm:px-6 lg:px-8 relative">
 
     <div class="max-w-7xl mx-auto">
         <div class="swiper heroSwiper overflow-visible">
@@ -177,28 +281,53 @@
 
                 {{-- SLIDE 1 --}}
                 <div class="swiper-slide">
-                    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                    {{-- Mobile Background (moved here for proper coverage) --}}
+                    <div class="lg:hidden mobile-slide-bg" style="background-image: url('{{ asset('images/image2.jpg') }}');"></div>
+                    <div class="lg:hidden mobile-slide-overlay"></div>
 
-                        {{-- LEFT CONTENT --}}
-                        <div class="z-20">
-                            <h1 class="hero-title text-5xl lg:text-7xl mb-8">
-                                Precision Care for<br>
-                                the Human<br>
-                                Experience
-                            </h1>
+                    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10 w-full">
 
-                            <p class="text-gray-600 text-lg lg:text-xl leading-relaxed mb-10 max-w-lg">
-                                Betterly Wellness reimagines wellbeing through a thoughtful blend of
-                                advanced science and genuine emotional understanding.
-                            </p>
+                        {{-- CONTENT - Mobile / Desktop --}}
+                        <div class="z-20 text-center lg:text-left relative w-full lg:relative">
+                            {{-- Mobile optimized layout content --}}
+                            <div class="lg:hidden flex flex-col items-center">
+                                <h1 class="hero-title">
+                                    Precision Care for<br>
+                                    the Human<br>
+                                    Experience
+                                </h1>
+                                
+                                <p class="hero-description">
+                                    Betterly Wellness reimagines wellbeing through a thoughtful blend of
+                                    advanced science and genuine emotional understanding.
+                                </p>
+                                
+                                <a href="/contact" class="btn-orange text-lg px-10 relative z-20">
+                                    Talk To Us
+                                </a>
+                            </div>
 
-                            <a href="/contact" class="btn-orange text-lg">
-                                Talk To Us
-                            </a>
+                            {{-- Desktop layout --}}
+                            <div class="hidden lg:block">
+                                <h1 class="hero-title text-5xl lg:text-7xl mb-8">
+                                    Precision Care for<br>
+                                    the Human<br>
+                                    Experience
+                                </h1>
+
+                                <p class="hero-description text-gray-600 text-lg lg:text-xl leading-relaxed mb-10 max-w-lg">
+                                    Betterly Wellness reimagines wellbeing through a thoughtful blend of
+                                    advanced science and genuine emotional understanding.
+                                </p>
+
+                                <a href="/contact" class="btn-orange text-lg mx-auto lg:mx-0">
+                                    Talk To Us
+                                </a>
+                            </div>
                         </div>
 
-                        {{-- RIGHT IMAGE --}}
-                        <div class="organic-shape-container">
+                        {{-- RIGHT IMAGE - Hidden on mobile, shown on desktop --}}
+                        <div class="organic-shape-container hidden lg:block">
                             <div class="organic-image-mask">
                                 <img src="{{ asset('images/image2.jpg') }}"
                                      class="w-full h-full object-cover"
@@ -211,26 +340,52 @@
 
                 {{-- SLIDE 2 --}}
                 <div class="swiper-slide">
-                    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                    {{-- Mobile Background --}}
+                    <div class="lg:hidden mobile-slide-bg" style="background-image: url('{{ asset('images/image1.png') }}');"></div>
+                    <div class="lg:hidden mobile-slide-overlay"></div>
 
-                        <div class="z-20">
-                            <h1 class="hero-title text-5xl lg:text-7xl mb-8">
-                                Empowering<br>
-                                Potential with<br>
-                                Expert Guidance
-                            </h1>
+                    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10 w-full">
 
-                            <p class="text-gray-600 text-lg lg:text-xl leading-relaxed mb-10 max-w-lg">
-                                Join over 1000 families who trust our certified therapists
-                                for holistic developmental care.
-                            </p>
+                        <div class="z-20 text-center lg:text-left relative w-full lg:relative">
+                            {{-- Mobile optimized layout content --}}
+                            <div class="lg:hidden flex flex-col items-center">
+                                <h1 class="hero-title">
+                                    Empowering<br>
+                                    Potential with<br>
+                                    Expert Guidance
+                                </h1>
+                                
+                                <p class="hero-description">
+                                    Join over 1000 families who trust our certified therapists
+                                    for holistic developmental care.
+                                </p>
+                                
+                                <a href="/contact" class="btn-orange text-lg px-10 relative z-20">
+                                    Book Assessment
+                                </a>
+                            </div>
 
-                            <a href="/contact" class="btn-orange text-lg">
-                                Book Assessment
-                            </a>
+                            {{-- Desktop layout --}}
+                            <div class="hidden lg:block">
+                                <h1 class="hero-title text-5xl lg:text-7xl mb-8">
+                                    Empowering<br>
+                                    Potential with<br>
+                                    Expert Guidance
+                                </h1>
+
+                                <p class="hero-description text-gray-600 text-lg lg:text-xl leading-relaxed mb-10 max-w-lg">
+                                    Join over 1000 families who trust our certified therapists
+                                    for holistic developmental care.
+                                </p>
+
+                                <a href="/contact" class="btn-orange text-lg mx-auto lg:mx-0">
+                                    Book Assessment
+                                </a>
+                            </div>
                         </div>
 
-                        <div class="organic-shape-container">
+                        {{-- RIGHT IMAGE - Hidden on mobile --}}
+                        <div class="organic-shape-container hidden lg:block">
                             <div class="organic-image-mask">
                                 <img src="{{ asset('images/image1.png') }}"
                                      class="w-full h-full object-cover"
@@ -241,28 +396,54 @@
                     </div>
                 </div>
 
-                {{-- ✅ SLIDE 3 (NEW) --}}
+                {{-- SLIDE 3 --}}
                 <div class="swiper-slide">
-                    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                    {{-- Mobile Background --}}
+                    <div class="lg:hidden mobile-slide-bg" style="background-image: url('{{ asset('images/image4.jpg') }}');"></div>
+                    <div class="lg:hidden mobile-slide-overlay"></div>
 
-                        <div class="z-20">
-                            <h1 class="hero-title text-5xl lg:text-7xl mb-8">
-                                Supporting Every<br>
-                                Child’s Growth<br>
-                                Journey
-                            </h1>
+                    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10 w-full">
 
-                            <p class="text-gray-600 text-lg lg:text-xl leading-relaxed mb-10 max-w-lg">
-                                From early intervention to specialized therapies,
-                                we walk alongside families at every stage of development.
-                            </p>
+                        <div class="z-20 text-center lg:text-left relative w-full lg:relative">
+                            {{-- Mobile optimized layout content --}}
+                            <div class="lg:hidden flex flex-col items-center">
+                                <h1 class="hero-title">
+                                    Supporting Every<br>
+                                    Child's Growth<br>
+                                    Journey
+                                </h1>
+                                
+                                <p class="hero-description">
+                                    From early intervention to specialized therapies,
+                                    we walk alongside families at every stage of development.
+                                </p>
+                                
+                                <a href="/services" class="btn-orange text-lg px-10 relative z-20">
+                                    Explore Services
+                                </a>
+                            </div>
 
-                            <a href="/services" class="btn-orange text-lg">
-                                Explore Services
-                            </a>
+                            {{-- Desktop layout --}}
+                            <div class="hidden lg:block">
+                                <h1 class="hero-title text-5xl lg:text-7xl mb-8">
+                                    Supporting Every<br>
+                                    Child's Growth<br>
+                                    Journey
+                                </h1>
+
+                                <p class="hero-description text-gray-600 text-lg lg:text-xl leading-relaxed mb-10 max-w-lg">
+                                    From early intervention to specialized therapies,
+                                    we walk alongside families at every stage of development.
+                                </p>
+
+                                <a href="/services" class="btn-orange text-lg mx-auto lg:mx-0">
+                                    Explore Services
+                                </a>
+                            </div>
                         </div>
 
-                        <div class="organic-shape-container">
+                        {{-- RIGHT IMAGE - Hidden on mobile --}}
+                        <div class="organic-shape-container hidden lg:block">
                             <div class="organic-image-mask">
                                 <img src="{{ asset('images/image4.jpg') }}"
                                      class="w-full h-full object-cover"

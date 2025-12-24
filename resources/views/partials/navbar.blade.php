@@ -60,12 +60,14 @@
 
             {{-- MOBILE MENU BUTTON --}}
             <button id="mobile-menu-button"
-                    class="lg:hidden flex flex-col items-center justify-center w-10 h-10 rounded-lg hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    class="lg:hidden relative flex flex-col items-center justify-center w-10 h-10 rounded-lg bg-teal-50 text-teal-600 transition-all duration-300 focus:outline-none"
                     aria-label="Toggle menu">
                 <span class="sr-only">Open main menu</span>
-                <span class="block w-6 h-0.5 bg-gray-600 mb-1.5 transition-all duration-300" id="bar1"></span>
-                <span class="block w-6 h-0.5 bg-gray-600 mb-1.5 transition-all duration-300" id="bar2"></span>
-                <span class="block w-6 h-0.5 bg-gray-600 transition-all duration-300" id="bar3"></span>
+                <div class="relative w-6 h-5 flex flex-col justify-between">
+                    <span class="block w-6 h-0.5 bg-teal-600 rounded-full transition-all duration-300" id="bar1"></span>
+                    <span class="block w-6 h-0.5 bg-teal-600 rounded-full transition-all duration-300" id="bar2"></span>
+                    <span class="block w-6 h-0.5 bg-teal-600 rounded-full transition-all duration-300" id="bar3"></span>
+                </div>
             </button>
         </div>
 
@@ -137,26 +139,38 @@
 <style>
     /* Mobile menu animation styles */
     .mobile-menu-open {
-        height: calc(100vh - 4rem) !important;
+        height: auto !important;
+        max-height: calc(100vh - 4rem) !important;
         overflow-y: auto;
     }
     
     /* Animated hamburger menu */
     #mobile-menu-button.active #bar1 {
-        transform: rotate(45deg) translate(5px, 6px);
+        transform: translateY(9px) rotate(45deg);
     }
     
     #mobile-menu-button.active #bar2 {
         opacity: 0;
+        transform: translateX(10px);
     }
     
     #mobile-menu-button.active #bar3 {
-        transform: rotate(-45deg) translate(5px, -6px);
+        transform: translateY(-9px) rotate(-45deg);
+    }
+    
+    #mobile-menu-button.active {
+        background-color: #fcece0; /* Soft highlight when active */
+        color: var(--secondary-orange);
+    }
+
+    #mobile-menu-button.active span {
+        background-color: var(--secondary-orange);
     }
     
     /* Smooth scroll for mobile menu */
     #mobile-menu {
         -webkit-overflow-scrolling: touch;
+        border-top: 1px solid #f1f5f9;
     }
 </style>
 
