@@ -558,8 +558,7 @@
                 </h3>
 
                 <p class="text-gray-600 leading-relaxed mb-6">
-                    Helping children improve communication, language skills,
-                    and confidence through personalized speech therapy programs.
+                  Targeted therapy to improve speech, language, communication, and articulation skills for effective expression and understanding.
                 </p>
 
                 <a href="/services"
@@ -585,8 +584,7 @@
                 </h3>
 
                 <p class="text-gray-600 leading-relaxed mb-6">
-                    Supporting children in developing motor skills, coordination,
-                    and independence in daily activities.
+                    Therapeutic support to enhance motor skills, sensory integration, and daily living abilities, promoting independence and functional growth.
                 </p>
 
                 <a href="/services"
@@ -608,12 +606,11 @@
                 </div>
 
                 <h3 class="text-xl font-bold text-gray-900 mb-4">
-                    Special Education
+                   Counselling
                 </h3>
 
                 <p class="text-gray-600 leading-relaxed mb-6">
-                    Customized learning programs that focus on academic,
-                    behavioral, and social development.
+                    A safe and supportive space to address emotional, psychological, and personal challenges, promoting mental wellbeing and healthy coping skills.
                 </p>
 
                 <a href="/services"

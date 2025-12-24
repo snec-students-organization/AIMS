@@ -34,7 +34,7 @@
                 </div>
                 <h3 class="text-2xl font-bold text-gray-900 mb-4">Speech Therapy</h3>
                 <p class="text-gray-600 mb-6 leading-relaxed">
-                    Assessment and treatment of communication problems and speech disorders. We help children with articulation, fluency, voice, and receptive/expressive language delays.
+                    Targeted therapy to improve speech, language, communication, and articulation skills for effective expression and understanding.
                 </p>
                 <ul class="space-y-2 mb-6">
                     <li class="flex items-center gap-2 text-sm text-gray-600">
@@ -56,7 +56,7 @@
                 </div>
                 <h3 class="text-2xl font-bold text-gray-900 mb-4">Occupational Therapy</h3>
                 <p class="text-gray-600 mb-6 leading-relaxed">
-                    Helping children develop skills for the job of living - playing, learning, and self-care. Focuses on fine motor skills, sensory integration, and daily living activities.
+                    Therapeutic support to enhance motor skills, sensory integration, and daily living abilities, promoting independence and functional growth.
                 </p>
                 <ul class="space-y-2 mb-6">
                     <li class="flex items-center gap-2 text-sm text-gray-600">
@@ -71,27 +71,7 @@
                 </ul>
             </div>
 
-            {{-- Service 3: Special Education --}}
-            <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-b-4 border-blue-500" data-aos="fade-up" data-aos-delay="200">
-                <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center text-4xl mb-6">
-                    📚
-                </div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">Special Education</h3>
-                <p class="text-gray-600 mb-6 leading-relaxed">
-                    Tailored educational programs addressing individual learning differences. We use specialized teaching techniques to help children master academic and functional skills.
-                </p>
-                <ul class="space-y-2 mb-6">
-                    <li class="flex items-center gap-2 text-sm text-gray-600">
-                        <span class="text-blue-500">✓</span> IEP Development
-                    </li>
-                    <li class="flex items-center gap-2 text-sm text-gray-600">
-                        <span class="text-blue-500">✓</span> Learning Disability Support
-                    </li>
-                    <li class="flex items-center gap-2 text-sm text-gray-600">
-                        <span class="text-blue-500">✓</span> School Readiness
-                    </li>
-                </ul>
-            </div>
+            
 
             {{-- Service 4: Behavioral Therapy --}}
             <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-b-4 border-orange-500" data-aos="fade-up">
@@ -100,7 +80,7 @@
                 </div>
                 <h3 class="text-2xl font-bold text-gray-900 mb-4">Behavioral Therapy</h3>
                 <p class="text-gray-600 mb-6 leading-relaxed">
-                    Interventions to reduce maladaptive behaviors and increase positive social behaviors. Based on ABA principles to improve social and adaptive functioning.
+                    Structured and evidence-based interventions to support positive behaviour, emotional regulation, and social skills, helping individuals adapt and thrive in daily life.
                 </p>
                 <ul class="space-y-2 mb-6">
                     <li class="flex items-center gap-2 text-sm text-gray-600">
@@ -120,9 +100,9 @@
                 <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center text-4xl mb-6">
                     🧠
                 </div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">Child Psychology</h3>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Counselling</h3>
                 <p class="text-gray-600 mb-6 leading-relaxed">
-                    Psychological assessment and counseling for emotional and behavioral challenges. Support for anxiety, depression, and adjustment issues in children.
+                    A safe and supportive space to address emotional, psychological, and personal challenges, promoting mental wellbeing and healthy coping skills.
                 </p>
                 <ul class="space-y-2 mb-6">
                     <li class="flex items-center gap-2 text-sm text-gray-600">
@@ -137,27 +117,18 @@
                 </ul>
             </div>
 
-            {{-- Service 6: Early Intervention --}}
-            <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-b-4 border-green-500" data-aos="fade-up" data-aos-delay="200">
-                <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center text-4xl mb-6">
-                    🌱
+            {{-- Service 3: Special Education --}}
+            <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-b-4 border-blue-500" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center text-4xl mb-6">
+                    📚
                 </div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">Early Intervention</h3>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Remedial Training</h3>
                 <p class="text-gray-600 mb-6 leading-relaxed">
-                    Services for infants and toddlers involved in developmental delays. Early action is key to maximizing a child's developmental outcomes.
+                    Individualized academic support to strengthen learning skills, attention, and comprehension, enabling children to overcome learning difficulties.
                 </p>
-                <ul class="space-y-2 mb-6">
-                    <li class="flex items-center gap-2 text-sm text-gray-600">
-                        <span class="text-green-500">✓</span> Developmental Screening
-                    </li>
-                    <li class="flex items-center gap-2 text-sm text-gray-600">
-                        <span class="text-green-500">✓</span> Infant Stimulation
-                    </li>
-                    <li class="flex items-center gap-2 text-sm text-gray-600">
-                        <span class="text-green-500">✓</span> Pre-school Readiness
-                    </li>
-                </ul>
+                
             </div>
+            
         </div>
     </div>
 </section>
