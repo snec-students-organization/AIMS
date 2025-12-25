@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <path d="M14 24c0-6 5-11 18-11s18 5 18 11v16c0 6-5 11-18 11S14 46 14 40V24z"
-        stroke="#006684" stroke-width="2.5" />
-  <path d="M22 18h20" stroke="#006684" stroke-width="2.5" />
-  <text x="40" y="18" font-size="10" fill="#006684">Z</text>
-  <text x="46" y="14" font-size="8" fill="#006684">Z</text>
-</svg>

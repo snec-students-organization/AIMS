@@ -489,60 +489,81 @@
 @endpush
 
 {{-- ================= FEATURE STRIP (UNDER HERO) ================= --}}
-<section class="feature-strip bg-white py-14 mt-16 lg:mt-20 border-t border-gray-100">
-
+<section class="feature-strip bg-white py-16 mt-16 lg:mt-20 border-t border-gray-100">
 
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-10 text-center">
+        {{-- SECTION HEADING --}}
+        <div class="text-center mb-12">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
+                Our Services
+            </h2>
+            <p class="mt-3 text-gray-500 max-w-2xl mx-auto text-sm sm:text-base">
+                Comprehensive care and support designed for children, adolescents, and families.
+            </p>
+        </div>
 
-            {{-- Item 1 --}}
+        {{-- SERVICES GRID --}}
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-6 gap-10 text-center">
+
+
+            {{-- Psychological Assessment --}}
             <div class="flex flex-col items-center">
-                <img src="{{ asset('images/icons/sleep.svg') }}"
-                     alt="Sleep & Wellbeing Care"
+                <img src="{{ asset('images/icons/psychological-assessment.svg') }}"
+                     alt="Psychological Assessment"
                      class="w-14 h-14 mb-4">
                 <p class="text-gray-700 font-medium text-sm">
-                    Sleep & Wellbeing Care
+                    PSYCHOLOGICAL ASSESSMENT
                 </p>
             </div>
 
-            {{-- Item 2 --}}
+            {{-- Behavioural Therapy --}}
             <div class="flex flex-col items-center">
-                <img src="{{ asset('images/icons/remedial.svg') }}"
-                     alt="Remedial Education"
+                <img src="{{ asset('images/icons/behavioural-therapy.svg') }}"
+                     alt="Behavioural Therapy"
                      class="w-14 h-14 mb-4">
                 <p class="text-gray-700 font-medium text-sm">
-                    Remedial Education
+                    BEHAVIOURAL THERAPY
                 </p>
             </div>
 
-            {{-- Item 3 --}}
+            {{-- Speech Therapy --}}
             <div class="flex flex-col items-center">
-                <img src="{{ asset('images/icons/adhd.svg') }}"
-                     alt="ADHD Care"
+                <img src="{{ asset('images/icons/speech-therapy.svg') }}"
+                     alt="Speech Therapy"
                      class="w-14 h-14 mb-4">
                 <p class="text-gray-700 font-medium text-sm">
-                    ADHD Care
+                    SPEECH THERAPY
                 </p>
             </div>
 
-            {{-- Item 4 --}}
+            {{-- Special Education --}}
             <div class="flex flex-col items-center">
-                <img src="{{ asset('images/icons/skill.svg') }}"
-                     alt="Skill Training"
+                <img src="{{ asset('images/icons/special-education.svg') }}"
+                     alt="Special Education"
                      class="w-14 h-14 mb-4">
                 <p class="text-gray-700 font-medium text-sm">
-                    Skill Training
+                    SPECIAL EDUCATION
                 </p>
             </div>
 
-            {{-- Item 5 --}}
+            {{-- Occupational Therapy --}}
             <div class="flex flex-col items-center">
-                <img src="{{ asset('images/icons/mental.svg') }}"
-                     alt="Child & Adolescent Mental Health"
+                <img src="{{ asset('images/icons/occupational-therapy.svg') }}"
+                     alt="Occupational Therapy"
                      class="w-14 h-14 mb-4">
                 <p class="text-gray-700 font-medium text-sm">
-                    Child & Adolescent<br> Mental Health
+                    OCCUPATIONAL THERAPY
+                </p>
+            </div>
+
+            {{-- Psychotherapy & Counselling --}}
+            <div class="flex flex-col items-center">
+                <img src="{{ asset('images/icons/psychotherapy-counselling.svg') }}"
+                     alt="Psychotherapy and Counselling"
+                     class="w-14 h-14 mb-4">
+                <p class="text-gray-700 font-medium text-sm">
+                    PSYCHOTHERAPY & COUNSELLING
                 </p>
             </div>
 
@@ -550,6 +571,8 @@
 
     </div>
 </section>
+
+
 
 {{-- ================= ABOUT US SECTION ================= --}}
 <section class="py-16 lg:py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
