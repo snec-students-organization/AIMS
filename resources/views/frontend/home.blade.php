@@ -574,147 +574,245 @@
 
 
 
-{{-- ================= ABOUT US SECTION ================= --}}
-<section class="py-16 lg:py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
-    {{-- Background pattern --}}
-    <div class="absolute inset-0 opacity-5">
-        <div class="absolute top-0 left-1/4 w-64 h-64 bg-teal-300 rounded-full"></div>
-        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-pink-300 rounded-full"></div>
-    </div>
+
+<section class="py-16 lg:py-28 bg-gradient-to-b from-white to-gray-50/30 relative overflow-hidden">
+    {{-- Background decorative elements --}}
+    <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
+    <div class="absolute top-10 left-10 w-72 h-72 bg-gradient-to-br from-teal-200/20 to-teal-400/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-tr from-pink-200/20 to-pink-400/10 rounded-full blur-3xl"></div>
     
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             {{-- LEFT IMAGE SECTION --}}
-            <div class="relative" data-aos="fade-right">
-                <div class="relative">
-                    {{-- Main image --}}
-                    <div class="relative rounded-3xl overflow-hidden shadow-2xl">
-                        <img src="{{ asset('images/image5.jpg') }}" 
-                             alt="AIMS CDC Team"
-                             class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                    </div>
-                    
-                    {{-- Experience badge --}}
-                    <div class="absolute -bottom-6 -right-6 bg-gradient-to-r from-teal-500 to-teal-600 text-white p-6 rounded-2xl shadow-xl">
-                        <div class="text-center">
-                            <div class="text-4xl font-bold">10+</div>
-                            <div class="text-sm font-medium">Years of Excellence</div>
+            <div class="relative" data-aos="fade-right" data-aos-delay="100">
+                <div class="relative group">
+                    {{-- Main image container --}}
+                    <div class="relative overflow-hidden rounded-3xl shadow-2xl shadow-teal-500/10">
+                        <div class="aspect-[4/5] overflow-hidden">
+                            <img src="{{ asset('images/image5.jpg') }}" 
+                                 alt="AIMS CDC Therapy Services"
+                                 class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+                        
+                        {{-- Floating badges --}}
+                        <div class="absolute top-6 left-6">
+                            <div class="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm text-teal-600 px-4 py-2 rounded-full font-semibold text-sm shadow-lg">
+                                <span class="w-2 h-2 bg-teal-500 rounded-full animate-pulse"></span>
+                                Expert Care Team
+                            </div>
                         </div>
                     </div>
                     
-                    {{-- Floating shape --}}
-                    <div class="absolute -top-6 -left-6 w-40 h-40 bg-gradient-to-br from-pink-400/20 to-pink-500/10 rounded-3xl -z-10 animate-pulse"></div>
+                    
                 </div>
                 
-                {{-- Stats overlay --}}
-                <div class="mt-10 grid grid-cols-3 gap-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="bg-white p-4 rounded-xl shadow-lg text-center border border-gray-100">
-                        <div class="text-2xl font-bold text-teal-600">15+</div>
-                        <div class="text-sm text-gray-600">Expert Therapists</div>
-                    </div>
-                    <div class="bg-white p-4 rounded-xl shadow-lg text-center border border-gray-100">
-                        <div class="text-2xl font-bold text-pink-600">10+</div>
-                        <div class="text-sm text-gray-600">Therapies</div>
-                    </div>
-                    <div class="bg-white p-4 rounded-xl shadow-lg text-center border border-gray-100">
-                        <div class="text-2xl font-bold text-blue-600">24/7</div>
-                        <div class="text-sm text-gray-600">Support</div>
-                    </div>
-                </div>
-            </div>
-
-            {{-- RIGHT CONTENT --}}
-            <div data-aos="fade-left">
-                <div class="inline-flex items-center gap-2 text-pink-600 font-semibold mb-4">
-                    <span class="w-8 h-0.5 bg-pink-500"></span>
-                    About us
-                </div>
                 
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
-                    Creating Brighter Futures,
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-pink-500">One Child at a Time</span>
-                </h2>
-                
-                <p class="text-lg text-gray-600 leading-relaxed mb-10">
-                    At AIMS CDC, we believe every child deserves the opportunity to shine. 
-                    Our holistic approach combines cutting-edge therapies with compassionate 
-                    care, creating an environment where children with developmental needs 
-                    can thrive and reach their full potential.
-                </p>
-
-                {{-- FEATURES --}}
-                <div class="space-y-6 mb-12">
-                    <div class="flex gap-4 group hover:bg-gradient-to-r hover:from-white hover:to-teal-50 p-4 rounded-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
-                        <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            <span class="text-white text-xl">✓</span>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-gray-900 text-lg mb-2">Comprehensive Care</h3>
-                            <p class="text-gray-600">All therapies, learning programs, and support services under one roof.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex gap-4 group hover:bg-gradient-to-r hover:from-white hover:to-pink-50 p-4 rounded-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
-                        <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            <span class="text-white text-xl">❤</span>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-gray-900 text-lg mb-2">Personalized Approach</h3>
-                            <p class="text-gray-600">Customized programs designed for each child's unique needs and abilities.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex gap-4 group hover:bg-gradient-to-r hover:from-white hover:to-blue-50 p-4 rounded-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
-                        <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            <span class="text-white text-xl">🏠</span>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-gray-900 text-lg mb-2">Safe & Nurturing Environment</h3>
-                            <p class="text-gray-600">A warm, secure space where children feel loved, valued, and supported.</p>
-                        </div>
-                    </div>
-                </div>
-
-                {{-- FOUNDER SECTION --}}
-                <div class="bg-gradient-to-r from-white to-gray-50 p-6 rounded-2xl shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="400">
-                    <div class="flex items-center gap-4">
+                {{-- FOUNDER TESTIMONIAL --}}
+                <div class="mt-16 bg-gradient-to-br from-white to-gray-50 p-6 rounded-2xl shadow-lg border border-gray-200/50" data-aos="fade-up" data-aos-delay="700">
+                    <div class="flex items-center gap-4 mb-4">
                         <div class="relative">
-                            <img src="{{ asset('images/image.jpg') }}" 
-                                 class="w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg"
-                                 alt="mushtaq">
-                            <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-gradient-to-br from-teal-500 to-teal-600 rounded-full flex items-center justify-center">
-                                <span class="text-white text-sm">👑</span>
+                            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-teal-500 to-teal-600 p-0.5">
+                                <img src="{{ asset('images/image.jpg') }}" 
+                                     class="w-full h-full rounded-full object-cover border-2 border-white"
+                                     alt="Mushtaq - Founder & CEO">
+                            </div>
+                            <div class="absolute -bottom-1 -right-1 w-6 h-6 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full flex items-center justify-center border border-white">
+                                <span class="text-white text-xs">✓</span>
                             </div>
                         </div>
                         <div class="flex-1">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <p class="font-bold text-gray-900 text-xl">Mushtaq</p>
-                                    <p class="text-teal-600 font-medium">Founder & CEO</p>
-                                </div>
-                                <span class="text-2xl text-yellow-500">"</span>
+                            <div>
+                                <p class="font-bold text-gray-900 text-lg">Mushtaq</p>
+                                <p class="text-teal-600 font-medium text-sm">Founder & CEO</p>
                             </div>
-                            <p class="text-gray-600 mt-2 italic">
-                                "Our mission is to create a world where every child, regardless of their challenges, 
-                                can discover their strengths and shine brightly."
-                            </p>
                         </div>
+                        <div class="text-3xl text-yellow-400 opacity-80">"</div>
+                    </div>
+                    <p class="text-gray-700 italic pl-2 border-l-2 border-teal-500">
+                        "Our mission is to create a world where every child, regardless of their challenges, 
+                        can discover their strengths and shine brightly. We believe in personalized care 
+                        that addresses the unique needs of each child."
+                    </p>
+                </div>
+
+                {{-- CTA BUTTONS --}}
+                <div class="mt-10 flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="800">
+                    <a href="/services" 
+                       class="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 flex-1">
+                        <span>View All Services</span>
+                        <span class="group-hover:translate-x-1 transition-transform duration-300">→</span>
+                    </a>
+                    <a href="/contact" 
+                       class="inline-flex items-center justify-center gap-3 border-2 border-teal-500 text-teal-600 hover:bg-teal-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 flex-1">
+                        <span>Book Consultation</span>
+                    </a>
+                </div>
+            </div>
+            
+
+            {{-- RIGHT CONTENT --}}
+            <div class="lg:sticky lg:top-24" data-aos="fade-left" data-aos-delay="200">
+                {{-- Section header --}}
+                <div class="mb-10">
+                    <div class="inline-flex items-center gap-2 text-teal-600 font-semibold mb-4">
+                        <div class="w-8 h-0.5 bg-teal-500"></div>
+                        Our Comprehensive Services
+                    </div>
+                    
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                        Specialized Therapies
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-pink-500 block">
+                            For Holistic Development
+                        </span>
+                    </h2>
+                    
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        We offer a complete range of evidence-based therapies and interventions designed to 
+                        address every aspect of your child's developmental needs.
+                    </p>
+                </div>
+
+                {{-- SERVICES GRID --}}
+                <div class="grid sm:grid-cols-2 gap-4 mb-12">
+                    @php
+                        $services = [
+                            [
+                                'title' => 'PSYCHOLOGICAL ASSESSMENT',
+                                'description' => 'IQ assessment, learning disability assessment, personality assessment, cognitive and behavioral assessment for tailored intervention strategies.',
+                                'icon' => '🧠',
+                                'color' => 'teal',
+                                'delay' => 100
+                            ],
+                            [
+                                'title' => 'BEHAVIOURAL THERAPY',
+                                'description' => 'Improving intellectual and socio-adaptive functioning using scientific psychological techniques to manage behavioral problems.',
+                                'icon' => '🌟',
+                                'color' => 'pink',
+                                'delay' => 200
+                            ],
+                            [
+                                'title' => 'SPEECH THERAPY',
+                                'description' => 'Addressing challenges with speech sounds, language development, fluency, and social communication skills.',
+                                'icon' => '🗣️',
+                                'color' => 'blue',
+                                'delay' => 300
+                            ],
+                            [
+                                'title' => 'SPECIAL EDUCATION',
+                                'description' => 'Individualized educational plans using VAKT approach for children with academic skill deficits in reading, writing, and mathematics.',
+                                'icon' => '📚',
+                                'color' => 'purple',
+                                'delay' => 400
+                            ],
+                            [
+                                'title' => 'OCCUPATIONAL THERAPY',
+                                'description' => 'Strengthening fine motor, gross motor, sensory motor skills and overcoming sensory challenges for daily living activities.',
+                                'icon' => '👐',
+                                'color' => 'orange',
+                                'delay' => 500
+                            ],
+                            [
+                                'title' => 'PSYCHOTHERAPY & COUNSELLING',
+                                'description' => 'RCI licensed psychologists providing individual/group psychotherapy using evidence-based practices.',
+                                'icon' => '💭',
+                                'color' => 'indigo',
+                                'delay' => 600
+                            ],
+                        ];
+                    @endphp
+
+                    @foreach($services as $service)
+    <a href="/services"
+       class="group relative block focus:outline-none"
+       data-aos="fade-up"
+       data-aos-delay="{{ $service['delay'] }}">
+
+        <div class="absolute inset-0 bg-gradient-to-br from-{{ $service['color'] }}-50 to-white rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+        <div class="relative bg-white p-5 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+            <div class="flex items-start gap-4">
+                <div class="flex-shrink-0">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-{{ $service['color'] }}-500 to-{{ $service['color'] }}-600 flex items-center justify-center text-white text-xl">
+                        {{ $service['icon'] }}
                     </div>
                 </div>
 
-                {{-- CTA BUTTON --}}
-                <div class="mt-10" data-aos="fade-up" data-aos-delay="500">
-                    <a href="/about" 
-                       class="group inline-flex items-center gap-3 bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-                        Discover Our Programs
-                        <span class="group-hover:translate-x-2 transition-transform duration-300">→</span>
-                    </a>
+                <div class="flex-1">
+                    <h3 class="font-bold text-gray-900 text-base mb-2">
+                        {{ $service['title'] }}
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        {{ $service['description'] }}
+                    </p>
                 </div>
+            </div>
+
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center">
+                <span class="text-xs text-gray-500 group-hover:text-{{ $service['color'] }}-600 transition-colors">
+                    Learn more
+                </span>
+                <span class="text-gray-400 group-hover:text-{{ $service['color'] }}-500 transform group-hover:translate-x-1 transition-transform">
+                    →
+                </span>
+            </div>
+        </div>
+    </a>
+@endforeach
+
+                </div>
+
+                
             </div>
         </div>
     </div>
 </section>
+
+<style>
+    /* Custom background pattern */
+    .bg-grid-pattern {
+        background-image: 
+            linear-gradient(to right, #f0f9ff 1px, transparent 1px),
+            linear-gradient(to bottom, #f0f9ff 1px, transparent 1px);
+        background-size: 40px 40px;
+    }
+    
+    /* Smooth hover effects */
+    .group-hover\:-translate-y-1:hover {
+        transform: translateY(-4px);
+    }
+    
+    /* Aspect ratio for image */
+    .aspect-\[4\/5\] {
+        aspect-ratio: 4 / 5;
+    }
+    
+    /* Gradient text for all color variations */
+    .text-teal-600 { color: #0d9488; }
+    .text-pink-600 { color: #db2777; }
+    .text-blue-600 { color: #2563eb; }
+    .text-purple-600 { color: #7c3aed; }
+    .text-orange-600 { color: #ea580c; }
+    .text-indigo-600 { color: #4f46e5; }
+    
+    .from-teal-500 { --tw-gradient-from: #0d9488; }
+    .to-teal-600 { --tw-gradient-to: #0f766e; }
+    
+    .from-pink-500 { --tw-gradient-from: #ec4899; }
+    .to-pink-600 { --tw-gradient-to: #db2777; }
+    
+    .from-blue-500 { --tw-gradient-from: #3b82f6; }
+    .to-blue-600 { --tw-gradient-to: #2563eb; }
+    
+    .from-purple-500 { --tw-gradient-from: #8b5cf6; }
+    .to-purple-600 { --tw-gradient-to: #7c3aed; }
+    
+    .from-orange-500 { --tw-gradient-from: #f97316; }
+    .to-orange-600 { --tw-gradient-to: #ea580c; }
+    
+    .from-indigo-500 { --tw-gradient-from: #6366f1; }
+    .to-indigo-600 { --tw-gradient-to: #4f46e5; }
+</style>
 
 
 {{-- ================= SERVICES SECTION ================= --}}
