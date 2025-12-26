@@ -5,32 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0d9488">
     
-    <title>@yield('title', 'AIMS CDC | Best Child Development Centre in Kerala')</title>
+    <title>@yield('title', 'GEMS | Best Child Development Centre in Kerala')</title>
 
     {{-- SEO Meta Tags --}}
-    <meta name="description" content="@yield('meta_description', 'AIMS Child Development Centre – Kerala\'s premier center for child development therapies, special education, and holistic care. 10+ years of experience helping children thrive.')">
+    <meta name="description" content="@yield('meta_description', 'GEMS Child Development Centre – Kerala\'s premier center for child development therapies, special education, and holistic care. 10+ years of experience helping children thrive.')">
     <meta name="keywords" content="child development, autism therapy, speech therapy, occupational therapy, special education, Kerala, Kochi">
-    <meta name="author" content="AIMS Child Development Centre">
+    <meta name="author" content="GEMS Child Development Centre">
     
     {{-- Open Graph --}}
-    <meta property="og:title" content="@yield('og_title', 'AIMS CDC | Best Child Development Centre in Kerala')">
+    <meta property="og:title" content="@yield('og_title', 'GEMS  | Best Child Development Centre in Kerala')">
     <meta property="og:description" content="@yield('og_description', 'Comprehensive child development therapies and special education programs in Kerala.')">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:image" content="@yield('og_image', asset('images/og-image.jpg'))">
-    <meta property="og:site_name" content="AIMS CDC">
+    <meta property="og:site_name" content="GEMS Child Development Centre">
     
     {{-- Twitter Card --}}
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="@yield('title', 'AIMS CDC | Best Child Development Centre in Kerala')">
+    <meta name="twitter:title" content="@yield('title', 'GEMS | Best Child Development Centre in Kerala')">
     <meta name="twitter:description" content="Kerala's premier child development center with 10+ years of experience.">
     
     {{-- Favicon & Apple Touch Icons --}}
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
-    <link rel="manifest" href="{{ asset('site.webmanifest') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('images/Logo.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/Logo.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/Logo.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/Logo.png') }}">
+    <link rel="manifest" href="{{ asset('images/Logo.png') }}">
     
     {{-- Preload critical assets --}}
     <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style">
