@@ -30,9 +30,10 @@
                     <div class="w-12 h-12 bg-teal-100 text-teal-600 rounded-xl flex items-center justify-center text-2xl mb-4">📍</div>
                     <h3 class="font-bold text-gray-900 text-lg mb-2">Visit Us</h3>
                     <p class="text-gray-600 leading-relaxed">
-                        AIMS Child Development Centre<br>
-                        [Street Address]<br>
-                        Kochi, Kerala, India - [Pin Code]
+                        GEMS Child Development Centre<br>
+                        Pallipatu Ayyapa Temple Road
+Civil Station,<br>
+                        Kozhikode, Kerala, India - 673020
                     </p>
                 </div>
                 
