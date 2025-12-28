@@ -41,7 +41,7 @@
 
             {{-- DESKTOP CONTACT BUTTONS --}}
             <div class="hidden lg:flex items-center gap-3">
-                <a href="tel:+918891810022" 
+                <a href="tel:+918086497941" 
                    class="flex items-center gap-2 bg-gray-50 hover:bg-gray-100 px-4 py-2 rounded-lg transition-colors duration-200 group">
                     <div class="w-8 h-8 rounded-full bg-gradient-to-r from-teal-500 to-pink-500 flex items-center justify-center">
                         <span class="text-white text-sm">📞</span>
@@ -52,10 +52,30 @@
                     </div>
                 </a>
                 
-                <a href="/contact" 
-                   class="bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white px-5 py-2.5 rounded-lg font-semibold text-sm shadow-sm hover:shadow transition-all duration-300">
-                    Book Consultation
-                </a>
+                @auth
+                    @if(auth()->user()->isAdmin())
+                        <a href="{{ route('admin.dashboard') }}" 
+                           class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-5 py-2.5 rounded-lg font-semibold text-sm transition-all duration-300">
+                            Dashboard
+                        </a>
+                    @endif
+                    <form action="{{ route('logout') }}" method="POST" class="inline">
+                        @csrf
+                        <button type="submit" 
+                           class="bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white px-5 py-2.5 rounded-lg font-semibold text-sm shadow-sm hover:shadow transition-all duration-300">
+                            Logout
+                        </button>
+                    </form>
+                @else
+                    <a href="{{ route('login') }}" 
+                       class="text-gray-700 hover:text-teal-600 font-semibold text-sm px-4">
+                        Login
+                    </a>
+                    <a href="/contact" 
+                       class="bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white px-5 py-2.5 rounded-lg font-semibold text-sm shadow-sm hover:shadow transition-all duration-300">
+                        Book Consultation
+                    </a>
+                @endauth
             </div>
 
             {{-- MOBILE MENU BUTTON --}}
@@ -93,16 +113,36 @@
                         </div>
                         <div>
                             <p class="text-sm text-gray-600">Emergency Helpline</p>
-                            <a href="tel:+918891810022" class="text-base font-bold text-gray-900 hover:text-teal-600 transition-colors">
-                                +91 88918 10022
+                            <a href="tel:+918086497941" class="text-base font-bold text-gray-900 hover:text-teal-600 transition-colors">
+                                +91 80864 97941
                             </a>
                         </div>
                     </div>
                     
-                    <a href="/contact" 
-                       class="block w-full bg-gradient-to-r from-teal-500 to-teal-600 text-white text-center py-3 rounded-lg font-semibold text-sm shadow hover:shadow-md transition-all duration-300">
-                        Get Free Consultation
-                    </a>
+                    @auth
+                        @if(auth()->user()->isAdmin())
+                            <a href="{{ route('admin.dashboard') }}" 
+                               class="block w-full text-center py-3 text-gray-700 font-semibold border border-gray-200 rounded-lg mb-2">
+                                Admin Dashboard
+                            </a>
+                        @endif
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button type="submit" 
+                               class="block w-full bg-red-50 text-red-600 text-center py-3 rounded-lg font-semibold text-sm mb-4">
+                                Logout
+                            </button>
+                        </form>
+                    @else
+                        <a href="{{ route('login') }}" 
+                           class="block w-full text-center py-3 text-teal-600 font-semibold border border-teal-200 rounded-lg mb-2">
+                            Admin Login
+                        </a>
+                        <a href="/contact" 
+                           class="block w-full bg-gradient-to-r from-teal-500 to-teal-600 text-white text-center py-3 rounded-lg font-semibold text-sm shadow hover:shadow-md transition-all duration-300">
+                            Get Free Consultation
+                        </a>
+                    @endauth
                 </div>
 
                 {{-- SOCIAL LINKS --}}
