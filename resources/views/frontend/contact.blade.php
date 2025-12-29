@@ -129,14 +129,15 @@ Civil Station,<br>
 
 {{-- ================= MAP SECTION ================= --}}
 <section class="h-[400px] w-full bg-gray-200 relative">
-    {{-- Placeholder for Google Maps --}}
     <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.0!2d76.3!3d10.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDAwJzAwLjAiTiA3NsKwMTgnMDAuMCJF!5e0!3m2!1sen!2sin!4v1635000000000!5m2!1sen!2sin" 
-        width="100%" 
-        height="100%" 
-        class="border-0 filter grayscale hover:grayscale-0 transition-all duration-500" 
-        allowfullscreen="" 
-        loading="lazy">
+        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3912.643596121176!2d75.79063037504932!3d11.28758808889399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDE3JzE1LjMiTiA3NcKwNDcnMzUuNSJF!5e0!3m2!1sen!2sin!4v1767009982802!5m2!1sen!2sin"
+        width="100%"
+        height="100%"
+        class="border-0 filter grayscale hover:grayscale-0 transition-all duration-500"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
     </iframe>
 </section>
+
 @endsection

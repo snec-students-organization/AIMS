@@ -884,7 +884,7 @@
             <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/10" data-aos="fade-up" data-aos-delay="200">
                 <div class="flex gap-1 text-yellow-400 mb-4">★★★★★</div>
                 <p class="text-gray-200 italic mb-6">
-                    "AIMS CDC provided us with the guidance we desperately needed. Their early intervention program is top-notch."
+                    " provided us with the guidance we desperately needed. Their early intervention program is top-notch."
                 </p>
                 <div class="flex items-center gap-4">
                     <div class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center font-bold">SM</div>
