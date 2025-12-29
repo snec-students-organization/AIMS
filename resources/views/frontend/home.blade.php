@@ -282,7 +282,7 @@
                 {{-- SLIDE 1 --}}
                 <div class="swiper-slide">
                     {{-- Mobile Background (moved here for proper coverage) --}}
-                    <div class="lg:hidden mobile-slide-bg" style="background-image: url('{{ asset('images/image2.jpg') }}');"></div>
+                    <div class="lg:hidden mobile-slide-bg" style="background-image: url('{{ asset('images/image7.jpg') }}');"></div>
                     <div class="lg:hidden mobile-slide-overlay"></div>
 
                     <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10 w-full">
@@ -329,7 +329,7 @@
                         {{-- RIGHT IMAGE - Hidden on mobile, shown on desktop --}}
                         <div class="organic-shape-container hidden lg:block">
                             <div class="organic-image-mask">
-                                <img src="{{ asset('images/image2.jpg') }}"
+                                <img src="{{ asset('images/image7.jpg') }}"
                                      class="w-full h-full object-cover"
                                      alt="Wellness Experience">
                             </div>
@@ -341,7 +341,7 @@
                 {{-- SLIDE 2 --}}
                 <div class="swiper-slide">
                     {{-- Mobile Background --}}
-                    <div class="lg:hidden mobile-slide-bg" style="background-image: url('{{ asset('images/image1.png') }}');"></div>
+                    <div class="lg:hidden mobile-slide-bg" style="background-image: url('{{ asset('images/image8.jpg') }}');"></div>
                     <div class="lg:hidden mobile-slide-overlay"></div>
 
                     <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10 w-full">
@@ -387,7 +387,7 @@
                         {{-- RIGHT IMAGE - Hidden on mobile --}}
                         <div class="organic-shape-container hidden lg:block">
                             <div class="organic-image-mask">
-                                <img src="{{ asset('images/image1.png') }}"
+                                <img src="{{ asset('images/image6.jpg') }}"
                                      class="w-full h-full object-cover"
                                      alt="Expert Care">
                             </div>

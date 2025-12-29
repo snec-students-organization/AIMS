@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Admin Dashboard | AIMS CDC')
+@section('title', 'Admin Dashboard | GEMS')
 
 @section('content')
 <div class="bg-gray-100 min-h-screen py-12">
