@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - AIMS CDC</title>
+    <title>Login - GEMS</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -44,7 +44,7 @@
                     <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
                     <input type="email" id="email" name="email" required 
                            class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 transition-all outline-none"
-                           placeholder="admin@aimscdc.com"
+                           placeholder="admin@example.com"
                            value="{{ old('email') }}">
                     @error('email')
                         <p class="text-red-500 text-xs mt-1">{{ $message }}</p>

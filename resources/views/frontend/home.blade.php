@@ -282,7 +282,7 @@
                 {{-- SLIDE 1 --}}
                 <div class="swiper-slide">
                     {{-- Mobile Background (moved here for proper coverage) --}}
-                    <div class="lg:hidden mobile-slide-bg" style="background-image: url('{{ asset('images/image7.jpg') }}');"></div>
+                    <div class="lg:hidden mobile-slide-bg" style="background-image: url('{{ asset('images/image9.jpg') }}');"></div>
                     <div class="lg:hidden mobile-slide-overlay"></div>
 
                     <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10 w-full">
