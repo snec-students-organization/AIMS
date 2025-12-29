@@ -44,18 +44,18 @@
             {{-- Brand & Description --}}
             <div class="lg:col-span-2" data-aos="fade-up" data-aos-delay="100">
                 <div class="flex items-center gap-3 mb-6">
-                    <img src="{{ asset('images/logo-white.png') }}" 
+                    <img src="{{ asset('images/Logo.png') }}" 
                          alt="AIMS CDC Logo" 
                          class="h-12 w-auto">
                     <div>
-                        <h2 class="text-xl font-bold text-white">AIMS CDC</h2>
+                        <h2 class="text-xl font-bold text-white">GEMS</h2>
                         <p class="text-sm text-teal-400">Child Development Centre</p>
                     </div>
                 </div>
                 <p class="text-gray-300 leading-relaxed mb-6 max-w-lg">
                     Kerala's premier child development center providing comprehensive therapies, 
                     special education, and holistic care for children with developmental needs. 
-                    Empowering children to reach their full potential since 2013.
+                    Empowering children to reach their full potential .
                 </p>
                 
                 {{-- Social Media --}}
@@ -129,14 +129,12 @@
                 <ul class="space-y-3">
                     @php
                         $services = [
-                            'Speech & Language Therapy',
+                            'Speech  Therapy',
                             'Occupational Therapy',
                             'Special Education',
                             'Behavioral Therapy',
-                            'Psychological Counseling',
-                            'Early Intervention',
-                            'Parent Training',
-                            'Sensory Integration',
+                            'Psychotherapy & Counseling',
+                            'psychological Assessment',
                         ];
                     @endphp
                     
@@ -159,7 +157,7 @@
                         </div>
                         <div>
                             <p class="text-white font-medium">Our Location</p>
-                            <p class="text-gray-400 text-sm">Kerala, India</p>
+                            <p class="text-gray-400 text-sm">Pallipatu Ayyapa Temple Road ,  Civil Station, Kozhikode, 673020</p>
                         </div>
                     </li>
                     
@@ -169,8 +167,8 @@
                         </div>
                         <div>
                             <p class="text-white font-medium">Call Us</p>
-                            <a href="tel:+918891810022" class="text-gray-400 text-sm hover:text-teal-400 transition-colors">
-                                +91 88918 10022
+                            <a href="tel:+918086497941" class="text-gray-400 text-sm hover:text-teal-400 transition-colors">
+                                +91 8086497941
                             </a>
                         </div>
                     </li>
@@ -181,8 +179,8 @@
                         </div>
                         <div>
                             <p class="text-white font-medium">Email</p>
-                            <a href="mailto:info@aimscdc.com" class="text-gray-400 text-sm hover:text-teal-400 transition-colors">
-                                info@aimscdc.com
+                            <a href="mailto:gemsrehab@gmail.com" class="text-gray-400 text-sm hover:text-teal-400 transition-colors">
+                                gemsrehab@gmail.com
                             </a>
                         </div>
                     </li>
@@ -205,7 +203,7 @@
         <div class="pt-8 border-t border-gray-800">
             <div class="flex flex-col md:flex-row justify-between items-center gap-4">
                 <div class="text-gray-400 text-sm text-center md:text-left">
-                    © {{ date('Y') }} AIMS Child Development Centre. All rights reserved.
+                    © {{ date('Y') }} GEMS Child Development Centre. All rights reserved.
                 </div>
                 
                 <div class="flex items-center gap-6 text-sm text-gray-400">

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Our Services | AIMS CDC')
+@section('title', 'Our Services | GEMS')
 
 @section('content')
 

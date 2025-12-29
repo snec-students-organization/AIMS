@@ -968,8 +968,8 @@
                     <a href="/contact" class="bg-white text-teal-600 font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition-colors shadow-lg">
                         Book Appointment
                     </a>
-                    <a href="tel:+918891810022" class="bg-transparent border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-white/10 transition-colors">
-                        Call +91 88918 10022
+                    <a href="tel:+918086497941" class="bg-transparent border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-white/10 transition-colors">
+                        Call +91 8086497941
                     </a>
                 </div>
             </div>

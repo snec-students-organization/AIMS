@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Careers | AIMS CDC')
+@section('title', 'Careers | GEMS')
 
 @section('content')
 {{-- ================= HERO SECTION ================= --}}

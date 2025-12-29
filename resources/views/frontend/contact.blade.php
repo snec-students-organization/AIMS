@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Contact Us | AIMS CDC')
+@section('title', 'Contact Us | GEMS')
 
 @section('content')
 {{-- ================= HERO SECTION ================= --}}
@@ -105,7 +105,9 @@ Civil Station,<br>
                                 <option value="occupational">Occupational Therapy</option>
                                 <option value="behavioral">Behavioral Therapy</option>
                                 <option value="special_education">Special Education</option>
-                                <option value="psychology">Child Psychology</option>
+                                <option value="psychology">Psychological Assessment</option>
+                                <option value="psychologycouncil">Psychotherapy & Counselling</option>
+                                
                                 <option value="other">Other / General Inquiry</option>
                             </select>
                         </div>
