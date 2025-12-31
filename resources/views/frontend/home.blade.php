@@ -869,13 +869,13 @@
             <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/10" data-aos="fade-up" data-aos-delay="100">
                 <div class="flex gap-1 text-yellow-400 mb-4">★★★★★</div>
                 <p class="text-gray-200 italic mb-6">
-                    "The change we've seen in our son is miraculous. The therapists here are not just professionals; they are angels. Highly recommended!"
+                    "We are extremely happy with the therapy services provide by gems clinic. We have seen a remarkable improvement in our child over time. He has started trying to speak, his hyperactivity has reduced significantly, and his eye contact with people has improved a lot"
                 </p>
                 <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center font-bold">JD</div>
+                    <div class="w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center font-bold">HS</div>
                     <div>
-                        <div class="font-semibold">John Doe</div>
-                        <div class="text-xs text-gray-400">Parent of Ryan, 5 yrs</div>
+                        <div class="font-semibold">Hasna Kp</div>
+                        
                     </div>
                 </div>
             </div>
@@ -884,13 +884,13 @@
             <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/10" data-aos="fade-up" data-aos-delay="200">
                 <div class="flex gap-1 text-yellow-400 mb-4">★★★★★</div>
                 <p class="text-gray-200 italic mb-6">
-                    " provided us with the guidance we desperately needed. Their early intervention program is top-notch."
+                    "One of the best child development centres in Calicut! Only after reaching here did I truly feel that my son has received the right guidance and support. The staff are very professional, caring, and patient, and they give individual attention to every child. I can see a real improvement in my son's confidence and overall development. Highly recommend this centre to any parent looking for the best guidance for their child."
                 </p>
                 <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center font-bold">SM</div>
+                    <div class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center font-bold">FA</div>
                     <div>
-                        <div class="font-semibold">Sarah M.</div>
-                        <div class="text-xs text-gray-400">Mother of 3 yr old</div>
+                        <div class="font-semibold">Fathima va.</div>
+                        
                     </div>
                 </div>
             </div>
@@ -899,13 +899,13 @@
             <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/10" data-aos="fade-up" data-aos-delay="300">
                 <div class="flex gap-1 text-yellow-400 mb-4">★★★★★</div>
                 <p class="text-gray-200 italic mb-6">
-                    "Professional, caring, and result-oriented. We travel 50km just to come here because it's worth it."
+                    "The best therapy centre for developmental delayed kids. Excellent teaching and skill development methods using Kids are very happy because of friendly atmosphere."
                 </p>
                 <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center font-bold">RK</div>
+                    <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center font-bold">AM</div>
                     <div>
-                        <div class="font-semibold">Rajesh K.</div>
-                        <div class="text-xs text-gray-400">Father</div>
+                        <div class="font-semibold">Aneesh meladath.</div>
+                        
                     </div>
                 </div>
             </div>
