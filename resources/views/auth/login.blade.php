@@ -76,7 +76,7 @@
         </div>
 
         <p class="text-center text-gray-500 text-sm mt-8">
-            &copy; {{ date('Y') }} AIMS CDC. All rights reserved.
+            &copy; {{ date('Y') }} GEMS. All rights reserved.
         </p>
     </div>
 </body>
