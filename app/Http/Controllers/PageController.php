@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Gallery; 
 
 class PageController extends Controller
 {
@@ -22,9 +23,10 @@ class PageController extends Controller
     }
 
     public function gallery()
-    {
-        return view('frontend.gallery');
-    }
+{
+    $galleries = Gallery::latest()->get(); // ✅ FETCH DATA
+    return view('frontend.gallery', compact('galleries')); // ✅ PASS TO VIEW
+}
 
     public function blog()
     {
