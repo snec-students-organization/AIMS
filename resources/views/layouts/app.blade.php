@@ -153,7 +153,7 @@
     {{-- Floating Action Buttons --}}
     <div class="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3">
         {{-- WhatsApp --}}
-        <a href="https://wa.me/918086497941?text=Hello%20AIMS%20CDC%2C%20I%20need%20information%20about%20your%20services" 
+        <a href="https://wa.me/917994502501?text=Hello%20AIMS%20CDC%2C%20I%20need%20information%20about%20your%20services" 
            target="_blank"
            class="group flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-xl transition-all duration-300 hover:shadow-2xl hover:scale-105"
            aria-label="Chat on WhatsApp">
@@ -164,7 +164,7 @@
         </a>
         
         {{-- Phone Call --}}
-        <a href="tel:+918086497941" 
+        <a href="tel:+917994502501" 
            class="group flex items-center gap-3 bg-blue-500 hover:bg-blue-600 text-white p-4 rounded-full shadow-xl transition-all duration-300 hover:shadow-2xl hover:scale-105"
            aria-label="Call AIMS CDC">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
