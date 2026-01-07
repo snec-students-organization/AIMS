@@ -13,7 +13,7 @@
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
         <div class="text-center" data-aos="fade-up">
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-                About AIMS CDC
+                About GEMS
             </h1>
             <p class="text-xl text-teal-100 max-w-3xl mx-auto leading-relaxed">
                 Dedicated to empowering children with developmental needs through holistic, 
@@ -144,7 +144,7 @@
                     </div>
                 </div>
                 <div class="mt-6">
-                    <h3 class="text-2xl font-bold text-gray-900">Smitha K</h3>
+                    <h3 class="text-2xl font-bold text-gray-900">Mushtaq</h3>
                     <p class="text-teal-600 font-medium text-lg">Founder & Director</p>
                 </div>
             </div>
@@ -153,7 +153,7 @@
                 <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">A Message from the Founder</h2>
                 <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
                     <p>
-                        "Welcome to AIMS Child Development Centre. Our journey began with a simple yet profound belief: that every child is unique and capable of amazing things when given the right support."
+                        "Welcome to GEMS Child Development Centre. Our journey began with a simple yet profound belief: that every child is unique and capable of amazing things when given the right support."
                     </p>
                     <p>
                         "Over the past decade, we have had the privilege of walking alongside hundreds of families, witnessing the incredible resilience of children and the transforming power of early intervention. We understand that navigating developmental challenges can be overwhelming, which is why we've built a center that isn't just a clinic, but a supportive community."
