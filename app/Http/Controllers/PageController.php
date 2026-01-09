@@ -38,6 +38,11 @@ class PageController extends Controller
         return view('frontend.career');
     }
 
+    public function team()
+    {
+        return view('frontend.team');
+    }
+
     public function contact()
     {
         return view('frontend.contact');

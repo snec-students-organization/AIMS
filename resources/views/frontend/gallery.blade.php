@@ -4,12 +4,18 @@
 
 @section('content')
 {{-- ================= HERO SECTION ================= --}}
-<section class="bg-gray-50 py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6" data-aos="fade-up">
+<section class="relative overflow-hidden py-20 lg:py-28" style="background-color: #32A8B8;">
+    {{-- Background elements --}}
+    <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-white/10 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-[#32A8B8] to-transparent"></div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6" data-aos="fade-up">
             Our Gallery
         </h1>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        <p class="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="100">
             Glimpses of our center, activities, and the happy smiles of our children.
         </p>
     </div>

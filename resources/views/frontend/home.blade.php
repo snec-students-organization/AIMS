@@ -24,7 +24,7 @@
         }
 
         .hero-title {
-            color: var(--primary-teal);
+            color: #32A8B8;
             font-weight: 800;
             line-height: 1.1;
         }
@@ -62,7 +62,7 @@
                 font-size: 2.25rem !important;
                 margin-bottom: 1.25rem !important;
                 text-align: center;
-                color: #006684 !important;
+                color: #32A8B8 !important;
                 position: relative;
                 z-index: 10;
                 padding: 0 1.5rem;
@@ -662,7 +662,7 @@
                     
                     <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                         Specialized Therapies
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-pink-500 block">
+                        <span class="text-transparent bg-clip-text block" style="background: linear-gradient(to right, #32A8B8, #EA6F71); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
                             For Holistic Development
                         </span>
                     </h2>
@@ -674,91 +674,85 @@
                 </div>
 
                 {{-- SERVICES GRID --}}
-                <div class="grid sm:grid-cols-2 gap-4 mb-12">
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                     @php
                         $services = [
                             [
                                 'title' => 'PSYCHOLOGICAL ASSESSMENT',
-                                'description' => 'IQ assessment, learning disability assessment, personality assessment, cognitive and behavioral assessment for tailored intervention strategies.',
-                                'icon' => '🧠',
-                                'color' => 'teal',
+                                'description' => 'IQ assessment, learning disability assessment, personality assessment, cognitive and behavioral assessment.',
+                                'icon' => 'public/images/icons/services/psychological-assessment.svg',
+                                'color' => 'bg-teal-400',
+                                'blob' => 'rounded-[30%_70%_70%_30%/30%_30%_70%_70%]',
                                 'delay' => 100
                             ],
                             [
                                 'title' => 'BEHAVIOURAL THERAPY',
-                                'description' => 'Improving intellectual and socio-adaptive functioning using scientific psychological techniques to manage behavioral problems.',
-                                'icon' => '🌟',
-                                'color' => 'pink',
+                                'description' => 'Scientific techniques to improve socio-adaptive functioning and manage behavior.',
+                                'icon' => 'public/images/icons/services/behavioural-therapy.svg',
+                                'color' => 'bg-pink-400',
+                                'blob' => 'rounded-[60%_40%_30%_70%/60%_30%_70%_40%]',
                                 'delay' => 200
                             ],
                             [
                                 'title' => 'SPEECH THERAPY',
-                                'description' => 'Addressing challenges with speech sounds, language development, fluency, and social communication skills.',
-                                'icon' => '🗣️',
-                                'color' => 'blue',
-                                'delay' => 300
+                                'description' => 'Improving speech sounds, fluency, language development, and communication.',
+                                'icon' => 'public/images/icons/services/speech-therapy.svg',
+                                'color' => 'bg-sky-400',
+                                'blob' => 'rounded-[40%_60%_60%_40%/70%_30%_70%_30%]',
+                                'delay' => 100
                             ],
                             [
                                 'title' => 'SPECIAL EDUCATION',
-                                'description' => 'Individualized educational plans using VAKT approach for children with academic skill deficits in reading, writing, and mathematics.',
-                                'icon' => '📚',
-                                'color' => 'purple',
-                                'delay' => 400
+                                'description' => 'Individualized education plans using VAKT methodology.',
+                                'icon' => 'public/images/icons/services/special-education.svg',
+                                'color' => 'bg-red-400',
+                                'blob' => 'rounded-[50%_50%_20%_80%/25%_80%_20%_75%]',
+                                'delay' => 200
                             ],
                             [
                                 'title' => 'OCCUPATIONAL THERAPY',
-                                'description' => 'Strengthening fine motor, gross motor, sensory motor skills and overcoming sensory challenges for daily living activities.',
-                                'icon' => '👐',
-                                'color' => 'orange',
-                                'delay' => 500
+                                'description' => 'Developing fine motor, gross motor, and sensory integration skills.',
+                                'icon' => 'public/images/icons/services/occupational-therapy.svg',
+                                'color' => 'bg-orange-400',
+                                'blob' => 'rounded-[30%_70%_40%_60%/50%_60%_40%_50%]',
+                                'delay' => 300
                             ],
                             [
                                 'title' => 'PSYCHOTHERAPY & COUNSELLING',
-                                'description' => 'RCI licensed psychologists providing individual/group psychotherapy using evidence-based practices.',
-                                'icon' => '💭',
-                                'color' => 'indigo',
-                                'delay' => 600
+                                'description' => 'Evidence-based psychotherapy by licensed professionals.',
+                                'icon' => 'public/images/icons/services/psychotherapy.svg',
+                                'color' => 'bg-yellow-400',
+                                'blob' => 'rounded-[70%_30%_50%_50%/30%_30%_70%_70%]',
+                                'delay' => 400
                             ],
                         ];
                     @endphp
 
                     @foreach($services as $service)
-    <a href="/services"
-       class="group relative block focus:outline-none"
-       data-aos="fade-up"
-       data-aos-delay="{{ $service['delay'] }}">
+                        <a href="/services" class="glass-card p-6 rounded-[2rem] group hover:bg-white/60 transition-all duration-500 relative flex flex-col h-full shadow-lg border-white/50 block hover:no-underline text-center" data-aos="fade-up" data-aos-delay="{{ $service['delay'] }}">
+                            <div class="space-y-4 flex-grow flex flex-col items-center">
+                                <div class="w-12 h-12 {{ $service['color'] }} {{ $service['blob'] }} flex items-center justify-center p-3 shadow-lg transform group-hover:scale-110 transition-transform duration-500">
+                                    <img src="{{ asset(str_replace('public/', '', $service['icon'])) }}" 
+                                         alt="{{ $service['title'] }}" 
+                                         class="w-full h-full brightness-0 invert object-contain">
+                                </div>
+                                <div class="space-y-2">
+                                    <h3 class="text-xl font-bold text-gray-800 tracking-tight leading-snug group-hover:text-teal-600 transition-colors">{{ $service['title'] }}</h3>
+                                    <p class="text-gray-600 leading-relaxed text-sm">{{ $service['description'] }}</p>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8 pt-4 border-t border-gray-100/50 flex justify-center items-center text-gray-500 font-bold text-xs tracking-wide group/link transition-colors">
+                                <div class="flex items-center gap-2">
+                                    <span>Learn more</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transform group-hover/link:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    @endforeach
 
-        <div class="absolute inset-0 bg-gradient-to-br from-{{ $service['color'] }}-50 to-white rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-        <div class="relative bg-white p-5 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
-            <div class="flex items-start gap-4">
-                <div class="flex-shrink-0">
-                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-{{ $service['color'] }}-500 to-{{ $service['color'] }}-600 flex items-center justify-center text-white text-xl">
-                        {{ $service['icon'] }}
-                    </div>
-                </div>
-
-                <div class="flex-1">
-                    <h3 class="font-bold text-gray-900 text-base mb-2">
-                        {{ $service['title'] }}
-                    </h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        {{ $service['description'] }}
-                    </p>
-                </div>
-            </div>
-
-            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center">
-                <span class="text-xs text-gray-500 group-hover:text-{{ $service['color'] }}-600 transition-colors">
-                    Learn more
-                </span>
-                <span class="text-gray-400 group-hover:text-{{ $service['color'] }}-500 transform group-hover:translate-x-1 transition-transform">
-                    →
-                </span>
-            </div>
-        </div>
-    </a>
-@endforeach
 
                 </div>
 
@@ -833,23 +827,23 @@
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="p-6 bg-teal-50 rounded-2xl border border-teal-100" data-aos="fade-up" data-aos-delay="100">
-                <div class="w-12 h-12 bg-teal-500 text-white rounded-lg flex items-center justify-center text-2xl mb-4">🏆</div>
+            <div class="p-6 rounded-2xl border" style="background-color: rgba(50, 168, 184, 0.05); border-color: rgba(50, 168, 184, 0.2);" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-12 h-12 text-white rounded-lg flex items-center justify-center text-2xl mb-4" style="background-color: #32A8B8;">🏆</div>
                 <h3 class="font-bold text-lg mb-2 text-gray-900">Expert Team</h3>
                 <p class="text-gray-600 text-sm">Highly qualified and RCI certified professionals dedicated to your child.</p>
             </div>
-            <div class="p-6 bg-pink-50 rounded-2xl border border-pink-100" data-aos="fade-up" data-aos-delay="200">
-                <div class="w-12 h-12 bg-pink-500 text-white rounded-lg flex items-center justify-center text-2xl mb-4">🔬</div>
+            <div class="p-6 rounded-2xl border" style="background-color: rgba(234, 111, 113, 0.05); border-color: rgba(234, 111, 113, 0.2);" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-12 h-12 text-white rounded-lg flex items-center justify-center text-2xl mb-4" style="background-color: #EA6F71;">🔬</div>
                 <h3 class="font-bold text-lg mb-2 text-gray-900">Evidence Based</h3>
                 <p class="text-gray-600 text-sm">Scientific approach to therapy with proven methodologies and tracking.</p>
             </div>
-            <div class="p-6 bg-blue-50 rounded-2xl border border-blue-100" data-aos="fade-up" data-aos-delay="300">
-                <div class="w-12 h-12 bg-blue-500 text-white rounded-lg flex items-center justify-center text-2xl mb-4">🏰</div>
+            <div class="p-6 rounded-2xl border" style="background-color: rgba(50, 168, 184, 0.05); border-color: rgba(50, 168, 184, 0.2);" data-aos="fade-up" data-aos-delay="300">
+                <div class="w-12 h-12 text-white rounded-lg flex items-center justify-center text-2xl mb-4" style="background-color: #32A8B8;">🏰</div>
                 <h3 class="font-bold text-lg mb-2 text-gray-900">World Class Facility</h3>
                 <p class="text-gray-600 text-sm">Child-friendly, safe, and stimulating environment for optimal learning.</p>
             </div>
-            <div class="p-6 bg-orange-50 rounded-2xl border border-orange-100" data-aos="fade-up" data-aos-delay="400">
-                <div class="w-12 h-12 bg-orange-500 text-white rounded-lg flex items-center justify-center text-2xl mb-4">🤝</div>
+            <div class="p-6 rounded-2xl border" style="background-color: rgba(233, 157, 29, 0.05); border-color: rgba(233, 157, 29, 0.2);" data-aos="fade-up" data-aos-delay="400">
+                <div class="w-12 h-12 text-white rounded-lg flex items-center justify-center text-2xl mb-4" style="background-color: #E99D1D;">🤝</div>
                 <h3 class="font-bold text-lg mb-2 text-gray-900">Parent Support</h3>
                 <p class="text-gray-600 text-sm">Regular counseling, training workships, and support groups for families.</p>
             </div>
@@ -858,21 +852,21 @@
 </section>
 
 {{-- ================= TESTIMONIALS ================= --}}
-<section class="py-16 lg:py-24 bg-gradient-to-br from-teal-900 to-slate-900 text-white relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+<section class="py-16 lg:py-24 text-white relative overflow-hidden" style="background: linear-gradient(135deg, #d6454b 0%, #c27c0e 30%, #7db818 60%, #14b8a6 100%);">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-white/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
     
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16" data-aos="fade-up">Stories of Hope & Success</h2>
         
         <div class="grid md:grid-cols-3 gap-8">
             {{-- Testimonial 1 --}}
-            <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/10" data-aos="fade-up" data-aos-delay="100">
-                <div class="flex gap-1 text-yellow-400 mb-4">★★★★★</div>
-                <p class="text-gray-200 italic mb-6">
+            <div class="bg-white/20 backdrop-blur-md p-8 rounded-2xl border border-white/20 shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex gap-1 text-white mb-4">★★★★★</div>
+                <p class="text-white italic mb-6">
                     "We are extremely happy with the therapy services provide by gems clinic. We have seen a remarkable improvement in our child over time. He has started trying to speak, his hyperactivity has reduced significantly, and his eye contact with people has improved a lot"
                 </p>
                 <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center font-bold">HS</div>
+                    <div class="w-10 h-10 bg-white text-[#32A8B8] rounded-full flex items-center justify-center font-bold shadow-md">HS</div>
                     <div>
                         <div class="font-semibold">Hasna Kp</div>
                         
@@ -881,13 +875,13 @@
             </div>
 
             {{-- Testimonial 2 --}}
-            <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/10" data-aos="fade-up" data-aos-delay="200">
-                <div class="flex gap-1 text-yellow-400 mb-4">★★★★★</div>
-                <p class="text-gray-200 italic mb-6">
+            <div class="bg-white/20 backdrop-blur-md p-8 rounded-2xl border border-white/20 shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex gap-1 text-white mb-4">★★★★★</div>
+                <p class="text-white italic mb-6">
                     "One of the best child development centres in Calicut! Only after reaching here did I truly feel that my son has received the right guidance and support. The staff are very professional, caring, and patient, and they give individual attention to every child. I can see a real improvement in my son's confidence and overall development. Highly recommend this centre to any parent looking for the best guidance for their child."
                 </p>
                 <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center font-bold">FA</div>
+                    <div class="w-10 h-10 bg-white text-[#EA6F71] rounded-full flex items-center justify-center font-bold shadow-md">FA</div>
                     <div>
                         <div class="font-semibold">Fathima va.</div>
                         
@@ -896,13 +890,13 @@
             </div>
 
             {{-- Testimonial 3 --}}
-            <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/10" data-aos="fade-up" data-aos-delay="300">
-                <div class="flex gap-1 text-yellow-400 mb-4">★★★★★</div>
-                <p class="text-gray-200 italic mb-6">
+            <div class="bg-white/20 backdrop-blur-md p-8 rounded-2xl border border-white/20 shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                <div class="flex gap-1 text-white mb-4">★★★★★</div>
+                <p class="text-white italic mb-6">
                     "The best therapy centre for developmental delayed kids. Excellent teaching and skill development methods using Kids are very happy because of friendly atmosphere."
                 </p>
                 <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center font-bold">AM</div>
+                    <div class="w-10 h-10 bg-white text-[#E99D1D] rounded-full flex items-center justify-center font-bold shadow-md">AM</div>
                     <div>
                         <div class="font-semibold">Aneesh meladath.</div>
                         
@@ -955,7 +949,7 @@
 {{-- ================= FINAL CTA ================= --}}
 <section class="py-20 bg-white relative">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-gradient-to-r from-teal-500 to-pink-500 rounded-3xl p-8 sm:p-16 text-center text-white relative overflow-hidden shadow-2xl" data-aos="zoom-in">
+        <div class="rounded-3xl p-8 sm:p-16 text-center text-white relative overflow-hidden shadow-2xl" style="background: linear-gradient(135deg, #d6454b 0%, #c27c0e 30%, #7db818 60%, #14b8a6 100%);" data-aos="zoom-in">
             <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
             <div class="absolute bottom-0 left-0 w-40 h-40 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
             

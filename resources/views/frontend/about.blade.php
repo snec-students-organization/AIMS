@@ -4,9 +4,9 @@
 
 @section('content')
 {{-- ================= HERO SECTION ================= --}}
-<section class="relative bg-teal-900 overflow-hidden">
+<section class="relative overflow-hidden" style="background-color: #32A8B8;">
     <div class="absolute inset-0">
-        <div class="absolute inset-0 bg-gradient-to-r from-teal-900 to-teal-800 opacity-90"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-[#32A8B8] to-[#2d96a5] opacity-90"></div>
         {{-- Pattern/Texture can go here --}}
     </div>
     
@@ -171,12 +171,12 @@
 </section>
 
 {{-- CTA --}}
-<section class="py-16 bg-gradient-to-r from-teal-600 to-teal-800 text-white">
+<section class="py-16 text-white" style="background-color: #32A8B8;">
     <div class="max-w-4xl mx-auto px-4 text-center" data-aos="zoom-in">
         <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Journey?</h2>
-        <p class="text-xl text-teal-100 mb-8">Book a consultation with our experts today and let's discuss how we can support your child's growth.</p>
+        <p class="text-xl text-white/90 mb-8">Book a consultation with our experts today and let's discuss how we can support your child's growth.</p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="/contact" class="bg-white text-teal-800 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg">
+            <a href="/contact" class="bg-white text-[#32A8B8] px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg">
                 Contact Us Now
             </a>
             <a href="/services" class="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-colors">

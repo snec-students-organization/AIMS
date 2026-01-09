@@ -14,6 +14,7 @@ Route::get('/services', [PageController::class, 'services'])->name('services');
 Route::get('/gallery', [PageController::class, 'gallery'])->name('gallery');
 Route::get('/blog', [PageController::class, 'blog'])->name('blog');
 Route::get('/career', [PageController::class, 'career'])->name('career');
+Route::get('/team', [PageController::class, 'team'])->name('team');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 Route::post('/contact', [PageController::class, 'storeContact'])->name('contact.store');
 

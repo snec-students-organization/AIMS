@@ -5,11 +5,11 @@
 @section('content')
 
 {{-- ================= HERO SECTION ================= --}}
-<section class="relative bg-teal-900 overflow-hidden py-20 lg:py-28">
+<section class="relative overflow-hidden py-20 lg:py-28" style="background-color: #32A8B8;">
     {{-- Background elements --}}
     <div class="absolute inset-0 overflow-hidden">
-        <div class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-teal-800/50 blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-teal-900 to-transparent"></div>
+        <div class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-white/10 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-[#32A8B8] to-transparent"></div>
     </div>
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -138,7 +138,7 @@
             </p>
             <a href="/contact"
                aria-label="Schedule an assessment"
-               class="inline-block bg-teal-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-teal-700 transition-colors shadow-lg">
+               class="inline-block bg-[#32A8B8] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#2d96a5] transition-colors shadow-lg">
                 Schedule an Assessment
             </a>
         </div>

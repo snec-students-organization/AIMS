@@ -102,6 +102,7 @@
                         $quickLinks = [
                             ['name' => 'Home', 'url' => '/', 'icon' => '🏠'],
                             ['name' => 'About Us', 'url' => '/about', 'icon' => '👥'],
+                            ['name' => 'Our Team', 'url' => '/team', 'icon' => '🤝'],
                             ['name' => 'Services', 'url' => '/services', 'icon' => '🎯'],
                             ['name' => 'Testimonials', 'url' => '/testimonials', 'icon' => '⭐'],
                             ['name' => 'Gallery', 'url' => '/gallery', 'icon' => '🖼️'],
