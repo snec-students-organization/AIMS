@@ -533,19 +533,70 @@
         display: none;
     }
 }
+/* Loader Logo */
+.loader-logo {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: logoFloat 2.5s ease-in-out infinite;
+}
+
+.loader-logo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 25px rgba(0,0,0,0.15));
+}
+
+/* Subtle floating animation */
+@keyframes logoFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+.loader-logo::before {
+    content: "";
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background: radial-gradient(circle, rgba(50,168,184,0.25), transparent 70%);
+    filter: blur(20px);
+    z-index: -1;
+}
+
 
     </style>
 @endpush
 
 {{-- Loading Screen --}}
+{{-- Loading Screen --}}
 <div class="loader" id="loader">
     <div class="loader-content">
-        <div class="loader-text">Gems</div>
+        
+        {{-- Logo --}}
+        <div class="loader-logo">
+            <img 
+                src="{{ asset('images/Logo.png') }}" 
+                alt="GEMS Logo"
+            >
+        </div>
+
+        
+
+        {{-- Progress Bar --}}
         <div class="loader-bar">
             <div class="loader-progress"></div>
         </div>
+
     </div>
 </div>
+
 
 {{-- Global Background --}}
 <div class="page-bg-image"></div>
