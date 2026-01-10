@@ -391,10 +391,9 @@
         align-items: stretch;
     }
 
-    /* REMOVE HERO CONTENT TOP PADDING */
+    /* REMOVE HERO CONTENT PADDING */
     .hero-content {
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
+        padding: 0 !important;
     }
 
     /* MAKE HERO TOUCH NAVBAR */
