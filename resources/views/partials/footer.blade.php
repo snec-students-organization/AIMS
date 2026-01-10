@@ -9,32 +9,39 @@
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {{-- Newsletter section --}}
-        <div class="relative bg-gradient-to-r from-teal-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 mb-16 border border-teal-500/20" data-aos="fade-up">
-            <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-teal-500 to-pink-500 text-white px-6 py-2 rounded-full font-semibold text-sm">
+        <div class="relative overflow-hidden rounded-[2.5rem] p-8 sm:p-12 mb-16 shadow-[0_20px_50px_rgba(0,0,0,0.02)] border border-white/[0.03] backdrop-blur-2xl" 
+             style="background: linear-gradient(135deg, rgba(50,168,184,0.4), rgba(0,167,157,0.3), rgba(151,180,26,0.4));"
+             data-aos="fade-up">
+            
+            {{-- Decorative Glow Blobs --}}
+            <div class="absolute -top-24 -left-24 w-80 h-80 bg-white/20 rounded-full blur-[100px]"></div>
+            <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-white/10 rounded-full blur-[120px]"></div>
+
+            <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-white/60 text-[#00A79D] px-8 py-2.5 rounded-2xl font-bold text-xs uppercase tracking-widest shadow-lg backdrop-blur-md border border-white/10">
                 Stay Updated
             </div>
             
-            <div class="grid lg:grid-cols-2 gap-8 items-center">
-                <div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Subscribe to Our Newsletter</h3>
-                    <p class="text-gray-300">Get the latest updates on child development, parenting tips, and center news.</p>
+            <div class="grid lg:grid-cols-2 gap-10 items-center relative z-10">
+                <div class="text-left">
+                    <h3 class="text-3xl sm:text-4xl font-extrabold text-white mb-4 leading-tight">Subscribe to Our Newsletter</h3>
+                    <p class="text-white/60 text-lg max-w-md">Get the latest updates on child development, parenting tips, and center news.</p>
                 </div>
                 
                 <form id="newsletter-form" class="relative">
-                    <div class="flex flex-col sm:flex-row gap-3">
+                    <div class="flex flex-col sm:flex-row gap-4">
                         <input type="email" 
                                placeholder="Your email address" 
                                required
-                               class="flex-1 bg-white/10 border border-gray-600 text-white placeholder-gray-400 rounded-xl px-5 py-3 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent">
+                               class="flex-1 bg-white/10 border border-white/30 text-white placeholder-white/60 rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-white/50 backdrop-blur-md transition-all">
                         <button type="submit"
-                                class="bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2">
+                                class="bg-white text-[#00A79D] font-bold px-8 py-4 rounded-2xl shadow-xl hover:bg-gray-50 transition-all duration-300 flex items-center justify-center gap-2 group">
                             <span>Subscribe</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                            <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                             </svg>
                         </button>
                     </div>
-                    <p id="form-message" class="text-sm mt-3 text-gray-400 hidden">Thank you for subscribing!</p>
+                    <p id="form-message" class="text-sm mt-4 text-white font-medium hidden">Thank you for subscribing!</p>
                 </form>
             </div>
         </div>
