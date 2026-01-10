@@ -2,7 +2,6 @@
 
 @section('content')
 
-{{-- ================= HERO SECTION ================= --}}
 @push('head')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -12,484 +11,852 @@
             --secondary-orange: #e99e5a;
             --text-dark: #1a1a1a;
             --soft-bg: #f8fafc;
+            --gradient-1: linear-gradient(135deg, #00A79D 0%, #32A8B8 100%);
+            --gradient-2: linear-gradient(135deg, #EA6F71 0%, #FF9A8B 100%);
+            --gradient-3: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
 
         body {
             font-family: 'Outfit', sans-serif;
+            overflow-x: hidden;
         }
 
         .hero-section {
-            background-color: var(--soft-bg);
-            overflow: visible;
+            position: relative;
+            overflow: hidden;
+            background: transparent;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
         }
 
+        /* Animated Gradient Background */
+        .gradient-bg {
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                rgba(0, 167, 157, 0.08) 0%,
+                rgba(50, 168, 184, 0.05) 25%,
+                rgba(234, 111, 113, 0.08) 50%,
+                rgba(102, 126, 234, 0.05) 75%,
+                rgba(118, 75, 162, 0.08) 100%
+            );
+            animation: gradientShift 15s ease infinite;
+            z-index: -2;
+        }
+
+        /* Fixed Global Background Image */
+        .page-bg-image {
+            position: fixed;
+            inset: 0;
+            z-index: -3;
+            background-image: url('{{ asset("images/image8.jpg") }}');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            animation: slowZoom 20s infinite alternate ease-in-out;
+        }
+
+        /* Animated Backdrop Blobs */
+        .blur-blobs {
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.15;
+            animation: floatBlob 25s infinite alternate ease-in-out;
+        }
+
+        .blob-1 {
+            width: 600px;
+            height: 600px;
+            background: #32A8B8;
+            top: -10%;
+            left: -10%;
+            animation-duration: 30s;
+        }
+
+        .blob-2 {
+            width: 500px;
+            height: 500px;
+            background: #EA6F71;
+            bottom: -5%;
+            right: -5%;
+            animation-duration: 35s;
+            animation-delay: -5s;
+        }
+
+        .blob-3 {
+            width: 400px;
+            height: 400px;
+            background: #E99D1D;
+            top: 40%;
+            left: 50%;
+            animation-duration: 40s;
+            animation-delay: -10s;
+        }
+
+        .page-bg-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            background: linear-gradient(
+                to bottom,
+                rgba(255, 255, 255, 0.85) 0%,
+                rgba(255, 255, 255, 0.75) 40%,
+                rgba(255, 255, 255, 0.9) 100%
+            );
+        }
+
+        /* Floating Particles */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(0, 102, 132, 0.05);
+            border-radius: 50%;
+            animation: float 15s infinite ease-in-out;
+        }
+
+        /* Content Container */
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            padding: 4rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* Modern Title with Gradient Animation */
         .hero-title {
-            color: #32A8B8;
+            background: linear-gradient(45deg, 
+                #00A79D 0%, 
+                #32A8B8 25%, 
+                #EA6F71 50%, 
+                #FF9A8B 75%, 
+                #667eea 100%
+            );
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
             font-weight: 800;
             line-height: 1.1;
+            animation: gradientText 8s ease infinite;
+            margin-bottom: 2rem;
         }
 
-        @media (max-width: 1023px) {
-            .hero-section {
-                background: #f0fbff; 
-                padding: 0 !important;
-                min-height: 85vh;
-            }
-            .hero-section .swiper-slide {
-                min-height: 85vh;
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                padding-top: 4rem;
-                overflow: hidden;
-            }
-            .mobile-slide-bg {
-                position: absolute;
-                inset: 0;
-                background-size: cover;
-                background-position: center 85%;
-                background-repeat: no-repeat;
-                z-index: 1;
-            }
-            .mobile-slide-overlay {
-                position: absolute;
-                inset: 0;
-                background: linear-gradient(to bottom, #f0fbff 0%, #f0fbff 20%, rgba(240, 251, 255, 0.3) 50%, transparent 100%);
-                z-index: 2;
-            }
-            .hero-title {
-                font-size: 2.25rem !important;
-                margin-bottom: 1.25rem !important;
-                text-align: center;
-                color: #32A8B8 !important;
-                position: relative;
-                z-index: 10;
-                padding: 0 1.5rem;
-                line-height: 1.2;
-            }
-            .hero-description {
-                font-size: 1rem !important;
-                margin-bottom: 2.5rem !important;
-                text-align: center;
-                color: #4a5568 !important;
-                position: relative;
-                z-index: 10;
-                padding: 0 2rem;
-                max-width: 100%;
-                line-height: 1.6;
-            }
+        /* Modern Description */
+        .hero-description {
+            color: rgba(26, 26, 26, 0.7);
+            font-size: 1.25rem;
+            line-height: 1.6;
+            max-width: 600px;
+            margin-bottom: 3rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease forwards;
         }
 
-        .btn-orange {
-            background-color: var(--secondary-orange);
+        /* Modern Button with Hover Effects */
+        .btn-modern {
+            position: relative;
+            background: linear-gradient(45deg, #e99e5a, #ff7a45);
             color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 9999px;
+            padding: 1.25rem 3rem;
+            border-radius: 50px;
             font-weight: 600;
+            font-size: 1.1rem;
+            border: none;
+            overflow: hidden;
             transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
-            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 10px 30px rgba(233, 158, 90, 0.3);
         }
 
-        .btn-orange:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(233, 158, 90, 0.3);
-            background-color: #d88d4a;
-        }
-
-        .organic-shape-container {
-            position: relative;
-            z-index: 1;
-        }
-
-        .organic-image-mask {
-            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            overflow: hidden;
+        .btn-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
             width: 100%;
             height: 100%;
-            min-height: 500px;
-            object-fit: cover;
-            background: #fff;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
         }
 
-        .dept-menu-card {
-            background: rgba(255, 255, 255, 0.95);
+        .btn-modern:hover::before {
+            left: 100%;
+        }
+
+        .btn-modern:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(233, 158, 90, 0.4);
+        }
+
+        /* Modern Image Container */
+        .modern-image-container {
+            position: relative;
+            perspective: 1000px;
+        }
+
+        .image-3d {
+            width: 100%;
+            height: 500px;
+            border-radius: 20px;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            transform: rotateY(-10deg) rotateX(5deg);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.3),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+            animation: floatImage 6s ease-in-out infinite;
+            transition: transform 0.5s ease;
+        }
+
+        .image-3d:hover {
+            transform: rotateY(-5deg) rotateX(0deg);
+        }
+
+        /* Glass Morphism Card */
+        .glass-card {
+            background: rgba(0, 102, 132, 0.03);
             backdrop-filter: blur(10px);
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            width: 320px;
-            position: absolute;
-            top: 20px;
-            left: -100px;
-            z-index: 50;
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid rgba(0, 102, 132, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 102, 132, 0.05);
+            margin-top: 2rem;
+            animation: slideInUp 0.8s ease forwards;
+            animation-delay: 0.3s;
+            opacity: 0;
         }
 
-        @media (max-width: 1024px) {
-            .dept-menu-card {
-                position: static;
-                width: 100%;
-                margin-bottom: 2rem;
-                left: 0;
-            }
-            .organic-image-mask {
-                min-height: 350px;
-                border-radius: 40px;
-                margin-top: 2rem;
-            }
-            .organic-shape-container {
-                padding: 0 10px;
-            }
-        }
-
-        .dept-item {
-            padding: 0.85rem 1.25rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            color: var(--primary-teal);
-            font-size: 0.95rem;
-            font-weight: 500;
-            border-bottom: 1px solid #f1f5f9;
-            transition: background 0.2s;
-            cursor: pointer;
-        }
-
-        .dept-item:last-child {
-            border-bottom: none;
-        }
-
-        .dept-item:hover {
-            background: #f8fafc;
-        }
-
-        .dept-item.active {
-            color: var(--secondary-orange);
-        }
-
-        .sub-menu-card {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            position: absolute;
-            left: 102%;
-            top: 0;
-            width: 240px;
+        /* Stats Counter */
+        .stat-item {
+            text-align: center;
             padding: 1rem;
-            display: none;
         }
 
-        .dept-item:hover .sub-menu-card {
-            display: block;
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, #00A79D, #32A8B8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
 
-        .sub-menu-item {
-            padding: 0.5rem 0;
-            color: #4b5563;
-            font-size: 0.9rem;
-            transition: color 0.2s;
+        /* Animations */
+        @keyframes gradientShift {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            50% {
+                transform: translate(-10%, -10%) rotate(180deg);
+            }
+            100% {
+                transform: translate(0, 0) rotate(360deg);
+            }
         }
 
-        .sub-menu-item:hover {
-            color: var(--primary-teal);
+        @keyframes floatBlob {
+            0% {
+                transform: translate(0, 0) scale(1) rotate(0deg);
+            }
+            33% {
+                transform: translate(50px, 100px) scale(1.1) rotate(30deg);
+            }
+            66% {
+                transform: translate(-50px, 50px) scale(0.9) rotate(-30deg);
+            }
+            100% {
+                transform: translate(0, 0) scale(1) rotate(0deg);
+            }
         }
 
-        .swiper-pagination-hero {
-            position: absolute;
+        @keyframes slowZoom {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.08);
+            }
+        }
+
+        @keyframes gradientText {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+            }
+        }
+
+        @keyframes floatImage {
+            0%, 100% {
+                transform: rotateY(-10deg) rotateX(5deg) translateY(0);
+            }
+            50% {
+                transform: rotateY(-10deg) rotateX(5deg) translateY(-20px);
+            }
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Swiper Customization */
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            opacity: 0 !important;
+            transition: opacity 0.5s ease;
+        }
+
+        .swiper-slide-active {
+            opacity: 1 !important;
+        }
+
+        .swiper-pagination {
             bottom: 40px !important;
-            left: 0 !important;
-            text-align: left !important;
         }
 
         .swiper-pagination-bullet {
             width: 12px;
             height: 12px;
-            background: var(--primary-teal);
-            opacity: 0.2;
+            background: rgba(0, 102, 132, 0.2);
+            opacity: 1;
+            transition: all 0.3s ease;
         }
 
         .swiper-pagination-bullet-active {
-            opacity: 1;
+            background: #e99e5a;
             width: 30px;
-            border-radius: 6px;
+            border-radius: 10px;
         }
 
-        @media (max-width: 1023px) {
-            .hero-section {
-                background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%);
-            }
-            .swiper-pagination-hero {
-                left: 0 !important;
-                right: 0 !important;
-                text-align: center !important;
-                bottom: 20px !important;
-            }
-        }
-        /* Feature strip modern lift */
-.feature-strip {
-    position: relative;
-    z-index: 5;
-}
-/* Add to your existing styles */
-.organic-image-mask-mobile {
-    border-radius: 24px;
-    overflow: hidden;
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    background: #fff;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    position: relative;
-}
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
 
-/* Adjust pagination position for mobile */
-@media (max-width: 1023px) {
-    .swiper-pagination-hero {
-        position: relative !important;
-        margin-top: 2rem;
-        bottom: 0 !important;
+    /* REMOVE GAP BETWEEN NAVBAR & HERO */
+    .hero-section {
+        min-height: 100vh;
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+        align-items: stretch;
     }
-    
-    .hero-title {
-        text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+
+    /* REMOVE HERO CONTENT TOP PADDING */
+    .hero-content {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
     }
-    
-    .btn-orange {
+
+    /* MAKE HERO TOUCH NAVBAR */
+    .hero-mobile-wrapper {
+        min-height: 100vh;
+        margin-top: 0 !important;
+    }
+
+    /* SAFETY FIX FOR SUB-PIXEL GAPS */
+    .hero-section {
         position: relative;
-        z-index: 10;
+        top: -1px;
     }
 }
 
-/* Ensure proper stacking */
-.hero-section .swiper-slide {
-    display: flex;
-    align-items: center;
+
+        /* Loading Animation */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loader-content {
+            text-align: center;
+        }
+
+        .loader-text {
+            color: #1a1a1a;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+        }
+
+        .loader-bar {
+            width: 300px;
+            height: 4px;
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .loader-progress {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, #00A79D, #e99e5a);
+            transition: width 0.3s ease;
+        }
+        @media (max-width: 768px) {
+
+    /* HERO BACKGROUND IMAGE */
+    .hero-mobile-wrapper {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Hide separate image container */
+    .hero-mobile-wrapper .modern-image-container {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+    }
+
+    .hero-mobile-wrapper .image-3d {
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+        transform: none !important;
+        animation: none;
+    }
+
+    .hero-mobile-wrapper .image-3d img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Dark overlay for readability */
+    .hero-mobile-wrapper::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            to bottom,
+            rgba(255,255,255,0.85) 0%,
+            rgba(255,255,255,0.65) 40%,
+            rgba(255,255,255,0.35) 100%
+        );
+        z-index: 2;
+    }
+
+    /* TEXT CONTENT */
+    .hero-mobile-wrapper > div:first-child {
+        position: relative;
+        z-index: 3;
+        text-align: center;
+        padding: 0 1.25rem;
+    }
+
+    .hero-title {
+        font-size: 2.3rem;
+        line-height: 1.15;
+        color: #0d9488;
+        background: none;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        margin: 1rem auto 1.75rem;
+        color: #374151;
+        max-width: 90%;
+    }
+
+    /* CTA BUTTON */
+    .btn-modern {
+        padding: 0.9rem 2.5rem;
+        font-size: 1rem;
+        border-radius: 999px;
+        margin: 0 auto;
+    }
+
+    /* Disable background effects */
+    .particles,
+    .gradient-bg {
+        display: none;
+    }
 }
 
     </style>
 @endpush
 
-{{-- ================= HERO SECTION ================= --}}
-<section class="hero-section pt-10 pb-20 lg:pt-32 lg:pb-56 px-4 sm:px-6 lg:px-8 relative">
+{{-- Loading Screen --}}
+<div class="loader" id="loader">
+    <div class="loader-content">
+        <div class="loader-text">Gems</div>
+        <div class="loader-bar">
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+</div>
 
-    <div class="max-w-7xl mx-auto">
-        <div class="swiper heroSwiper overflow-visible">
+{{-- Global Background --}}
+<div class="page-bg-image"></div>
+<div class="page-bg-overlay"></div>
+<div class="gradient-bg"></div>
+<div class="blur-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+</div>
+<div class="particles" id="particles"></div>
+
+{{-- ================= MODERN HERO SECTION ================= --}}
+<section class="hero-section">
+    {{-- Main Content --}}
+    <div class="hero-content">
+        <div class="swiper modernSwiper">
             <div class="swiper-wrapper">
-
+                
                 {{-- SLIDE 1 --}}
                 <div class="swiper-slide">
-                    {{-- Mobile Background (moved here for proper coverage) --}}
-                    <div class="lg:hidden mobile-slide-bg" style="background-image: url('{{ asset('images/image9.jpg') }}');"></div>
-                    <div class="lg:hidden mobile-slide-overlay"></div>
+                   <div class="hero-mobile-wrapper grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-                    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10 w-full">
-
-                        {{-- CONTENT - Mobile / Desktop --}}
-                        <div class="z-20 text-center lg:text-left relative w-full lg:relative">
-                            {{-- Mobile optimized layout content --}}
-                            <div class="lg:hidden flex flex-col items-center">
-                                <h1 class="hero-title">
-                                    Precision Care for<br>
-                                    the Human<br>
-                                    Experience
-                                </h1>
-                                
-                                <p class="hero-description">
-                                    Betterly Wellness reimagines wellbeing through a thoughtful blend of
-                                    advanced science and genuine emotional understanding.
-                                </p>
-                                
-                                <a href="/contact" class="btn-orange text-lg px-10 relative z-20">
-                                    Talk To Us
-                                </a>
-                            </div>
-
-                            {{-- Desktop layout --}}
-                            <div class="hidden lg:block">
-                                <h1 class="hero-title text-5xl lg:text-7xl mb-8">
-                                    Precision Care for<br>
-                                    the Human<br>
-                                    Experience
-                                </h1>
-
-                                <p class="hero-description text-gray-600 text-lg lg:text-xl leading-relaxed mb-10 max-w-lg">
-                                    Betterly Wellness reimagines wellbeing through a thoughtful blend of
-                                    advanced science and genuine emotional understanding.
-                                </p>
-
-                                <a href="/contact" class="btn-orange text-lg mx-auto lg:mx-0">
-                                    Talk To Us
-                                </a>
-                            </div>
+                        {{-- Left Content --}}
+                        <div>
+                            <h1 class="hero-title text-5xl lg:text-7xl xl:text-8xl">
+                                Precision Care for<br>
+                                the <span class="text-gray-900">Human</span><br>
+                                Experience
+                            </h1>
+                            
+                            <p class="hero-description">
+                                Betterly Wellness reimagines wellbeing through a thoughtful blend 
+                                of advanced science and genuine emotional understanding.
+                            </p>
+                            
+                            <a href="/contact" class="btn-modern">
+                                <span>Talk To Us</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </a>
                         </div>
 
-                        {{-- RIGHT IMAGE - Hidden on mobile, shown on desktop --}}
-                        <div class="organic-shape-container hidden lg:block">
-                            <div class="organic-image-mask">
-                                <img src="{{ asset('images/image7.jpg') }}"
-                                     class="w-full h-full object-cover"
-                                     alt="Wellness Experience">
+                        {{-- Right Image --}}
+                        <div class="modern-image-container">
+                            <div class="image-3d">
+                                <img src="{{ asset('images/image7.jpg') }}" 
+                                     alt="Wellness Experience"
+                                     class="w-full h-full object-cover">
                             </div>
                         </div>
-
                     </div>
                 </div>
 
                 {{-- SLIDE 2 --}}
                 <div class="swiper-slide">
-                    {{-- Mobile Background --}}
-                    <div class="lg:hidden mobile-slide-bg" style="background-image: url('{{ asset('images/image8.jpg') }}');"></div>
-                    <div class="lg:hidden mobile-slide-overlay"></div>
+                    <div class="hero-mobile-wrapper grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-                    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10 w-full">
-
-                        <div class="z-20 text-center lg:text-left relative w-full lg:relative">
-                            {{-- Mobile optimized layout content --}}
-                            <div class="lg:hidden flex flex-col items-center">
-                                <h1 class="hero-title">
-                                    Empowering<br>
-                                    Potential with<br>
-                                    Expert Guidance
-                                </h1>
-                                
-                                <p class="hero-description">
-                                    Join over 1000 families who trust our certified therapists
-                                    for holistic developmental care.
-                                </p>
-                                
-                                <a href="/contact" class="btn-orange text-lg px-10 relative z-20">
-                                    Book Assessment
-                                </a>
-                            </div>
-
-                            {{-- Desktop layout --}}
-                            <div class="hidden lg:block">
-                                <h1 class="hero-title text-5xl lg:text-7xl mb-8">
-                                    Empowering<br>
-                                    Potential with<br>
-                                    Expert Guidance
-                                </h1>
-
-                                <p class="hero-description text-gray-600 text-lg lg:text-xl leading-relaxed mb-10 max-w-lg">
-                                    Join over 1000 families who trust our certified therapists
-                                    for holistic developmental care.
-                                </p>
-
-                                <a href="/contact" class="btn-orange text-lg mx-auto lg:mx-0">
-                                    Book Assessment
-                                </a>
-                            </div>
+                        {{-- Left Content --}}
+                        <div>
+                            <h1 class="hero-title text-5xl lg:text-7xl xl:text-8xl">
+                                Expert-Led<br>
+                                <span class="text-gray-900">Growth</span><br>
+                                Journeys
+                            </h1>
+                            
+                            <p class="hero-description">
+                                Join thousands of families who trust our certified specialists 
+                                for personalized developmental pathways and lasting progress.
+                            </p>
+                            
+                            <a href="/contact" class="btn-modern">
+                                <span>Talk To Us</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </a>
                         </div>
 
-                        {{-- RIGHT IMAGE - Hidden on mobile --}}
-                        <div class="organic-shape-container hidden lg:block">
-                            <div class="organic-image-mask">
-                                <img src="{{ asset('images/image6.jpg') }}"
-                                     class="w-full h-full object-cover"
-                                     alt="Expert Care">
+                        {{-- Right Image --}}
+                        <div class="modern-image-container">
+                            <div class="image-3d">
+                                <img src="{{ asset('images/image6.jpg') }}" 
+                                     alt="Expert Care"
+                                     class="w-full h-full object-cover">
                             </div>
                         </div>
-
                     </div>
                 </div>
 
                 {{-- SLIDE 3 --}}
                 <div class="swiper-slide">
-                    {{-- Mobile Background --}}
-                    <div class="lg:hidden mobile-slide-bg" style="background-image: url('{{ asset('images/image4.jpg') }}');"></div>
-                    <div class="lg:hidden mobile-slide-overlay"></div>
+                    <div class="hero-mobile-wrapper grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-                    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10 w-full">
-
-                        <div class="z-20 text-center lg:text-left relative w-full lg:relative">
-                            {{-- Mobile optimized layout content --}}
-                            <div class="lg:hidden flex flex-col items-center">
-                                <h1 class="hero-title">
-                                    Supporting Every<br>
-                                    Child's Growth<br>
-                                    Journey
-                                </h1>
-                                
-                                <p class="hero-description">
-                                    From early intervention to specialized therapies,
-                                    we walk alongside families at every stage of development.
-                                </p>
-                                
-                                <a href="/services" class="btn-orange text-lg px-10 relative z-20">
-                                    Explore Services
-                                </a>
-                            </div>
-
-                            {{-- Desktop layout --}}
-                            <div class="hidden lg:block">
-                                <h1 class="hero-title text-5xl lg:text-7xl mb-8">
-                                    Supporting Every<br>
-                                    Child's Growth<br>
-                                    Journey
-                                </h1>
-
-                                <p class="hero-description text-gray-600 text-lg lg:text-xl leading-relaxed mb-10 max-w-lg">
-                                    From early intervention to specialized therapies,
-                                    we walk alongside families at every stage of development.
-                                </p>
-
-                                <a href="/services" class="btn-orange text-lg mx-auto lg:mx-0">
-                                    Explore Services
-                                </a>
-                            </div>
+                        {{-- Left Content --}}
+                        <div>
+                            <h1 class="hero-title text-5xl lg:text-7xl xl:text-8xl">
+                                Holistic<br>
+                                <span class="text-gray-900">Support</span><br>
+                                Systems
+                            </h1>
+                            
+                            <p class="hero-description">
+                                From early interventions to specialized therapies, we provide 
+                                comprehensive care that evolves with your family's needs.
+                            </p>
+                            
+                            <a href="/services" class="btn-modern">
+                                <span>Talk To Us</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </a>
                         </div>
 
-                        {{-- RIGHT IMAGE - Hidden on mobile --}}
-                        <div class="organic-shape-container hidden lg:block">
-                            <div class="organic-image-mask">
-                                <img src="{{ asset('images/image4.jpg') }}"
-                                     class="w-full h-full object-cover"
-                                     alt="Child Development Care">
+                        {{-- Right Image --}}
+                        <div class="modern-image-container">
+                            <div class="image-3d">
+                                <img src="{{ asset('images/image4.jpg') }}" 
+                                     alt="Child Development"
+                                     class="w-full h-full object-cover">
                             </div>
                         </div>
-
                     </div>
                 </div>
 
             </div>
 
-            {{-- PAGINATION --}}
-            <div class="swiper-pagination-hero swiper-pagination"></div>
+            {{-- Pagination --}}
+            <div class="swiper-pagination"></div>
         </div>
+
+        
     </div>
 </section>
-
-
 
 @push('scripts')
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            var swiper = new Swiper(".heroSwiper", {
-                direction: "horizontal",
+            // Initialize Loader
+            const loader = document.getElementById('loader');
+            const progressBar = document.querySelector('.loader-progress');
+            
+            // Simulate loading progress
+            let progress = 0;
+            const loadInterval = setInterval(() => {
+                progress += Math.random() * 20;
+                if (progress >= 100) {
+                    progress = 100;
+                    clearInterval(loadInterval);
+                    setTimeout(() => {
+                        loader.style.opacity = '0';
+                        setTimeout(() => {
+                            loader.style.display = 'none';
+                        }, 500);
+                    }, 300);
+                }
+                progressBar.style.width = `${progress}%`;
+            }, 150);
+
+            // Create Particles
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = window.innerWidth < 768 ? 20 : 50;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                // Random properties
+                const size = Math.random() * 10 + 5;
+                const x = Math.random() * 100;
+                const y = Math.random() * 100;
+                const duration = Math.random() * 20 + 10;
+                const delay = Math.random() * 5;
+                
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${x}%`;
+                particle.style.top = `${y}%`;
+                particle.style.animationDelay = `${delay}s`;
+                particle.style.animationDuration = `${duration}s`;
+                
+                // Random gradient
+                const gradients = [
+                    'radial-gradient(circle at 30% 30%, rgba(0, 167, 157, 0.3), transparent)',
+                    'radial-gradient(circle at 30% 30%, rgba(234, 111, 113, 0.3), transparent)',
+                    'radial-gradient(circle at 30% 30%, rgba(233, 158, 90, 0.3), transparent)'
+                ];
+                particle.style.background = gradients[Math.floor(Math.random() * gradients.length)];
+                
+                particlesContainer.appendChild(particle);
+            }
+
+            // Initialize Swiper
+            const swiper = new Swiper('.modernSwiper', {
+                direction: 'horizontal',
                 slidesPerView: 1,
                 spaceBetween: 30,
                 loop: true,
                 autoplay: {
-                    delay: 5000,
+                    delay: 6000,
                     disableOnInteraction: false,
                 },
                 pagination: {
-                    el: ".swiper-pagination",
+                    el: '.swiper-pagination',
                     clickable: true,
                 },
-                effect: "slide",
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
                 speed: 1000,
+                on: {
+                    slideChange: function() {
+                        // Change background gradient on slide change
+                        const gradients = [
+                            'linear-gradient(135deg, rgba(0, 167, 157, 0.08) 0%, rgba(50, 168, 184, 0.05) 100%)',
+                            'linear-gradient(135deg, rgba(234, 111, 113, 0.08) 0%, rgba(255, 154, 139, 0.05) 100%)',
+                            'linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.05) 100%)'
+                        ];
+                        
+                        const gradientBg = document.querySelector('.gradient-bg');
+                        gradientBg.style.background = gradients[this.realIndex % gradients.length];
+                    }
+                }
             });
+
+            // Animate Stats Counter
+            function animateStats() {
+                const stats = document.querySelectorAll('.stat-number');
+                stats.forEach(stat => {
+                    const target = parseInt(stat.getAttribute('data-count'));
+                    const duration = 2000;
+                    const steps = 60;
+                    const increment = target / steps;
+                    let current = 0;
+                    
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            current = target;
+                            clearInterval(timer);
+                        }
+                        stat.textContent = Math.floor(current);
+                    }, duration / steps);
+                });
+            }
+
+            // Intersection Observer for stats animation
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateStats();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            observer.observe(document.querySelector('.glass-card'));
+
+            // Parallax effect on scroll
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const particles = document.querySelector('.particles');
+                particles.style.transform = `translateY(${scrolled * 0.5}px)`;
+            });
+
+            // Interactive image tilt effect
+            if (window.innerWidth > 768) {
+    const image3d = document.querySelector('.image-3d');
+    if (image3d) {
+        image3d.addEventListener('mousemove', () => {});
+    }
+}
+
+            if (image3d) {
+                image3d.addEventListener('mousemove', (e) => {
+                    const rect = image3d.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    
+                    const rotateY = ((x - centerX) / centerX) * 5;
+                    const rotateX = ((centerY - y) / centerY) * 5;
+                    
+                    image3d.style.transform = `
+                        rotateY(${-10 + rotateY}deg)
+                        rotateX(${5 + rotateX}deg)
+                        translateY(${Math.sin(Date.now() / 1000) * 10}px)
+                    `;
+                });
+                
+                image3d.addEventListener('mouseleave', () => {
+                    image3d.style.transform = `
+                        rotateY(-10deg)
+                        rotateX(5deg)
+                        translateY(0)
+                    `;
+                });
+            }
         });
     </script>
 @endpush
 
+
 {{-- ================= FEATURE STRIP (UNDER HERO) ================= --}}
-<section class="feature-strip bg-white py-16 mt-16 lg:mt-20 border-t border-gray-100">
+<section class="feature-strip bg-transparent py-16 mt-16 lg:mt-20 border-t border-gray-100/30">
 
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
@@ -575,7 +942,7 @@
 
 
 
-<section class="py-16 lg:py-28 bg-gradient-to-b from-white to-gray-50/30 relative overflow-hidden">
+<section class="py-16 lg:py-28 bg-transparent relative overflow-hidden">
     {{-- Background decorative elements --}}
     <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
     <div class="absolute top-10 left-10 w-72 h-72 bg-gradient-to-br from-teal-200/20 to-teal-400/10 rounded-full blur-3xl"></div>
@@ -815,7 +1182,7 @@
 
 
 {{-- ================= WHY CHOOSE US ================= --}}
-<section class="py-16 lg:py-24 bg-white relative overflow-hidden">
+<section class="py-16 lg:py-24 bg-transparent relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16">
             <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6" data-aos="fade-up">
@@ -852,54 +1219,84 @@
 </section>
 
 {{-- ================= TESTIMONIALS ================= --}}
-<section class="py-16 lg:py-24 text-white relative overflow-hidden" style="background: linear-gradient(135deg, #d6454b 0%, #c27c0e 30%, #7db818 60%, #14b8a6 100%);">
-    <div class="absolute top-0 right-0 w-96 h-96 bg-white/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+<section class="py-24 lg:py-32 text-white relative overflow-hidden" style="background: linear-gradient(135deg, rgba(50, 168, 184, 0.95), rgba(0, 167, 157, 0.95), rgba(151, 180, 26, 0.95));">
+    {{-- Modern Deco Blobs --}}
+    <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#EA6F71]/30 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2 animate-pulse"></div>
+    <div class="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-[#E99D1D]/20 rounded-full blur-[150px] translate-x-1/2 translate-y-1/2"></div>
+    <div class="absolute top-1/2 left-1/2 w-[800px] h-[800px] bg-[#32A8B8]/10 rounded-full blur-[180px] -translate-x-1/2 -translate-y-1/2"></div>
     
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16" data-aos="fade-up">Stories of Hope & Success</h2>
+        <div class="text-center mb-20" data-aos="fade-up">
+            <h2 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4">Stories of Hope & Success</h2>
+            <div class="h-1.5 w-24 bg-white/30 mx-auto rounded-full"></div>
+        </div>
         
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid md:grid-cols-3 gap-10">
             {{-- Testimonial 1 --}}
-            <div class="bg-white/20 backdrop-blur-md p-8 rounded-2xl border border-white/20 shadow-lg" data-aos="fade-up" data-aos-delay="100">
-                <div class="flex gap-1 text-white mb-4">★★★★★</div>
-                <p class="text-white italic mb-6">
-                    "We are extremely happy with the therapy services provide by gems clinic. We have seen a remarkable improvement in our child over time. He has started trying to speak, his hyperactivity has reduced significantly, and his eye contact with people has improved a lot"
-                </p>
-                <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 bg-white text-[#32A8B8] rounded-full flex items-center justify-center font-bold shadow-md">HS</div>
-                    <div>
-                        <div class="font-semibold">Hasna Kp</div>
-                        
+            <div class="group h-full" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-white/10 backdrop-blur-xl p-10 rounded-[2.5rem] border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.1)] hover:shadow-[0_20px_80px_rgba(255,255,255,0.1)] transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
+                    <div class="flex gap-1 text-yellow-300 mb-6 scale-110 origin-left">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <p class="text-lg lg:text-xl leading-relaxed font-medium mb-10 flex-grow">
+                        "We are extremely happy with the therapy services provide by gems clinic. We have seen a remarkable improvement in our child over time. He has started trying to speak, his hyperactivity has reduced significantly, and his eye contact with people has improved a lot"
+                    </p>
+                    <div class="flex items-center gap-5 pt-8 border-t border-white/10 mt-auto">
+                        <div class="w-14 h-14 bg-gradient-to-br from-[#32A8B8] to-teal-100/30 backdrop-blur-sm rounded-2xl flex items-center justify-center font-bold text-xl shadow-lg border border-white/20 transform group-hover:rotate-6 transition-transform">HS</div>
+                        <div>
+                            <div class="font-bold text-lg text-white">Hasna Kp</div>
+                            <div class="text-white/60 text-sm font-medium uppercase tracking-wider">Happy Parent</div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             {{-- Testimonial 2 --}}
-            <div class="bg-white/20 backdrop-blur-md p-8 rounded-2xl border border-white/20 shadow-lg" data-aos="fade-up" data-aos-delay="200">
-                <div class="flex gap-1 text-white mb-4">★★★★★</div>
-                <p class="text-white italic mb-6">
-                    "One of the best child development centres in Calicut! Only after reaching here did I truly feel that my son has received the right guidance and support. The staff are very professional, caring, and patient, and they give individual attention to every child. I can see a real improvement in my son's confidence and overall development. Highly recommend this centre to any parent looking for the best guidance for their child."
-                </p>
-                <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 bg-white text-[#EA6F71] rounded-full flex items-center justify-center font-bold shadow-md">FA</div>
-                    <div>
-                        <div class="font-semibold">Fathima va.</div>
-                        
+            <div class="group h-full" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-white/10 backdrop-blur-xl p-10 rounded-[2.5rem] border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.1)] hover:shadow-[0_20px_80px_rgba(255,255,255,0.1)] transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
+                    <div class="flex gap-1 text-yellow-300 mb-6 scale-110 origin-left">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <p class="text-lg lg:text-xl leading-relaxed font-medium mb-10 flex-grow">
+                        "One of the best child development centres in Calicut! Only after reaching here did I truly feel that my son has received the right guidance and support. The staff are very professional, caring, and patient."
+                    </p>
+                    <div class="flex items-center gap-5 pt-8 border-t border-white/10 mt-auto">
+                        <div class="w-14 h-14 bg-gradient-to-br from-[#EA6F71] to-pink-100/30 backdrop-blur-sm rounded-2xl flex items-center justify-center font-bold text-xl shadow-lg border border-white/20 transform group-hover:-rotate-6 transition-transform">FA</div>
+                        <div>
+                            <div class="font-bold text-lg text-white">Fathima va.</div>
+                            <div class="text-white/60 text-sm font-medium uppercase tracking-wider">Grateful Parent</div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             {{-- Testimonial 3 --}}
-            <div class="bg-white/20 backdrop-blur-md p-8 rounded-2xl border border-white/20 shadow-lg" data-aos="fade-up" data-aos-delay="300">
-                <div class="flex gap-1 text-white mb-4">★★★★★</div>
-                <p class="text-white italic mb-6">
-                    "The best therapy centre for developmental delayed kids. Excellent teaching and skill development methods using Kids are very happy because of friendly atmosphere."
-                </p>
-                <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 bg-white text-[#E99D1D] rounded-full flex items-center justify-center font-bold shadow-md">AM</div>
-                    <div>
-                        <div class="font-semibold">Aneesh meladath.</div>
-                        
+            <div class="group h-full" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-white/10 backdrop-blur-xl p-10 rounded-[2.5rem] border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.1)] hover:shadow-[0_20px_80px_rgba(255,255,255,0.1)] transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
+                    <div class="flex gap-1 text-yellow-300 mb-6 scale-110 origin-left">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <p class="text-lg lg:text-xl leading-relaxed font-medium mb-10 flex-grow">
+                        "The best therapy centre for developmental delayed kids. Excellent teaching and skill development methods using Kids are very happy because of friendly atmosphere."
+                    </p>
+                    <div class="flex items-center gap-5 pt-8 border-t border-white/10 mt-auto">
+                        <div class="w-14 h-14 bg-gradient-to-br from-[#E99D1D] to-orange-100/30 backdrop-blur-sm rounded-2xl flex items-center justify-center font-bold text-xl shadow-lg border border-white/20 transform group-hover:rotate-12 transition-transform">AM</div>
+                        <div>
+                            <div class="font-bold text-lg text-white">Aneesh meladath.</div>
+                            <div class="text-white/60 text-sm font-medium uppercase tracking-wider">Satisfied Parent</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -949,20 +1346,44 @@
 {{-- ================= FINAL CTA ================= --}}
 <section class="py-20 bg-white relative">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="rounded-3xl p-8 sm:p-16 text-center text-white relative overflow-hidden shadow-2xl" style="background: linear-gradient(135deg, #d6454b 0%, #c27c0e 30%, #7db818 60%, #14b8a6 100%);" data-aos="zoom-in">
-            <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-            <div class="absolute bottom-0 left-0 w-40 h-40 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
-            
+        <div 
+            class="rounded-[2.5rem] p-8 sm:p-16 text-center text-white relative overflow-hidden 
+                   bg-white/10 backdrop-blur-xl 
+                   border border-white/20 
+                   shadow-[0_20px_80px_rgba(0,0,0,0.15)]"
+            data-aos="zoom-in"
+            style="background: linear-gradient(135deg, rgba(50,168,184,0.95), rgba(0,167,157,0.95), rgba(151,180,26,0.95));"
+        >
+
+            {{-- Glow blobs (same language as testimonials) --}}
+            <div class="absolute -top-24 -left-24 w-96 h-96 bg-[#EA6F71]/30 rounded-full blur-[120px]"></div>
+            <div class="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-[#E99D1D]/25 rounded-full blur-[150px]"></div>
+
             <div class="relative z-10">
-                <h2 class="text-3xl sm:text-4xl font-bold mb-6">Take the First Step Today</h2>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mb-6 tracking-tight">
+                    Take the First Step Today
+                </h2>
+
                 <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">
-                    Your child's potential is limitless. Let us help them unlock it. Schedule an assessment with our experts.
+                    Your child's potential is limitless. Let us help them unlock it.
+                    Schedule an assessment with our experts.
                 </p>
+
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="/contact" class="bg-white text-teal-600 font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition-colors shadow-lg">
+                    <a 
+                        href="/contact"
+                        class="bg-white text-teal-600 font-bold px-8 py-4 rounded-xl 
+                               hover:bg-gray-100 transition-all duration-300 
+                               shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                    >
                         Book Appointment
                     </a>
-                    <a href="tel:+917994502501" class="bg-transparent border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-white/10 transition-colors">
+
+                    <a 
+                        href="tel:+917994502501"
+                        class="border-2 border-white/80 text-white font-bold px-8 py-4 rounded-xl 
+                               hover:bg-white/10 transition-all duration-300"
+                    >
                         Call +91 7994502501
                     </a>
                 </div>
@@ -970,4 +1391,5 @@
         </div>
     </div>
 </section>
+
 @endsection
