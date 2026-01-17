@@ -860,7 +860,7 @@
         
         <div class="grid md:grid-cols-3 gap-8">
             {{-- Testimonial 1 --}}
-            <div class="p-8 shadow-lg" style="background-color: #A8CF45; border-radius: 60px 20px 60px 20px;" data-aos="fade-up" data-aos-delay="100">
+            <div class="p-8 shadow-lg" style="background-color: #86b118; border-radius: 60px 20px 60px 20px;" data-aos="fade-up" data-aos-delay="100">
                 <div class="flex gap-1 mb-4" style="color: #E99D1D;">★★★★★</div>
                 <p class="text-white italic mb-6">
                     "We are extremely happy with the therapy services provide by gems clinic. We have seen a remarkable improvement in our child over time. He has started trying to speak, his hyperactivity has reduced significantly, and his eye contact with people has improved a lot"
@@ -868,14 +868,14 @@
                 <div class="flex items-center gap-4">
                     <div class="w-10 h-10 bg-white text-[#32A8B8] rounded-full flex items-center justify-center font-bold shadow-md">HS</div>
                     <div>
-                        <div class="font-semibold" style="color: #EA6F71;">Hasna Kp</div>
+                        <div class="font-semibold" style="color: #ffffff;">Hasna Kp</div>
                         
                     </div>
                 </div>
             </div>
 
             {{-- Testimonial 2 --}}
-            <div class="p-8 shadow-lg" style="background-color: #A8CF45; border-radius: 20px 60px 20px 60px;" data-aos="fade-up" data-aos-delay="200">
+            <div class="p-8 shadow-lg" style="background-color: #86b118; border-radius: 20px 60px 20px 60px;" data-aos="fade-up" data-aos-delay="200">
                 <div class="flex gap-1 mb-4" style="color: #E99D1D;">★★★★★</div>
                 <p class="text-white italic mb-6">
                     "One of the best child development centres in Calicut! Only after reaching here did I truly feel that my son has received the right guidance and support. The staff are very professional, caring, and patient, and they give individual attention to every child. I can see a real improvement in my son's confidence and overall development. Highly recommend this centre to any parent looking for the best guidance for their child."
@@ -883,22 +883,22 @@
                 <div class="flex items-center gap-4">
                     <div class="w-10 h-10 bg-white text-[#EA6F71] rounded-full flex items-center justify-center font-bold shadow-md">FA</div>
                     <div>
-                        <div class="font-semibold" style="color: #EA6F71;">Fathima va.</div>
+                        <div class="font-semibold" style="color: #ffffff;">Fathima va.</div>
                         
                     </div>
                 </div>
             </div>
 
             {{-- Testimonial 3 --}}
-            <div class="p-8 shadow-lg" style="background-color: #A8CF45; border-radius: 60px 20px 60px 20px;" data-aos="fade-up" data-aos-delay="300">
-                <div class="flex gap-1 mb-4" style="color: #E99D1D;">★★★★★</div>
+            <div class="p-8 shadow-lg" style="background-color: #86b118; border-radius: 60px 20px 60px 20px;" data-aos="fade-up" data-aos-delay="300">
+                <div class="flex gap-1 mb-4" style="color: #dea035;">★★★★★</div>
                 <p class="text-white italic mb-6">
                     "The best therapy centre for developmental delayed kids. Excellent teaching and skill development methods using Kids are very happy because of friendly atmosphere."
                 </p>
                 <div class="flex items-center gap-4">
                     <div class="w-10 h-10 bg-white text-[#E99D1D] rounded-full flex items-center justify-center font-bold shadow-md">AM</div>
                     <div>
-                        <div class="font-semibold" style="color: #EA6F71;">Aneesh meladath.</div>
+                        <div class="font-semibold" style="color: #ffffff;">Aneesh meladath.</div>
                         
                     </div>
                 </div>
