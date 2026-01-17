@@ -6,7 +6,7 @@
 {{-- ================= HERO SECTION ================= --}}
 <section class="relative overflow-hidden" style="background-color: #32A8B8;">
     <div class="absolute inset-0">
-        <div class="absolute inset-0 bg-gradient-to-r from-[#32A8B8] to-[#2d96a5] opacity-90"></div>
+        <div class="absolute inset-0 bg-[#32A8B8] opacity-90"></div>
         {{-- Pattern/Texture can go here --}}
     </div>
     
@@ -15,7 +15,7 @@
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
                 About GEMS
             </h1>
-            <p class="text-xl text-teal-100 max-w-3xl mx-auto leading-relaxed">
+            <p class="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
                 Dedicated to empowering children with developmental needs through holistic, 
                 evidence-based care and unwavering support.
             </p>
@@ -46,7 +46,7 @@
             <div data-aos="fade-left">
                 <div class="mb-12">
                     <div class="flex items-center gap-3 mb-4">
-                        <span class="w-12 h-1 bg-teal-500 rounded-full"></span>
+                        <span class="w-12 h-1 bg-[#32A8B8] rounded-full"></span>
                         <h2 class="text-3xl font-bold text-gray-900">Our Vision</h2>
                     </div>
                     <p class="text-lg text-gray-600 leading-relaxed">
@@ -57,20 +57,20 @@
                 
                 <div>
                     <div class="flex items-center gap-3 mb-4">
-                        <span class="w-12 h-1 bg-pink-500 rounded-full"></span>
+                        <span class="w-12 h-1 bg-[#EA6F71] rounded-full"></span>
                         <h2 class="text-3xl font-bold text-gray-900">Our Mission</h2>
                     </div>
                     <ul class="space-y-4">
                         <li class="flex gap-4">
-                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-pink-100 flex items-center justify-center text-pink-600 font-bold">1</span>
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[#EA6F711a] flex items-center justify-center text-[#EA6F71] font-bold">1</span>
                             <p class="text-gray-600">Provide comprehensive, multidisciplinary therapeutic services tailored to each child's unique needs.</p>
                         </li>
                         <li class="flex gap-4">
-                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-pink-100 flex items-center justify-center text-pink-600 font-bold">2</span>
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[#EA6F711a] flex items-center justify-center text-[#EA6F71] font-bold">2</span>
                             <p class="text-gray-600">Empower parents and caregivers through education, training, and emotional support.</p>
                         </li>
                         <li class="flex gap-4">
-                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-pink-100 flex items-center justify-center text-pink-600 font-bold">3</span>
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[#EA6F711a] flex items-center justify-center text-[#EA6F71] font-bold">3</span>
                             <p class="text-gray-600">Foster an inclusive community that advocates for the rights and acceptance of children with special needs.</p>
                         </li>
                     </ul>
@@ -92,8 +92,8 @@
         
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {{-- Value 1 --}}
-            <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
-                <div class="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center text-teal-600 text-3xl mb-6">
+            <div class="bg-white p-8 shadow-lg hover:shadow-xl transition-all duration-300" style="border-radius: 60px 20px 60px 20px;" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-14 h-14 bg-[#32A8B81a] rounded-xl flex items-center justify-center text-[#32A8B8] text-3xl mb-6">
                     ❤️
                 </div>
                 <h3 class="text-xl font-bold text-gray-900 mb-3">Compassion</h3>
@@ -101,8 +101,8 @@
             </div>
             
             {{-- Value 2 --}}
-            <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
-                <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 text-3xl mb-6">
+            <div class="bg-white p-8 shadow-lg hover:shadow-xl transition-all duration-300" style="border-radius: 20px 60px 20px 60px;" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-14 h-14 bg-[#E99D1D1a] rounded-xl flex items-center justify-center text-[#E99D1D] text-3xl mb-6">
                     🌟
                 </div>
                 <h3 class="text-xl font-bold text-gray-900 mb-3">Excellence</h3>
@@ -110,8 +110,8 @@
             </div>
             
             {{-- Value 3 --}}
-            <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
-                <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600 text-3xl mb-6">
+            <div class="bg-white p-8 shadow-lg hover:shadow-xl transition-all duration-300" style="border-radius: 60px 20px 60px 20px;" data-aos="fade-up" data-aos-delay="300">
+                <div class="w-14 h-14 bg-[#A8CF451a] rounded-xl flex items-center justify-center text-[#A8CF45] text-3xl mb-6">
                     🤝
                 </div>
                 <h3 class="text-xl font-bold text-gray-900 mb-3">Integrity</h3>
@@ -119,8 +119,8 @@
             </div>
             
             {{-- Value 4 --}}
-            <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
-                <div class="w-14 h-14 bg-pink-100 rounded-xl flex items-center justify-center text-pink-600 text-3xl mb-6">
+            <div class="bg-white p-8 shadow-lg hover:shadow-xl transition-all duration-300" style="border-radius: 20px 60px 20px 60px;" data-aos="fade-up" data-aos-delay="400">
+                <div class="w-14 h-14 bg-[#EA6F711a] rounded-xl flex items-center justify-center text-[#EA6F71] text-3xl mb-6">
                     👨‍👩‍👧‍👦
                 </div>
                 <h3 class="text-xl font-bold text-gray-900 mb-3">Collaboration</h3>
@@ -139,13 +139,13 @@
             <div class="lg:w-1/3 text-center lg:text-left" data-aos="fade-right">
                 <div class="relative inline-block">
                     <img src="{{ asset('images/image2.jpg') }}" alt="Founder" class="w-64 h-64 lg:w-80 lg:h-80 object-cover rounded-full border-8 border-white shadow-2xl">
-                    <div class="absolute bottom-4 right-4 bg-teal-600 text-white p-3 rounded-full shadow-lg">
+                    <div class="absolute bottom-4 right-4 bg-[#32A8B8] text-white p-3 rounded-full shadow-lg">
                         <span class="text-2xl">❝</span>
                     </div>
                 </div>
                 <div class="mt-6">
                     <h3 class="text-2xl font-bold text-gray-900">Mushtaq</h3>
-                    <p class="text-teal-600 font-medium text-lg">Founder & Director</p>
+                    <p class="text-[#32A8B8] font-medium text-lg">Founder & Director</p>
                 </div>
             </div>
             

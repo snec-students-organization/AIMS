@@ -9,8 +9,8 @@
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {{-- Newsletter section --}}
-        <div class="relative bg-gradient-to-r from-teal-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 mb-16 border border-teal-500/20" data-aos="fade-up">
-            <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-teal-500 to-pink-500 text-white px-6 py-2 rounded-full font-semibold text-sm">
+        <div class="relative bg-gradient-to-r from-[#32A8B826] to-[#EA6F7126] backdrop-blur-sm rounded-2xl p-8 mb-16 border border-[#32A8B833]" data-aos="fade-up">
+            <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-[#32A8B8] to-[#EA6F71] text-white px-6 py-2 rounded-full font-semibold text-sm">
                 Stay Updated
             </div>
             
@@ -25,9 +25,9 @@
                         <input type="email" 
                                placeholder="Your email address" 
                                required
-                               class="flex-1 bg-white/10 border border-gray-600 text-white placeholder-gray-400 rounded-xl px-5 py-3 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent">
+                               class="flex-1 bg-white/10 border border-gray-600 text-white placeholder-gray-400 rounded-xl px-5 py-3 focus:outline-none focus:ring-2 focus:ring-[#32A8B8] focus:border-transparent">
                         <button type="submit"
-                                class="bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2">
+                                class="bg-gradient-to-r from-[#32A8B8] to-[#2d96a5] hover:from-[#2d96a5] hover:to-[#288492] text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2">
                             <span>Subscribe</span>
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
@@ -49,7 +49,7 @@
                          class="h-12 w-auto">
                     <div>
                         <h2 class="text-xl font-bold text-white">GEMS</h2>
-                        <p class="text-sm text-teal-400">Child Development Centre</p>
+                        <p class="text-sm text-[#32A8B8]">Child Development Centre</p>
                     </div>
                 </div>
                 <p class="text-gray-300 leading-relaxed mb-6 max-w-lg">
@@ -114,7 +114,7 @@
                     @foreach($quickLinks as $link)
                         <li>
                             <a href="{{ $link['url'] }}" 
-                               class="flex items-center gap-2 text-gray-300 hover:text-teal-400 transition-colors group">
+                               class="flex items-center gap-2 text-gray-300 hover:text-[#32A8B8] transition-colors group">
                                 <span class="text-sm">{{ $link['icon'] }}</span>
                                 <span>{{ $link['name'] }}</span>
                                 <span class="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300">→</span>
@@ -141,7 +141,7 @@
                     
                     @foreach($services as $service)
                         <li class="flex items-center gap-2">
-                            <span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#32A8B8]"></span>
                             <span class="text-gray-300">{{ $service }}</span>
                         </li>
                     @endforeach
@@ -153,8 +153,8 @@
                 <h4 class="text-white font-bold text-lg mb-6 pb-2 border-b border-gray-700">Contact Info</h4>
                 <ul class="space-y-4">
                     <li class="flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-full bg-teal-500/20 flex items-center justify-center flex-shrink-0">
-                            <span class="text-teal-400">📍</span>
+                        <div class="w-8 h-8 rounded-full bg-[#32A8B833] flex items-center justify-center flex-shrink-0">
+                            <span class="text-[#32A8B8]">📍</span>
                         </div>
                         <div>
                             <p class="text-white font-medium">Our Location</p>
@@ -163,32 +163,32 @@
                     </li>
                     
                     <li class="flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-full bg-pink-500/20 flex items-center justify-center flex-shrink-0">
-                            <span class="text-pink-400">📞</span>
+                        <div class="w-8 h-8 rounded-full bg-[#EA6F7133] flex items-center justify-center flex-shrink-0">
+                            <span class="text-[#EA6F71]">📞</span>
                         </div>
                         <div>
                             <p class="text-white font-medium">Call Us</p>
-                            <a href="tel:+917994502501" class="text-gray-400 text-sm hover:text-teal-400 transition-colors">
+                            <a href="tel:+917994502501" class="text-gray-400 text-sm hover:text-[#32A8B8] transition-colors">
                                 +91 7994502501
                             </a>
                         </div>
                     </li>
                     
                     <li class="flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0">
-                            <span class="text-blue-400">✉️</span>
+                        <div class="w-8 h-8 rounded-full bg-[#3b82f633] flex items-center justify-center flex-shrink-0">
+                            <span class="text-[#3b82f6]">✉️</span>
                         </div>
                         <div>
                             <p class="text-white font-medium">Email</p>
-                            <a href="mailto:gemsrehab@gmail.com" class="text-gray-400 text-sm hover:text-teal-400 transition-colors">
+                            <a href="mailto:gemsrehab@gmail.com" class="text-gray-400 text-sm hover:text-[#32A8B8] transition-colors">
                                 gemsrehab@gmail.com
                             </a>
                         </div>
                     </li>
                     
                     <li class="flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-full bg-yellow-500/20 flex items-center justify-center flex-shrink-0">
-                            <span class="text-yellow-400">🕒</span>
+                        <div class="w-8 h-8 rounded-full bg-[#E99D1D33] flex items-center justify-center flex-shrink-0">
+                            <span class="text-[#E99D1D]">🕒</span>
                         </div>
                         <div>
                             <p class="text-white font-medium">Working Hours</p>
@@ -208,9 +208,9 @@
                 </div>
                 
                 <div class="flex items-center gap-6 text-sm text-gray-400">
-                    <a href="/privacy-policy" class="hover:text-teal-400 transition-colors">Privacy Policy</a>
-                    <a href="/terms" class="hover:text-teal-400 transition-colors">Terms of Service</a>
-                    <a href="/sitemap" class="hover:text-teal-400 transition-colors">Sitemap</a>
+                    <a href="/privacy-policy" class="hover:text-[#32A8B8] transition-colors">Privacy Policy</a>
+                    <a href="/terms" class="hover:text-[#32A8B8] transition-colors">Terms of Service</a>
+                    <a href="/sitemap" class="hover:text-[#32A8B8] transition-colors">Sitemap</a>
                     <div class="flex items-center gap-2">
                         <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
                         <span>Made with ❤️ in Kerala</span>
@@ -241,7 +241,7 @@
     </div>
 
     {{-- Floating CTA for mobile --}}
-    <div class="lg:hidden fixed bottom-0 left-0 right-0 bg-gradient-to-r from-teal-600 to-pink-600 text-white p-4 shadow-lg">
+    <div class="lg:hidden fixed bottom-0 left-0 right-0 bg-gradient-to-r from-[#32A8B8] to-[#EA6F71] text-white p-4 shadow-lg">
         <div class="flex items-center justify-between max-w-7xl mx-auto px-4">
             <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
@@ -253,7 +253,7 @@
                 </div>
             </div>
             <a href="/contact" 
-               class="bg-white text-teal-600 font-semibold px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">
+               class="bg-white text-[#32A8B8] font-semibold px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">
                 Contact
             </a>
         </div>

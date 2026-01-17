@@ -852,7 +852,7 @@
 </section>
 
 {{-- ================= TESTIMONIALS ================= --}}
-<section class="py-16 lg:py-24 text-white relative overflow-hidden" style="background: linear-gradient(135deg, #d6454b 0%, #c27c0e 30%, #7db818 60%, #14b8a6 100%);">
+<section class="py-16 lg:py-24 text-white relative overflow-hidden" style="background-color: #32A8B8;">
     <div class="absolute top-0 right-0 w-96 h-96 bg-white/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
     
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -860,45 +860,45 @@
         
         <div class="grid md:grid-cols-3 gap-8">
             {{-- Testimonial 1 --}}
-            <div class="bg-white/20 backdrop-blur-md p-8 rounded-2xl border border-white/20 shadow-lg" data-aos="fade-up" data-aos-delay="100">
-                <div class="flex gap-1 text-white mb-4">★★★★★</div>
+            <div class="p-8 shadow-lg" style="background-color: #A8CF45; border-radius: 60px 20px 60px 20px;" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex gap-1 mb-4" style="color: #E99D1D;">★★★★★</div>
                 <p class="text-white italic mb-6">
                     "We are extremely happy with the therapy services provide by gems clinic. We have seen a remarkable improvement in our child over time. He has started trying to speak, his hyperactivity has reduced significantly, and his eye contact with people has improved a lot"
                 </p>
                 <div class="flex items-center gap-4">
                     <div class="w-10 h-10 bg-white text-[#32A8B8] rounded-full flex items-center justify-center font-bold shadow-md">HS</div>
                     <div>
-                        <div class="font-semibold">Hasna Kp</div>
+                        <div class="font-semibold" style="color: #EA6F71;">Hasna Kp</div>
                         
                     </div>
                 </div>
             </div>
 
             {{-- Testimonial 2 --}}
-            <div class="bg-white/20 backdrop-blur-md p-8 rounded-2xl border border-white/20 shadow-lg" data-aos="fade-up" data-aos-delay="200">
-                <div class="flex gap-1 text-white mb-4">★★★★★</div>
+            <div class="p-8 shadow-lg" style="background-color: #A8CF45; border-radius: 20px 60px 20px 60px;" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex gap-1 mb-4" style="color: #E99D1D;">★★★★★</div>
                 <p class="text-white italic mb-6">
                     "One of the best child development centres in Calicut! Only after reaching here did I truly feel that my son has received the right guidance and support. The staff are very professional, caring, and patient, and they give individual attention to every child. I can see a real improvement in my son's confidence and overall development. Highly recommend this centre to any parent looking for the best guidance for their child."
                 </p>
                 <div class="flex items-center gap-4">
                     <div class="w-10 h-10 bg-white text-[#EA6F71] rounded-full flex items-center justify-center font-bold shadow-md">FA</div>
                     <div>
-                        <div class="font-semibold">Fathima va.</div>
+                        <div class="font-semibold" style="color: #EA6F71;">Fathima va.</div>
                         
                     </div>
                 </div>
             </div>
 
             {{-- Testimonial 3 --}}
-            <div class="bg-white/20 backdrop-blur-md p-8 rounded-2xl border border-white/20 shadow-lg" data-aos="fade-up" data-aos-delay="300">
-                <div class="flex gap-1 text-white mb-4">★★★★★</div>
+            <div class="p-8 shadow-lg" style="background-color: #A8CF45; border-radius: 60px 20px 60px 20px;" data-aos="fade-up" data-aos-delay="300">
+                <div class="flex gap-1 mb-4" style="color: #E99D1D;">★★★★★</div>
                 <p class="text-white italic mb-6">
                     "The best therapy centre for developmental delayed kids. Excellent teaching and skill development methods using Kids are very happy because of friendly atmosphere."
                 </p>
                 <div class="flex items-center gap-4">
                     <div class="w-10 h-10 bg-white text-[#E99D1D] rounded-full flex items-center justify-center font-bold shadow-md">AM</div>
                     <div>
-                        <div class="font-semibold">Aneesh meladath.</div>
+                        <div class="font-semibold" style="color: #EA6F71;">Aneesh meladath.</div>
                         
                     </div>
                 </div>
@@ -949,7 +949,7 @@
 {{-- ================= FINAL CTA ================= --}}
 <section class="py-20 bg-white relative">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="rounded-3xl p-8 sm:p-16 text-center text-white relative overflow-hidden shadow-2xl" style="background: linear-gradient(135deg, #d6454b 0%, #c27c0e 30%, #7db818 60%, #14b8a6 100%);" data-aos="zoom-in">
+        <div class="rounded-3xl p-8 sm:p-16 text-center text-white relative overflow-hidden shadow-2xl" style="background-color: #32A8B8;" data-aos="zoom-in">
             <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
             <div class="absolute bottom-0 left-0 w-40 h-40 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
             

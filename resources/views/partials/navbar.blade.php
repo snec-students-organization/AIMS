@@ -32,10 +32,10 @@
                 @foreach($navItems as $item)
                     <a href="{{ $item['url'] }}" 
                        class="group relative px-3 py-2 mx-1 transition-all duration-200">
-                        <span class="font-medium text-gray-700 group-hover:text-teal-600 transition-colors text-sm">
+                        <span class="font-medium text-gray-700 group-hover:text-[#32A8B8] transition-colors text-sm">
                             {{ $item['name'] }}
                         </span>
-                        <span class="absolute bottom-0 left-3 right-3 h-0.5 bg-gradient-to-r from-teal-500 to-pink-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                        <span class="absolute bottom-0 left-3 right-3 h-0.5 bg-gradient-to-r from-[#32A8B8] to-[#EA6F71] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
                 @endforeach
             </nav>
@@ -49,7 +49,7 @@
                     </div>
                     <div class="text-left">
                         <p class="text-xs text-gray-500 leading-none">Call Now</p>
-                        <p class="font-semibold text-gray-900 text-sm group-hover:text-teal-600">+91 7994502501</p>
+                        <p class="font-semibold text-gray-900 text-sm group-hover:text-[#32A8B8]">+91 7994502501</p>
                     </div>
                 </a>
                 
@@ -63,17 +63,17 @@
                     <form action="{{ route('logout') }}" method="POST" class="inline">
                         @csrf
                         <button type="submit" 
-                           class="bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white px-5 py-2.5 rounded-lg font-semibold text-sm shadow-sm hover:shadow transition-all duration-300">
+                           class="bg-gradient-to-r from-[#32A8B8] to-[#2d96a5] hover:from-[#2d96a5] hover:to-[#288492] text-white px-5 py-2.5 rounded-lg font-semibold text-sm shadow-sm hover:shadow transition-all duration-300">
                             Logout
                         </button>
                     </form>
                 @else
                     <a href="{{ route('login') }}" 
-                       class="text-gray-700 hover:text-teal-600 font-semibold text-sm px-4">
+                       class="text-gray-700 hover:text-[#32A8B8] font-semibold text-sm px-4">
                         Login
                     </a>
                     <a href="/contact" 
-                       class="bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white px-5 py-2.5 rounded-lg font-semibold text-sm shadow-sm hover:shadow transition-all duration-300">
+                       class="bg-gradient-to-r from-[#32A8B8] to-[#2d96a5] hover:from-[#2d96a5] hover:to-[#288492] text-white px-5 py-2.5 rounded-lg font-semibold text-sm shadow-sm hover:shadow transition-all duration-300">
                         Book Consultation
                     </a>
                 @endauth
@@ -81,13 +81,13 @@
 
             {{-- MOBILE MENU BUTTON --}}
             <button id="mobile-menu-button"
-                    class="lg:hidden relative flex flex-col items-center justify-center w-10 h-10 rounded-lg bg-teal-50 text-teal-600 transition-all duration-300 focus:outline-none"
+                    class="lg:hidden relative flex flex-col items-center justify-center w-10 h-10 rounded-lg bg-[#32A8B81a] text-[#32A8B8] transition-all duration-300 focus:outline-none"
                     aria-label="Toggle menu">
                 <span class="sr-only">Open main menu</span>
                 <div class="relative w-6 h-5 flex flex-col justify-between">
-                    <span class="block w-6 h-0.5 bg-teal-600 rounded-full transition-all duration-300" id="bar1"></span>
-                    <span class="block w-6 h-0.5 bg-teal-600 rounded-full transition-all duration-300" id="bar2"></span>
-                    <span class="block w-6 h-0.5 bg-teal-600 rounded-full transition-all duration-300" id="bar3"></span>
+                    <span class="block w-6 h-0.5 bg-[#32A8B8] rounded-full transition-all duration-300" id="bar1"></span>
+                    <span class="block w-6 h-0.5 bg-[#32A8B8] rounded-full transition-all duration-300" id="bar2"></span>
+                    <span class="block w-6 h-0.5 bg-[#32A8B8] rounded-full transition-all duration-300" id="bar3"></span>
                 </div>
             </button>
         </div>
@@ -99,22 +99,22 @@
                 <div class="space-y-0">
                     @foreach($navItems as $item)
                         <a href="{{ $item['url'] }}" 
-                           class="flex items-center px-4 py-3 rounded-lg hover:bg-gray-50 transition-colors duration-200 text-gray-700 hover:text-teal-600 group border-b border-gray-100 last:border-0">
+                           class="flex items-center px-4 py-3 rounded-lg hover:bg-gray-50 transition-colors duration-200 text-gray-700 hover:text-[#32A8B8] group border-b border-gray-100 last:border-0">
                             <span class="font-medium flex-1">{{ $item['name'] }}</span>
-                            <span class="text-gray-400 group-hover:text-teal-500 transform group-hover:translate-x-1 transition-transform">→</span>
+                            <span class="text-gray-400 group-hover:text-[#32A8B8] transform group-hover:translate-x-1 transition-transform">→</span>
                         </a>
                     @endforeach
                 </div>
 
                 {{-- MOBILE CONTACT SECTION --}}
-                <div class="mt-6 p-4 bg-gradient-to-r from-teal-50 to-pink-50 rounded-xl">
+                <div class="mt-6 p-4 bg-gradient-to-r from-[#32A8B80d] to-[#EA6F710d] rounded-xl">
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-teal-500 to-pink-500 flex items-center justify-center flex-shrink-0">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-[#32A8B8] to-[#EA6F71] flex items-center justify-center flex-shrink-0">
                             <span class="text-white">📞</span>
                         </div>
                         <div>
                             <p class="text-sm text-gray-600">Emergency Helpline</p>
-                            <a href="tel:+918086497941" class="text-base font-bold text-gray-900 hover:text-teal-600 transition-colors">
+                            <a href="tel:+918086497941" class="text-base font-bold text-gray-900 hover:text-[#32A8B8] transition-colors">
                                 +91 7994502501
                             </a>
                         </div>
@@ -136,11 +136,11 @@
                         </form>
                     @else
                         <a href="{{ route('login') }}" 
-                           class="block w-full text-center py-3 text-teal-600 font-semibold border border-teal-200 rounded-lg mb-2">
+                           class="block w-full text-center py-3 text-[#32A8B8] font-semibold border border-[#32A8B8] rounded-lg mb-2">
                             Admin Login
                         </a>
                         <a href="/contact" 
-                           class="block w-full bg-gradient-to-r from-teal-500 to-teal-600 text-white text-center py-3 rounded-lg font-semibold text-sm shadow hover:shadow-md transition-all duration-300">
+                           class="block w-full bg-gradient-to-r from-[#32A8B8] to-[#2d96a5] text-white text-center py-3 rounded-lg font-semibold text-sm shadow hover:shadow-md transition-all duration-300">
                             Get  Consultation
                         </a>
                     @endauth
@@ -200,12 +200,12 @@
     }
     
     #mobile-menu-button.active {
-        background-color: #fcece0; /* Soft highlight when active */
-        color: var(--secondary-orange);
+        background-color: #A8CF451a; /* Soft highlight when active - using logo Lime Green */
+        color: #E99D1D; /* Using logo Yellow */
     }
 
     #mobile-menu-button.active span {
-        background-color: var(--secondary-orange);
+        background-color: #E99D1D;
     }
     
     /* Smooth scroll for mobile menu */

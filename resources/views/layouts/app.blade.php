@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0d9488">
+    <meta name="theme-color" content="#32A8B8">
     
     <title>@yield('title', 'GEMS | Best Child Development Centre in Kerala')</title>
 
@@ -49,9 +49,10 @@
     {{-- Custom Styles --}}
     <style>
         :root {
-            --primary: #0d9488;
-            --secondary: #db2777;
-            --accent: #3b82f6;
+            --primary: #32A8B8;
+            --secondary: #EA6F71;
+            --accent: #E99D1D;
+            --success: #A8CF45;
             --light: #f0fdfa;
             --dark: #0f172a;
         }
@@ -136,7 +137,7 @@
     </a>
     
     {{-- Progress bar --}}
-    <div class="fixed top-0 left-0 w-full h-1 bg-gradient-to-r from-teal-500 to-pink-500 z-50 transform origin-left scale-x-0 transition-transform duration-300" 
+    <div class="fixed top-0 left-0 w-full h-1 bg-gradient-to-r from-[#32A8B8] to-[#EA6F71] z-50 transform origin-left scale-x-0 transition-transform duration-300" 
          id="progress-bar"></div>
     
     {{-- NAVBAR --}}
@@ -182,7 +183,7 @@
         {{-- Back to top --}}
         <button onclick="scrollToTop()"
                 id="back-to-top"
-                class="bg-gradient-to-r from-teal-500 to-pink-500 hover:from-teal-600 hover:to-pink-600 text-white p-4 rounded-full shadow-xl transition-all duration-300 opacity-0 translate-y-4 hover:shadow-2xl hover:scale-105"
+                class="bg-gradient-to-r from-[#32A8B8] to-[#EA6F71] hover:from-[#2d96a5] hover:to-[#d66567] text-white p-4 rounded-full shadow-xl transition-all duration-300 opacity-0 translate-y-4 hover:shadow-2xl hover:scale-105"
                 aria-label="Back to top">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
