@@ -414,7 +414,7 @@
                     <div class="swiper-slide">
                         {{-- Mobile Background --}}
                         <div class="lg:hidden mobile-slide-bg"
-                            style="background-image: url('{{ asset('images/image8.jpg') }}');"></div>
+                            style="background-image: url('{{ asset('images/image11.png') }}');"></div>
                         <div class="lg:hidden mobile-slide-overlay"></div>
 
                         <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10 w-full">
@@ -473,7 +473,7 @@
                     <div class="swiper-slide">
                         {{-- Mobile Background --}}
                         <div class="lg:hidden mobile-slide-bg"
-                            style="background-image: url('{{ asset('images/image4.jpg') }}');"></div>
+                            style="background-image: url('{{ asset('images/image10.png') }}');"></div>
                         <div class="lg:hidden mobile-slide-overlay"></div>
 
                         <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10 w-full">
