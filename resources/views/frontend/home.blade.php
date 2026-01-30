@@ -104,6 +104,60 @@
                 background-color: #d88d4a;
             }
 
+            .btn-custom-teal {
+                background-color: #32A8B8;
+                color: white;
+                padding: 1rem 2.5rem;
+                border-radius: 9999px;
+                font-weight: 600;
+                transition: all 0.3s ease;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .btn-custom-teal:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 20px rgba(50, 168, 184, 0.3);
+                background-color: #2a8f9d;
+            }
+
+            .btn-custom-lime {
+                background-color: #97B41A;
+                color: white;
+                padding: 1rem 2.5rem;
+                border-radius: 9999px;
+                font-weight: 600;
+                transition: all 0.3s ease;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .btn-custom-lime:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 20px rgba(151, 180, 26, 0.3);
+                background-color: #8da618;
+            }
+
+            .btn-custom-coral {
+                background-color: #EA6F71;
+                color: white;
+                padding: 1rem 2.5rem;
+                border-radius: 9999px;
+                font-weight: 600;
+                transition: all 0.3s ease;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .btn-custom-coral:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 20px rgba(234, 111, 113, 0.3);
+                background-color: #d65f61;
+            }
+
             .organic-shape-container {
                 position: relative;
                 z-index: 1;
@@ -278,6 +332,14 @@
                 display: flex;
                 align-items: center;
             }
+
+            .text-custom-lime {
+                color: #97B41A !important;
+            }
+
+            .text-custom-coral {
+                color: #EA6F71 !important;
+            }
         </style>
     @endpush
 
@@ -312,7 +374,7 @@
                                         advanced science and genuine emotional understanding.
                                     </p>
 
-                                    <a href="/contact" class="btn-orange text-lg px-10 relative z-20">
+                                    <a href="/contact" class="btn-custom-teal text-lg px-10 relative z-20">
                                         Talk To Us
                                     </a>
                                 </div>
@@ -331,7 +393,7 @@
                                         advanced science and genuine emotional understanding.
                                     </p>
 
-                                    <a href="/contact" class="btn-orange text-lg mx-auto lg:mx-0">
+                                    <a href="/contact" class="btn-custom-teal text-lg mx-auto lg:mx-0">
                                         Talk To Us
                                     </a>
                                 </div>
@@ -360,7 +422,7 @@
                             <div class="z-20 text-center lg:text-left relative w-full lg:relative">
                                 {{-- Mobile optimized layout content --}}
                                 <div class="lg:hidden flex flex-col items-center">
-                                    <h1 class="hero-title">
+                                    <h1 class="hero-title text-custom-lime">
                                         Empowering<br>
                                         Potential with<br>
                                         Expert Guidance
@@ -371,14 +433,14 @@
                                         for holistic developmental care.
                                     </p>
 
-                                    <a href="/contact" class="btn-orange text-lg px-10 relative z-20">
+                                    <a href="/contact" class="btn-custom-lime text-lg px-10 relative z-20">
                                         Book Assessment
                                     </a>
                                 </div>
 
                                 {{-- Desktop layout --}}
                                 <div class="hidden lg:block">
-                                    <h1 class="hero-title text-5xl lg:text-7xl mb-8">
+                                    <h1 class="hero-title text-5xl lg:text-7xl mb-8 text-custom-lime">
                                         Empowering<br>
                                         Potential with<br>
                                         Expert Guidance
@@ -390,7 +452,7 @@
                                         for holistic developmental care.
                                     </p>
 
-                                    <a href="/contact" class="btn-orange text-lg mx-auto lg:mx-0">
+                                    <a href="/contact" class="btn-custom-lime text-lg mx-auto lg:mx-0">
                                         Book Assessment
                                     </a>
                                 </div>
@@ -419,7 +481,7 @@
                             <div class="z-20 text-center lg:text-left relative w-full lg:relative">
                                 {{-- Mobile optimized layout content --}}
                                 <div class="lg:hidden flex flex-col items-center">
-                                    <h1 class="hero-title">
+                                    <h1 class="hero-title text-custom-coral">
                                         Supporting Every<br>
                                         Child's Growth<br>
                                         Journey
@@ -430,14 +492,14 @@
                                         we walk alongside families at every stage of development.
                                     </p>
 
-                                    <a href="/services" class="btn-orange text-lg px-10 relative z-20">
+                                    <a href="/services" class="btn-custom-coral text-lg px-10 relative z-20">
                                         Explore Services
                                     </a>
                                 </div>
 
                                 {{-- Desktop layout --}}
                                 <div class="hidden lg:block">
-                                    <h1 class="hero-title text-5xl lg:text-7xl mb-8">
+                                    <h1 class="hero-title text-5xl lg:text-7xl mb-8 text-custom-coral">
                                         Supporting Every<br>
                                         Child's Growth<br>
                                         Journey
@@ -449,7 +511,7 @@
                                         we walk alongside families at every stage of development.
                                     </p>
 
-                                    <a href="/services" class="btn-orange text-lg mx-auto lg:mx-0">
+                                    <a href="/services" class="btn-custom-coral text-lg mx-auto lg:mx-0">
                                         Explore Services
                                     </a>
                                 </div>
