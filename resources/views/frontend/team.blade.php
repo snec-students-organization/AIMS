@@ -158,8 +158,8 @@
 
             <div class="mt-20 text-center">
                 <p class="mb-8 text-gray-600">Want to join our amazing team of professionals?</p>
-                <a href="/career"
-                    class="inline-flex items-center gap-2 bg-[#32A8B8] text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-[#32A8B8]/20 transition-all hover:-translate-y-1">
+                <a href="/contact"
+                    class="inline-flex items-center gap-2 bg-[#97B41A] text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-[#97B41A]/20 transition-all hover:-translate-y-1">
                     View Career Opportunities
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
@@ -167,35 +167,46 @@
                             d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                 </a>
+
             </div>
         </div>
     </section>
 
     {{-- JOIN US SECTION --}}
-    <section class="py-20 bg-white overflow-hidden">
-        <div class="container mx-auto px-4">
-            <div class="rounded-[3rem] bg-[#32A8B8] p-8 md:p-16 text-white relative overflow-hidden text-center shadow-2xl"
-                data-aos="zoom-in">
-                <div
-                    class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
-                </div>
-                <div
-                    class="absolute bottom-0 left-0 w-64 h-64 bg-black/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2">
-                </div>
+<section class="py-20 bg-white overflow-hidden">
+    <div class="container mx-auto px-4">
+        <div
+            class="rounded-[3rem] bg-[#EA6F71] p-8 md:p-16 text-white relative overflow-hidden text-center shadow-2xl"
+            data-aos="zoom-in">
 
-                <div class="relative z-10 max-w-3xl mx-auto space-y-8">
-                    <h2 class="text-4xl font-bold">Growing Together for a Better Future</h2>
-                    <p class="text-white/90 text-lg leading-relaxed">
-                        Our team is always looking for compassionate individuals who share our vision. If you have a passion
-                        for helping children, we'd love to hear from you.
-                    </p>
-                    <div class="flex flex-wrap justify-center gap-4">
-                        <a href="/contact"
-                            class="bg-white text-teal-600 px-8 py-3 rounded-full font-bold hover:bg-teal-50 transition-all">Contact
-                            Us Today</a>
-                    </div>
+            <div
+                class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
+            </div>
+
+            <div
+                class="absolute bottom-0 left-0 w-64 h-64 bg-black/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2">
+            </div>
+
+            <div class="relative z-10 max-w-3xl mx-auto space-y-8">
+                <h2 class="text-4xl font-bold">
+                    Growing Together for a Better Future
+                </h2>
+
+                <p class="text-white/90 text-lg leading-relaxed">
+                    Our team is always looking for compassionate individuals who share our vision.
+                    If you have a passion for helping children, we'd love to hear from you.
+                </p>
+
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="/contact"
+                       class="bg-white text-[#EA6F71] px-8 py-3 rounded-full font-bold hover:bg-white/90 transition-all">
+                        Contact Us Today
+                    </a>
                 </div>
             </div>
+
         </div>
-    </section>
+    </div>
+</section>
+
 @endsection
