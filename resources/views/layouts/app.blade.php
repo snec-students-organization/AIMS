@@ -127,12 +127,75 @@
                 transform: rotate(360deg);
             }
         }
+
+        /* Custom Cursor Styling */
+        .cursor-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+        }
+
+        .cursor-outline {
+            width: 30px;
+            height: 30px;
+            border: 2px solid var(--primary);
+        }
+
+        .cursor-dot,
+        .cursor-outline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: 10000;
+            pointer-events: none;
+            transition: transform 0.15s ease-out, width 0.3s ease, height 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+        }
+
+        .cursor-outline.hovered {
+            width: 50px;
+            height: 50px;
+            background: rgba(50, 168, 184, 0.1);
+            border-color: var(--secondary);
+        }
+
+        .bubble-trail {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            border-radius: 50%;
+            animation: bubble-fade 1s ease-out forwards;
+        }
+
+        @keyframes bubble-fade {
+            0% {
+                transform: scale(1) translateY(0);
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: scale(0) translateY(-20px);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 1024px) {
+
+            .cursor-dot,
+            .cursor-outline {
+                display: none;
+            }
+        }
     </style>
 
     @stack('head')
 </head>
 
 <body class="bg-white text-gray-800 font-body antialiased overflow-x-hidden">
+    {{-- Custom Cursor --}}
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
 
     {{-- Loading overlay --}}
     <div id="loading-overlay"
@@ -254,6 +317,87 @@
                 } else {
                     backToTop.style.opacity = '0';
                     backToTop.style.transform = 'translateY(4px)';
+                }
+            });
+
+            // Custom Cursor Logic
+            const cursorDot = document.getElementById('cursor-dot');
+            const cursorOutline = document.getElementById('cursor-outline');
+            const interactiveElements = 'a, button, input, textarea, [role="button"], .interactive';
+
+            window.addEventListener('mousemove', (e) => {
+                const posX = e.clientX;
+                const posY = e.clientY;
+
+                // Move dot immediately
+                cursorDot.style.left = `${posX}px`;
+                cursorDot.style.top = `${posY}px`;
+
+                // Smooth outline following
+                cursorOutline.animate({
+                    left: `${posX}px`,
+                    top: `${posY}px`
+                }, { duration: 500, fill: "forwards" });
+
+                // Create trail bubbles occasionally
+                if (Math.random() > 0.8) {
+                    createBubble(posX, posY);
+                }
+            });
+
+            function createBubble(x, y) {
+                const colors = ['#32A8B8', '#EA6F71', '#E99D1D', '#A8CF45'];
+                const bubble = document.createElement('div');
+                bubble.className = 'bubble-trail';
+                const size = Math.random() * 15 + 5;
+                bubble.style.width = `${size}px`;
+                bubble.style.height = `${size}px`;
+                bubble.style.left = `${x}px`;
+                bubble.style.top = `${y}px`;
+                bubble.style.background = colors[Math.floor(Math.random() * colors.length)];
+                document.body.appendChild(bubble);
+
+                setTimeout(() => {
+                    bubble.remove();
+                }, 1000);
+            }
+
+            // Hover effects
+            document.querySelectorAll(interactiveElements).forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursorOutline.classList.add('hovered');
+                    cursorDot.style.transform = 'translate(-50%, -50%) scale(0.5)';
+                });
+                el.addEventListener('mouseleave', () => {
+                    cursorOutline.classList.remove('hovered');
+                    cursorDot.style.transform = 'translate(-50%, -50%) scale(1)';
+                });
+            });
+
+            // Click effect
+            window.addEventListener('mousedown', (e) => {
+                for (let i = 0; i < 8; i++) {
+                    const bubble = document.createElement('div');
+                    bubble.className = 'bubble-trail';
+                    const size = Math.random() * 10 + 2;
+                    bubble.style.width = `${size}px`;
+                    bubble.style.height = `${size}px`;
+                    bubble.style.left = `${e.clientX}px`;
+                    bubble.style.top = `${e.clientY}px`;
+                    bubble.style.background = '#32A8B8';
+
+                    const angle = Math.random() * Math.PI * 2;
+                    const velocity = Math.random() * 50 + 20;
+                    const tx = Math.cos(angle) * velocity;
+                    const ty = Math.sin(angle) * velocity;
+
+                    bubble.animate([
+                        { transform: 'translate(-50%, -50%) scale(1)', opacity: 1 },
+                        { transform: `translate(${tx}px, ${ty}px) scale(0)`, opacity: 0 }
+                    ], { duration: 600, easing: 'ease-out' });
+
+                    document.body.appendChild(bubble);
+                    setTimeout(() => bubble.remove(), 600);
                 }
             });
 
