@@ -22,8 +22,8 @@
                         ['name' => 'Services', 'url' => '/services'],
                         ['name' => 'Team', 'url' => '/team'],
                         ['name' => 'Gallery', 'url' => '/gallery'],
-                        ['name' => 'Blog', 'url' => '/blog'],
-                        ['name' => 'Career', 'url' => '/career'],
+                       // ['name' => 'Blog', 'url' => '/blog'],
+                       // ['name' => 'Career', 'url' => '/career'],
                         ['name' => 'Contact', 'url' => '/contact'],
                     ];
                 @endphp

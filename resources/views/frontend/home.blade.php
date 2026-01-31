@@ -5,92 +5,91 @@
     {{-- ================= HERO SECTION ================= --}}
     @push('head')
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
         <style>
-            :root {
-                --primary-teal: #006684;
-                --secondary-orange: #e99e5a;
-                --text-dark: #1a1a1a;
-                --soft-bg: #f8fafc;
-            }
+                    :root {
+                        --primary-teal: #006684;
+                        --secondary-orange: #e99e5a;
+                        --text-dark: #1a1a1a;
+                        --soft-bg: #f8fafc;
+                    }
 
-            body {
-                font-family: 'Outfit', sans-serif;
-            }
+                    body {
+                        font-family: 'Outfit', sans-serif;
+                    }
 
-            .hero-section {
-                background-color: var(--soft-bg);
-                overflow: visible;
-            }
-
-            .hero-title {
-                color: #32A8B8;
-                font-weight: 800;
-                line-height: 1.1;
-            }
-
-            @media (max-width: 1023px) {
-                .hero-section {
-                    background: #f0fbff;
-                    padding: 0 !important;
-                    min-height: 85vh;
-                }
-
-                .hero-section .swiper-slide {
-                    min-height: 85vh;
-                    position: relative;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    padding-top: 5rem;
-                    overflow: hidden;
-                }
-
-                .mobile-slide-bg {
-                    position: absolute;
-                    inset: 0;
-                    background-size: cover;
-                    background-position: center 85%;
-                    background-repeat: no-repeat;
-                    z-index: 1;
-                }
-
-                .mobile-slide-overlay {
-                    position: absolute;
-                    inset: 0;
-                    background: linear-gradient(to bottom, #f0fbff 0%, #f0fbff 20%, rgba(240, 251, 255, 0.3) 50%, transparent 100%);
-                    z-index: 2;
-                }
-
-                .hero-title,
-                .hero-title.text-custom-lime,
-                .hero-title.text-custom-coral {
-                    font-size: 2.25rem !important;
-                    margin-bottom: 1.25rem !important;
-                    text-align: center;
-                    color: #32A8B8 !important;
-                    position: relative;
-                    z-index: 10;
-                    padding: 0 1.5rem;
-                    line-height: 1.2;
-                }
-
-                .btn-custom-lime,
-                        .btn-custom-coral {
-                            background-color: #32A8B8 !important;
+                    .hero-section {
+                        background-color: var(--soft-bg);
+                        overflow: visible;
                         }
 
-                        .hero-description {
-                            font-size: 1rem !important;
-                            margin-bottom: 2.5rem !important;
-                            text-align: center;
-                            color: #4a5568 !important;
-                            position: relative;
-                            z-index: 10;
-                            padding: 0 2rem;
-                            max-width: 100%;
-                            line-height: 1.6;
-                        }
+                            .hero-title {
+                                color: #32A8B8;
+                                font-weight: 800;
+                                line-height: 1.1;
+                            }
+
+                            @media (max-width: 1023px) {
+                                .hero-section {
+                                    background: #f0fbff;
+                                    padding: 0 !important;
+                                    min-height: 85vh;
+                                }
+
+                                .hero-section .swiper-slide {
+                                    min-height: 85vh;
+                                    position: relative;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: flex-start;
+                                    padding-top: 5rem;
+                                    overflow: hidden;
+                                }
+
+                                .mobile-slide-bg {
+                                    position: absolute;
+                                    inset: 0;
+                                    background-size: cover;
+                                    background-position: center 85%;
+                                    background-repeat: no-repeat;
+                                    z-index: 1;
+                                }
+
+                                .mobile-slide-overlay {
+                                    position: absolute;
+                                    inset: 0;
+                                    background: linear-gradient(to bottom, #f0fbff 0%, #f0fbff 20%, rgba(240, 251, 255, 0.3) 50%, transparent 100%);
+                                    z-index: 2;
+                                }
+
+                                .hero-title,
+                                .hero-title.text-custom-lime,
+                                .hero-title.text-custom-coral {
+                                    font-size: 2.25rem !important;
+                                    margin-bottom: 1.25rem !important;
+                                    text-align: center;
+                                    color: #32A8B8 !important;
+                                    position: relative;
+                                    z-index: 10;
+                                    padding: 0 1.5rem;
+                                    line-height: 1.2;
+                                }
+
+                                .btn-custom-lime,
+                                .btn-custom-coral {
+                                    background-color: #32A8B8 !important;
+                                }
+
+                                .hero-description {
+                                    font-size: 1rem !important;
+                                    margin-bottom: 2.5rem !important;
+                                    text-align: center;
+                                    color: #4a5568 !important;
+                                    position: relative;
+                                    z-index: 10;
+                                    padding: 0 2rem;
+                                    max-width: 100%;
+                                    line-height: 1.6;
+                                }
                             }
 
                             .btn-orange {
