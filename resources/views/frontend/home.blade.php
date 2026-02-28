@@ -30,133 +30,101 @@
 
             @media (max-width: 1023px) {
                 .hero-section {
-                    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+                    background: #ffffff;
                     padding: 0 !important;
-                    min-height: 90vh;
+                    min-height: 100vh;
                     position: relative;
-                }
-
-                /* Decorative blurred elements */
-                .hero-section::before,
-                .hero-section::after {
-                    content: '';
-                    position: absolute;
-                    width: 300px;
-                    height: 300px;
-                    border-radius: 50%;
-                    filter: blur(80px);
-                    z-index: 0;
-                    opacity: 0.5;
-                }
-
-                .hero-section::before {
-                    background: #32A8B8;
-                    top: -100px;
-                    right: -100px;
-                }
-
-                .hero-section::after {
-                    background: #EA6F71;
-                    bottom: -100px;
-                    left: -100px;
-                }
-
-                .hero-section .swiper-slide {
-                    min-height: 90vh;
-                    position: relative;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    padding-top: 6rem;
                     overflow: hidden;
                 }
 
-                .mobile-slide-bg {
-                    position: absolute;
-                    inset: 0;
-                    background-size: cover;
-                    background-position: center bottom;
-                    background-repeat: no-repeat;
-                    z-index: 1;
-                    transform: scale(1.1);
-                    transition: transform 10s ease-out;
+                .hero-section .swiper-slide {
+                    min-height: 100vh;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    padding-top: 2rem;
                 }
 
-                .swiper-slide-active .mobile-slide-bg {
-                    transform: scale(1.0);
-                }
-
-                .mobile-slide-overlay {
-                    position: absolute;
-                    inset: 0;
-                    background: linear-gradient(to bottom,
-                            rgba(240, 249, 255, 0.5) 0%,
-                            rgba(240, 249, 255, 0.3) 30%,
-                            rgba(240, 249, 255, 0.1) 60%,
-                            rgba(240, 249, 255, 0) 100%);
-                    z-index: 2;
-                }
-
-                .mobile-glass-content {
-                    background: rgba(255, 255, 255, 0.2);
-                    /* Maximum transparency for clarity */
-                    backdrop-filter: blur(4px);
-                    /* Minimal blur for clearest background */
-                    -webkit-backdrop-filter: blur(4px);
-                    border: 1px solid rgba(255, 255, 255, 0.15);
-                    border-radius: 32px;
-                    padding: 2.25rem 1.25rem;
-                    margin: 0 0.75rem;
-                    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.03);
-                    z-index: 10;
+                .mobile-hero-image-container {
+                    width: 90%;
+                    max-width: 400px;
+                    aspect-ratio: 1;
+                    margin: 0 auto;
                     position: relative;
+                    z-index: 5;
                 }
 
-                .hero-title,
-                .hero-title.text-custom-lime,
-                .hero-title.text-custom-coral {
-                    font-size: 2.5rem !important;
-                    margin-bottom: 1.5rem !important;
-                    text-align: center;
-                    color: #006684 !important;
-                    /* Deeper primary for contrast */
-                    position: relative;
-                    z-index: 10;
-                    padding: 0;
-                    line-height: 1.1;
-                    letter-spacing: -0.02em;
-                    font-weight: 800;
-                }
-
-                /* Highlight words with color */
-                .hero-title span {
-                    background: linear-gradient(to right, #32A8B8, #4FB8C7);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
-
-                .btn-custom-lime,
-                .btn-custom-coral,
-                .btn-custom-teal {
+                .mobile-organic-circle {
                     width: 100%;
-                    max-width: 280px;
-                    margin-top: 1rem;
-                    border-radius: 16px !important;
-                    box-shadow: 0 10px 25px rgba(50, 168, 184, 0.25) !important;
-                    padding: 1.1rem 2rem !important;
+                    height: 100%;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+                    border: 8px solid white;
+                    position: relative;
+                }
+
+                .mobile-organic-circle img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                /* Circular border pattern background */
+                .mobile-hero-image-container::before {
+                    content: '';
+                    position: absolute;
+                    inset: -15px;
+                    border: 2px dashed #EA6F71;
+                    border-radius: 50%;
+                    opacity: 0.3;
+                    animation: rotate 20s linear infinite;
+                }
+
+                @keyframes rotate {
+                    from {
+                        transform: rotate(0deg);
+                    }
+
+                    to {
+                        transform: rotate(360deg);
+                    }
+                }
+
+                .mobile-content-card {
+                    padding: 2.5rem 1.5rem;
+                    text-align: left;
+                    width: 100%;
+                    background: white;
+                    margin-top: -20px;
+                    border-radius: 40px 40px 0 0;
+                    position: relative;
+                    z-index: 10;
+                }
+
+                .mobile-subheading {
+                    color: #EA6F71;
+                    font-weight: 700;
+                    font-size: 1.25rem;
+                    margin-bottom: 0.5rem;
+                    display: block;
+                }
+
+                .hero-title {
+                    font-size: 2.5rem !important;
+                    line-height: 1.2;
+                    color: #1a365d !important;
+                    font-weight: 800;
+                    margin-bottom: 1.5rem;
                 }
 
                 .hero-description {
-                    font-size: 1.1rem !important;
-                    margin-bottom: 2rem !important;
-                    text-align: center;
-                    color: #475569 !important;
-                    position: relative;
-                    z-index: 10;
-                    padding: 0;
-                    max-width: 100%;
+                    font-size: 1rem !important;
+                    color: #4a5568 !important;
                     line-height: 1.6;
+                    margin-bottom: 2rem;
                 }
+
             }
 
             .btn-orange {
@@ -425,34 +393,27 @@
 
                     {{-- SLIDE 1 --}}
                     <div class="swiper-slide">
-                        {{-- Mobile Background (moved here for proper coverage) --}}
-                        <div class="lg:hidden mobile-slide-bg"
-                            style="background-image: url('{{ asset('images/image9.jpg') }}');"></div>
-                        <div class="lg:hidden mobile-slide-overlay"></div>
-
                         <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10 w-full">
 
                             {{-- CONTENT - Mobile / Desktop --}}
                             <div class="z-20 text-center lg:text-left relative w-full lg:relative">
                                 {{-- Mobile optimized layout content --}}
                                 <div class="lg:hidden flex flex-col items-center">
-                                    <div class="mobile-glass-content">
-                                        <h1 class="hero-title">
-                                            <span>Precision Care</span> for<br>
-                                            the Human<br>
-                                            Experience
-                                        </h1>
+                                    <div class="mobile-hero-image-container">
+                                        <div class="mobile-organic-circle">
+                                            <img src="{{ asset('images/image9.jpg') }}" alt="Wellness">
+                                        </div>
+                                    </div>
 
+                                    <div class="mobile-content-card">
+                                        <span class="mobile-subheading">Best Child Development Center In Kerala</span>
+                                        <h1 class="hero-title">About Us</h1>
                                         <p class="hero-description">
-                                            Betterly Wellness reimagines wellbeing through a thoughtful blend of
-                                            advanced science and genuine emotional understanding.
+                                            Our center is designed to be a safe, caring, and hopeful environment where every
+                                            child's unique potential is recognized and nurtured.
                                         </p>
 
-                                        <div class="flex flex-col items-center">
-                                            <a href="/contact" class="btn-custom-teal text-lg px-10 relative z-20">
-                                                Talk To Us
-                                            </a>
-                                        </div>
+                                        <a href="/contact" class="btn-custom-teal">Talk To Us</a>
                                     </div>
                                 </div>
 
@@ -489,33 +450,26 @@
 
                     {{-- SLIDE 2 --}}
                     <div class="swiper-slide">
-                        {{-- Mobile Background --}}
-                        <div class="lg:hidden mobile-slide-bg"
-                            style="background-image: url('{{ asset('images/image8.jpg') }}');"></div>
-                        <div class="lg:hidden mobile-slide-overlay"></div>
-
                         <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10 w-full">
 
                             <div class="z-20 text-center lg:text-left relative w-full lg:relative">
                                 {{-- Mobile optimized layout content --}}
                                 <div class="lg:hidden flex flex-col items-center">
-                                    <div class="mobile-glass-content">
-                                        <h1 class="hero-title">
-                                            <span>Empowering</span><br>
-                                            Potential with<br>
-                                            Expert Guidance
-                                        </h1>
+                                    <div class="mobile-hero-image-container">
+                                        <div class="mobile-organic-circle">
+                                            <img src="{{ asset('images/image8.jpg') }}" alt="Expert Guidance">
+                                        </div>
+                                    </div>
 
+                                    <div class="mobile-content-card">
+                                        <span class="mobile-subheading">Comprehensive Expert Guidance</span>
+                                        <h1 class="hero-title">Join Our Family</h1>
                                         <p class="hero-description">
-                                            Join over 1000 families who trust our certified therapists
-                                            for holistic developmental care.
+                                            Join over 1000 families who trust our certified therapists for holistic
+                                            developmental care and specialized support.
                                         </p>
 
-                                        <div class="flex flex-col items-center">
-                                            <a href="/contact" class="btn-custom-lime text-lg px-10 relative z-20">
-                                                Book Assessment
-                                            </a>
-                                        </div>
+                                        <a href="/contact" class="btn-custom-lime">Book Assessment</a>
                                     </div>
                                 </div>
 
@@ -552,33 +506,26 @@
 
                     {{-- SLIDE 3 --}}
                     <div class="swiper-slide">
-                        {{-- Mobile Background --}}
-                        <div class="lg:hidden mobile-slide-bg"
-                            style="background-image: url('{{ asset('images/image10.png') }}');"></div>
-                        <div class="lg:hidden mobile-slide-overlay"></div>
-
                         <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10 w-full">
 
                             <div class="z-20 text-center lg:text-left relative w-full lg:relative">
                                 {{-- Mobile optimized layout content --}}
                                 <div class="lg:hidden flex flex-col items-center">
-                                    <div class="mobile-glass-content">
-                                        <h1 class="hero-title">
-                                            <span>Supporting</span> Every<br>
-                                            Child's Growth<br>
-                                            Journey
-                                        </h1>
+                                    <div class="mobile-hero-image-container">
+                                        <div class="mobile-organic-circle">
+                                            <img src="{{ asset('images/image10.png') }}" alt="Growth Journey">
+                                        </div>
+                                    </div>
 
+                                    <div class="mobile-content-card">
+                                        <span class="mobile-subheading">Supporting Every Step</span>
+                                        <h1 class="hero-title">Our Services</h1>
                                         <p class="hero-description">
-                                            From early intervention to specialized therapies,
-                                            we walk alongside families at every stage of development.
+                                            From early intervention to specialized therapies, we walk alongside families at
+                                            every stage of development.
                                         </p>
 
-                                        <div class="flex flex-col items-center">
-                                            <a href="/services" class="btn-custom-coral text-lg px-10 relative z-20">
-                                                Explore Services
-                                            </a>
-                                        </div>
+                                        <a href="/services" class="btn-custom-coral">Explore Services</a>
                                     </div>
                                 </div>
 
@@ -618,6 +565,7 @@
                 {{-- PAGINATION --}}
                 <div class="swiper-pagination-hero swiper-pagination"></div>
             </div>
+
         </div>
     </section>
 
