@@ -57,23 +57,29 @@
                 .mobile-organic-circle {
                     width: 100%;
                     height: 100%;
-                    border-radius: 8px;
-                            overflow: hidden;
-                            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-                            border: 8px solid white;
-                            position: relative;
-                        }
+                    border-radius: 50%;
+                    overflow: hidden;
+                    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+                    border: 8px solid white;
+                    position: relative;
+                }
 
-                        /* Circular border pattern background */
-                        .mobile-hero-image-container::before {
-                            content: '';
-                            position: absolute;
-                            inset: -15px;
-                            border: 2px dashed #EA6F71;
-                            border-radius: 16px;
-                            opacity: 0.3;
-                            animation: rotate 20s linear infinite;
-                        }
+                .mobile-organic-circle img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                /* Circular border pattern background */
+                .mobile-hero-image-container::before {
+                    content: '';
+                    position: absolute;
+                    inset: -15px;
+                    border: 2px dashed #EA6F71;
+                    border-radius: 50%;
+                    opacity: 0.3;
+                    animation: rotate 20s linear infinite;
+                }
 
                         @keyframes rotate {
                             from {
@@ -85,16 +91,16 @@
                             }
                         }
 
-                        .mobile-content-card {
-                            padding: 2.5rem 1.5rem;
-                            text-align: left;
-                            width: 100%;
-                            background: white;
-                            margin-top: 2rem;
-                            border-radius: 8px;
-                            position: relative;
-                            z-index: 10;
-                        }
+                .mobile-content-card {
+                    padding: 2.5rem 1.5rem;
+                    text-align: left;
+                    width: 100%;
+                    background: white;
+                    margin-top: -20px;
+                    border-radius: 40px 40px 0 0;
+                    position: relative;
+                    z-index: 10;
+                }
 
                         .mobile-subheading {
                             color: #EA6F71;
