@@ -18,7 +18,7 @@
             }
 
             .hero-section {
-                background-color: var(--soft-bg);
+                background-color: #ffffff;
                 overflow: visible;
             }
 
@@ -57,7 +57,7 @@
                 .mobile-organic-circle {
                     width: 100%;
                     height: 100%;
-                    border-radius: 4px;
+                    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
                     overflow: hidden;
                     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
                     border: 8px solid white;
@@ -76,7 +76,7 @@
                     position: absolute;
                     inset: -15px;
                     border: 2px dashed #EA6F71;
-                    border-radius: 8px;
+                    border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
                     opacity: 0.3;
                     animation: rotate 20s linear infinite;
                 }
@@ -97,7 +97,7 @@
                     width: 100%;
                     background: white;
                     margin-top: 2rem;
-                    border-radius: 4px;
+                    border-radius: 24px;
                     position: relative;
                     z-index: 10;
                 }
@@ -675,16 +675,7 @@
 
 
 
-    <section class="py-16 lg:py-28 bg-gradient-to-b from-white to-gray-50/30 relative overflow-hidden">
-        {{-- Background decorative elements --}}
-        <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
-        <div
-            class="absolute top-10 left-10 w-72 h-72 bg-gradient-to-br from-teal-200/20 to-teal-400/10 rounded-full blur-3xl">
-        </div>
-        <div
-            class="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-tr from-pink-200/20 to-pink-400/10 rounded-full blur-3xl">
-        </div>
-
+    <section class="py-16 lg:py-28 bg-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
                 {{-- LEFT IMAGE SECTION --}}
@@ -789,48 +780,60 @@
                                     'title' => 'PSYCHOLOGICAL ASSESSMENT',
                                     'description' => 'IQ assessment, learning disability assessment, personality assessment, cognitive and behavioral assessment.',
                                     'icon' => 'public/images/icons/services/psychological-assessment.svg',
-                                    'color' => 'bg-teal-400',
-                                    'blob' => 'rounded-[30%_70%_70%_30%/30%_30%_70%_70%]',
+                                    'bgColor' => 'rgba(50, 168, 184, 0.05)',
+                                    'borderColor' => 'rgba(50, 168, 184, 0.2)',
+                                    'iconColor' => '#32A8B8',
+                                    'shape' => 'rounded-[60px_20px_60px_20px]',
                                     'delay' => 100
                                 ],
                                 [
                                     'title' => 'BEHAVIOURAL THERAPY',
                                     'description' => 'Scientific techniques to improve socio-adaptive functioning and manage behavior.',
                                     'icon' => 'public/images/icons/services/behavioural-therapy.svg',
-                                    'color' => 'bg-pink-400',
-                                    'blob' => 'rounded-[60%_40%_30%_70%/60%_30%_70%_40%]',
+                                    'bgColor' => 'rgba(151, 180, 26, 0.05)',
+                                    'borderColor' => 'rgba(151, 180, 26, 0.2)',
+                                    'iconColor' => '#97B41A',
+                                    'shape' => 'rounded-[20px_60px_20px_60px]',
                                     'delay' => 200
                                 ],
                                 [
                                     'title' => 'SPEECH THERAPY',
                                     'description' => 'Improving speech sounds, fluency, language development, and communication.',
                                     'icon' => 'public/images/icons/services/speech-therapy.svg',
-                                    'color' => 'bg-sky-400',
-                                    'blob' => 'rounded-[40%_60%_60%_40%/70%_30%_70%_30%]',
+                                    'bgColor' => 'rgba(234, 111, 113, 0.05)',
+                                    'borderColor' => 'rgba(234, 111, 113, 0.2)',
+                                    'iconColor' => '#EA6F71',
+                                    'shape' => 'rounded-[60px_20px_60px_20px]',
                                     'delay' => 100
                                 ],
                                 [
                                     'title' => 'SPECIAL EDUCATION',
                                     'description' => 'Individualized education plans using VAKT methodology.',
                                     'icon' => 'public/images/icons/services/special-education.svg',
-                                    'color' => 'bg-red-400',
-                                    'blob' => 'rounded-[50%_50%_20%_80%/25%_80%_20%_75%]',
+                                    'bgColor' => 'rgba(233, 157, 29, 0.05)',
+                                    'borderColor' => 'rgba(233, 157, 29, 0.2)',
+                                    'iconColor' => '#E99D1D',
+                                    'shape' => 'rounded-[20px_60px_20px_60px]',
                                     'delay' => 200
                                 ],
                                 [
                                     'title' => 'OCCUPATIONAL THERAPY',
                                     'description' => 'Developing fine motor, gross motor, and sensory integration skills.',
                                     'icon' => 'public/images/icons/services/occupational-therapy.svg',
-                                    'color' => 'bg-orange-400',
-                                    'blob' => 'rounded-[30%_70%_40%_60%/50%_60%_40%_50%]',
+                                    'bgColor' => 'rgba(50, 168, 184, 0.05)',
+                                    'borderColor' => 'rgba(50, 168, 184, 0.2)',
+                                    'iconColor' => '#32A8B8',
+                                    'shape' => 'rounded-[60px_20px_60px_20px]',
                                     'delay' => 300
                                 ],
                                 [
                                     'title' => 'PSYCHOTHERAPY & COUNSELLING',
                                     'description' => 'Evidence-based psychotherapy by licensed professionals.',
                                     'icon' => 'public/images/icons/services/psychotherapy.svg',
-                                    'color' => 'bg-yellow-400',
-                                    'blob' => 'rounded-[70%_30%_50%_50%/30%_30%_70%_70%]',
+                                    'bgColor' => 'rgba(151, 180, 26, 0.05)',
+                                    'borderColor' => 'rgba(151, 180, 26, 0.2)',
+                                    'iconColor' => '#97B41A',
+                                    'shape' => 'rounded-[20px_60px_20px_60px]',
                                     'delay' => 400
                                 ],
                             ];
@@ -838,18 +841,20 @@
 
                         @foreach($services as $service)
                             <a href="/services"
-                                class="glass-card p-6 rounded-[2rem] group hover:bg-white/60 transition-all duration-500 relative flex flex-col h-full shadow-lg border-white/50 block hover:no-underline text-center"
+                                class="p-8 transform hover:-translate-y-2 transition-all duration-300 flex flex-col h-full {{ $service['shape'] }} block hover:no-underline text-center group border"
+                                style="background-color: {{ $service['bgColor'] }}; border-color: {{ $service['borderColor'] }};"
                                 data-aos="fade-up" data-aos-delay="{{ $service['delay'] }}">
                                 <div class="space-y-4 flex-grow flex flex-col items-center">
                                     <div
-                                        class="w-12 h-12 {{ $service['color'] }} {{ $service['blob'] }} flex items-center justify-center p-3 shadow-lg transform group-hover:scale-110 transition-transform duration-500">
+                                        class="w-16 h-16 rounded-full flex items-center justify-center p-4 transform group-hover:scale-110 transition-transform duration-500"
+                                        style="background-color: {{ $service['iconColor'] }};">
                                         <img src="{{ asset(str_replace('public/', '', $service['icon'])) }}"
                                             alt="{{ $service['title'] }}"
                                             class="w-full h-full brightness-0 invert object-contain">
                                     </div>
-                                    <div class="space-y-2">
+                                    <div class="space-y-3">
                                         <h3
-                                            class="text-xl font-bold text-gray-800 tracking-tight leading-snug group-hover:text-teal-600 transition-colors">
+                                            class="text-xl font-bold text-gray-900 tracking-tight leading-snug">
                                             {{ $service['title'] }}
                                         </h3>
                                         <p class="text-gray-600 leading-relaxed text-sm">{{ $service['description'] }}</p>
@@ -857,7 +862,8 @@
                                 </div>
 
                                 <div
-                                    class="mt-8 pt-4 border-t border-gray-100/50 flex justify-center items-center text-gray-500 font-bold text-xs tracking-wide group/link transition-colors">
+                                    class="mt-8 pt-4 border-t flex justify-center items-center font-bold text-xs tracking-wide group/link transition-colors"
+                                    style="border-color: {{ $service['borderColor'] }}; color: {{ $service['iconColor'] }};">
                                     <div class="flex items-center gap-2">
                                         <span>Learn more</span>
                                         <svg xmlns="http://www.w3.org/2000/svg"
@@ -1033,9 +1039,7 @@
     </section>
 
     {{-- ================= TESTIMONIALS ================= --}}
-    <section class="py-16 lg:py-24 relative overflow-hidden" style="background-color: #f8fafc;">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-teal-100 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
-        </div>
+    <section class="py-16 lg:py-24 relative overflow-hidden" style="background-color: #ffffff;">
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16 text-transparent bg-clip-text"
@@ -1046,83 +1050,83 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {{-- Testimonial 1 --}}
-                <div class="p-8 shadow-xl transform hover:-translate-y-2 transition-all duration-300 flex flex-col h-full"
-                    style="background-color: #00A79D; border-radius: 60px 20px 60px 20px;" data-aos="fade-up"
-                    data-aos-delay="100">
-                    <div class="flex gap-1 mb-4" style="color: #ffffff;">★★★★★</div>
-                    <p class="text-white italic mb-6 flex-grow">
+                <div class="p-8 transform hover:-translate-y-2 transition-all duration-300 flex flex-col h-full border"
+                    style="background-color: rgba(50, 168, 184, 0.05); border-color: rgba(50, 168, 184, 0.2); border-radius: 60px 20px 60px 20px;"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex gap-1 mb-4" style="color: #32A8B8;">★★★★★</div>
+                    <p class="text-gray-700 italic mb-6 flex-grow">
                         "We are extremely happy with the therapy services provide by gems clinic. We have seen a remarkable
                         improvement in our child over time. He has started trying to speak, his hyperactivity has reduced
                         significantly, and his eye contact with people has improved a lot"
                     </p>
                     <div class="flex items-center gap-4">
                         <div
-                            class="w-10 h-10 bg-white text-[#00A79D] rounded-full flex items-center justify-center font-bold shadow-md">
+                            class="w-10 h-10 bg-white text-[#32A8B8] rounded-full flex items-center justify-center font-bold shadow-sm border border-gray-100">
                             HS</div>
                         <div>
-                            <div class="font-semibold text-white">Hasna Kp</div>
-                            <div class="text-white/80 text-xs text-left">Parent</div>
+                            <div class="font-semibold text-gray-900">Hasna Kp</div>
+                            <div class="text-gray-500 text-xs text-left">Parent</div>
                         </div>
                     </div>
                 </div>
 
                 {{-- Testimonial 2 --}}
-                <div class="p-8 shadow-xl transform hover:-translate-y-2 transition-all duration-300 flex flex-col h-full"
-                    style="background-color: #97B41A; border-radius: 20px 60px 20px 60px;" data-aos="fade-up"
-                    data-aos-delay="200">
-                    <div class="flex gap-1 mb-4" style="color: #ffffff;">★★★★★</div>
-                    <p class="text-white italic mb-6 flex-grow">
+                <div class="p-8 transform hover:-translate-y-2 transition-all duration-300 flex flex-col h-full border"
+                    style="background-color: rgba(151, 180, 26, 0.05); border-color: rgba(151, 180, 26, 0.2); border-radius: 20px 60px 20px 60px;"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex gap-1 mb-4" style="color: #97B41A;">★★★★★</div>
+                    <p class="text-gray-700 italic mb-6 flex-grow">
                         "One of the best child development centres in Calicut! Only after reaching here did I truly feel
                         that my son has received the right guidance and support. The staff are very professional, caring,
                         and patient."
                     </p>
                     <div class="flex items-center gap-4">
                         <div
-                            class="w-10 h-10 bg-white text-[#97B41A] rounded-full flex items-center justify-center font-bold shadow-md">
+                            class="w-10 h-10 bg-white text-[#97B41A] rounded-full flex items-center justify-center font-bold shadow-sm border border-gray-100">
                             FA</div>
                         <div>
-                            <div class="font-semibold text-white">Fathima va.</div>
-                            <div class="text-white/80 text-xs text-left">Parent</div>
+                            <div class="font-semibold text-gray-900">Fathima va.</div>
+                            <div class="text-gray-500 text-xs text-left">Parent</div>
                         </div>
                     </div>
                 </div>
 
                 {{-- Testimonial 3 --}}
-                <div class="p-8 shadow-xl transform hover:-translate-y-2 transition-all duration-300 flex flex-col h-full"
-                    style="background-color: #EA6F71; border-radius: 60px 20px 60px 20px;" data-aos="fade-up"
-                    data-aos-delay="300">
-                    <div class="flex gap-1 mb-4" style="color: #ffffff;">★★★★★</div>
-                    <p class="text-white italic mb-6 flex-grow">
+                <div class="p-8 transform hover:-translate-y-2 transition-all duration-300 flex flex-col h-full border"
+                    style="background-color: rgba(234, 111, 113, 0.05); border-color: rgba(234, 111, 113, 0.2); border-radius: 60px 20px 60px 20px;"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex gap-1 mb-4" style="color: #EA6F71;">★★★★★</div>
+                    <p class="text-gray-700 italic mb-6 flex-grow">
                         "The best therapy centre for developmental delayed kids. Excellent teaching and skill development
                         methods using Kids are very happy because of friendly atmosphere."
                     </p>
                     <div class="flex items-center gap-4">
                         <div
-                            class="w-10 h-10 bg-white text-[#EA6F71] rounded-full flex items-center justify-center font-bold shadow-md">
+                            class="w-10 h-10 bg-white text-[#EA6F71] rounded-full flex items-center justify-center font-bold shadow-sm border border-gray-100">
                             AM</div>
                         <div>
-                            <div class="font-semibold text-white">Aneesh meladath.</div>
-                            <div class="text-white/80 text-xs text-left">Parent</div>
+                            <div class="font-semibold text-gray-900">Aneesh meladath.</div>
+                            <div class="text-gray-500 text-xs text-left">Parent</div>
                         </div>
                     </div>
                 </div>
 
                 {{-- Testimonial 4 --}}
-                <div class="p-8 shadow-xl transform hover:-translate-y-2 transition-all duration-300 flex flex-col h-full"
-                    style="background-color: #E99D1D; border-radius: 20px 60px 20px 60px;" data-aos="fade-up"
-                    data-aos-delay="400">
-                    <div class="flex gap-1 mb-4" style="color: #ffffff;">★★★★★</div>
-                    <p class="text-white italic mb-6 flex-grow">
+                <div class="p-8 transform hover:-translate-y-2 transition-all duration-300 flex flex-col h-full border"
+                    style="background-color: rgba(233, 157, 29, 0.05); border-color: rgba(233, 157, 29, 0.2); border-radius: 20px 60px 20px 60px;"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex gap-1 mb-4" style="color: #E99D1D;">★★★★★</div>
+                    <p class="text-gray-700 italic mb-6 flex-grow">
                         "Truly grateful for the progress we've seen. The staff is like family. They've supported us as much
                         as they've supported our son. Excellent environment."
                     </p>
                     <div class="flex items-center gap-4">
                         <div
-                            class="w-10 h-10 bg-white text-[#E99D1D] rounded-full flex items-center justify-center font-bold shadow-md">
+                            class="w-10 h-10 bg-white text-[#E99D1D] rounded-full flex items-center justify-center font-bold shadow-sm border border-gray-100">
                             RK</div>
                         <div>
-                            <div class="font-semibold text-white">Rahul K.</div>
-                            <div class="text-white/80 text-xs text-left">Parent</div>
+                            <div class="font-semibold text-gray-900">Rahul K.</div>
+                            <div class="text-gray-500 text-xs text-left">Parent</div>
                         </div>
                     </div>
                 </div>
@@ -1131,7 +1135,7 @@
     </section>
 
     {{-- ================= FAQ SECTION ================= --}}
-    <section class="py-16 lg:py-24 bg-gray-50">
+    <section class="py-16 lg:py-24 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-12" data-aos="fade-up">Frequently Asked
                 Questions</h2>

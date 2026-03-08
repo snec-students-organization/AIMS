@@ -93,84 +93,171 @@
     </section>
 
     {{-- ================= VALUES SECTION ================= --}}
-<section class="py-16 lg:py-24 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="py-16 lg:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
-            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                Core Values
-            </h2>
-            <p class="text-gray-600 text-lg">
-                Our work is guided by a set of principles that ensure the highest quality of care for every child.
-            </p>
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                    Core Values
+                </h2>
+                <p class="text-gray-600 text-lg">
+                    Our work is guided by a set of principles that ensure the highest quality of care for every child.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                {{-- Value 1 --}}
+                <div class="p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border group"
+                    style="background-color: rgba(50, 168, 184, 0.05); border-color: rgba(50, 168, 184, 0.2);"
+                    data-aos="fade-up" data-aos-delay="100">
+
+                    <div
+                        class="w-14 h-14 bg-[#32A8B8] text-white rounded-xl flex items-center justify-center text-3xl mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                        ❤️
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 uppercase">Compassion</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        We approach every child and family with empathy, kindness, and understanding.
+                    </p>
+                </div>
+
+                {{-- Value 2 --}}
+                <div class="p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border group"
+                    style="background-color: rgba(151, 180, 26, 0.05); border-color: rgba(151, 180, 26, 0.2);"
+                    data-aos="fade-up" data-aos-delay="200">
+
+                    <div
+                        class="w-14 h-14 bg-[#97B41A] text-white rounded-xl flex items-center justify-center text-3xl mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                        🌟
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 uppercase">Excellence</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        We are committed to the highest standards of clinical practice and continuous learning.
+                    </p>
+                </div>
+
+                {{-- Value 3 --}}
+                <div class="p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border group"
+                    style="background-color: rgba(234, 111, 113, 0.05); border-color: rgba(234, 111, 113, 0.2);"
+                    data-aos="fade-up" data-aos-delay="300">
+
+                    <div
+                        class="w-14 h-14 bg-[#EA6F71] text-white rounded-xl flex items-center justify-center text-3xl mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                        🤝
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 uppercase">Integrity</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        We operate with honesty, transparency, and ethical responsibility in all we do.
+                    </p>
+                </div>
+
+                {{-- Value 4 --}}
+                <div class="p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border group"
+                    style="background-color: rgba(233, 157, 29, 0.05); border-color: rgba(233, 157, 29, 0.2);"
+                    data-aos="fade-up" data-aos-delay="400">
+
+                    <div
+                        class="w-14 h-14 bg-[#E99D1D] text-white rounded-xl flex items-center justify-center text-3xl mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                        👨‍👩‍👧‍👦
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 uppercase">Collaboration</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        We work as a team with families, schools, and other professionals for the child's benefit.
+                    </p>
+                </div>
+
+            </div>
         </div>
+    </section>
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
-            {{-- Value 1 --}}
-            <div
-                class="p-8 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-                style="background:#32A8B8; border-radius: 60px 20px 60px 20px;"
-                data-aos="fade-up" data-aos-delay="100">
-
-                <div class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center text-3xl mb-6">
-                    ❤️
-                </div>
-                <h3 class="text-xl font-bold mb-3">Compassion</h3>
-                <p class="text-white/90">
-                    We approach every child and family with empathy, kindness, and understanding.
+    {{-- ================= WHY CHOOSE GEMS ================= --}}
+    <section class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-[#32A8B8] font-bold tracking-widest uppercase text-sm mb-3 block">Our Strengths</span>
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                    Why Choose GEMS?
+                </h2>
+                <p class="text-gray-600 text-lg">
+                    We combine clinical expertise with a heart-centered approach to ensure the best possible start for your
+                    child.
                 </p>
             </div>
 
-            {{-- Value 2 --}}
-            <div
-                class="p-8 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-                style="background:#97B41A; border-radius: 20px 60px 20px 60px;"
-                data-aos="fade-up" data-aos-delay="200">
-
-                <div class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center text-3xl mb-6">
-                    🌟
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                {{-- Point 1: Licensed Therapist --}}
+                <div class="p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border group"
+                    style="background-color: rgba(50, 168, 184, 0.05); border-color: rgba(50, 168, 184, 0.2);"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-16 h-16 bg-[#32A8B8] text-white rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                        👨‍⚕️
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 uppercase">Licensed Therapist</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Expert care from certified professionals dedicated to pediatric excellence.
+                    </p>
                 </div>
-                <h3 class="text-xl font-bold mb-3">Excellence</h3>
-                <p class="text-white/90">
-                    We are committed to the highest standards of clinical practice and continuous learning.
-                </p>
-            </div>
 
-            {{-- Value 3 --}}
-            <div
-                class="p-8 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-                style="background:#EA6F71; border-radius: 60px 20px 60px 20px;"
-                data-aos="fade-up" data-aos-delay="300">
-
-                <div class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center text-3xl mb-6">
-                    🤝
+                {{-- Point 2: Precision in Diagnosis --}}
+                <div class="p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border group"
+                    style="background-color: rgba(233, 157, 29, 0.05); border-color: rgba(233, 157, 29, 0.2);"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-16 h-16 bg-[#E99D1D] text-white rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                        🎯
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 uppercase">Precision in Diagnosis</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Accurate assessments that form the foundation for highly tailored interventions.
+                    </p>
                 </div>
-                <h3 class="text-xl font-bold mb-3">Integrity</h3>
-                <p class="text-white/90">
-                    We operate with honesty, transparency, and ethical responsibility in all we do.
-                </p>
-            </div>
 
-            {{-- Value 4 --}}
-            <div
-                class="p-8 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-                style="background:#E99D1D; border-radius: 20px 60px 20px 60px;"
-                data-aos="fade-up" data-aos-delay="400">
-
-                <div class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center text-3xl mb-6">
-                    👨‍👩‍👧‍👦
+                {{-- Point 3: Multidisciplinary Team Care --}}
+                <div class="p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border group"
+                    style="background-color: rgba(151, 180, 26, 0.05); border-color: rgba(151, 180, 26, 0.2);"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="w-16 h-16 bg-[#97B41A] text-white rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                        🤝
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 uppercase">Multidisciplinary Team Care</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        A collaborative approach involving specialists across multiple therapeutic disciplines.
+                    </p>
                 </div>
-                <h3 class="text-xl font-bold mb-3">Collaboration</h3>
-                <p class="text-white/90">
-                    We work as a team with families, schools, and other professionals for the child's benefit.
-                </p>
-            </div>
 
+                {{-- Point 4: Parent Support --}}
+                <div class="p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border group"
+                    style="background-color: rgba(234, 111, 113, 0.05); border-color: rgba(234, 111, 113, 0.2);"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <div
+                        class="w-16 h-16 bg-[#EA6F71] text-white rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                        👪
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 uppercase">Parent Support</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Empowering families with tools, education, and emotional guidance throughout the journey.
+                    </p>
+                </div>
+
+                {{-- Point 5: Assured Result --}}
+                <div class="p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border group"
+                    style="background-color: rgba(50, 168, 184, 0.05); border-color: rgba(50, 168, 184, 0.2);"
+                    data-aos="fade-up" data-aos-delay="500">
+                    <div
+                        class="w-16 h-16 bg-[#32A8B8] text-white rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                        🏆
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 uppercase">Assured Result</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Committed to measurable progress and positive functional outcomes for every child.
+                    </p>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
-
+    </section>
 
     {{-- ================= FOUNDER'S MESSAGE ================= --}}
     <section class="py-16 lg:py-24 bg-white relative overflow-hidden">
@@ -219,21 +306,53 @@
     </section>
 
     {{-- CTA --}}
-    <section class="py-16 text-white" style="background-color: #32A8B8;">
-        <div class="max-w-4xl mx-auto px-4 text-center" data-aos="zoom-in">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Journey?</h2>
-            <p class="text-xl text-white/90 mb-8">Book a consultation with our experts today and let's discuss how we can
-                support your child's growth.</p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
+    <section class="relative overflow-hidden py-24 lg:py-32" style="background-color: #32A8B8;">
+        {{-- Background Decor --}}
+        <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-[#32A8B8] opacity-90"></div>
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-white/5 skew-x-12 transform translate-x-20"></div>
+            <div class="absolute bottom-0 left-0 w-1/2 h-full bg-black/5 -skew-x-12 transform -translate-x-20"></div>
+        </div>
+
+        {{-- Top Curve --}}
+        <div class="absolute top-0 left-0 w-full overflow-hidden leading-none transform rotate-180">
+            <svg class="relative block w-full h-[60px] sm:h-[100px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                    class="fill-white"></path>
+            </svg>
+        </div>
+
+        {{-- Content --}}
+        <div class="relative max-w-4xl mx-auto px-4 text-center z-10" data-aos="zoom-in">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-8 tracking-tight">
+                Ready to Start Your Journey?
+            </h2>
+            <p class="text-xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed">
+                Book a consultation with our experts today and let's discuss how we can
+                support your child's growth.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
                 <a href="/contact"
-                    class="bg-white text-[#32A8B8] px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg">
+                    class="bg-white text-[#32A8B8] px-10 py-5 rounded-2xl font-bold text-lg hover:bg-gray-50 transition-all shadow-2xl hover:-translate-y-1">
                     Contact Us Now
                 </a>
                 <a href="/services"
-                    class="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-colors">
+                    class="border-2 border-white/30 backdrop-blur-sm text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white/10 transition-all hover:-translate-y-1">
                     View Services
                 </a>
             </div>
+        </div>
+
+        {{-- Bottom Curve --}}
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+            <svg class="relative block w-full h-[60px] sm:h-[100px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                    class="fill-white"></path>
+            </svg>
         </div>
     </section>
 @endsection

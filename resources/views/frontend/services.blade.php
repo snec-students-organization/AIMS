@@ -5,35 +5,47 @@
 @section('content')
 
 {{-- ================= HERO SECTION ================= --}}
-<section class="relative overflow-hidden py-20 lg:py-28" style="background-color: #32A8B8;">
-    {{-- Background elements --}}
-    <div class="absolute inset-0 overflow-hidden">
-        <div class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-white/10 blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-[#32A8B8] to-transparent"></div>
+<section class="relative overflow-hidden" style="background-color: #32A8B8;">
+    <div class="absolute inset-0">
+        <div class="absolute inset-0 bg-[#32A8B8] opacity-90"></div>
+        {{-- Design elements --}}
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-white/5 skew-x-12 transform translate-x-20"></div>
     </div>
 
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 text-center">
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6" data-aos="fade-up">
             Our Services
         </h1>
-        <p class="text-xl text-teal-100 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+        <p class="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="100">
             Comprehensive, evidence-based therapies designed to maximize your child’s potential
             in a supportive and nurturing environment.
         </p>
     </div>
+
+    {{-- Curve divider --}}
+    <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+        <svg class="relative block w-full h-[60px] sm:h-[100px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+                d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                class="fill-white"></path>
+        </svg>
+    </div>
 </section>
 
 {{-- ================= SERVICES GRID ================= --}}
-<section class="py-16 lg:py-24 bg-gray-50 -mt-10 rounded-t-[3rem] relative z-10">
+<section class="py-16 lg:py-24 bg-white relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
             {{-- Psychological Assessment --}}
-            <div class="p-8 text-white shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" style="background:#32A8B8; border-radius: 20px 60px 20px 60px;" data-aos="fade-up">
-                <div class="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center text-4xl mb-6">🗣️</div>
-                <h3 class="text-2xl font-bold mb-4 uppercase">PSYCHOLOGICAL ASSESSMENT</h3>
-                <p class="text-white/90 leading-relaxed">
+            <div class="p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border" 
+                 style="background-color: rgba(50, 168, 184, 0.05); border-color: rgba(50, 168, 184, 0.2);"
+                 data-aos="fade-up">
+                <div class="w-16 h-16 bg-[#32A8B8] text-white rounded-2xl flex items-center justify-center text-4xl mb-6 shadow-sm">🗣️</div>
+                <h3 class="text-2xl font-bold mb-4 text-gray-900 uppercase">PSYCHOLOGICAL ASSESSMENT</h3>
+                <p class="text-gray-600 leading-relaxed">
                     Our licensed psychologists conduct IQ assessments, learning disability evaluations,
                     personality assessments, and cognitive and behavioural assessments to create
                     tailored intervention strategies based on individual needs.
@@ -41,10 +53,12 @@
             </div>
 
             {{-- Behavioural Therapy --}}
-            <div class="p-8 text-white shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" style="background:#97B41A; border-radius: 60px 20px 60px 20px;" data-aos="fade-up" data-aos-delay="100">
-                <div class="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center text-4xl mb-6">🧩</div>
-                <h3 class="text-2xl font-bold mb-4 uppercase">BEHAVIOURAL THERAPY</h3>
-                <p class="text-white/90 leading-relaxed">
+            <div class="p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border" 
+                 style="background-color: rgba(151, 180, 26, 0.05); border-color: rgba(151, 180, 26, 0.2);"
+                 data-aos="fade-up" data-aos-delay="100">
+                <div class="w-16 h-16 bg-[#97B41A] text-white rounded-2xl flex items-center justify-center text-4xl mb-6 shadow-sm">🧩</div>
+                <h3 class="text-2xl font-bold mb-4 text-gray-900 uppercase">BEHAVIOURAL THERAPY</h3>
+                <p class="text-gray-600 leading-relaxed">
                     Behavioural therapy supports children in improving intellectual and socio-adaptive
                     functioning by strengthening cognitive, social, and emotional skills while reducing
                     challenging behaviours using scientifically validated techniques.
@@ -52,10 +66,12 @@
             </div>
 
             {{-- Speech Therapy --}}
-            <div class="p-8 text-white shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" style="background:#EA6F71; border-radius: 20px 60px 20px 60px;" data-aos="fade-up">
-                <div class="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center text-4xl mb-6">🎭</div>
-                <h3 class="text-2xl font-bold mb-4 uppercase">SPEECH THERAPY</h3>
-                <p class="text-white/90 leading-relaxed">
+            <div class="p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border" 
+                 style="background-color: rgba(234, 111, 113, 0.05); border-color: rgba(234, 111, 113, 0.2);"
+                 data-aos="fade-up">
+                <div class="w-16 h-16 bg-[#EA6F71] text-white rounded-2xl flex items-center justify-center text-4xl mb-6 shadow-sm">🎭</div>
+                <h3 class="text-2xl font-bold mb-4 text-gray-900 uppercase">SPEECH THERAPY</h3>
+                <p class="text-gray-600 leading-relaxed">
                     Speech and language therapy focuses on improving communication skills,
                     including speech sounds, language development, fluency, social communication,
                     and expressive abilities.
@@ -63,10 +79,12 @@
             </div>
 
             {{-- Occupational Therapy --}}
-            <div class="p-8 text-white shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" style="background:#E99D1D; border-radius: 60px 20px 60px 20px;" data-aos="fade-up" data-aos-delay="100">
-                <div class="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center text-4xl mb-6">📚</div>
-                <h3 class="text-2xl font-bold mb-4 uppercase">OCCUPATIONAL THERAPY</h3>
-                <p class="text-white/90 leading-relaxed">
+            <div class="p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border" 
+                 style="background-color: rgba(233, 157, 29, 0.05); border-color: rgba(233, 157, 29, 0.2);"
+                 data-aos="fade-up" data-aos-delay="100">
+                <div class="w-16 h-16 bg-[#E99D1D] text-white rounded-2xl flex items-center justify-center text-4xl mb-6 shadow-sm">📚</div>
+                <h3 class="text-2xl font-bold mb-4 text-gray-900 uppercase">OCCUPATIONAL THERAPY</h3>
+                <p class="text-gray-600 leading-relaxed">
                     Occupational therapy helps children develop independence in daily activities by
                     strengthening fine motor, gross motor, sensory integration, visual-motor coordination,
                     self-care, and self-regulation skills.
@@ -74,10 +92,12 @@
             </div>
 
             {{-- Special Education --}}
-            <div class="p-8 text-white shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" style="background:#32A8B8; border-radius: 20px 60px 20px 60px;" data-aos="fade-up" data-aos-delay="200">
-                <div class="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center text-4xl mb-6">🧠</div>
-                <h3 class="text-2xl font-bold mb-4 uppercase">SPECIAL EDUCATION</h3>
-                <p class="text-white/90 leading-relaxed">
+            <div class="p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border" 
+                 style="background-color: rgba(50, 168, 184, 0.05); border-color: rgba(50, 168, 184, 0.2);"
+                 data-aos="fade-up" data-aos-delay="200">
+                <div class="w-16 h-16 bg-[#32A8B8] text-white rounded-2xl flex items-center justify-center text-4xl mb-6 shadow-sm">🧠</div>
+                <h3 class="text-2xl font-bold mb-4 text-gray-900 uppercase">SPECIAL EDUCATION</h3>
+                <p class="text-gray-600 leading-relaxed">
                     We support children with academic difficulties in reading, writing, and mathematics
                     through Individualized Education Plans (IEPs), customized teaching strategies,
                     and the VAKT approach for inclusive learning outcomes.
@@ -85,10 +105,12 @@
             </div>
 
             {{-- Psychotherapy & Counselling --}}
-            <div class="p-8 text-white shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" style="background:#97B41A; border-radius: 60px 20px 60px 20px;" data-aos="fade-up" data-aos-delay="300">
-                <div class="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center text-4xl mb-6">💬</div>
-                <h3 class="text-2xl font-bold mb-4 uppercase">PSYCHOTHERAPY & COUNSELLING</h3>
-                <p class="text-white/90 leading-relaxed">
+            <div class="p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border" 
+                 style="background-color: rgba(151, 180, 26, 0.05); border-color: rgba(151, 180, 26, 0.2);"
+                 data-aos="fade-up" data-aos-delay="300">
+                <div class="w-16 h-16 bg-[#97B41A] text-white rounded-2xl flex items-center justify-center text-4xl mb-6 shadow-sm">💬</div>
+                <h3 class="text-2xl font-bold mb-4 text-gray-900 uppercase">PSYCHOTHERAPY & COUNSELLING</h3>
+                <p class="text-gray-600 leading-relaxed">
                     Our RCI-licensed psychologists provide individual and group psychotherapy
                     and counselling services using evidence-based practices for a wide range
                     of mental health concerns.
