@@ -33,6 +33,97 @@
                 background-size: 300px;
             }
 
+            /* CHILD FRIENDLY BACKGROUND ELEMENTS */
+
+            /* 1️⃣ Outline Illustration Pattern */
+            .hero-pattern-lightbulb {
+                position: absolute;
+                inset: 0;
+                opacity: 0.04;
+                pointer-events: none;
+                z-index: 1;
+                background-image: url("data:image/svg+xml,%3Csvg width='300' height='300' viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%2332A8B8' stroke-width='1.5'%3E%3Cpath d='M150 60c-20 0-35 15-35 35 0 15 10 25 15 30v15h40v-15c5-5 15-15 15-30 0-20-15-35-35-35z'/%3E%3Cline x1='140' y1='140' x2='160' y2='140'/%3E%3Cline x1='140' y1='145' x2='160' y2='145'/%3E%3C/g%3E%3C/svg%3E");
+                background-size: 220px;
+            }
+
+            /* 2️⃣ Abstract Doodle Lines */
+            .hero-doodle-lines {
+                position: absolute;
+                inset: 0;
+                opacity: 0.06;
+                pointer-events: none;
+                z-index: 2;
+                background-image: url("data:image/svg+xml,%3Csvg width='300' height='300' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 100 Q60 60 100 100 T180 100 T260 100' stroke='%23EA6F71' stroke-width='2' fill='none' stroke-dasharray='6 6'/%3E%3C/svg%3E");
+                background-size: 250px;
+            }
+
+            /* 3️⃣ Soft Geometric Shapes */
+            .hero-geo-shapes span {
+                position: absolute;
+                border-radius: 50%;
+                opacity: 0.15;
+                animation: floatShapes 8s infinite ease-in-out;
+            }
+
+            .hero-geo-shapes .circle1 {
+                width: 120px;
+                height: 120px;
+                background: #32A8B8;
+                top: 15%;
+                left: 5%;
+            }
+
+            .hero-geo-shapes .circle2 {
+                width: 80px;
+                height: 80px;
+                background: #EA6F71;
+                bottom: 20%;
+                left: 10%;
+            }
+
+            .hero-geo-shapes .circle3 {
+                width: 60px;
+                height: 60px;
+                background: #97B41A;
+                top: 25%;
+                right: 12%;
+            }
+
+            .hero-geo-shapes .circle4 {
+                width: 100px;
+                height: 100px;
+                background: #E99D1D;
+                bottom: 10%;
+                right: 8%;
+            }
+
+            /* 4️⃣ Large Gradient Blob */
+            .hero-gradient-blob {
+                position: absolute;
+                width: 500px;
+                height: 500px;
+                top: -120px;
+                right: -150px;
+                background: radial-gradient(circle at center, rgba(50, 168, 184, 0.25), transparent 70%);
+                border-radius: 50%;
+                filter: blur(80px);
+                z-index: 0;
+            }
+
+            /* floating animation */
+
+            @keyframes floatShapes {
+
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+
+                50% {
+                    transform: translateY(-20px);
+                }
+            }
+
             .floating-decoration {
                 position: absolute;
                 pointer-events: none;
@@ -41,8 +132,15 @@
             }
 
             @keyframes floatAnim {
-                0%, 100% { transform: translateY(0) rotate(0deg); }
-                50% { transform: translateY(-20px) rotate(5deg); }
+
+                0%,
+                100% {
+                    transform: translateY(0) rotate(0deg);
+                }
+
+                50% {
+                    transform: translateY(-20px) rotate(5deg);
+                }
             }
 
             .decoration-pencil {
@@ -73,10 +171,41 @@
                 animation: floatAnim 8s infinite ease-in-out;
             }
 
-            .dot-teal { background: #32A8B8; width: 12px; height: 12px; top: 20%; left: 15%; animation-delay: -1s; }
-            .dot-coral { background: #EA6F71; width: 15px; height: 15px; top: 70%; left: 10%; animation-delay: -3s; }
-            .dot-lime { background: #97B41A; width: 10px; height: 10px; top: 15%; right: 20%; animation-delay: -5s; }
-            .dot-orange { background: #E99D1D; width: 14px; height: 14px; top: 60%; right: 15%; animation-delay: -2s; }
+            .dot-teal {
+                background: #32A8B8;
+                width: 12px;
+                height: 12px;
+                top: 20%;
+                left: 15%;
+                animation-delay: -1s;
+            }
+
+            .dot-coral {
+                background: #EA6F71;
+                width: 15px;
+                height: 15px;
+                top: 70%;
+                left: 10%;
+                animation-delay: -3s;
+            }
+
+            .dot-lime {
+                background: #97B41A;
+                width: 10px;
+                height: 10px;
+                top: 15%;
+                right: 20%;
+                animation-delay: -5s;
+            }
+
+            .dot-orange {
+                background: #E99D1D;
+                width: 14px;
+                height: 14px;
+                top: 60%;
+                right: 15%;
+                animation-delay: -2s;
+            }
 
             .sparkle {
                 position: absolute;
@@ -89,8 +218,17 @@
             }
 
             @keyframes pulseSparkle {
-                0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.8; }
-                50% { transform: scale(1.5) rotate(180deg); opacity: 1; }
+
+                0%,
+                100% {
+                    transform: scale(1) rotate(0deg);
+                    opacity: 0.8;
+                }
+
+                50% {
+                    transform: scale(1.5) rotate(180deg);
+                    opacity: 1;
+                }
             }
 
             .hero-title {
@@ -720,6 +858,18 @@
                         {{-- Background Elements --}}
                         <div class="hero-bg-doodles"></div>
 
+                        <!-- CHILD FRIENDLY BACKGROUND -->
+                        <div class="hero-pattern-lightbulb"></div>
+                        <div class="hero-doodle-lines"></div>
+                        <div class="hero-gradient-blob"></div>
+
+                        <div class="hero-geo-shapes">
+                            <span class="circle1"></span>
+                            <span class="circle2"></span>
+                            <span class="circle3"></span>
+                            <span class="circle4"></span>
+                        </div>
+
                         {{-- Floating Decorations --}}
                         <div class="floating-decoration decoration-pencil hidden lg:block" data-aos="fade-down"
                             data-aos-delay="500">
@@ -810,6 +960,18 @@
                         {{-- Background Elements --}}
                         <div class="hero-bg-doodles" style="transform: rotate(180deg); opacity: 0.03;"></div>
 
+                        <!-- CHILD FRIENDLY BACKGROUND -->
+                        <div class="hero-pattern-lightbulb"></div>
+                        <div class="hero-doodle-lines"></div>
+                        <div class="hero-gradient-blob"></div>
+
+                        <div class="hero-geo-shapes">
+                            <span class="circle1"></span>
+                            <span class="circle2"></span>
+                            <span class="circle3"></span>
+                            <span class="circle4"></span>
+                        </div>
+
                         {{-- Floating Decorations --}}
                         <div class="floating-decoration hidden lg:block" style="top: 20%; right: 5%; width: 70px;"
                             data-aos="fade-left">
@@ -892,6 +1054,17 @@
                         {{-- Background Elements --}}
                         <div class="hero-bg-doodles" style="background-size: 200px; opacity: 0.04;"></div>
 
+                        <!-- CHILD FRIENDLY BACKGROUND -->
+                        <div class="hero-pattern-lightbulb"></div>
+                        <div class="hero-doodle-lines"></div>
+                        <div class="hero-gradient-blob"></div>
+
+                        <div class="hero-geo-shapes">
+                            <span class="circle1"></span>
+                            <span class="circle2"></span>
+                            <span class="circle3"></span>
+                            <span class="circle4"></span>
+                        </div>
                         {{-- Floating Decorations --}}
                         <div class="floating-decoration hidden lg:block" style="top: 10%; left: 45%; width: 50px;"
                             data-aos="fade-down">
