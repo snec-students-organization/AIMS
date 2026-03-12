@@ -19,7 +19,78 @@
 
             .hero-section {
                 background-color: #ffffff;
-                overflow: visible;
+                overflow: hidden;
+                position: relative;
+            }
+
+            .hero-bg-doodles {
+                position: absolute;
+                inset: 0;
+                opacity: 0.05;
+                pointer-events: none;
+                z-index: 1;
+                background-image: url("data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%2332A8B8' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M50 50 Q 70 30 90 50 T 130 50'/%3E%3Ccircle cx='300' cy='100' r='15'/%3E%3Cpath d='M350 300 l 15 15 m -15 0 l 15 -15'/%3E%3Crect x='100' y='300' width='25' height='25' rx='5'/%3E%3Cpath d='M200 150 c 15 0 15 20 30 20 s 15 -20 30 -20'/%3E%3Ccircle cx='50' cy='350' r='5' fill='%2332A8B8'/%3E%3Cpath d='M300 50 l 20 0 m -10 -10 l 0 20'/%3E%3Cpath d='M150 100 q 10 -10 20 0 t 20 0'/%3E%3C/g%3E%3C/svg%3E");
+                background-size: 300px;
+            }
+
+            .floating-decoration {
+                position: absolute;
+                pointer-events: none;
+                z-index: 15;
+                animation: floatAnim 6s infinite ease-in-out;
+            }
+
+            @keyframes floatAnim {
+                0%, 100% { transform: translateY(0) rotate(0deg); }
+                50% { transform: translateY(-20px) rotate(5deg); }
+            }
+
+            .decoration-pencil {
+                top: 15%;
+                left: 5%;
+                width: 80px;
+                transform: rotate(-15deg);
+            }
+
+            .decoration-plane {
+                bottom: 25%;
+                right: 45%;
+                width: 60px;
+                animation-delay: -2s;
+            }
+
+            .decoration-dots {
+                top: 40%;
+                right: 10%;
+                width: 100px;
+                opacity: 0.2;
+            }
+
+            .accent-dot {
+                position: absolute;
+                border-radius: 50%;
+                z-index: 10;
+                animation: floatAnim 8s infinite ease-in-out;
+            }
+
+            .dot-teal { background: #32A8B8; width: 12px; height: 12px; top: 20%; left: 15%; animation-delay: -1s; }
+            .dot-coral { background: #EA6F71; width: 15px; height: 15px; top: 70%; left: 10%; animation-delay: -3s; }
+            .dot-lime { background: #97B41A; width: 10px; height: 10px; top: 15%; right: 20%; animation-delay: -5s; }
+            .dot-orange { background: #E99D1D; width: 14px; height: 14px; top: 60%; right: 15%; animation-delay: -2s; }
+
+            .sparkle {
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background: #FFD700;
+                clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+                z-index: 10;
+                animation: pulseSparkle 4s infinite ease-in-out;
+            }
+
+            @keyframes pulseSparkle {
+                0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+                50% { transform: scale(1.5) rotate(180deg); opacity: 1; }
             }
 
             .hero-title {
@@ -385,6 +456,8 @@
             .hero-section .swiper-slide {
                 display: flex;
                 align-items: center;
+                position: relative;
+                overflow: hidden;
             }
 
             .text-custom-lime {
@@ -638,14 +711,45 @@
 
     {{-- ================= HERO SECTION ================= --}}
     <section class="hero-section pt-10 pb-10 lg:pt-12 lg:pb-20 px-4 sm:px-6 lg:px-8 relative">
-        <div class="doodle-bg-dark"></div>
-
-        <div class="max-w-7xl mx-auto">
+        <div class="max-w-7xl mx-auto relative z-10">
             <div class="swiper heroSwiper overflow-visible">
                 <div class="swiper-wrapper">
 
                     {{-- SLIDE 1 --}}
                     <div class="swiper-slide">
+                        {{-- Background Elements --}}
+                        <div class="hero-bg-doodles"></div>
+
+                        {{-- Floating Decorations --}}
+                        <div class="floating-decoration decoration-pencil hidden lg:block" data-aos="fade-down"
+                            data-aos-delay="500">
+                            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 80 L30 85 L85 30 L75 25 Z" fill="#EA6F71" />
+                                <path d="M85 30 L90 25 L80 15 L75 20" fill="#E99D1D" />
+                                <path d="M20 80 L15 85 L30 85 Z" fill="#32A8B8" />
+                                <path d="M10 90 Q 40 70 70 90 T 130 70" stroke="#EA6F71" stroke-width="2"
+                                    stroke-dasharray="4 4" fill="none" />
+                            </svg>
+                        </div>
+
+                        <div class="floating-decoration decoration-plane hidden lg:block" data-aos="zoom-in"
+                            data-aos-delay="800">
+                            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 50 L90 20 L50 90 L45 55 Z" fill="#32A8B8" />
+                                <path d="M45 55 L90 20 L10 50 Z" fill="#2A8F9D" />
+                                <path d="M5 60 Q 15 70 25 60 T 45 60" stroke="#97B41A" stroke-width="1.5"
+                                    stroke-dasharray="3 3" fill="none" />
+                            </svg>
+                        </div>
+
+                        {{-- Accent Dots and Sparkles --}}
+                        <div class="accent-dot dot-teal"></div>
+                        <div class="accent-dot dot-coral"></div>
+                        <div class="accent-dot dot-lime"></div>
+                        <div class="accent-dot dot-orange"></div>
+                        <div class="sparkle" style="top: 25%; right: 25%;"></div>
+                        <div class="sparkle" style="bottom: 15%; left: 30%;"></div>
+
                         <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10 w-full">
 
                             {{-- CONTENT - Mobile / Desktop --}}
@@ -703,6 +807,32 @@
 
                     {{-- SLIDE 2 --}}
                     <div class="swiper-slide">
+                        {{-- Background Elements --}}
+                        <div class="hero-bg-doodles" style="transform: rotate(180deg); opacity: 0.03;"></div>
+
+                        {{-- Floating Decorations --}}
+                        <div class="floating-decoration hidden lg:block" style="top: 20%; right: 5%; width: 70px;"
+                            data-aos="fade-left">
+                            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="30" y="20" width="40" height="60" rx="10" fill="#EA6F71" opacity="0.8" />
+                                <circle cx="50" cy="40" r="10" fill="white" opacity="0.5" />
+                            </svg>
+                        </div>
+
+                        <div class="floating-decoration decoration-plane hidden lg:block"
+                            style="bottom: 15%; left: 10%; transform: scaleX(-1);" data-aos="zoom-in">
+                            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                style="transform: rotate(-45deg);">
+                                <path d="M10 50 L90 20 L50 90 L45 55 Z" fill="#E99D1D" />
+                                <path d="M5 60 Q 15 70 25 60 T 45 60" stroke="#EA6F71" stroke-width="1.5"
+                                    stroke-dasharray="3 3" fill="none" />
+                            </svg>
+                        </div>
+
+                        <div class="accent-dot dot-lime" style="top: 30%; left: 40%;"></div>
+                        <div class="accent-dot dot-orange" style="bottom: 40%; right: 30%;"></div>
+                        <div class="sparkle" style="top: 15%; left: 20%;"></div>
+
                         <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10 w-full">
 
                             <div class="z-20 text-center lg:text-left relative w-full lg:relative">
@@ -759,6 +889,21 @@
 
                     {{-- SLIDE 3 --}}
                     <div class="swiper-slide">
+                        {{-- Background Elements --}}
+                        <div class="hero-bg-doodles" style="background-size: 200px; opacity: 0.04;"></div>
+
+                        {{-- Floating Decorations --}}
+                        <div class="floating-decoration hidden lg:block" style="top: 10%; left: 45%; width: 50px;"
+                            data-aos="fade-down">
+                            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M50 10 L60 40 L90 50 L60 60 L50 90 L40 60 L10 50 L40 40 Z" fill="#97B41A" />
+                            </svg>
+                        </div>
+
+                        <div class="accent-dot dot-teal" style="top: 20%; right: 40%;"></div>
+                        <div class="accent-dot dot-coral" style="bottom: 10%; left: 15%;"></div>
+                        <div class="sparkle" style="bottom: 25%; right: 10%;"></div>
+
                         <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10 w-full">
 
                             <div class="z-20 text-center lg:text-left relative w-full lg:relative">
