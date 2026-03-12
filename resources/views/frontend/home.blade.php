@@ -23,9 +23,15 @@
             }
 
             .hero-title {
+                font-family: 'Fredoka', sans-serif;
                 color: #32A8B8;
-                font-weight: 800;
+                font-weight: 700;
                 line-height: 1.1;
+            }
+
+            .hero-description {
+                font-family: 'Quicksand', sans-serif;
+                font-weight: 500;
             }
 
             @media (max-width: 1023px) {
@@ -103,6 +109,7 @@
                 }
 
                 .mobile-subheading {
+                    font-family: 'Quicksand', sans-serif;
                     color: #EA6F71;
                     font-weight: 700;
                     font-size: 1.25rem;
@@ -111,14 +118,16 @@
                 }
 
                 .hero-title {
+                    font-family: 'Fredoka', sans-serif;
                     font-size: 2.5rem !important;
                     line-height: 1.2;
                     color: #1a365d !important;
-                    font-weight: 800;
+                    font-weight: 700;
                     margin-bottom: 1.5rem;
                 }
 
                 .hero-description {
+                    font-family: 'Quicksand', sans-serif;
                     font-size: 1rem !important;
                     color: #4a5568 !important;
                     line-height: 1.6;
@@ -128,6 +137,7 @@
             }
 
             .btn-orange {
+                font-family: 'Fredoka', sans-serif;
                 background-color: var(--secondary-orange);
                 color: white;
                 padding: 1rem 2.5rem;
@@ -146,6 +156,7 @@
             }
 
             .btn-custom-teal {
+                font-family: 'Fredoka', sans-serif;
                 background-color: #32A8B8;
                 color: white;
                 padding: 1rem 2.5rem;
@@ -164,6 +175,7 @@
             }
 
             .btn-custom-lime {
+                font-family: 'Fredoka', sans-serif;
                 background-color: #97B41A;
                 color: white;
                 padding: 1rem 2.5rem;
@@ -182,6 +194,7 @@
             }
 
             .btn-custom-coral {
+                font-family: 'Fredoka', sans-serif;
                 background-color: #EA6F71;
                 color: white;
                 padding: 1rem 2.5rem;
@@ -381,11 +394,251 @@
             .text-custom-coral {
                 color: #EA6F71 !important;
             }
+
+            /* NEW SERVICE CARDS DESIGN (HALF-COLOURED) */
+            .services-section-v2 {
+                background-color: #32A8B8;
+                /* Green top half */
+                position: relative;
+                padding: 0;
+                overflow: hidden;
+            }
+
+            .services-section-v2::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 40%;
+                /* White bottom half */
+                background-color: #ffffff;
+                z-index: 1;
+            }
+
+            /* Sliding Marquee */
+            .marquee-wrapper {
+                background-color: #32A8B8;
+                padding: 20px 0;
+                /* Reduced from 40px */
+                border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+                white-space: nowrap;
+                overflow: hidden;
+                position: relative;
+                z-index: 2;
+            }
+
+            .marquee-text {
+                display: inline-block;
+                font-size: 80px;
+                font-weight: 900;
+                color: rgba(255, 255, 255, 0.9);
+                text-transform: uppercase;
+                animation: marquee 30s linear infinite;
+                letter-spacing: 15px;
+            }
+
+            .marquee-text span {
+                margin: 0 40px;
+                display: inline-block;
+            }
+
+            @keyframes marquee {
+                from {
+                    transform: translateX(0);
+                }
+
+                to {
+                    transform: translateX(-50%);
+                }
+            }
+
+            .services-content-v2 {
+                position: relative;
+                z-index: 5;
+                padding-top: 40px;
+                /* Reduced from 60px */
+                padding-bottom: 60px;
+                /* Reduced from 80px */
+            }
+
+            .doodle-bg-light,
+            .doodle-bg-dark {
+                position: absolute;
+                inset: -50px;
+                pointer-events: none;
+                z-index: 1;
+                background-size: 400px;
+                animation: floatBackground 20s ease-in-out infinite;
+            }
+
+            .doodle-bg-light {
+                opacity: 0.15;
+                background-image: url("data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M200 100 c -20 0 -35 15 -35 35 c 0 15 10 25 15 30 l 0 15 l 40 0 l 0 -15 c 5 -5 15 -15 15 -30 c 0 -20 -15 -35 -35 -35 Z'/%3E%3Cpath d='M185 185 l 30 0 m -30 5 l 30 0'/%3E%3Cpath d='M200 85 l 0 -10 M230 115 l 10 -10 M170 115 l -10 -10'/%3E%3Cpath d='M50 50 Q 70 30 90 50 T 130 50'/%3E%3Ccircle cx='300' cy='100' r='20'/%3E%3Cpath d='M350 300 l 20 20 m -20 0 l 20 -20'/%3E%3Crect x='100' y='300' width='30' height='30' rx='5'/%3E%3Cpath d='M40 250 c 10 0 10 20 20 20 s 10 -20 20 -20'/%3E%3Ccircle cx='150' cy='100' r='5' fill='white'/%3E%3Ccircle cx='250' cy='350' r='8'/%3E%3C/g%3E%3C/svg%3E");
+            }
+
+            .doodle-bg-dark {
+                opacity: 0.05;
+                background-image: url("data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%2332A8B8' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M200 100 c -20 0 -35 15 -35 35 c 0 15 10 25 15 30 l 0 15 l 40 0 l 0 -15 c 5 -5 15 -15 15 -30 c 0 -20 -15 -35 -35 -35 Z'/%3E%3Cpath d='M185 185 l 30 0 m -30 5 l 30 0'/%3E%3Cpath d='M200 85 l 0 -10 M230 115 l 10 -10 M170 115 l -10 -10'/%3E%3Cpath d='M50 50 Q 70 30 90 50 T 130 50'/%3E%3Ccircle cx='300' cy='100' r='20'/%3E%3Cpath d='M350 300 l 20 20 m -20 0 l 20 -20'/%3E%3Crect x='100' y='300' width='30' height='30' rx='5'/%3E%3Cpath d='M40 250 c 10 0 10 20 20 20 s 10 -20 20 -20'/%3E%3Ccircle cx='150' cy='100' r='5' fill='%2332A8B8'/%3E%3Ccircle cx='250' cy='350' r='8'/%3E%3C/g%3E%3C/svg%3E");
+            }
+
+            @keyframes floatBackground {
+
+                0%,
+                100% {
+                    transform: translate(0, 0);
+                }
+
+                50% {
+                    transform: translate(20px, -20px);
+                }
+            }
+
+            .servicesSwiper {
+                padding: 20px 20px 60px !important;
+                margin: 0 -20px;
+            }
+
+            .servicesSwiper .swiper-slide {
+                height: auto !important;
+                display: flex;
+            }
+
+            .service-card-v2 {
+                background: white;
+                border-radius: 40px;
+                overflow: hidden;
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+                transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                width: 100%;
+                text-align: center;
+                border: none;
+            }
+
+            .service-card-v2:hover {
+                transform: translateY(-12px);
+                box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+            }
+
+            .card-top-image-v2 {
+                position: relative;
+                height: 220px;
+                overflow: hidden;
+            }
+
+            .card-top-image-v2 img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.6s ease;
+            }
+
+            .service-card-v2:hover .card-top-image-v2 img {
+                transform: scale(1.1);
+            }
+
+            .wavy-svg {
+                position: absolute;
+                bottom: -1px;
+                left: 0;
+                width: 100%;
+                height: 50px;
+                fill: currentColor;
+            }
+
+            .icon-bubble-v2 {
+                position: absolute;
+                left: 50%;
+                bottom: 0px;
+                transform: translate(-50%, 50%);
+                width: 65px;
+                height: 65px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 10;
+                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            }
+
+            .icon-bubble-v2 img {
+                width: 32px;
+                height: 32px;
+                filter: brightness(0) invert(1);
+            }
+
+            .card-body-v2 {
+                padding: 45px 25px 30px;
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card-title-v2 {
+                font-size: 1.5rem;
+                font-weight: 800;
+                color: #2D3748;
+                margin-bottom: 12px;
+            }
+
+            .card-text-v2 {
+                font-size: 0.95rem;
+                color: #718096;
+                line-height: 1.6;
+                margin-bottom: 25px;
+            }
+
+            .card-btn-v2 {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: auto;
+                transition: all 0.3s ease;
+                border: none;
+            }
+
+            .card-btn-v2:hover {
+                transform: scale(1.15) rotate(15deg);
+            }
+
+            .card-btn-v2 svg {
+                width: 20px;
+                height: 20px;
+                stroke: white;
+            }
+
+            .view-more-services-btn {
+                background-color: #32A8B8;
+                color: white;
+                padding: 14px 35px;
+                border-radius: 12px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                display: inline-block;
+                transition: all 0.3s ease;
+                box-shadow: 0 10px 20px rgba(50, 168, 184, 0.2);
+            }
+
+            .view-more-services-btn:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 15px 30px rgba(50, 168, 184, 0.3);
+                background-color: #2a8f9d;
+                color: white;
+            }
         </style>
     @endpush
 
     {{-- ================= HERO SECTION ================= --}}
-    <section class="hero-section pt-10 pb-20 lg:pt-32 lg:pb-56 px-4 sm:px-6 lg:px-8 relative">
+    <section class="hero-section pt-10 pb-10 lg:pt-12 lg:pb-20 px-4 sm:px-6 lg:px-8 relative">
+        <div class="doodle-bg-dark"></div>
 
         <div class="max-w-7xl mx-auto">
             <div class="swiper heroSwiper overflow-visible">
@@ -575,7 +828,7 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script>
             document.addEventListener('DOMContentLoaded', function () {
-                var swiper = new Swiper(".heroSwiper", {
+                var swiperHero = new Swiper(".heroSwiper", {
                     direction: "horizontal",
                     slidesPerView: 1,
                     spaceBetween: 30,
@@ -585,397 +838,626 @@
                         disableOnInteraction: false,
                     },
                     pagination: {
-                        el: ".swiper-pagination",
+                        el: ".swiper-pagination-hero",
                         clickable: true,
                     },
                     effect: "slide",
                     speed: 1000,
                 });
+
+                var swiperServices = new Swiper(".servicesSwiper", {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    loop: true,
+                    autoplay: {
+                        delay: 3500,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30,
+                        },
+                        1280: {
+                            slidesPerView: 4,
+                            spaceBetween: 30,
+                        },
+                    },
+                    speed: 800,
+                });
+
             });
         </script>
     @endpush
 
     {{-- ================= FEATURE STRIP (UNDER HERO) ================= --}}
-    <section class="feature-strip bg-white py-16 mt-16 lg:mt-20 border-t border-gray-100">
+    <section class="feature-strip bg-white py-16 lg:py-24 relative overflow-hidden">
+        <div class="doodle-bg-dark" style="opacity: 0.03;"></div>
+        {{-- Background decorative elements (Subtle geometric network) --}}
+        <div class="absolute inset-0 pointer-events-none" style="z-index: 0;">
+            <svg class="absolute w-full h-full opacity-10" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="network" x="0" y="0" width="150" height="150" patternUnits="userSpaceOnUse">
+                        <path d="M75 0 L75 150 M0 75 L150 75" stroke="#32A8B8" stroke-width="0.5" stroke-dasharray="2 6" />
+                        <circle cx="75" cy="75" r="3" fill="none" stroke="#EA6F71" stroke-width="1" />
+                        <circle cx="0" cy="75" r="2" fill="#32A8B8" />
+                        <circle cx="75" cy="0" r="2" fill="#32A8B8" />
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#network)" />
+            </svg>
+            <div
+                class="absolute -top-40 -left-40 w-96 h-96 bg-teal-50 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob">
+            </div>
+            <div
+                class="absolute top-20 right-0 w-80 h-80 bg-pink-50 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-2000">
+            </div>
+        </div>
 
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-            {{-- SECTION HEADING --}}
-            <div class="text-center mb-12">
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
+            {{-- SECTION HEADING with sliding animation --}}
+            <div class="text-center mb-16" data-aos="fade-down" data-aos-duration="1000">
+                <span
+                    class="inline-block px-5 py-2 rounded-full bg-teal-50/80 text-teal-600 font-bold text-sm mb-4 tracking-wider border border-teal-100 backdrop-blur-sm"
+                    data-aos="zoom-in" data-aos-delay="200">
+                    ✦ What We Offer ✦
+                </span>
+                <h2 class="text-4xl lg:text-5xl font-extrabold text-[#1a2b4b] tracking-tight mb-4">
                     Our Services
                 </h2>
-                <p class="mt-3 text-gray-500 max-w-2xl mx-auto text-sm sm:text-base">
+                <p class="mt-4 text-gray-500 max-w-2xl mx-auto text-base sm:text-lg font-medium" data-aos="fade-up"
+                    data-aos-delay="300">
                     Comprehensive care and support designed for children, adolescents, and families.
                 </p>
             </div>
 
-            {{-- SERVICES GRID --}}
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-6 gap-10 text-center">
+            {{-- SERVICES FLOATING CARDS --}}
+            <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-6 lg:gap-8 justify-center">
+                @php
+                    $featureServices = [
+                        ['icon' => 'psychological-assessment.svg', 'title' => 'PSYCHOLOGICAL ASSESSMENT', 'bgColor' => '#F4F9FA', 'iconColor' => '#006684', 'delay' => '100'],
+                        ['icon' => 'behavioural-therapy.svg', 'title' => 'BEHAVIOURAL THERAPY', 'bgColor' => '#E8F5E9', 'iconColor' => '#2E7D32', 'delay' => '200'],
+                        ['icon' => 'speech-therapy.svg', 'title' => 'SPEECH THERAPY', 'bgColor' => '#FCE4EC', 'iconColor' => '#C2185B', 'delay' => '300'],
+                        ['icon' => 'special-education.svg', 'title' => 'SPECIAL EDUCATION', 'bgColor' => '#FFF3E0', 'iconColor' => '#E65100', 'delay' => '400'],
+                        ['icon' => 'occupational-therapy.svg', 'title' => 'OCCUPATIONAL THERAPY', 'bgColor' => '#E3F2FD', 'iconColor' => '#1565C0', 'delay' => '500'],
+                        ['icon' => 'psychotherapy-counselling.svg', 'title' => 'PSYCHOTHERAPY & COUNSELLING', 'bgColor' => '#F3E5F5', 'iconColor' => '#6A1B9A', 'delay' => '600'],
+                    ];
+                @endphp
 
-
-                {{-- Psychological Assessment --}}
-                <div class="flex flex-col items-center">
-                    <img src="{{ asset('images/icons/psychological-assessment.svg') }}" alt="Psychological Assessment"
-                        class="w-14 h-14 mb-4">
-                    <p class="text-gray-700 font-medium text-sm">
-                        PSYCHOLOGICAL ASSESSMENT
-                    </p>
-                </div>
-
-                {{-- Behavioural Therapy --}}
-                <div class="flex flex-col items-center">
-                    <img src="{{ asset('images/icons/behavioural-therapy.svg') }}" alt="Behavioural Therapy"
-                        class="w-14 h-14 mb-4">
-                    <p class="text-gray-700 font-medium text-sm">
-                        BEHAVIOURAL THERAPY
-                    </p>
-                </div>
-
-                {{-- Speech Therapy --}}
-                <div class="flex flex-col items-center">
-                    <img src="{{ asset('images/icons/speech-therapy.svg') }}" alt="Speech Therapy" class="w-14 h-14 mb-4">
-                    <p class="text-gray-700 font-medium text-sm">
-                        SPEECH THERAPY
-                    </p>
-                </div>
-
-                {{-- Special Education --}}
-                <div class="flex flex-col items-center">
-                    <img src="{{ asset('images/icons/special-education.svg') }}" alt="Special Education"
-                        class="w-14 h-14 mb-4">
-                    <p class="text-gray-700 font-medium text-sm">
-                        SPECIAL EDUCATION
-                    </p>
-                </div>
-
-                {{-- Occupational Therapy --}}
-                <div class="flex flex-col items-center">
-                    <img src="{{ asset('images/icons/occupational-therapy.svg') }}" alt="Occupational Therapy"
-                        class="w-14 h-14 mb-4">
-                    <p class="text-gray-700 font-medium text-sm">
-                        OCCUPATIONAL THERAPY
-                    </p>
-                </div>
-
-                {{-- Psychotherapy & Counselling --}}
-                <div class="flex flex-col items-center">
-                    <img src="{{ asset('images/icons/psychotherapy-counselling.svg') }}" alt="Psychotherapy and Counselling"
-                        class="w-14 h-14 mb-4">
-                    <p class="text-gray-700 font-medium text-sm">
-                        PSYCHOTHERAPY & COUNSELLING
-                    </p>
-                </div>
-
+                @foreach($featureServices as $index => $service)
+                    <div data-aos="fade-up" data-aos-delay="{{ $service['delay'] }}" data-aos-duration="800" class="h-full">
+                        <div class="service-card-modern">
+                            <div class="service-icon-wrapper"
+                                style="background-color: {{ $service['bgColor'] }}; border: 1px solid rgba(0,0,0,0.03);">
+                                {{-- We apply a css filter hack or specific styled icon if needed, for now we load the SVG and
+                                let it display normally. Ideally these are single-color SVGs --}}
+                                <img src="{{ asset('images/icons/' . $service['icon']) }}" alt="{{ $service['title'] }}"
+                                    class="service-icon-img" style="filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));">
+                            </div>
+                            <h3 class="service-card-title">{{ $service['title'] }}</h3>
+                        </div>
+                    </div>
+                @endforeach
             </div>
-
         </div>
     </section>
 
+    {{-- ================= REDESIGNED SERVICES SECTION ================= --}}
+    <section class="services-section-v2 overflow-hidden">
+        {{-- Sliding Marquee Heading --}}
+        <div class="marquee-wrapper">
+            <div class="marquee-text">
+                <span>OFFLINE</span> <span>SERVICES</span> <span>ONLINE</span> <span>24 Hour support</span>
+                <span>OFFLINE</span> <span>SERVICES</span> <span>ONLINE</span> <span>24 Hour support</span>
+            </div>
+        </div>
 
+        <div class="services-content-v2">
+            <div class="doodle-bg-light"></div>
 
-
-    <section class="py-16 lg:py-28 bg-white relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-                {{-- LEFT IMAGE SECTION --}}
-                <div class="relative" data-aos="fade-right" data-aos-delay="100">
-                    <div class="relative group">
-                        {{-- Main image container --}}
-                        <div class="relative overflow-hidden rounded-3xl shadow-2xl shadow-teal-500/10">
-                            <div class="aspect-[4/5] overflow-hidden">
-                                <img src="{{ asset('images/image5.jpg') }}" alt="AIMS CDC Therapy Services"
-                                    class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                            </div>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent">
-                            </div>
-
-                            {{-- Floating badges --}}
-                            <div class="absolute top-6 left-6">
-                                <div
-                                    class="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm text-teal-600 px-4 py-2 rounded-full font-semibold text-sm shadow-lg">
-                                    <span class="w-2 h-2 bg-teal-500 rounded-full animate-pulse"></span>
-                                    Expert Care Team
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-
-
-                    {{-- FOUNDER TESTIMONIAL --}}
-                    <div class="mt-16 bg-gradient-to-br from-white to-gray-50 p-6 rounded-2xl shadow-lg border border-gray-200/50"
-                        data-aos="fade-up" data-aos-delay="700">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="relative">
-                                <div class="w-16 h-16 rounded-full bg-gradient-to-br from-teal-500 to-teal-600 p-0.5">
-                                    <img src="{{ asset('images/image.jpg') }}"
-                                        class="w-full h-full rounded-full object-cover border-2 border-white"
-                                        alt="Mushtaq - Founder & CEO">
-                                </div>
-                                <div
-                                    class="absolute -bottom-1 -right-1 w-6 h-6 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full flex items-center justify-center border border-white">
-                                    <span class="text-white text-xs">✓</span>
-                                </div>
-                            </div>
-                            <div class="flex-1">
-                                <div>
-                                    <p class="font-bold text-gray-900 text-lg">Mushtaq</p>
-                                    <p class="text-teal-600 font-medium text-sm">Founder & CEO</p>
-                                </div>
-                            </div>
-                            <div class="text-3xl text-yellow-400 opacity-80">"</div>
-                        </div>
-                        <p class="text-gray-700 italic pl-2 border-l-2 border-teal-500">
-                            "Our mission is to create a world where every child, regardless of their challenges,
-                            can discover their strengths and shine brightly. We believe in personalized care
-                            that addresses the unique needs of each child."
-                        </p>
-                    </div>
-
-                    {{-- CTA BUTTONS --}}
-                    <div class="mt-10 flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="800">
-                        <a href="/services"
-                            class="group inline-flex items-center justify-center gap-3 bg-[#32A8B8] hover:bg-[#2a8f9d] text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 flex-1">
-                            <span>View All Services</span>
-                            <span class="group-hover:translate-x-1 transition-transform duration-300">→</span>
-                        </a>
-                        <a href="/contact"
-                            class="inline-flex items-center justify-center gap-3 border-2 border-teal-500 text-teal-600 hover:bg-teal-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 flex-1">
-                            <span>Book Consultation</span>
-                        </a>
-                    </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                {{-- Section Heading --}}
+                <div class="text-center mb-10" data-aos="fade-up"> {{-- Reduced mb-16 to mb-10 --}}
+                    <p class="text-white/80 font-medium mb-2 italic text-xl">Our Services</p> {{-- Reduced mb-4 to mb-2 --}}
+                    <h2 class="text-4xl lg:text-6xl font-extrabold text-white tracking-tight">
+                        Building Skills, Inspiring Confidence
+                    </h2>
                 </div>
+                @php
+                    $v2Services = [
+                        [
+                            'title' => 'Speech Therapy',
+                            'description' => 'Speech therapy improves communication by treating speech delays, language disorders, and articulation issues through personalized strategies.',
+                            'image' => 'images/image7.jpg',
+                            'icon' => 'speech-therapy.svg',
+                            'color' => '#32A8B8',
+                            'bgColor' => '#ffffff',
+                            'borderColor' => 'rgba(50, 168, 184, 0.2)',
+                        ],
+                        [
+                            'title' => 'Special Education',
+                            'description' => 'Special education supports diverse learners through individualized strategies and skill-based instruction to foster meaningful growth.',
+                            'image' => 'images/image8.jpg',
+                            'icon' => 'special-education.svg',
+                            'color' => '#EA6F71',
+                            'bgColor' => '#ffffff',
+                            'borderColor' => 'rgba(234, 111, 113, 0.2)',
+                        ],
+                        [
+                            'title' => 'Behavioral Therapy',
+                            'description' => 'Behavioral therapy effectively modifies negative behaviors and enhances emotional regulation through structured techniques.',
+                            'image' => 'images/image6.jpg',
+                            'icon' => 'behavioural-therapy.svg',
+                            'color' => '#97B41A',
+                            'bgColor' => '#ffffff',
+                            'borderColor' => 'rgba(151, 180, 26, 0.2)',
+                        ],
+                        [
+                            'title' => 'Occupation Therapy',
+                            'description' => 'Occupational therapy effectively develops daily living skills and boosts motor coordination through personalized interventions.',
+                            'image' => 'images/image4.jpg',
+                            'icon' => 'occupational-therapy.svg',
+                            'color' => '#E99D1D',
+                            'bgColor' => '#ffffff',
+                            'borderColor' => 'rgba(233, 157, 29, 0.2)',
+                        ],
+                        [
+                            'title' => 'Psychological Assessment',
+                            'description' => 'Comprehensive assessments including IQ, learning disabilities, and behavioral evaluations for precise diagnostic clarity.',
+                            'image' => 'images/image3.jpg',
+                            'icon' => 'psychological-assessment.svg',
+                            'color' => '#32A8B8',
+                            'bgColor' => '#ffffff',
+                            'borderColor' => 'rgba(50, 168, 184, 0.2)',
+                        ],
+                        [
+                            'title' => 'Counseling',
+                            'description' => 'Professional psychotherapy and counseling services for children and families to support emotional well-being.',
+                            'image' => 'images/image2.jpg',
+                            'icon' => 'psychotherapy-counselling.svg',
+                            'color' => '#EA6F71',
+                            'bgColor' => '#ffffff',
+                            'borderColor' => 'rgba(234, 111, 113, 0.2)',
+                        ]
+                    ];
+                @endphp
 
-
-                {{-- RIGHT CONTENT --}}
-                <div class="lg:sticky lg:top-24" data-aos="fade-left" data-aos-delay="200">
-                    {{-- Section header --}}
-                    <div class="mb-10">
-                        <div class="inline-flex items-center gap-2 text-teal-600 font-semibold mb-4">
-                            <div class="w-8 h-0.5 bg-teal-500"></div>
-                            Our Comprehensive Services
-                        </div>
-
-                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                            Specialized Therapies
-                            <span class="text-transparent bg-clip-text block"
-                                style="background: linear-gradient(to right, #32A8B8, #EA6F71); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                                For Holistic Development
-                            </span>
-                        </h2>
-
-                        <p class="text-lg text-gray-600 leading-relaxed">
-                            We offer a complete range of evidence-based therapies and interventions designed to
-                            address every aspect of your child's developmental needs.
-                        </p>
-                    </div>
-
-                    {{-- SERVICES GRID --}}
-                    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-                        @php
-                            $services = [
-                                [
-                                    'title' => 'PSYCHOLOGICAL ASSESSMENT',
-                                    'description' => 'IQ assessment, learning disability assessment, personality assessment, cognitive and behavioral assessment.',
-                                    'icon' => 'public/images/icons/services/psychological-assessment.svg',
-                                    'bgColor' => 'rgba(50, 168, 184, 0.05)',
-                                    'borderColor' => 'rgba(50, 168, 184, 0.2)',
-                                    'iconColor' => '#32A8B8',
-                                    'shape' => 'rounded-[60px_20px_60px_20px]',
-                                    'delay' => 100
-                                ],
-                                [
-                                    'title' => 'BEHAVIOURAL THERAPY',
-                                    'description' => 'Scientific techniques to improve socio-adaptive functioning and manage behavior.',
-                                    'icon' => 'public/images/icons/services/behavioural-therapy.svg',
-                                    'bgColor' => 'rgba(151, 180, 26, 0.05)',
-                                    'borderColor' => 'rgba(151, 180, 26, 0.2)',
-                                    'iconColor' => '#97B41A',
-                                    'shape' => 'rounded-[20px_60px_20px_60px]',
-                                    'delay' => 200
-                                ],
-                                [
-                                    'title' => 'SPEECH THERAPY',
-                                    'description' => 'Improving speech sounds, fluency, language development, and communication.',
-                                    'icon' => 'public/images/icons/services/speech-therapy.svg',
-                                    'bgColor' => 'rgba(234, 111, 113, 0.05)',
-                                    'borderColor' => 'rgba(234, 111, 113, 0.2)',
-                                    'iconColor' => '#EA6F71',
-                                    'shape' => 'rounded-[60px_20px_60px_20px]',
-                                    'delay' => 100
-                                ],
-                                [
-                                    'title' => 'SPECIAL EDUCATION',
-                                    'description' => 'Individualized education plans using VAKT methodology.',
-                                    'icon' => 'public/images/icons/services/special-education.svg',
-                                    'bgColor' => 'rgba(233, 157, 29, 0.05)',
-                                    'borderColor' => 'rgba(233, 157, 29, 0.2)',
-                                    'iconColor' => '#E99D1D',
-                                    'shape' => 'rounded-[20px_60px_20px_60px]',
-                                    'delay' => 200
-                                ],
-                                [
-                                    'title' => 'OCCUPATIONAL THERAPY',
-                                    'description' => 'Developing fine motor, gross motor, and sensory integration skills.',
-                                    'icon' => 'public/images/icons/services/occupational-therapy.svg',
-                                    'bgColor' => 'rgba(50, 168, 184, 0.05)',
-                                    'borderColor' => 'rgba(50, 168, 184, 0.2)',
-                                    'iconColor' => '#32A8B8',
-                                    'shape' => 'rounded-[60px_20px_60px_20px]',
-                                    'delay' => 300
-                                ],
-                                [
-                                    'title' => 'PSYCHOTHERAPY & COUNSELLING',
-                                    'description' => 'Evidence-based psychotherapy by licensed professionals.',
-                                    'icon' => 'public/images/icons/services/psychotherapy.svg',
-                                    'bgColor' => 'rgba(151, 180, 26, 0.05)',
-                                    'borderColor' => 'rgba(151, 180, 26, 0.2)',
-                                    'iconColor' => '#97B41A',
-                                    'shape' => 'rounded-[20px_60px_20px_60px]',
-                                    'delay' => 400
-                                ],
-                            ];
-                        @endphp
-
-                        @foreach($services as $service)
-                            <a href="/services"
-                                class="p-8 transform hover:-translate-y-2 transition-all duration-300 flex flex-col h-full {{ $service['shape'] }} block hover:no-underline text-center group border"
-                                style="background-color: {{ $service['bgColor'] }}; border-color: {{ $service['borderColor'] }};"
-                                data-aos="fade-up" data-aos-delay="{{ $service['delay'] }}">
-                                <div class="space-y-4 flex-grow flex flex-col items-center">
-                                    <div
-                                        class="w-16 h-16 rounded-full flex items-center justify-center p-4 transform group-hover:scale-110 transition-transform duration-500"
-                                        style="background-color: {{ $service['iconColor'] }};">
-                                        <img src="{{ asset(str_replace('public/', '', $service['icon'])) }}"
-                                            alt="{{ $service['title'] }}"
-                                            class="w-full h-full brightness-0 invert object-contain">
+                <div class="swiper servicesSwiper">
+                    <div class="swiper-wrapper">
+                        @foreach($v2Services as $index => $service)
+                            <div class="swiper-slide">
+                                <div class="service-card-v2" data-aos="fade-up" data-aos-delay="{{ ($index + 1) * 100 }}"
+                                    style="background-color: {{ $service['bgColor'] }}; border: 1px solid {{ $service['borderColor'] }};">
+                                    <div class="card-top-image-v2">
+                                        <img src="{{ asset($service['image']) }}" alt="{{ $service['title'] }}">
+                                        <div class="icon-bubble-v2" style="background-color: {{ $service['color'] }}">
+                                            <img src="{{ asset('images/icons/' . $service['icon']) }}"
+                                                alt="{{ $service['title'] }}">
+                                        </div>
                                     </div>
-                                    <div class="space-y-3">
-                                        <h3
-                                            class="text-xl font-bold text-gray-900 tracking-tight leading-snug">
-                                            {{ $service['title'] }}
-                                        </h3>
-                                        <p class="text-gray-600 leading-relaxed text-sm">{{ $service['description'] }}</p>
+                                    <div class="card-body-v2">
+                                        <h3 class="card-title-v2">{{ $service['title'] }}</h3>
+                                        <p class="card-text-v2">{{ $service['description'] }}</p>
+
+                                        <a href="/services" class="card-btn-v2"
+                                            style="background-color: {{ $service['color'] }}">
+                                            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                            </svg>
+                                        </a>
                                     </div>
                                 </div>
-
-                                <div
-                                    class="mt-8 pt-4 border-t flex justify-center items-center font-bold text-xs tracking-wide group/link transition-colors"
-                                    style="border-color: {{ $service['borderColor'] }}; color: {{ $service['iconColor'] }};">
-                                    <div class="flex items-center gap-2">
-                                        <span>Learn more</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                            class="h-4 w-4 transform group-hover/link:translate-x-1 transition-transform"
-                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </a>
+                            </div>
                         @endforeach
+                    </div>
+                    {{-- Swiper Pagination --}}
+                    <div class="swiper-pagination"></div>
+                </div>
 
+                <div class="text-center mt-12 relative z-20" data-aos="fade-up">
+                    <a href="/services" class="view-more-services-btn">
+                        View More Services
+                    </a>
+                </div>
+            </div>
+    </section>
 
+    {{-- ================= MISSION & CTA SECTION ================= --}}
+    <section class="py-12 lg:py-16 relative overflow-hidden bg-white">
+        <div class="doodle-bg-dark"></div>
+        {{-- Animated background elements (Scaled down) --}}
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div
+                class="absolute -top-20 -right-20 w-64 h-64 bg-teal-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse-slow">
+            </div>
+            <div
+                class="absolute -bottom-20 -left-20 w-64 h-64 bg-pink-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse-slow animation-delay-2000">
+            </div>
+        </div>
+
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 relative z-10">
+            {{-- Founder card with sliding entrance --}}
+            <div class="relative bg-white/90 backdrop-blur-lg p-6 lg:p-10 rounded-3xl shadow-lg border border-gray-100 transform hover:scale-[1.01] transition-all duration-500 text-center"
+                data-aos="zoom-in" data-aos-duration="800">
+
+                {{-- Avatar & Meta Data --}}
+                <div class="flex flex-col items-center mb-6">
+                    <div class="relative inline-block mb-3">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-tr from-teal-400 to-pink-400 rounded-full blur-md opacity-40">
+                        </div>
+                        <div
+                            class="relative w-24 h-24 rounded-full bg-white p-1 border border-gray-100 shadow-sm relative z-10">
+                            <img src="{{ asset('images/Logo.png') }}" class="w-full h-full object-cover rounded-full"
+                                alt="Mushtaq - Founder & CEO">
+                        </div>
                     </div>
 
-
+                    <h3 class="font-bold text-gray-900 text-xl tracking-tight">Mushtaq</h3>
+                    <span
+                        class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-50 text-teal-700 text-xs font-semibold mt-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-teal-500 animate-pulse"></span>
+                        Founder & CEO
+                    </span>
                 </div>
+
+                {{-- Quote content --}}
+                <div class="relative max-w-2xl mx-auto">
+                    <div class="absolute -top-4 -left-2 text-teal-100 transform -scale-x-100">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M14 11H19L17 19H12L14 11ZM5 11H10L8 19H3L5 11Z" />
+                        </svg>
+                    </div>
+
+                    <p class="text-base lg:text-lg text-gray-600 leading-relaxed font-serif italic relative z-10 px-6">
+                        "Our mission is to create a world where every child, regardless of their challenges, can discover
+                        their strengths and shine brightly. We believe in personalized care that addresses the unique needs
+                        of each child."
+                    </p>
+
+                    <div class="absolute -bottom-4 -right-2 text-pink-100">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M14 11H19L17 19H12L14 11ZM5 11H10L8 19H3L5 11Z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            {{-- CTA Buttons --}}
+            <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                <a href="/services"
+                    class="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-teal-500 to-teal-600 px-8 py-3.5 text-white font-semibold text-sm shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <span
+                        class="absolute inset-0 bg-gradient-to-r from-teal-600 to-teal-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <span class="relative flex items-center gap-2">
+                        <span class="transform group-hover:scale-110 transition-transform duration-300">✦</span>
+                        View All Services
+                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </span>
+                </a>
+
+                <a href="/contact"
+                    class="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full border border-teal-500 bg-white px-8 py-3.5 text-teal-600 font-semibold text-sm hover:bg-teal-50 transform hover:-translate-y-1 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <span class="relative flex items-center gap-2">
+                        <span class="transform group-hover:rotate-12 transition-transform duration-300">📅</span>
+                        Book Consultation
+                        <svg class="w-5 h-5 transform group-hover:rotate-12 transition-transform duration-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </span>
+                </a>
             </div>
         </div>
     </section>
 
     <style>
-        /* Custom background pattern */
+        /* Custom animations */
+        @keyframes blob {
+            0% {
+                transform: translate(0px, 0px) scale(1);
+            }
+
+            33% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
+
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+
+            100% {
+                transform: translate(0px, 0px) scale(1);
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        @keyframes spin-slow {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        @keyframes pulse-slow {
+
+            0%,
+            100% {
+                opacity: 0.2;
+            }
+
+            50% {
+                opacity: 0.3;
+            }
+        }
+
+        @keyframes slide-up {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes hover-pop {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1.02);
+            }
+        }
+
+        @keyframes icon-bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .service-card-modern {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem 1.5rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .service-card-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(234, 250, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .service-card-modern:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+            border-color: rgba(50, 168, 184, 0.2);
+            animation: hover-pop 0.4s ease-out forwards;
+        }
+
+        .service-card-modern:hover::before {
+            opacity: 1;
+        }
+
+        .service-icon-wrapper {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .service-card-modern:hover .service-icon-wrapper {
+            animation: icon-bounce 0.6s ease-in-out;
+            border-radius: 50%;
+        }
+
+        .service-icon-img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            transition: all 0.4s ease;
+        }
+
+        .service-card-modern:hover .service-icon-img {
+            transform: scale(1.1);
+        }
+
+        .service-card-title {
+            color: #1a365d;
+            font-size: 0.9rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-align: center;
+            line-height: 1.4;
+            transition: color 0.4s ease;
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-card-modern:hover .service-card-title {
+            color: #32A8B8;
+        }
+
+        /* Swiper Highlight Styles for feature strip */
+        .featureSwiper .swiper-slide {
+            transition: all 0.6s ease;
+            opacity: 0.5;
+            transform: scale(0.85);
+            /* Normal cards are smaller */
+        }
+
+        .featureSwiper .swiper-slide-active {
+            opacity: 1;
+            transform: scale(1.15);
+            /* Selected card is bigger */
+            z-index: 20;
+        }
+
+        .featureSwiper .swiper-slide-active .service-card-modern {
+            /* Glow shadow */
+            box-shadow: 0 25px 50px rgba(50, 168, 184, 0.25), 0 0 20px rgba(50, 168, 184, 0.1);
+            border-color: rgba(50, 168, 184, 0.4);
+            /* Brighter background */
+            background: #f4fdff;
+        }
+
+        .featureSwiper .swiper-slide-active .service-card-modern::before {
+            opacity: 1;
+        }
+
+        .featureSwiper .swiper-slide-active .service-icon-wrapper {
+            border-radius: 50%;
+            /* Continuous icon bounce */
+            animation: icon-bounce 1.5s ease-in-out infinite;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .featureSwiper .swiper-slide-active .service-icon-img {
+            transform: scale(1.15);
+        }
+
+        .featureSwiper .swiper-slide-active .service-card-title {
+            color: #32A8B8;
+        }
+
+        .animate-blob {
+            animation: blob 10s infinite;
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .animate-spin-slow {
+            animation: spin-slow 20s linear infinite;
+        }
+
+        .animate-pulse-slow {
+            animation: pulse-slow 4s ease-in-out infinite;
+        }
+
+        .animate-slide-up {
+            animation: slide-up 0.6s ease-out forwards;
+        }
+
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+
+        .animation-delay-3000 {
+            animation-delay: 3s;
+        }
+
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+
+        /* Smooth hover transitions */
+        .group:hover .group-hover\:rotate-6 {
+            transform: rotate(6deg);
+        }
+
+        .group:hover .group-hover\:scale-110 {
+            transform: scale(1.1);
+        }
+
+        .group:hover .group-hover\:translate-y-0 {
+            transform: translateY(0);
+        }
+
+        .group:hover .group-hover\:opacity-100 {
+            opacity: 1;
+        }
+
+        /* Background pattern */
         .bg-grid-pattern {
-            background-image:
-                linear-gradient(to right, #f0f9ff 1px, transparent 1px),
-                linear-gradient(to bottom, #f0f9ff 1px, transparent 1px);
-            background-size: 40px 40px;
+            background-image: linear-gradient(to right, #e5e7eb 1px, transparent 1px),
+                linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
+            background-size: 30px 30px;
         }
 
-        /* Smooth hover effects */
-        .group-hover\:-translate-y-1:hover {
-            transform: translateY(-4px);
+        /* Smooth scrolling for animations */
+        html {
+            scroll-behavior: smooth;
         }
 
-        /* Aspect ratio for image */
-        .aspect-\[4\/5\] {
-            aspect-ratio: 4 / 5;
-        }
-
-        /* Gradient text for all color variations */
-        .text-teal-600 {
-            color: #0d9488;
-        }
-
-        .text-pink-600 {
-            color: #db2777;
-        }
-
-        .text-blue-600 {
-            color: #2563eb;
-        }
-
-        .text-purple-600 {
-            color: #7c3aed;
-        }
-
-        .text-orange-600 {
-            color: #ea580c;
-        }
-
-        .text-indigo-600 {
-            color: #4f46e5;
-        }
-
-        .from-teal-500 {
-            --tw-gradient-from: #0d9488;
-        }
-
-        .to-teal-600 {
-            --tw-gradient-to: #0f766e;
-        }
-
-        .from-pink-500 {
-            --tw-gradient-from: #ec4899;
-        }
-
-        .to-pink-600 {
-            --tw-gradient-to: #db2777;
-        }
-
-        .from-blue-500 {
-            --tw-gradient-from: #3b82f6;
-        }
-
-        .to-blue-600 {
-            --tw-gradient-to: #2563eb;
-        }
-
-        .from-purple-500 {
-            --tw-gradient-from: #8b5cf6;
-        }
-
-        .to-purple-600 {
-            --tw-gradient-to: #7c3aed;
-        }
-
-        .from-orange-500 {
-            --tw-gradient-from: #f97316;
-        }
-
-        .to-orange-600 {
-            --tw-gradient-to: #ea580c;
-        }
-
-        .from-indigo-500 {
-            --tw-gradient-from: #6366f1;
-        }
-
-        .to-indigo-600 {
-            --tw-gradient-to: #4f46e5;
+        /* Gradient text */
+        .text-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     </style>
 
@@ -987,6 +1469,7 @@
 
     {{-- ================= WHY CHOOSE US ================= --}}
     <section class="py-16 lg:py-24 bg-white relative overflow-hidden">
+        <div class="doodle-bg-dark"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6" data-aos="fade-up">
@@ -1039,7 +1522,8 @@
     </section>
 
     {{-- ================= TESTIMONIALS ================= --}}
-    <section class="py-16 lg:py-24 relative overflow-hidden" style="background-color: #ffffff;">
+    <section class="py-16 lg:py-24 relative overflow-hidden bg-white">
+        <div class="doodle-bg-dark"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16 text-transparent bg-clip-text"
@@ -1135,7 +1619,8 @@
     </section>
 
     {{-- ================= FAQ SECTION ================= --}}
-    <section class="py-16 lg:py-24 bg-white">
+    <section class="py-16 lg:py-24 bg-white relative overflow-hidden">
+        <div class="doodle-bg-dark"></div>
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-12" data-aos="fade-up">Frequently Asked
                 Questions</h2>
@@ -1179,10 +1664,12 @@
     </section>
 
     {{-- ================= FINAL CTA ================= --}}
-    <section class="py-20 bg-white relative">
+    <section class="py-20 bg-white relative overflow-hidden">
+        <div class="doodle-bg-dark"></div>
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="rounded-3xl p-8 sm:p-16 text-center text-white relative overflow-hidden shadow-2xl"
                 style="background-color: #32A8B8;" data-aos="zoom-in">
+                <div class="doodle-bg-light"></div>
                 <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2">
                 </div>
                 <div class="absolute bottom-0 left-0 w-40 h-40 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2">

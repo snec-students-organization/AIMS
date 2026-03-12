@@ -2,14 +2,11 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16 lg:h-20">
 
-            <div class="flex items-center">
-                <a href="/" class="flex items-center gap-2 group">
-                    <div class="relative">
-                        <img src="{{ asset('images/Logo.png') }}" alt="AIMS CDC Logo"
-                            class="h-10 lg:h-12 w-auto transition-all duration-300 group-hover:scale-105"
-                            style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; filter: contrast(1.02) brightness(1.02); shadow: none; will-change: transform;">
-                    </div>
-
+            <div class="flex items-center flex-shrink-0">
+                <a href="/" class="group block">
+                    <img src="{{ asset('images/Logo.png') }}" alt="GEMS Logo"
+                        class="h-12 lg:h-15 w-auto object-contain transition-all duration-300 group-hover:scale-105"
+                        style="image-rendering: -webkit-optimize-contrast; will-change: transform;">
                 </a>
             </div>
 

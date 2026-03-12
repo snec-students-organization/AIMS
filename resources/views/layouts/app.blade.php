@@ -43,7 +43,7 @@
 
     {{-- Fonts --}}
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Dancing+Script:wght@600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Dancing+Script:wght@600&family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&display=swap"
         rel="stylesheet">
 
     {{-- VITE --}}
