@@ -5,6 +5,7 @@
     {{-- ================= HERO SECTION ================= --}}
     @push('head')
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
         <style>
             :root {
                 --primary-teal: #006684;
@@ -377,10 +378,11 @@
                 justify-content: center;
             }
 
-            .btn-custom-teal:hover {
+            .btn-custom-teal:hover,
+            .btn-custom-teal:active {
                 transform: translateY(-2px);
-                box-shadow: 0 10px 20px rgba(50, 168, 184, 0.3);
-                background-color: #2a8f9d;
+                box-shadow: 0 10px 20px rgba(234, 111, 113, 0.3);
+                background-color: #EA6F71;
             }
 
             .btn-custom-lime {
@@ -396,10 +398,11 @@
                 justify-content: center;
             }
 
-            .btn-custom-lime:hover {
+            .btn-custom-lime:hover,
+            .btn-custom-lime:active {
                 transform: translateY(-2px);
-                box-shadow: 0 10px 20px rgba(151, 180, 26, 0.3);
-                background-color: #8da618;
+                box-shadow: 0 10px 20px rgba(233, 157, 29, 0.3);
+                background-color: #E99D1D;
             }
 
             .btn-custom-coral {
@@ -415,10 +418,11 @@
                 justify-content: center;
             }
 
-            .btn-custom-coral:hover {
+            .btn-custom-coral:hover,
+            .btn-custom-coral:active {
                 transform: translateY(-2px);
-                box-shadow: 0 10px 20px rgba(234, 111, 113, 0.3);
-                background-color: #d65f61;
+                box-shadow: 0 10px 20px rgba(151, 180, 26, 0.3);
+                background-color: #97B41A;
             }
 
             .organic-shape-container {
@@ -1785,59 +1789,215 @@
 
 
 
-    {{-- ================= WHY CHOOSE US ================= --}}
-    <section class="py-16 lg:py-24 bg-white relative overflow-hidden">
-        <div class="doodle-bg-dark"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6" data-aos="fade-up">
+    {{-- ================= WHY CHOOSE US (PREMIUM VERSION) ================= --}}
+    <section class="why-section py-32 relative overflow-hidden">
+
+        {{-- Top Wave Divider --}}
+        <div class="absolute top-0 left-0 w-full overflow-hidden leading-[0] z-20">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-[calc(100%+1.3px)] h-[40px] lg:h-[70px]">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V120H0V0Z" fill="#ffffff"></path>
+            </svg>
+        </div>
+
+        {{-- floating shapes --}}
+        <div class="floating-shape shape1"></div>
+        <div class="floating-shape shape2"></div>
+        <div class="floating-shape shape3"></div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+
+            {{-- TITLE --}}
+            <div class="text-center max-w-3xl mx-auto mb-16 text-white" style="font-family: 'Fredoka', sans-serif;">
+
+                <h2 class="text-4xl lg:text-6xl font-extrabold mb-6 tracking-tight" style="text-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);">
                     Why Parents Trust GEMS
                 </h2>
-                <p class="text-lg text-gray-600" data-aos="fade-up" data-aos-delay="100">
-                    We go beyond traditional therapy to provide a holistic ecosystem for your child's growth.
+
+                <p class="text-lg opacity-90">
+                    We go beyond traditional therapy to provide a holistic ecosystem
+                    for your child's growth.
                 </p>
+
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="p-6 rounded-2xl border"
-                    style="background-color: rgba(50, 168, 184, 0.05); border-color: rgba(50, 168, 184, 0.2);"
-                    data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-12 h-12 text-white rounded-lg flex items-center justify-center text-2xl mb-4"
-                        style="background-color: #32A8B8;">🏆</div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-900">Expert Team</h3>
-                    <p class="text-gray-600 text-sm">Highly qualified and RCI certified professionals dedicated to your
-                        child.</p>
-                </div>
-                <div class="p-6 rounded-2xl border"
-                    style="background-color: rgba(234, 111, 113, 0.05); border-color: rgba(234, 111, 113, 0.2);"
-                    data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-12 h-12 text-white rounded-lg flex items-center justify-center text-2xl mb-4"
-                        style="background-color: #EA6F71;">🔬</div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-900">Evidence Based</h3>
-                    <p class="text-gray-600 text-sm">Scientific approach to therapy with proven methodologies and tracking.
+            {{-- CARDS --}}
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+                {{-- CARD --}}
+                <div class="why-card-premium">
+                    <div class="icon-box" style="background-color: #32A8B8;">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                        </svg>
+                    </div>
+                    <h3>Expert Team</h3>
+                    <p>
+                        Highly qualified and RCI certified professionals dedicated
+                        to your child.
                     </p>
                 </div>
-                <div class="p-6 rounded-2xl border"
-                    style="background-color: rgba(50, 168, 184, 0.05); border-color: rgba(50, 168, 184, 0.2);"
-                    data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-12 h-12 text-white rounded-lg flex items-center justify-center text-2xl mb-4"
-                        style="background-color: #32A8B8;">🏰</div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-900">World Class Facility</h3>
-                    <p class="text-gray-600 text-sm">Child-friendly, safe, and stimulating environment for optimal learning.
+
+
+                {{-- CARD --}}
+                <div class="why-card-premium">
+                    <div class="icon-box" style="background-color: #E99D1D;">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                        </svg>
+                    </div>
+                    <h3>Evidence Based</h3>
+                    <p>
+                        Scientific approach to therapy with proven methodologies
+                        and tracking.
                     </p>
                 </div>
-                <div class="p-6 rounded-2xl border"
-                    style="background-color: rgba(233, 157, 29, 0.05); border-color: rgba(233, 157, 29, 0.2);"
-                    data-aos="fade-up" data-aos-delay="400">
-                    <div class="w-12 h-12 text-white rounded-lg flex items-center justify-center text-2xl mb-4"
-                        style="background-color: #E99D1D;">🤝</div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-900">Parent Support</h3>
-                    <p class="text-gray-600 text-sm">Regular counseling, training workships, and support groups for
-                        families.</p>
+
+
+                {{-- CARD --}}
+                <div class="why-card-premium">
+                    <div class="icon-box" style="background-color: #EA6F71;">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                    </div>
+                    <h3>World Class Facility</h3>
+                    <p>
+                        Child-friendly, safe, and stimulating environment
+                        for optimal learning.
+                    </p>
                 </div>
+
+
+                {{-- CARD --}}
+                <div class="why-card-premium">
+                    <div class="icon-box" style="background-color: #32A8B8;">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                    </div>
+                    <h3>Parent Support</h3>
+                    <p>
+                        Regular counseling, training workshops,
+                        and support groups for families.
+                    </p>
+                </div>
+
             </div>
+
+        </div>
+
+        {{-- Bottom Wave Divider --}}
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-20">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-[calc(100%+1.3px)] h-[40px] lg:h-[70px]">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C41.67,11.39,119.33,31,179,42.41,234.19,53,281.42,63.74,321.39,56.44Z" fill="#ffffff"></path>
+            </svg>
         </div>
     </section>
+
+    <style>
+        .why-section {
+            background: #97B41A;
+            position: relative;
+        }
+
+        /* floating playful shapes */
+
+        .floating-shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.25;
+            animation: floatShape 8s infinite ease-in-out;
+        }
+
+        .shape1 {
+            width: 180px;
+            height: 180px;
+            background: #ffffff;
+            top: -40px;
+            left: -40px;
+        }
+
+        .shape2 {
+            width: 120px;
+            height: 120px;
+            background: #FFD54F;
+            bottom: 40px;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .shape3 {
+            width: 90px;
+            height: 90px;
+            background: #EA6F71;
+            top: 40%;
+            left: 5%;
+            animation-delay: 4s;
+        }
+
+        @keyframes floatShape {
+
+            0%,
+            100% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-25px)
+            }
+        }
+
+
+        /* cards */
+
+        .why-card-premium {
+            background: white;
+            padding: 35px;
+            border-radius: 24px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+            transition: 0.4s;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-card-premium:hover {
+            transform: translateY(-12px) scale(1.03);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18);
+        }
+
+        /* icon */
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            color: white;
+            margin-bottom: 18px;
+        }
+
+        /* title */
+
+        .why-card-premium h3 {
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 700;
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+
+        /* text */
+
+        .why-card-premium p {
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+    </style>
 
     {{-- ================= TESTIMONIALS ================= --}}
     <section class="py-16 lg:py-24 relative overflow-hidden bg-white">
