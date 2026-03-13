@@ -2146,7 +2146,7 @@
         <div class="doodle-bg-dark"></div>
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="rounded-3xl p-8 sm:p-16 text-center text-white relative overflow-hidden shadow-2xl"
-                style="background-color: #32A8B8;" data-aos="zoom-in">
+                style="background-color: #EA6F71;" data-aos="zoom-in">
                 <div class="doodle-bg-light"></div>
                 <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2">
                 </div>
