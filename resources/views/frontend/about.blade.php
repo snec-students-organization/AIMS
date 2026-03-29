@@ -93,80 +93,74 @@
     </section>
 
     {{-- ================= VALUES SECTION ================= --}}
-    <section class="py-16 lg:py-24 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="py-16 lg:py-24 bg-slate-50 relative overflow-hidden">
+        {{-- Decorative Background Elements --}}
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-[#EA6F71] opacity-5 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 rounded-full bg-[#32A8B8] opacity-5 blur-3xl"></div>
 
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                <span class="text-gray-900 text-2xl sm:text-3xl mb-2 block" style="font-family: 'Comic Sans MS', cursive;">What We Believe</span>
+                <h2 class="text-3xl lg:text-5xl font-bold text-gray-900 mb-6" style="font-family: 'Fredoka', sans-serif; font-weight: 800;">
                     Core Values
                 </h2>
-                <p class="text-gray-600 text-lg">
+                <p class="text-gray-600 font-medium text-lg">
                     Our work is guided by a set of principles that ensure the highest quality of care for every child.
                 </p>
             </div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
-                {{-- Value 1 --}}
-                <div class="p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border group"
-                    style="background-color: rgba(50, 168, 184, 0.05); border-color: rgba(50, 168, 184, 0.2);"
-                    data-aos="fade-up" data-aos-delay="100">
-
-                    <div
-                        class="w-14 h-14 bg-[#32A8B8] text-white rounded-xl flex items-center justify-center text-3xl mb-6 shadow-sm group-hover:scale-110 transition-transform">
-                        ❤️
+                {{-- Value 1: Compassion --}}
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="tilt-card bg-white p-8 rounded-[2rem] shadow-lg hover:shadow-2xl group flex flex-col items-center text-center cursor-pointer h-full border-b-[6px] border-[#EA6F71]">
+                        <div class="w-16 h-16 bg-[#EA6F71] text-white flex items-center justify-center mb-6 shadow-md group-hover:scale-110 group-hover:-rotate-3 transition-all duration-300" style="border-radius: 16px;">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 uppercase tracking-wide" style="font-family: 'Fredoka', sans-serif;">Compassion</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            We approach every child and family with empathy, kindness, and understanding.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3 uppercase">Compassion</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        We approach every child and family with empathy, kindness, and understanding.
-                    </p>
                 </div>
 
-                {{-- Value 2 --}}
-                <div class="p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border group"
-                    style="background-color: rgba(151, 180, 26, 0.05); border-color: rgba(151, 180, 26, 0.2);"
-                    data-aos="fade-up" data-aos-delay="200">
-
-                    <div
-                        class="w-14 h-14 bg-[#97B41A] text-white rounded-xl flex items-center justify-center text-3xl mb-6 shadow-sm group-hover:scale-110 transition-transform">
-                        🌟
+                {{-- Value 2: Excellence --}}
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="tilt-card bg-white p-8 rounded-[2rem] shadow-lg hover:shadow-2xl group flex flex-col items-center text-center cursor-pointer h-full border-b-[6px] border-[#E99D1D]">
+                        <div class="w-16 h-16 bg-[#E99D1D] text-white flex items-center justify-center mb-6 shadow-md group-hover:scale-110 group-hover:rotate-3 transition-all duration-300" style="border-radius: 32px 32px 8px 8px;">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 uppercase tracking-wide" style="font-family: 'Fredoka', sans-serif;">Excellence</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            We are committed to the highest standards of clinical practice and continuous learning.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3 uppercase">Excellence</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        We are committed to the highest standards of clinical practice and continuous learning.
-                    </p>
                 </div>
 
-                {{-- Value 3 --}}
-                <div class="p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border group"
-                    style="background-color: rgba(234, 111, 113, 0.05); border-color: rgba(234, 111, 113, 0.2);"
-                    data-aos="fade-up" data-aos-delay="300">
-
-                    <div
-                        class="w-14 h-14 bg-[#EA6F71] text-white rounded-xl flex items-center justify-center text-3xl mb-6 shadow-sm group-hover:scale-110 transition-transform">
-                        🤝
+                {{-- Value 3: Integrity --}}
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="tilt-card bg-white p-8 rounded-[2rem] shadow-lg hover:shadow-2xl group flex flex-col items-center text-center cursor-pointer h-full border-b-[6px] border-[#32A8B8]">
+                        <div class="w-16 h-16 bg-[#32A8B8] text-white flex items-center justify-center mb-6 shadow-md group-hover:scale-110 group-hover:-rotate-6 transition-all duration-300" style="border-radius: 24px 24px 24px 6px;">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 uppercase tracking-wide" style="font-family: 'Fredoka', sans-serif;">Integrity</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            We operate with honesty, transparency, and ethical responsibility in all we do.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3 uppercase">Integrity</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        We operate with honesty, transparency, and ethical responsibility in all we do.
-                    </p>
                 </div>
 
-                {{-- Value 4 --}}
-                <div class="p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border group"
-                    style="background-color: rgba(233, 157, 29, 0.05); border-color: rgba(233, 157, 29, 0.2);"
-                    data-aos="fade-up" data-aos-delay="400">
-
-                    <div
-                        class="w-14 h-14 bg-[#E99D1D] text-white rounded-xl flex items-center justify-center text-3xl mb-6 shadow-sm group-hover:scale-110 transition-transform">
-                        👨‍👩‍👧‍👦
+                {{-- Value 4: Collaboration --}}
+                <div data-aos="fade-up" data-aos-delay="400">
+                    <div class="tilt-card bg-white p-8 rounded-[2rem] shadow-lg hover:shadow-2xl group flex flex-col items-center text-center cursor-pointer h-full border-b-[6px] border-[#97B41A]">
+                        <div class="w-16 h-16 bg-[#97B41A] text-white flex items-center justify-center mb-6 shadow-md group-hover:scale-110 group-hover:rotate-6 transition-all duration-300" style="border-radius: 24px 8px 24px 8px;">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 uppercase tracking-wide" style="font-family: 'Fredoka', sans-serif;">Collaboration</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            We work as a team with families, schools, and other professionals for the child's benefit.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3 uppercase">Collaboration</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        We work as a team with families, schools, and other professionals for the child's benefit.
-                    </p>
                 </div>
-
             </div>
         </div>
     </section>
