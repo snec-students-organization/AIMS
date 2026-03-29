@@ -2001,98 +2001,158 @@
 
     {{-- ================= TESTIMONIALS ================= --}}
     <section class="py-16 lg:py-24 relative overflow-hidden bg-white">
-        <div class="doodle-bg-dark"></div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16 text-transparent bg-clip-text"
                 style="background-image: linear-gradient(to right, #00A79D, #EA6F71); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"
                 data-aos="fade-up">
                 Stories of Hope & Success
             </h2>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {{-- Testimonial 1 --}}
-                <div class="p-8 transform hover:-translate-y-2 transition-all duration-300 flex flex-col h-full border"
-                    style="background-color: rgba(50, 168, 184, 0.05); border-color: rgba(50, 168, 184, 0.2); border-radius: 60px 20px 60px 20px;"
-                    data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex gap-1 mb-4" style="color: #32A8B8;">★★★★★</div>
-                    <p class="text-gray-700 italic mb-6 flex-grow">
-                        "We are extremely happy with the therapy services provide by gems clinic. We have seen a remarkable
-                        improvement in our child over time. He has started trying to speak, his hyperactivity has reduced
-                        significantly, and his eye contact with people has improved a lot"
-                    </p>
-                    <div class="flex items-center gap-4">
-                        <div
-                            class="w-10 h-10 bg-white text-[#32A8B8] rounded-full flex items-center justify-center font-bold shadow-sm border border-gray-100">
-                            HS</div>
-                        <div>
-                            <div class="font-semibold text-gray-900">Hasna Kp</div>
-                            <div class="text-gray-500 text-xs text-left">Parent</div>
-                        </div>
+            <!-- Google Reviews Widget Layout -->
+            <div class="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16 w-full" data-aos="fade-up" data-aos-delay="100">
+                
+                {{-- Left: Google Summary --}}
+                <div class="flex flex-col items-center justify-center text-center w-full lg:w-1/4 shrink-0">
+                    <h3 class="text-2xl font-bold text-[#202124] tracking-wide mb-3" style="font-family: Arial, sans-serif;">EXCELLENT</h3>
+                    <div class="flex gap-1 mb-3">
+                        @for($i=0; $i<5; $i++)
+                        <svg viewBox="0 0 24 24" fill="#FBBC04" class="w-8 h-8"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        @endfor
                     </div>
+                    <p class="text-[15px] text-[#5f6368] mb-5 font-medium" style="font-family: Arial, sans-serif;">Based on <span class="font-bold text-[#202124]">72 reviews</span></p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="h-8">
                 </div>
 
-                {{-- Testimonial 2 --}}
-                <div class="p-8 transform hover:-translate-y-2 transition-all duration-300 flex flex-col h-full border"
-                    style="background-color: rgba(151, 180, 26, 0.05); border-color: rgba(151, 180, 26, 0.2); border-radius: 20px 60px 20px 60px;"
-                    data-aos="fade-up" data-aos-delay="200">
-                    <div class="flex gap-1 mb-4" style="color: #97B41A;">★★★★★</div>
-                    <p class="text-gray-700 italic mb-6 flex-grow">
-                        "One of the best child development centres in Calicut! Only after reaching here did I truly feel
-                        that my son has received the right guidance and support. The staff are very professional, caring,
-                        and patient."
-                    </p>
-                    <div class="flex items-center gap-4">
-                        <div
-                            class="w-10 h-10 bg-white text-[#97B41A] rounded-full flex items-center justify-center font-bold shadow-sm border border-gray-100">
-                            FA</div>
-                        <div>
-                            <div class="font-semibold text-gray-900">Fathima va.</div>
-                            <div class="text-gray-500 text-xs text-left">Parent</div>
-                        </div>
-                    </div>
-                </div>
+                {{-- Right: Cards Carousel/Grid --}}
+                <div class="w-full lg:w-3/4 relative px-2 sm:px-4 lg:px-10">
+                    <!-- Carousel Arrows (Decorative/Indication) -->
+                    <button class="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 bg-white border border-gray-100 rounded-full shadow-md items-center justify-center text-gray-500 hover:text-gray-800 z-10 -ml-2 transition-transform hover:scale-110 hidden lg:flex">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </button>
+                    <button class="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 bg-white border border-gray-100 rounded-full shadow-md items-center justify-center text-gray-500 hover:text-gray-800 z-10 -mr-2 transition-transform hover:scale-110 hidden lg:flex">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
 
-                {{-- Testimonial 3 --}}
-                <div class="p-8 transform hover:-translate-y-2 transition-all duration-300 flex flex-col h-full border"
-                    style="background-color: rgba(234, 111, 113, 0.05); border-color: rgba(234, 111, 113, 0.2); border-radius: 60px 20px 60px 20px;"
-                    data-aos="fade-up" data-aos-delay="300">
-                    <div class="flex gap-1 mb-4" style="color: #EA6F71;">★★★★★</div>
-                    <p class="text-gray-700 italic mb-6 flex-grow">
-                        "The best therapy centre for developmental delayed kids. Excellent teaching and skill development
-                        methods using Kids are very happy because of friendly atmosphere."
-                    </p>
-                    <div class="flex items-center gap-4">
-                        <div
-                            class="w-10 h-10 bg-white text-[#EA6F71] rounded-full flex items-center justify-center font-bold shadow-sm border border-gray-100">
-                            AM</div>
-                        <div>
-                            <div class="font-semibold text-gray-900">Aneesh meladath.</div>
-                            <div class="text-gray-500 text-xs text-left">Parent</div>
+                    <!-- Cards Container -->
+                    <div class="flex overflow-x-auto gap-4 lg:gap-6 snap-x snap-mandatory pb-6 hide-scrollbar cursor-grab active:cursor-grabbing w-full">
+                        
+                        {{-- Card 1 --}}
+                        <div class="bg-[#f8f9fa] rounded-[16px] p-6 shrink-0 w-[85%] sm:w-[320px] lg:w-[calc(100%/3-1rem)] snap-center text-left border border-gray-50 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-shadow">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-[#388e3c] flex items-center justify-center text-white font-bold text-lg">H</div>
+                                    <div>
+                                        <div class="font-bold text-[#202124] text-[15px] leading-tight font-sans">Hasna Kp</div>
+                                        <div class="text-[#5f6368] text-[13px] mt-0.5 font-sans">2024-08-12</div>
+                                    </div>
+                                </div>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="w-5 h-5 mt-1">
+                            </div>
+                            <div class="flex items-center gap-1 mb-3">
+                                <div class="flex gap-0.5">
+                                    @for($i=0; $i<5; $i++)
+                                    <svg viewBox="0 0 24 24" fill="#FBBC04" class="w-4 h-4"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    @endfor
+                                </div>
+                                <svg class="w-4 h-4 text-[#1a73e8] ml-1" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1.8 14.6L6 12.4l1.4-1.4 2.8 2.8 6.4-7.8 1.4 1.4-7.8 9.2z"/></svg>
+                            </div>
+                            <p class="text-[#3c4043] text-[14px] leading-[1.6] line-clamp-4 font-sans">
+                                We are extremely happy with the therapy services provide by gems clinic. We have seen a remarkable improvement in our child over time. He has started trying to speak, his hyperactivity has reduced significantly, and his eye contact with people has improved a lot
+                            </p>
+                            <a href="javascript:void(0)" class="text-[#5f6368] hover:text-gray-900 text-[13px] mt-2 inline-block font-sans">Read more</a>
                         </div>
-                    </div>
-                </div>
 
-                {{-- Testimonial 4 --}}
-                <div class="p-8 transform hover:-translate-y-2 transition-all duration-300 flex flex-col h-full border"
-                    style="background-color: rgba(233, 157, 29, 0.05); border-color: rgba(233, 157, 29, 0.2); border-radius: 20px 60px 20px 60px;"
-                    data-aos="fade-up" data-aos-delay="400">
-                    <div class="flex gap-1 mb-4" style="color: #E99D1D;">★★★★★</div>
-                    <p class="text-gray-700 italic mb-6 flex-grow">
-                        "Truly grateful for the progress we've seen. The staff is like family. They've supported us as much
-                        as they've supported our son. Excellent environment."
-                    </p>
-                    <div class="flex items-center gap-4">
-                        <div
-                            class="w-10 h-10 bg-white text-[#E99D1D] rounded-full flex items-center justify-center font-bold shadow-sm border border-gray-100">
-                            RK</div>
-                        <div>
-                            <div class="font-semibold text-gray-900">Rahul K.</div>
-                            <div class="text-gray-500 text-xs text-left">Parent</div>
+                        {{-- Card 2 --}}
+                        <div class="bg-[#f8f9fa] rounded-[16px] p-6 shrink-0 w-[85%] sm:w-[320px] lg:w-[calc(100%/3-1rem)] snap-center text-left border border-gray-50 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-shadow">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-[#1976d2] flex items-center justify-center text-white font-bold text-lg">F</div>
+                                    <div>
+                                        <div class="font-bold text-[#202124] text-[15px] leading-tight font-sans">Fathima va.</div>
+                                        <div class="text-[#5f6368] text-[13px] mt-0.5 font-sans">2024-11-04</div>
+                                    </div>
+                                </div>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="w-5 h-5 mt-1">
+                            </div>
+                            <div class="flex items-center gap-1 mb-3">
+                                <div class="flex gap-0.5">
+                                    @for($i=0; $i<5; $i++)
+                                    <svg viewBox="0 0 24 24" fill="#FBBC04" class="w-4 h-4"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    @endfor
+                                </div>
+                                <svg class="w-4 h-4 text-[#1a73e8] ml-1" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1.8 14.6L6 12.4l1.4-1.4 2.8 2.8 6.4-7.8 1.4 1.4-7.8 9.2z"/></svg>
+                            </div>
+                            <p class="text-[#3c4043] text-[14px] leading-[1.6] line-clamp-4 font-sans">
+                                One of the best child development centres in Calicut! Only after reaching here did I truly feel that my son has received the right guidance and support. The staff are very professional, caring, and patient.
+                            </p>
+                            <a href="javascript:void(0)" class="text-[#5f6368] hover:text-gray-900 text-[13px] mt-2 inline-block font-sans">Read more</a>
                         </div>
+
+                        {{-- Card 3 --}}
+                        <div class="bg-[#f8f9fa] rounded-[16px] p-6 shrink-0 w-[85%] sm:w-[320px] lg:w-[calc(100%/3-1rem)] snap-center text-left border border-gray-50 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-shadow">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-[#fbc02d] flex items-center justify-center text-white font-bold text-lg">A</div>
+                                    <div>
+                                        <div class="font-bold text-[#202124] text-[15px] leading-tight font-sans">Aneesh meladath.</div>
+                                        <div class="text-[#5f6368] text-[13px] mt-0.5 font-sans">2025-01-15</div>
+                                    </div>
+                                </div>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="w-5 h-5 mt-1">
+                            </div>
+                            <div class="flex items-center gap-1 mb-3">
+                                <div class="flex gap-0.5">
+                                    @for($i=0; $i<5; $i++)
+                                    <svg viewBox="0 0 24 24" fill="#FBBC04" class="w-4 h-4"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    @endfor
+                                </div>
+                                <svg class="w-4 h-4 text-[#1a73e8] ml-1" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1.8 14.6L6 12.4l1.4-1.4 2.8 2.8 6.4-7.8 1.4 1.4-7.8 9.2z"/></svg>
+                            </div>
+                            <p class="text-[#3c4043] text-[14px] leading-[1.6] line-clamp-4 font-sans">
+                                The best therapy centre for developmental delayed kids. Excellent teaching and skill development methods using Kids are very happy because of friendly atmosphere.
+                            </p>
+                            <a href="javascript:void(0)" class="text-[#5f6368] hover:text-gray-900 text-[13px] mt-2 inline-block font-sans">Read more</a>
+                        </div>
+                        
+                        {{-- Card 4 --}}
+                        <div class="bg-[#f8f9fa] rounded-[16px] p-6 shrink-0 w-[85%] sm:w-[320px] lg:w-[calc(100%/3-1rem)] snap-center text-left border border-gray-50 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-shadow">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-[#d32f2f] flex items-center justify-center text-white font-bold text-lg">R</div>
+                                    <div>
+                                        <div class="font-bold text-[#202124] text-[15px] leading-tight font-sans">Rahul K.</div>
+                                        <div class="text-[#5f6368] text-[13px] mt-0.5 font-sans">2025-02-28</div>
+                                    </div>
+                                </div>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="w-5 h-5 mt-1">
+                            </div>
+                            <div class="flex items-center gap-1 mb-3">
+                                <div class="flex gap-0.5">
+                                    @for($i=0; $i<5; $i++)
+                                    <svg viewBox="0 0 24 24" fill="#FBBC04" class="w-4 h-4"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    @endfor
+                                </div>
+                                <svg class="w-4 h-4 text-[#1a73e8] ml-1" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1.8 14.6L6 12.4l1.4-1.4 2.8 2.8 6.4-7.8 1.4 1.4-7.8 9.2z"/></svg>
+                            </div>
+                            <p class="text-[#3c4043] text-[14px] leading-[1.6] line-clamp-4 font-sans">
+                                Truly grateful for the progress we've seen. The staff is like family. They've supported us as much as they've supported our son. Excellent environment.
+                            </p>
+                            <a href="javascript:void(0)" class="text-[#5f6368] hover:text-gray-900 text-[13px] mt-2 inline-block font-sans">Read more</a>
+                        </div>
+
                     </div>
                 </div>
             </div>
+            
+            <style>
+                .hide-scrollbar::-webkit-scrollbar {
+                    display: none;
+                }
+                .hide-scrollbar {
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
+                }
+            </style>
         </div>
     </section>
 
