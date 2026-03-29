@@ -873,7 +873,7 @@
                             <span class="circle3"></span>
                             <span class="circle4"></span>
                         </div>
-
+                        
                         {{-- Floating Decorations --}}
                         <div class="floating-decoration decoration-pencil hidden lg:block" data-aos="fade-down"
                             data-aos-delay="500">

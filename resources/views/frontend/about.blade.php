@@ -172,90 +172,134 @@
     </section>
 
     {{-- ================= WHY CHOOSE GEMS ================= --}}
-    <section class="py-16 lg:py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="py-16 lg:py-24 relative overflow-hidden" style="background-color: #EA6F71;">
+        {{-- Child-friendly background pattern --}}
+        <div class="absolute inset-0 pointer-events-none opacity-15" style="background-image: url('data:image/svg+xml,%3Csvg width=\'400\' height=\'400\' viewBox=\'0 0 400 400\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' stroke=\'white\' stroke-width=\'1.5\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3E%3Cpath d=\'M200 100 c -20 0 -35 15 -35 35 c 0 15 10 25 15 30 l 0 15 l 40 0 l 0 -15 c 5 -5 15 -15 15 -30 c 0 -20 -15 -35 -35 -35 Z\'/%3E%3Cpath d=\'M185 185 l 30 0 m -30 5 l 30 0\'/%3E%3Cpath d=\'M200 85 l 0 -10 M230 115 l 10 -10 M170 115 l -10 -10\'/%3E%3Cpath d=\'M50 50 Q 70 30 90 50 T 130 50\'/%3E%3Ccircle cx=\'300\' cy=\'100\' r=\'20\'/%3E%3Cpath d=\'M350 300 l 20 20 m -20 0 l 20 -20\'/%3E%3Crect x=\'100\' y=\'300\' width=\'30\' height=\'30\' rx=\'5\'/%3E%3Cpath d=\'M40 250 c 10 0 10 20 20 20 s 10 -20 20 -20\'/%3E%3Ccircle cx=\'150\' cy=\'100\' r=\'5\' fill=\'white\'/%3E%3Ccircle cx=\'250\' cy=\'350\' r=\'8\'/%3E%3C/g%3E%3C/svg%3E'); background-size: 300px; animation: floatBackground 20s ease-in-out infinite;"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
-                <span class="text-[#32A8B8] font-bold tracking-widest uppercase text-sm mb-3 block">Our Strengths</span>
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                <span class="text-gray-900 text-2xl sm:text-3xl mb-2 block" style="font-family: 'Comic Sans MS', cursive;">Our Strengths</span>
+                <h2 class="text-3xl lg:text-5xl font-bold text-gray-900 mb-6" style="font-family: 'Fredoka', sans-serif; font-weight: 800; line-height: 1.2;">
                     Why Choose GEMS?
                 </h2>
-                <p class="text-gray-600 text-lg">
+                <p class="text-gray-900 font-medium text-lg opacity-90 mx-auto max-w-2xl">
                     We combine clinical expertise with a heart-centered approach to ensure the best possible start for your
                     child.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
                 {{-- Point 1: Licensed Therapist --}}
-                <div class="p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border group"
-                    style="background-color: rgba(50, 168, 184, 0.05); border-color: rgba(50, 168, 184, 0.2);"
-                    data-aos="fade-up" data-aos-delay="100">
-                    <div
-                        class="w-16 h-16 bg-[#32A8B8] text-white rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 shadow-sm group-hover:scale-110 transition-transform">
-                        👨‍⚕️
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="tilt-card bg-white p-6 lg:p-8 rounded-[2rem] shadow-lg hover:shadow-2xl group flex flex-col items-center text-center cursor-pointer h-full">
+                        <div class="w-16 h-16 bg-[#32A8B8] text-white flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 group-hover:rotate-6 transition-all duration-300" style="border-radius: 24px 24px 24px 6px;">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"></path><path d="M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-3" style="font-family: 'Fredoka', sans-serif;">Licensed Therapist</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Expert care from certified professionals dedicated to pediatric excellence.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3 uppercase">Licensed Therapist</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Expert care from certified professionals dedicated to pediatric excellence.
-                    </p>
                 </div>
 
                 {{-- Point 2: Precision in Diagnosis --}}
-                <div class="p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border group"
-                    style="background-color: rgba(233, 157, 29, 0.05); border-color: rgba(233, 157, 29, 0.2);"
-                    data-aos="fade-up" data-aos-delay="200">
-                    <div
-                        class="w-16 h-16 bg-[#E99D1D] text-white rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 shadow-sm group-hover:scale-110 transition-transform">
-                        🎯
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="tilt-card bg-white p-6 lg:p-8 rounded-[2rem] shadow-lg hover:shadow-2xl group flex flex-col items-center text-center cursor-pointer h-full">
+                        <div class="w-16 h-16 bg-[#E99D1D] text-white flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 group-hover:-rotate-3 transition-all duration-300" style="border-radius: 32px 32px 8px 8px;">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v8"></path><path d="M8 12h8"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-3" style="font-family: 'Fredoka', sans-serif;">Precision in Diagnosis</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Accurate assessments that form the foundation for highly tailored interventions.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3 uppercase">Precision in Diagnosis</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Accurate assessments that form the foundation for highly tailored interventions.
-                    </p>
                 </div>
 
                 {{-- Point 3: Multidisciplinary Team Care --}}
-                <div class="p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border group"
-                    style="background-color: rgba(151, 180, 26, 0.05); border-color: rgba(151, 180, 26, 0.2);"
-                    data-aos="fade-up" data-aos-delay="300">
-                    <div
-                        class="w-16 h-16 bg-[#97B41A] text-white rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 shadow-sm group-hover:scale-110 transition-transform">
-                        🤝
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="tilt-card bg-white p-6 lg:p-8 rounded-[2rem] shadow-lg hover:shadow-2xl group flex flex-col items-center text-center cursor-pointer h-full">
+                        <div class="w-16 h-16 bg-[#97B41A] text-white flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 group-hover:rotate-3 transition-all duration-300" style="border-radius: 24px 8px 24px 8px;">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-3" style="font-family: 'Fredoka', sans-serif;">Multidisciplinary Team</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            A collaborative approach involving specialists across multiple therapeutic disciplines.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3 uppercase">Multidisciplinary Team Care</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        A collaborative approach involving specialists across multiple therapeutic disciplines.
-                    </p>
                 </div>
 
                 {{-- Point 4: Parent Support --}}
-                <div class="p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border group"
-                    style="background-color: rgba(234, 111, 113, 0.05); border-color: rgba(234, 111, 113, 0.2);"
-                    data-aos="fade-up" data-aos-delay="400">
-                    <div
-                        class="w-16 h-16 bg-[#EA6F71] text-white rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 shadow-sm group-hover:scale-110 transition-transform">
-                        👪
+                <div data-aos="fade-up" data-aos-delay="400">
+                    <div class="tilt-card bg-white p-6 lg:p-8 rounded-[2rem] shadow-lg hover:shadow-2xl group flex flex-col items-center text-center cursor-pointer h-full">
+                        <div class="w-16 h-16 bg-[#EA6F71] text-white flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 group-hover:-rotate-3 transition-all duration-300" style="border-radius: 16px;">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-3" style="font-family: 'Fredoka', sans-serif;">Parent Support</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Empowering families with tools, education, and emotional guidance throughout the journey.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3 uppercase">Parent Support</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Empowering families with tools, education, and emotional guidance throughout the journey.
-                    </p>
                 </div>
 
                 {{-- Point 5: Assured Result --}}
-                <div class="p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border group"
-                    style="background-color: rgba(50, 168, 184, 0.05); border-color: rgba(50, 168, 184, 0.2);"
-                    data-aos="fade-up" data-aos-delay="500">
-                    <div
-                        class="w-16 h-16 bg-[#32A8B8] text-white rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 shadow-sm group-hover:scale-110 transition-transform">
-                        🏆
+                <div data-aos="fade-up" data-aos-delay="500">
+                    <div class="tilt-card bg-white p-6 lg:p-8 rounded-[2rem] shadow-lg hover:shadow-2xl group flex flex-col items-center text-center cursor-pointer h-full">
+                        <div class="w-16 h-16 bg-[#32A8B8] text-white flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 group-hover:rotate-6 transition-all duration-300" style="border-radius: 32px 10px 32px 10px;">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 1-12 0V2z"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-3" style="font-family: 'Fredoka', sans-serif;">Assured Result</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Committed to measurable progress and positive functional outcomes for every child.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3 uppercase">Assured Result</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Committed to measurable progress and positive functional outcomes for every child.
-                    </p>
                 </div>
             </div>
+        </div>
+
+        <style>
+            .tilt-card {
+                transform-style: preserve-3d;
+                transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease;
+                transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
+            }
+            .tilt-card:active {
+                transition: transform 0.1s ease !important;
+                transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(0.95, 0.95, 0.95) !important;
+            }
+            .tilt-card.is-moving {
+                transition: none;
+            }
+        </style>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const tiltCards = document.querySelectorAll('.tilt-card');
+                
+                tiltCards.forEach(card => {
+                    card.addEventListener('mousemove', (e) => {
+                        card.classList.add('is-moving');
+                        const rect = card.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+                        
+                        const centerX = rect.width / 2;
+                        const centerY = rect.height / 2;
+                        
+                        // Calculate rotation (-10 to 10 degrees max)
+                        const rotateX = ((y - centerY) / centerY) * -10;
+                        const rotateY = ((x - centerX) / centerX) * 10;
+                        
+                        // Add a slight pop effect (scale) while hovering
+                        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
+                    });
+                    
+                    card.addEventListener('mouseleave', () => {
+                        card.classList.remove('is-moving');
+                        // Return to resting state smoothly
+                        card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+                    });
+                });
+            });
+        </script>
         </div>
     </section>
 
