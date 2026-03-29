@@ -344,10 +344,10 @@
     </section>
 
     {{-- CTA --}}
-    <section class="relative overflow-hidden py-24 lg:py-32" style="background-color: #32A8B8;">
+    <section class="relative overflow-hidden py-24 lg:py-32" style="background-color: #97B41A;">
         {{-- Background Decor --}}
         <div class="absolute inset-0">
-            <div class="absolute inset-0 bg-[#32A8B8] opacity-90"></div>
+            <div class="absolute inset-0 bg-[#97B41A] opacity-90"></div>
             <div class="absolute top-0 right-0 w-1/2 h-full bg-white/5 skew-x-12 transform translate-x-20"></div>
             <div class="absolute bottom-0 left-0 w-1/2 h-full bg-black/5 -skew-x-12 transform -translate-x-20"></div>
         </div>
@@ -373,7 +373,7 @@
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-6">
                 <a href="/contact"
-                    class="bg-white text-[#32A8B8] px-10 py-5 rounded-2xl font-bold text-lg hover:bg-gray-50 transition-all shadow-2xl hover:-translate-y-1">
+                    class="bg-white text-[#97B41A] px-10 py-5 rounded-2xl font-bold text-lg hover:bg-gray-50 transition-all shadow-2xl hover:-translate-y-1">
                     Contact Us Now
                 </a>
                 <a href="/services"
