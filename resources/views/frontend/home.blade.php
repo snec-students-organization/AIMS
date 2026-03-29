@@ -2142,33 +2142,54 @@
     </section>
 
     {{-- ================= FINAL CTA ================= --}}
-    <section class="py-20 bg-white relative overflow-hidden">
-        <div class="doodle-bg-dark"></div>
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="rounded-3xl p-8 sm:p-16 text-center text-white relative overflow-hidden shadow-2xl"
+    <section class="py-12 bg-white relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="rounded-[30px] sm:rounded-[40px] p-6 lg:p-0 flex flex-col lg:flex-row items-center relative overflow-hidden shadow-lg transition-transform hover:-translate-y-1 duration-500"
                 style="background-color: #EA6F71;" data-aos="zoom-in">
-                <div class="doodle-bg-light"></div>
-                <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2">
-                </div>
-                <div class="absolute bottom-0 left-0 w-40 h-40 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2">
+
+                {{-- Faint Lightbulb Doodle Background --}}
+                <div class="absolute left-1/2 lg:left-[25%] top-1/2 -translate-x-1/2 -translate-y-1/2 text-white opacity-[0.08] pointer-events-none z-0">
+                    <svg class="w-[300px] h-[300px] lg:w-[450px] lg:h-[450px]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18h6" />
+                        <path d="M10 21h4" />
+                        <path d="M12 2a7 7 0 0 0-7 7c0 2 1 3.5 2 5 .7.7 1.3 2 1.5 3h5c.2-1 1-2.3 1.5-3 1-1.5 2-3 2-5a7 7 0 0 0-7-7z" />
+                        <!-- Subtle rays -->
+                        <path stroke-width="0.3" d="M12 0v2 M4.5 4.5l1.5 1.5 M0 12h2 M4.5 19.5l1.5-1.5 M19.5 4.5l-1.5 1.5 M24 12h-2 M19.5 19.5l-1.5-1.5" />
+                    </svg>
                 </div>
 
-                <div class="relative z-10">
-                    <h2 class="text-3xl sm:text-4xl font-bold mb-6">Take the First Step Today</h2>
-                    <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">
-                        Your child's potential is limitless. Let us help them unlock it. Schedule an assessment with our
-                        experts.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="/contact"
-                            class="bg-white text-teal-600 font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition-colors shadow-lg">
-                            Book Appointment
-                        </a>
-                        <a href="tel:+917994502501"
-                            class="bg-transparent border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-white/10 transition-colors">
-                            Call +91 7994502501
-                        </a>
+                {{-- Left Text Content --}}
+                <div class="lg:w-1/2 relative z-10 w-full text-center lg:text-left px-4 lg:pl-16 py-10 lg:py-16">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-8 leading-[1.15] tracking-tight" style="font-family: 'Fredoka', sans-serif;">
+                        Let's Connect and<br class="hidden lg:block"> Create Possibilities
+                    </h2>
+                    <a href="/contact"
+                        class="inline-block bg-white text-[#EA6F71] font-bold text-lg px-8 py-4 rounded-full hover:bg-gray-50 transition-all shadow-md hover:shadow-xl transform hover:-translate-y-1">
+                        Connect with Us
+                    </a>
+                </div>
+
+                {{-- Right Graphics Content --}}
+                <div class="lg:w-1/2 relative h-[300px] sm:h-[350px] lg:h-[400px] w-full flex items-end justify-center lg:justify-end overflow-hidden mt-6 lg:mt-0 z-10">
+                    
+                    {{-- Graphic Mask Circle Background --}}
+                    <div class="absolute bottom-0 right-0 w-[350px] h-[350px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px] rounded-full translate-y-[20%] translate-x-[10%] transition-transform duration-700 hover:scale-105 overflow-hidden" style="background-color: rgba(255,255,255,0.15);">
+                        <img src="{{ asset('images/image1.jpg') }}" alt="Student" class="w-full h-full object-cover opacity-90 transition-all duration-700 mix-blend-overlay hover:mix-blend-normal hover:opacity-100">
                     </div>
+
+                    {{-- Green Bubble AIMS CDC --}}
+                    <div class="absolute top-[15%] left-[5%] lg:left-[10%] z-20 animate-bounce" style="animation-duration: 4s;">
+                        <div class="bg-[#97B41A] text-white font-bold text-lg px-0 py-0 rounded-full shadow-xl relative w-24 h-24 lg:w-28 lg:h-28 flex flex-col items-center justify-center transform -rotate-3 border-4 border-white backdrop-blur-sm">
+                            <span>GEMS</span>
+                            <span>CDC</span>
+                            <!-- Bubble pointer tail -->
+                            <div class="absolute -bottom-1.5 right-5 w-5 h-5 bg-[#97B41A] transform rotate-45 rounded-sm shadow-sm z-[-1] border-b-4 border-r-4 border-white"></div>
+                        </div>
+                    </div>
+
+                    {{-- Floating abstract dots --}}
+                    <div class="absolute top-[30%] right-[15%] w-5 h-5 rounded-full bg-white opacity-50 blur-[2px]"></div>
+                    <div class="absolute bottom-[25%] left-[15%] w-8 h-8 rounded-full bg-white opacity-30 blur-sm"></div>
                 </div>
             </div>
         </div>
