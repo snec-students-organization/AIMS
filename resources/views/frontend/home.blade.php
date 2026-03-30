@@ -1299,7 +1299,7 @@
                         [
                             'title' => 'Speech Therapy',
                             'description' => 'Speech therapy improves communication by treating speech delays, language disorders, and articulation issues through personalized strategies.',
-                            'image' => 'images/image7.jpg',
+                            'image' => 'images/image15.jpg',
                             'icon' => 'speech-therapy.svg',
                             'color' => '#32A8B8',
                             'bgColor' => '#ffffff',
@@ -1308,7 +1308,7 @@
                         [
                             'title' => 'Special Education',
                             'description' => 'Special education supports diverse learners through individualized strategies and skill-based instruction to foster meaningful growth.',
-                            'image' => 'images/image8.jpg',
+                            'image' => 'images/image4.jpg',
                             'icon' => 'special-education.svg',
                             'color' => '#EA6F71',
                             'bgColor' => '#ffffff',
@@ -1326,7 +1326,7 @@
                         [
                             'title' => 'Occupation Therapy',
                             'description' => 'Occupational therapy effectively develops daily living skills and boosts motor coordination through personalized interventions.',
-                            'image' => 'images/image4.jpg',
+                            'image' => 'images/image14.jpg',
                             'icon' => 'occupational-therapy.svg',
                             'color' => '#E99D1D',
                             'bgColor' => '#ffffff',
@@ -1335,7 +1335,7 @@
                         [
                             'title' => 'Psychological Assessment',
                             'description' => 'Comprehensive assessments including IQ, learning disabilities, and behavioral evaluations for precise diagnostic clarity.',
-                            'image' => 'images/image3.jpg',
+                            'image' => 'images/image12.jpg',
                             'icon' => 'psychological-assessment.svg',
                             'color' => '#32A8B8',
                             'bgColor' => '#ffffff',
@@ -1344,7 +1344,7 @@
                         [
                             'title' => 'Counseling',
                             'description' => 'Professional psychotherapy and counseling services for children and families to support emotional well-being.',
-                            'image' => 'images/image2.jpg',
+                            'image' => 'images/image13.jpg',
                             'icon' => 'psychotherapy-counselling.svg',
                             'color' => '#EA6F71',
                             'bgColor' => '#ffffff',

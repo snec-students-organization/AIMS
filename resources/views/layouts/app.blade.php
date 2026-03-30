@@ -91,12 +91,12 @@
         }
 
         ::-webkit-scrollbar-thumb {
-            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            background: var(--primary);
             border-radius: 5px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(to bottom, var(--primary), #ec4899);
+            background: var(--primary);
         }
 
         /* Loading animation */

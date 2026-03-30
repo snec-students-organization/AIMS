@@ -40,82 +40,160 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
             {{-- Psychological Assessment --}}
-            <div class="p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border" 
-                 style="background-color: rgba(50, 168, 184, 0.05); border-color: rgba(50, 168, 184, 0.2);"
-                 data-aos="fade-up">
-                <div class="w-16 h-16 bg-[#32A8B8] text-white rounded-2xl flex items-center justify-center text-4xl mb-6 shadow-sm">🗣️</div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-900 uppercase">PSYCHOLOGICAL ASSESSMENT</h3>
-                <p class="text-gray-600 leading-relaxed">
-                    Our licensed psychologists conduct IQ assessments, learning disability evaluations,
-                    personality assessments, and cognitive and behavioural assessments to create
-                    tailored intervention strategies based on individual needs.
-                </p>
-            </div>
+            <a href="/contact" class="group block bg-white rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.08)] overflow-hidden text-center relative flex flex-col items-center pb-8 transform transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] active:scale-[0.97] active:shadow-md cursor-pointer" data-aos="fade-up">
+                <div class="relative w-full h-[220px] overflow-hidden">
+                    <img src="{{ asset('images/image12.jpg') }}" alt="Psychological Assessment" class="w-full h-full object-cover transform transition-transform duration-700 ease-in-out group-hover:scale-110">
+                    <div class="absolute bottom-[-1px] left-0 w-full overflow-hidden leading-none z-10 transition-transform duration-500 group-hover:translate-y-1">
+                        <svg class="relative block w-full h-[50px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                            <path d="M0,120 V60 C300,-20 900,140 1200,60 V120 Z" class="fill-white"></path>
+                        </svg>
+                    </div>
+                    <div class="w-16 h-16 rounded-full border-[5px] border-white text-white flex items-center justify-center text-3xl absolute -bottom-8 left-1/2 transform -translate-x-1/2 z-20 shadow-sm transition-transform duration-500 ease-out group-hover:-translate-y-2 group-hover:scale-110" style="background-color: #32A8B8;">
+                        🧠
+                    </div>
+                </div>
+                <div class="px-6 pt-12 flex-grow flex flex-col items-center">
+                    <h3 class="text-xl font-bold mb-3 text-gray-900 transition-colors duration-300 group-hover:text-[#32A8B8]" style="font-family: 'Fredoka', sans-serif;">Psychological Assessment</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6 font-medium transition-colors duration-300 group-hover:text-gray-600">
+                        Our licensed psychologists conduct IQ assessments, learning disability evaluations,
+                        personality assessments, and cognitive and behavioural assessments to create
+                        tailored intervention strategies based on individual needs.
+                    </p>
+                    <div class="w-10 h-10 rounded-full text-white flex items-center justify-center mt-auto shadow-md transition-all duration-500 ease-out group-hover:scale-110 group-hover:rotate-12 group-active:-rotate-12" style="background-color: #32A8B8;">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </div>
+                </div>
+            </a>
 
             {{-- Behavioural Therapy --}}
-            <div class="p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border" 
-                 style="background-color: rgba(151, 180, 26, 0.05); border-color: rgba(151, 180, 26, 0.2);"
-                 data-aos="fade-up" data-aos-delay="100">
-                <div class="w-16 h-16 bg-[#97B41A] text-white rounded-2xl flex items-center justify-center text-4xl mb-6 shadow-sm">🧩</div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-900 uppercase">BEHAVIOURAL THERAPY</h3>
-                <p class="text-gray-600 leading-relaxed">
-                    Behavioural therapy supports children in improving intellectual and socio-adaptive
-                    functioning by strengthening cognitive, social, and emotional skills while reducing
-                    challenging behaviours using scientifically validated techniques.
-                </p>
-            </div>
+            <a href="/contact" class="group block bg-white rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.08)] overflow-hidden text-center relative flex flex-col items-center pb-8 transform transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] active:scale-[0.97] active:shadow-md cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative w-full h-[220px] overflow-hidden">
+                    <img src="{{ asset('images/image6.jpg') }}" alt="Behavioural Therapy" class="w-full h-full object-cover transform transition-transform duration-700 ease-in-out group-hover:scale-110">
+                    <div class="absolute bottom-[-1px] left-0 w-full overflow-hidden leading-none z-10 transition-transform duration-500 group-hover:translate-y-1">
+                        <svg class="relative block w-full h-[50px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                            <path d="M0,120 V60 C300,-20 900,140 1200,60 V120 Z" class="fill-white"></path>
+                        </svg>
+                    </div>
+                    <div class="w-16 h-16 rounded-full border-[5px] border-white text-white flex items-center justify-center text-3xl absolute -bottom-8 left-1/2 transform -translate-x-1/2 z-20 shadow-sm transition-transform duration-500 ease-out group-hover:-translate-y-2 group-hover:scale-110" style="background-color: #97B41A;">
+                        🧩
+                    </div>
+                </div>
+                <div class="px-6 pt-12 flex-grow flex flex-col items-center">
+                    <h3 class="text-xl font-bold mb-3 text-gray-900 transition-colors duration-300 group-hover:text-[#97B41A]" style="font-family: 'Fredoka', sans-serif;">Behavioural Therapy</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6 font-medium transition-colors duration-300 group-hover:text-gray-600">
+                        Behavioural therapy supports children in improving intellectual and socio-adaptive
+                        functioning by strengthening cognitive, social, and emotional skills while reducing
+                        challenging behaviours using scientifically validated techniques.
+                    </p>
+                    <div class="w-10 h-10 rounded-full text-white flex items-center justify-center mt-auto shadow-md transition-all duration-500 ease-out group-hover:scale-110 group-hover:rotate-12 group-active:-rotate-12" style="background-color: #97B41A;">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </div>
+                </div>
+            </a>
 
             {{-- Speech Therapy --}}
-            <div class="p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border" 
-                 style="background-color: rgba(234, 111, 113, 0.05); border-color: rgba(234, 111, 113, 0.2);"
-                 data-aos="fade-up">
-                <div class="w-16 h-16 bg-[#EA6F71] text-white rounded-2xl flex items-center justify-center text-4xl mb-6 shadow-sm">🎭</div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-900 uppercase">SPEECH THERAPY</h3>
-                <p class="text-gray-600 leading-relaxed">
-                    Speech and language therapy focuses on improving communication skills,
-                    including speech sounds, language development, fluency, social communication,
-                    and expressive abilities.
-                </p>
-            </div>
+            <a href="/contact" class="group block bg-white rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.08)] overflow-hidden text-center relative flex flex-col items-center pb-8 transform transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] active:scale-[0.97] active:shadow-md cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative w-full h-[220px] overflow-hidden">
+                    <img src="{{ asset('images/image15.jpg') }}" alt="Speech Therapy" class="w-full h-full object-cover transform transition-transform duration-700 ease-in-out group-hover:scale-110">
+                    <div class="absolute bottom-[-1px] left-0 w-full overflow-hidden leading-none z-10 transition-transform duration-500 group-hover:translate-y-1">
+                        <svg class="relative block w-full h-[50px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                            <path d="M0,120 V60 C300,-20 900,140 1200,60 V120 Z" class="fill-white"></path>
+                        </svg>
+                    </div>
+                    <div class="w-16 h-16 rounded-full border-[5px] border-white text-white flex items-center justify-center text-3xl absolute -bottom-8 left-1/2 transform -translate-x-1/2 z-20 shadow-sm transition-transform duration-500 ease-out group-hover:-translate-y-2 group-hover:scale-110" style="background-color: #32A8B8;">
+                        🗣️
+                    </div>
+                </div>
+                <div class="px-6 pt-12 flex-grow flex flex-col items-center">
+                    <h3 class="text-xl font-bold mb-3 text-gray-900 transition-colors duration-300 group-hover:text-[#32A8B8]" style="font-family: 'Fredoka', sans-serif;">Speech Therapy</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6 font-medium transition-colors duration-300 group-hover:text-gray-600">
+                        Speech and language therapy focuses on improving communication skills,
+                        including speech sounds, language development, fluency, social communication,
+                        and expressive abilities.
+                    </p>
+                    <div class="w-10 h-10 rounded-full text-white flex items-center justify-center mt-auto shadow-md transition-all duration-500 ease-out group-hover:scale-110 group-hover:rotate-12 group-active:-rotate-12" style="background-color: #32A8B8;">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </div>
+                </div>
+            </a>
 
             {{-- Occupational Therapy --}}
-            <div class="p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border" 
-                 style="background-color: rgba(233, 157, 29, 0.05); border-color: rgba(233, 157, 29, 0.2);"
-                 data-aos="fade-up" data-aos-delay="100">
-                <div class="w-16 h-16 bg-[#E99D1D] text-white rounded-2xl flex items-center justify-center text-4xl mb-6 shadow-sm">📚</div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-900 uppercase">OCCUPATIONAL THERAPY</h3>
-                <p class="text-gray-600 leading-relaxed">
-                    Occupational therapy helps children develop independence in daily activities by
-                    strengthening fine motor, gross motor, sensory integration, visual-motor coordination,
-                    self-care, and self-regulation skills.
-                </p>
-            </div>
+            <a href="/contact" class="group block bg-white rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.08)] overflow-hidden text-center relative flex flex-col items-center pb-8 transform transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] active:scale-[0.97] active:shadow-md cursor-pointer" data-aos="fade-up">
+                <div class="relative w-full h-[220px] overflow-hidden">
+                    <img src="{{ asset('images/image14.jpg') }}" alt="Occupational Therapy" class="w-full h-full object-cover transform transition-transform duration-700 ease-in-out group-hover:scale-110">
+                    <div class="absolute bottom-[-1px] left-0 w-full overflow-hidden leading-none z-10 transition-transform duration-500 group-hover:translate-y-1">
+                        <svg class="relative block w-full h-[50px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                            <path d="M0,120 V60 C300,-20 900,140 1200,60 V120 Z" class="fill-white"></path>
+                        </svg>
+                    </div>
+                    <div class="w-16 h-16 rounded-full border-[5px] border-white text-white flex items-center justify-center text-3xl absolute -bottom-8 left-1/2 transform -translate-x-1/2 z-20 shadow-sm transition-transform duration-500 ease-out group-hover:-translate-y-2 group-hover:scale-110" style="background-color: #97B41A;">
+                        🤲
+                    </div>
+                </div>
+                <div class="px-6 pt-12 flex-grow flex flex-col items-center">
+                    <h3 class="text-xl font-bold mb-3 text-gray-900 transition-colors duration-300 group-hover:text-[#97B41A]" style="font-family: 'Fredoka', sans-serif;">Occupational Therapy</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6 font-medium transition-colors duration-300 group-hover:text-gray-600">
+                        Occupational therapy helps children develop independence in daily activities by
+                        strengthening fine motor, gross motor, sensory integration, visual-motor coordination,
+                        self-care, and self-regulation skills.
+                    </p>
+                    <div class="w-10 h-10 rounded-full text-white flex items-center justify-center mt-auto shadow-md transition-all duration-500 ease-out group-hover:scale-110 group-hover:rotate-12 group-active:-rotate-12" style="background-color: #97B41A;">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </div>
+                </div>
+            </a>
 
             {{-- Special Education --}}
-            <div class="p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border" 
-                 style="background-color: rgba(50, 168, 184, 0.05); border-color: rgba(50, 168, 184, 0.2);"
-                 data-aos="fade-up" data-aos-delay="200">
-                <div class="w-16 h-16 bg-[#32A8B8] text-white rounded-2xl flex items-center justify-center text-4xl mb-6 shadow-sm">🧠</div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-900 uppercase">SPECIAL EDUCATION</h3>
-                <p class="text-gray-600 leading-relaxed">
-                    We support children with academic difficulties in reading, writing, and mathematics
-                    through Individualized Education Plans (IEPs), customized teaching strategies,
-                    and the VAKT approach for inclusive learning outcomes.
-                </p>
-            </div>
+            <a href="/contact" class="group block bg-white rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.08)] overflow-hidden text-center relative flex flex-col items-center pb-8 transform transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] active:scale-[0.97] active:shadow-md cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative w-full h-[220px] overflow-hidden">
+                    <img src="{{ asset('images/image4.jpg') }}" alt="Special Education" class="w-full h-full object-cover transform transition-transform duration-700 ease-in-out group-hover:scale-110">
+                    <div class="absolute bottom-[-1px] left-0 w-full overflow-hidden leading-none z-10 transition-transform duration-500 group-hover:translate-y-1">
+                        <svg class="relative block w-full h-[50px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                            <path d="M0,120 V60 C300,-20 900,140 1200,60 V120 Z" class="fill-white"></path>
+                        </svg>
+                    </div>
+                    <div class="w-16 h-16 rounded-full border-[5px] border-white text-white flex items-center justify-center text-3xl absolute -bottom-8 left-1/2 transform -translate-x-1/2 z-20 shadow-sm transition-transform duration-500 ease-out group-hover:-translate-y-2 group-hover:scale-110" style="background-color: #EA6F71;">
+                        📚
+                    </div>
+                </div>
+                <div class="px-6 pt-12 flex-grow flex flex-col items-center">
+                    <h3 class="text-xl font-bold mb-3 text-gray-900 transition-colors duration-300 group-hover:text-[#EA6F71]" style="font-family: 'Fredoka', sans-serif;">Special Education</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6 font-medium transition-colors duration-300 group-hover:text-gray-600">
+                        We support children with academic difficulties in reading, writing, and mathematics
+                        through Individualized Education Plans (IEPs), customized teaching strategies,
+                        and the VAKT approach for inclusive learning outcomes.
+                    </p>
+                    <div class="w-10 h-10 rounded-full text-white flex items-center justify-center mt-auto shadow-md transition-all duration-500 ease-out group-hover:scale-110 group-hover:rotate-12 group-active:-rotate-12" style="background-color: #EA6F71;">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </div>
+                </div>
+            </a>
 
             {{-- Psychotherapy & Counselling --}}
-            <div class="p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border" 
-                 style="background-color: rgba(151, 180, 26, 0.05); border-color: rgba(151, 180, 26, 0.2);"
-                 data-aos="fade-up" data-aos-delay="300">
-                <div class="w-16 h-16 bg-[#97B41A] text-white rounded-2xl flex items-center justify-center text-4xl mb-6 shadow-sm">💬</div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-900 uppercase">PSYCHOTHERAPY & COUNSELLING</h3>
-                <p class="text-gray-600 leading-relaxed">
-                    Our RCI-licensed psychologists provide individual and group psychotherapy
-                    and counselling services using evidence-based practices for a wide range
-                    of mental health concerns.
-                </p>
-            </div>
+            <a href="/contact" class="group block bg-white rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.08)] overflow-hidden text-center relative flex flex-col items-center pb-8 transform transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] active:scale-[0.97] active:shadow-md cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative w-full h-[220px] overflow-hidden">
+                    <img src="{{ asset('images/image13.jpg') }}" alt="Psychotherapy & Counselling" class="w-full h-full object-cover transform transition-transform duration-700 ease-in-out group-hover:scale-110" onerror="this.src='{{ asset('images/image2.jpg') }}'">
+                    <div class="absolute bottom-[-1px] left-0 w-full overflow-hidden leading-none z-10 transition-transform duration-500 group-hover:translate-y-1">
+                        <svg class="relative block w-full h-[50px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                            <path d="M0,120 V60 C300,-20 900,140 1200,60 V120 Z" class="fill-white"></path>
+                        </svg>
+                    </div>
+                    <div class="w-16 h-16 rounded-full border-[5px] border-white text-white flex items-center justify-center text-3xl absolute -bottom-8 left-1/2 transform -translate-x-1/2 z-20 shadow-sm transition-transform duration-500 ease-out group-hover:-translate-y-2 group-hover:scale-110" style="background-color: #E99D1D;">
+                        💬
+                    </div>
+                </div>
+                <div class="px-6 pt-12 flex-grow flex flex-col items-center">
+                    <h3 class="text-xl font-bold mb-3 text-gray-900 transition-colors duration-300 group-hover:text-[#E99D1D]" style="font-family: 'Fredoka', sans-serif;">Psychotherapy & Counselling</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6 font-medium transition-colors duration-300 group-hover:text-gray-600">
+                        Our RCI-licensed psychologists provide individual and group psychotherapy
+                        and counselling services using evidence-based practices for a wide range
+                        of mental health concerns.
+                    </p>
+                    <div class="w-10 h-10 rounded-full text-white flex items-center justify-center mt-auto shadow-md transition-all duration-500 ease-out group-hover:scale-110 group-hover:rotate-12 group-active:-rotate-12" style="background-color: #E99D1D;">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </div>
+                </div>
+            </a>
 
         </div>
     </div>
