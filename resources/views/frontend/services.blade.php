@@ -229,7 +229,7 @@
 {{-- ================= CTA ================= --}}
 <section class="py-16 bg-white">
     <div class="max-w-4xl mx-auto px-4 text-center">
-        <div class="rounded-3xl p-8 md:p-12 shadow-2xl text-white" style="background: #32A8B8;">
+        <div class="rounded-3xl p-8 md:p-12 shadow-2xl text-white" style="background: #EA6F71;">
             <h2 class="text-3xl font-bold mb-4">
                 Not sure which service you need?
             </h2>

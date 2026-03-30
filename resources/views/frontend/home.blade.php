@@ -1795,7 +1795,7 @@
         {{-- Top Wave Divider --}}
         <div class="absolute top-0 left-0 w-full overflow-hidden leading-[0] z-20">
             <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-[calc(100%+1.3px)] h-[40px] lg:h-[70px]">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V120H0V0Z" fill="#ffffff"></path>
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V0C41.67,11.39,119.33,31,179,42.41,234.19,53,281.42,63.74,321.39,56.44Z" fill="#ffffff"></path>
             </svg>
         </div>
 
@@ -2025,16 +2025,16 @@
 
                 {{-- Right: Cards Carousel/Grid --}}
                 <div class="w-full lg:w-3/4 relative px-2 sm:px-4 lg:px-10">
-                    <!-- Carousel Arrows (Decorative/Indication) -->
-                    <button class="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 bg-white border border-gray-100 rounded-full shadow-md items-center justify-center text-gray-500 hover:text-gray-800 z-10 -ml-2 transition-transform hover:scale-110 hidden lg:flex">
+                    <!-- Carousel Arrows -->
+                    <button id="prev-review" class="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 bg-white border border-gray-100 rounded-full shadow-md flex items-center justify-center text-gray-500 hover:text-gray-800 z-10 -ml-2 transition-transform hover:scale-110 hidden lg:flex cursor-pointer">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                     </button>
-                    <button class="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 bg-white border border-gray-100 rounded-full shadow-md items-center justify-center text-gray-500 hover:text-gray-800 z-10 -mr-2 transition-transform hover:scale-110 hidden lg:flex">
+                    <button id="next-review" class="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 bg-white border border-gray-100 rounded-full shadow-md flex items-center justify-center text-gray-500 hover:text-gray-800 z-10 -mr-2 transition-transform hover:scale-110 hidden lg:flex cursor-pointer">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                     </button>
 
                     <!-- Cards Container -->
-                    <div class="flex overflow-x-auto gap-4 lg:gap-6 snap-x snap-mandatory pb-6 hide-scrollbar cursor-grab active:cursor-grabbing w-full">
+                    <div id="reviews-container" class="flex overflow-x-auto gap-4 lg:gap-6 snap-x snap-mandatory pb-6 hide-scrollbar cursor-grab active:cursor-grabbing w-full scroll-smooth">
                         
                         {{-- Card 1 --}}
                         <div class="bg-[#f8f9fa] rounded-[16px] p-6 shrink-0 w-[85%] sm:w-[320px] lg:w-[calc(100%/3-1rem)] snap-center text-left border border-gray-50 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-shadow">
@@ -2153,6 +2153,59 @@
                     scrollbar-width: none;
                 }
             </style>
+            
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const container = document.getElementById('reviews-container');
+                    const prevBtn = document.getElementById('prev-review');
+                    const nextBtn = document.getElementById('next-review');
+                    
+                    if (!container) return;
+                    
+                    // Arrow buttons clicking
+                    if (prevBtn) {
+                        prevBtn.addEventListener('click', () => {
+                            container.scrollBy({ left: -350, behavior: 'smooth' });
+                        });
+                    }
+                    if (nextBtn) {
+                        nextBtn.addEventListener('click', () => {
+                            container.scrollBy({ left: 350, behavior: 'smooth' });
+                        });
+                    }
+                    
+                    // Mouse drag to scroll
+                    let isDown = false;
+                    let startX;
+                    let scrollLeft;
+                    
+                    container.addEventListener('mousedown', (e) => {
+                        isDown = true;
+                        container.style.scrollSnapType = 'none'; // disable snap while dragging
+                        container.classList.add('active');
+                        startX = e.pageX - container.offsetLeft;
+                        scrollLeft = container.scrollLeft;
+                    });
+                    container.addEventListener('mouseleave', () => {
+                        isDown = false;
+                        container.style.scrollSnapType = 'x mandatory';
+                        container.classList.remove('active');
+                    });
+                    container.addEventListener('mouseup', () => {
+                        isDown = false;
+                        container.style.scrollSnapType = 'x mandatory';
+                        container.classList.remove('active');
+                    });
+                    container.addEventListener('mousemove', (e) => {
+                        if (!isDown) return;
+                        e.preventDefault();
+                        const x = e.pageX - container.offsetLeft;
+                        // Scroll-fast logic
+                        const walk = (x - startX) * 2; 
+                        container.scrollLeft = scrollLeft - walk;
+                    });
+                });
+            </script>
         </div>
     </section>
 
