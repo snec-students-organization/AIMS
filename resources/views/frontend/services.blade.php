@@ -17,8 +17,7 @@
             Our Services
         </h1>
         <p class="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-            Comprehensive, evidence-based therapies designed to maximize your child’s potential
-            in a supportive and nurturing environment.
+            Comprehensive, evidence-based therapies designed to maximise your child’s potential in a supportive and nurturing environment.
         </p>
     </div>
 
@@ -55,9 +54,7 @@
                 <div class="px-6 pt-12 flex-grow flex flex-col items-center">
                     <h3 class="text-xl font-bold mb-3 text-gray-900 transition-colors duration-300 group-hover:text-[#32A8B8]" style="font-family: 'Fredoka', sans-serif;">Psychological Assessment</h3>
                     <p class="text-gray-500 text-sm leading-relaxed mb-6 font-medium transition-colors duration-300 group-hover:text-gray-600">
-                        Our licensed psychologists conduct IQ assessments, learning disability evaluations,
-                        personality assessments, and cognitive and behavioural assessments to create
-                        tailored intervention strategies based on individual needs.
+                        Understanding your child’s unique mind.<br><br>Our expert child psychologists conduct professional IQ tests, comprehensive learning evaluations, and personality assessments. As a leading child development centre, we craft personalised support plans to help every student reach their full potential.
                     </p>
                     <div class="w-10 h-10 rounded-full text-white flex items-center justify-center mt-auto shadow-md transition-all duration-500 ease-out group-hover:scale-110 group-hover:rotate-12 group-active:-rotate-12" style="background-color: #32A8B8;">
                         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
@@ -79,11 +76,9 @@
                     </div>
                 </div>
                 <div class="px-6 pt-12 flex-grow flex flex-col items-center">
-                    <h3 class="text-xl font-bold mb-3 text-gray-900 transition-colors duration-300 group-hover:text-[#97B41A]" style="font-family: 'Fredoka', sans-serif;">Behavioural Therapy</h3>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900 transition-colors duration-300 group-hover:text-[#97B41A]" style="font-family: 'Fredoka', sans-serif;">Behaviour Therapy</h3>
                     <p class="text-gray-500 text-sm leading-relaxed mb-6 font-medium transition-colors duration-300 group-hover:text-gray-600">
-                        Behavioural therapy supports children in improving intellectual and socio-adaptive
-                        functioning by strengthening cognitive, social, and emotional skills while reducing
-                        challenging behaviours using scientifically validated techniques.
+                        Better skills for a happier life.<br><br>We provide the best behaviour therapy to improve cognitive, social, and emotional skills. Our ABA therapy and evidence-based methods ensure that every child receives the best autism support.
                     </p>
                     <div class="w-10 h-10 rounded-full text-white flex items-center justify-center mt-auto shadow-md transition-all duration-500 ease-out group-hover:scale-110 group-hover:rotate-12 group-active:-rotate-12" style="background-color: #97B41A;">
                         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
@@ -107,9 +102,7 @@
                 <div class="px-6 pt-12 flex-grow flex flex-col items-center">
                     <h3 class="text-xl font-bold mb-3 text-gray-900 transition-colors duration-300 group-hover:text-[#32A8B8]" style="font-family: 'Fredoka', sans-serif;">Speech Therapy</h3>
                     <p class="text-gray-500 text-sm leading-relaxed mb-6 font-medium transition-colors duration-300 group-hover:text-gray-600">
-                        Speech and language therapy focuses on improving communication skills,
-                        including speech sounds, language development, fluency, social communication,
-                        and expressive abilities.
+                        Helping every child find their voice.<br><br>We offer the best speech therapy to improve speech clarity, language development, and social interaction. Our paediatric therapy team ensures that "every voice matters."
                     </p>
                     <div class="w-10 h-10 rounded-full text-white flex items-center justify-center mt-auto shadow-md transition-all duration-500 ease-out group-hover:scale-110 group-hover:rotate-12 group-active:-rotate-12" style="background-color: #32A8B8;">
                         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
@@ -133,9 +126,7 @@
                 <div class="px-6 pt-12 flex-grow flex flex-col items-center">
                     <h3 class="text-xl font-bold mb-3 text-gray-900 transition-colors duration-300 group-hover:text-[#97B41A]" style="font-family: 'Fredoka', sans-serif;">Occupational Therapy</h3>
                     <p class="text-gray-500 text-sm leading-relaxed mb-6 font-medium transition-colors duration-300 group-hover:text-gray-600">
-                        Occupational therapy helps children develop independence in daily activities by
-                        strengthening fine motor, gross motor, sensory integration, visual-motor coordination,
-                        self-care, and self-regulation skills.
+                        Building independence for daily life.<br><br>Our occupational therapy focuses on building independence. We help children improve motor skills and sensory processing. This vital paediatric therapy helps children perform daily tasks such as writing, playing, and self-care with confidence.
                     </p>
                     <div class="w-10 h-10 rounded-full text-white flex items-center justify-center mt-auto shadow-md transition-all duration-500 ease-out group-hover:scale-110 group-hover:rotate-12 group-active:-rotate-12" style="background-color: #97B41A;">
                         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
@@ -159,9 +150,7 @@
                 <div class="px-6 pt-12 flex-grow flex flex-col items-center">
                     <h3 class="text-xl font-bold mb-3 text-gray-900 transition-colors duration-300 group-hover:text-[#EA6F71]" style="font-family: 'Fredoka', sans-serif;">Special Education</h3>
                     <p class="text-gray-500 text-sm leading-relaxed mb-6 font-medium transition-colors duration-300 group-hover:text-gray-600">
-                        We support children with academic difficulties in reading, writing, and mathematics
-                        through Individualized Education Plans (IEPs), customized teaching strategies,
-                        and the VAKT approach for inclusive learning outcomes.
+                        Making learning easy and fun.<br><br>At our child development centre, we unlock learning potential. We support children with reading, writing, and math difficulties through Individualised Education Plans (IEPs) and multisensory teaching tools, ensuring no child is left behind.
                     </p>
                     <div class="w-10 h-10 rounded-full text-white flex items-center justify-center mt-auto shadow-md transition-all duration-500 ease-out group-hover:scale-110 group-hover:rotate-12 group-active:-rotate-12" style="background-color: #EA6F71;">
                         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
@@ -183,11 +172,9 @@
                     </div>
                 </div>
                 <div class="px-6 pt-12 flex-grow flex flex-col items-center">
-                    <h3 class="text-xl font-bold mb-3 text-gray-900 transition-colors duration-300 group-hover:text-[#E99D1D]" style="font-family: 'Fredoka', sans-serif;">Psychotherapy & Counselling</h3>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900 transition-colors duration-300 group-hover:text-[#E99D1D]" style="font-family: 'Fredoka', sans-serif;">Counselling & Psychotherapy</h3>
                     <p class="text-gray-500 text-sm leading-relaxed mb-6 font-medium transition-colors duration-300 group-hover:text-gray-600">
-                        Our RCI-licensed psychologists provide individual and group psychotherapy
-                        and counselling services using evidence-based practices for a wide range
-                        of mental health concerns.
+                        Caring for mental health.<br><br>Our expert team offers child counselling and psychotherapy for anxiety, depression, personality disorders, relationship issues, low confidence, and emotional hurdles, helping them build resilience and achieve overall well-being.
                     </p>
                     <div class="w-10 h-10 rounded-full text-white flex items-center justify-center mt-auto shadow-md transition-all duration-500 ease-out group-hover:scale-110 group-hover:rotate-12 group-active:-rotate-12" style="background-color: #E99D1D;">
                         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>

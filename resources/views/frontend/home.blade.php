@@ -5,7 +5,8 @@
     {{-- ================= HERO SECTION ================= --}}
     @push('head')
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Outfit:wght@100..900&display=swap"
+            rel="stylesheet">
         <style>
             :root {
                 --primary-teal: #006684;
@@ -873,7 +874,7 @@
                             <span class="circle3"></span>
                             <span class="circle4"></span>
                         </div>
-                        
+
                         {{-- Floating Decorations --}}
                         <div class="floating-decoration decoration-pencil hidden lg:block" data-aos="fade-down"
                             data-aos-delay="500">
@@ -1238,7 +1239,8 @@
                 </h2>
                 <p class="mt-4 text-gray-500 max-w-2xl mx-auto text-base sm:text-lg font-medium" data-aos="fade-up"
                     data-aos-delay="300">
-                    Comprehensive care and support designed for children, adolescents, and families.
+                    Comprehensive, evidence-based therapies designed to maximise your child’s potential in a supportive and
+                    nurturing environment.
                 </p>
             </div>
 
@@ -1257,7 +1259,7 @@
 
                 @foreach($featureServices as $index => $service)
                     <div data-aos="fade-up" data-aos-delay="{{ $service['delay'] }}" data-aos-duration="800" class="h-full">
-                        <div class="service-card-modern">
+                        <a href="/services" class="service-card-modern" style="text-decoration: none;">
                             <div class="service-icon-wrapper"
                                 style="background-color: {{ $service['bgColor'] }}; border: 1px solid rgba(0,0,0,0.03);">
                                 {{-- We apply a css filter hack or specific styled icon if needed, for now we load the SVG and
@@ -1266,7 +1268,7 @@
                                     class="service-icon-img" style="filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));">
                             </div>
                             <h3 class="service-card-title">{{ $service['title'] }}</h3>
-                        </div>
+                        </a>
                     </div>
                 @endforeach
             </div>
@@ -1298,7 +1300,7 @@
                     $v2Services = [
                         [
                             'title' => 'Speech Therapy',
-                            'description' => 'Speech therapy improves communication by treating speech delays, language disorders, and articulation issues through personalized strategies.',
+                            'description' => "Helping every child find their voice.\n\nWe offer the best speech therapy to improve speech clarity, language development, and social interaction. Our paediatric therapy team ensures that \"every voice matters.\"",
                             'image' => 'images/image15.jpg',
                             'icon' => 'speech-therapy.svg',
                             'color' => '#32A8B8',
@@ -1307,7 +1309,7 @@
                         ],
                         [
                             'title' => 'Special Education',
-                            'description' => 'Special education supports diverse learners through individualized strategies and skill-based instruction to foster meaningful growth.',
+                            'description' => "Making learning easy and fun.\n\nAt our child development centre, we unlock learning potential. We support children with reading, writing, and math difficulties through Individualised Education Plans (IEPs) and multisensory teaching tools, ensuring no child is left behind.",
                             'image' => 'images/image4.jpg',
                             'icon' => 'special-education.svg',
                             'color' => '#EA6F71',
@@ -1315,8 +1317,8 @@
                             'borderColor' => 'rgba(234, 111, 113, 0.2)',
                         ],
                         [
-                            'title' => 'Behavioral Therapy',
-                            'description' => 'Behavioral therapy effectively modifies negative behaviors and enhances emotional regulation through structured techniques.',
+                            'title' => 'Behaviour Therapy',
+                            'description' => "Better skills for a happier life.\n\nWe provide the best behaviour therapy to improve cognitive, social, and emotional skills. Our ABA therapy and evidence-based methods ensure that every child receives the best autism support.",
                             'image' => 'images/image6.jpg',
                             'icon' => 'behavioural-therapy.svg',
                             'color' => '#97B41A',
@@ -1324,8 +1326,8 @@
                             'borderColor' => 'rgba(151, 180, 26, 0.2)',
                         ],
                         [
-                            'title' => 'Occupation Therapy',
-                            'description' => 'Occupational therapy effectively develops daily living skills and boosts motor coordination through personalized interventions.',
+                            'title' => 'Occupational Therapy',
+                            'description' => "Building independence for daily life.\n\nOur occupational therapy focuses on building independence. We help children improve motor skills and sensory processing. This vital paediatric therapy helps children perform daily tasks such as writing, playing, and self-care with confidence.",
                             'image' => 'images/image14.jpg',
                             'icon' => 'occupational-therapy.svg',
                             'color' => '#E99D1D',
@@ -1334,7 +1336,7 @@
                         ],
                         [
                             'title' => 'Psychological Assessment',
-                            'description' => 'Comprehensive assessments including IQ, learning disabilities, and behavioral evaluations for precise diagnostic clarity.',
+                            'description' => "Understanding your child’s unique mind.\n\nOur expert child psychologists conduct professional IQ tests, comprehensive learning evaluations, and personality assessments. As a leading child development centre, we craft personalised support plans to help every student reach their full potential.",
                             'image' => 'images/image12.jpg',
                             'icon' => 'psychological-assessment.svg',
                             'color' => '#32A8B8',
@@ -1342,8 +1344,8 @@
                             'borderColor' => 'rgba(50, 168, 184, 0.2)',
                         ],
                         [
-                            'title' => 'Counseling',
-                            'description' => 'Professional psychotherapy and counseling services for children and families to support emotional well-being.',
+                            'title' => 'Counselling & Psychotherapy',
+                            'description' => "Caring for mental health.\n\nOur expert team offers child counselling and psychotherapy for anxiety, depression, personality disorders, relationship issues, low confidence, and emotional hurdles, helping them build resilience and achieve overall well-being.",
                             'image' => 'images/image13.jpg',
                             'icon' => 'psychotherapy-counselling.svg',
                             'color' => '#EA6F71',
@@ -1368,7 +1370,7 @@
                                     </div>
                                     <div class="card-body-v2">
                                         <h3 class="card-title-v2">{{ $service['title'] }}</h3>
-                                        <p class="card-text-v2">{{ $service['description'] }}</p>
+                                        <p class="card-text-v2">{!! nl2br(e($service['description'])) !!}</p>
 
                                         <a href="/services" class="card-btn-v2"
                                             style="background-color: {{ $service['color'] }}">
@@ -1442,9 +1444,8 @@
                     </div>
 
                     <p class="text-base lg:text-lg text-gray-600 leading-relaxed font-serif italic relative z-10 px-6">
-                        "Our mission is to create a world where every child, regardless of their challenges, can discover
-                        their strengths and shine brightly. We believe in personalized care that addresses the unique needs
-                        of each child."
+                        "To be a beacon of hope and excellence in child development, creating a world where every child is
+                        understood, valued, and empowered to achieve their fullest potential."
                     </p>
 
                     <div class="absolute -bottom-4 -right-2 text-pink-100">
@@ -1794,8 +1795,11 @@
 
         {{-- Top Wave Divider --}}
         <div class="absolute top-0 left-0 w-full overflow-hidden leading-[0] z-20">
-            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-[calc(100%+1.3px)] h-[40px] lg:h-[70px]">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V0C41.67,11.39,119.33,31,179,42.41,234.19,53,281.42,63.74,321.39,56.44Z" fill="#ffffff"></path>
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none"
+                class="relative block w-[calc(100%+1.3px)] h-[40px] lg:h-[70px]">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V0C41.67,11.39,119.33,31,179,42.41,234.19,53,281.42,63.74,321.39,56.44Z"
+                    fill="#ffffff"></path>
             </svg>
         </div>
 
@@ -1809,7 +1813,8 @@
             {{-- TITLE --}}
             <div class="text-center max-w-3xl mx-auto mb-16 text-white" style="font-family: 'Fredoka', sans-serif;">
 
-                <h2 class="text-4xl lg:text-6xl font-extrabold mb-6 tracking-tight" style="text-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);">
+                <h2 class="text-4xl lg:text-6xl font-extrabold mb-6 tracking-tight"
+                    style="text-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);">
                     Why Parents Trust GEMS
                 </h2>
 
@@ -1827,7 +1832,8 @@
                 <div class="why-card-premium">
                     <div class="icon-box" style="background-color: #32A8B8;">
                         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                         </svg>
                     </div>
                     <h3>Expert Team</h3>
@@ -1842,7 +1848,8 @@
                 <div class="why-card-premium">
                     <div class="icon-box" style="background-color: #E99D1D;">
                         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
                         </svg>
                     </div>
                     <h3>Evidence Based</h3>
@@ -1857,7 +1864,8 @@
                 <div class="why-card-premium">
                     <div class="icon-box" style="background-color: #EA6F71;">
                         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                         </svg>
                     </div>
                     <h3>World Class Facility</h3>
@@ -1872,7 +1880,8 @@
                 <div class="why-card-premium">
                     <div class="icon-box" style="background-color: #32A8B8;">
                         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                         </svg>
                     </div>
                     <h3>Parent Support</h3>
@@ -1888,8 +1897,11 @@
 
         {{-- Bottom Wave Divider --}}
         <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-20">
-            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-[calc(100%+1.3px)] h-[40px] lg:h-[70px]">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C41.67,11.39,119.33,31,179,42.41,234.19,53,281.42,63.74,321.39,56.44Z" fill="#ffffff"></path>
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none"
+                class="relative block w-[calc(100%+1.3px)] h-[40px] lg:h-[70px]">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C41.67,11.39,119.33,31,179,42.41,234.19,53,281.42,63.74,321.39,56.44Z"
+                    fill="#ffffff"></path>
             </svg>
         </div>
     </section>
@@ -2009,159 +2021,234 @@
             </h2>
 
             <!-- Google Reviews Widget Layout -->
-            <div class="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16 w-full" data-aos="fade-up" data-aos-delay="100">
-                
+            <div class="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16 w-full" data-aos="fade-up"
+                data-aos-delay="100">
+
                 {{-- Left: Google Summary --}}
                 <div class="flex flex-col items-center justify-center text-center w-full lg:w-1/4 shrink-0">
-                    <h3 class="text-2xl font-bold text-[#202124] tracking-wide mb-3" style="font-family: Arial, sans-serif;">EXCELLENT</h3>
+                    <h3 class="text-2xl font-bold text-[#202124] tracking-wide mb-3"
+                        style="font-family: Arial, sans-serif;">EXCELLENT</h3>
                     <div class="flex gap-1 mb-3">
-                        @for($i=0; $i<5; $i++)
-                        <svg viewBox="0 0 24 24" fill="#FBBC04" class="w-8 h-8"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        @for($i = 0; $i < 5; $i++)
+                            <svg viewBox="0 0 24 24" fill="#FBBC04" class="w-8 h-8">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
                         @endfor
                     </div>
-                    <p class="text-[15px] text-[#5f6368] mb-5 font-medium" style="font-family: Arial, sans-serif;">Based on <span class="font-bold text-[#202124]">72 reviews</span></p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="h-8">
+                    <p class="text-[15px] text-[#5f6368] mb-5 font-medium" style="font-family: Arial, sans-serif;">Based on
+                        <span class="font-bold text-[#202124]">72 reviews</span>
+                    </p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google"
+                        class="h-8">
                 </div>
 
                 {{-- Right: Cards Carousel/Grid --}}
                 <div class="w-full lg:w-3/4 relative px-2 sm:px-4 lg:px-10">
                     <!-- Carousel Arrows -->
-                    <button id="prev-review" class="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 bg-white border border-gray-100 rounded-full shadow-md flex items-center justify-center text-gray-500 hover:text-gray-800 z-10 -ml-2 transition-transform hover:scale-110 hidden lg:flex cursor-pointer">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    <button id="prev-review"
+                        class="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 bg-white border border-gray-100 rounded-full shadow-md flex items-center justify-center text-gray-500 hover:text-gray-800 z-10 -ml-2 transition-transform hover:scale-110 hidden lg:flex cursor-pointer">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                            </path>
+                        </svg>
                     </button>
-                    <button id="next-review" class="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 bg-white border border-gray-100 rounded-full shadow-md flex items-center justify-center text-gray-500 hover:text-gray-800 z-10 -mr-2 transition-transform hover:scale-110 hidden lg:flex cursor-pointer">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    <button id="next-review"
+                        class="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 bg-white border border-gray-100 rounded-full shadow-md flex items-center justify-center text-gray-500 hover:text-gray-800 z-10 -mr-2 transition-transform hover:scale-110 hidden lg:flex cursor-pointer">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
                     </button>
 
                     <!-- Cards Container -->
-                    <div id="reviews-container" class="flex overflow-x-auto gap-4 lg:gap-6 snap-x snap-mandatory pb-6 hide-scrollbar cursor-grab active:cursor-grabbing w-full scroll-smooth">
-                        
+                    <div id="reviews-container"
+                        class="flex overflow-x-auto gap-4 lg:gap-6 snap-x snap-mandatory pb-6 hide-scrollbar cursor-grab active:cursor-grabbing w-full scroll-smooth">
+
                         {{-- Card 1 --}}
-                        <div class="bg-[#f8f9fa] rounded-[16px] p-6 shrink-0 w-[85%] sm:w-[320px] lg:w-[calc(100%/3-1rem)] snap-center text-left border border-gray-50 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-shadow">
+                        <div
+                            class="bg-[#f8f9fa] rounded-[16px] p-6 shrink-0 w-[85%] sm:w-[320px] lg:w-[calc(100%/3-1rem)] snap-center text-left border border-gray-50 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-shadow">
                             <div class="flex justify-between items-start mb-4">
                                 <div class="flex items-center gap-3">
-                                    <div class="w-10 h-10 rounded-full bg-[#388e3c] flex items-center justify-center text-white font-bold text-lg">H</div>
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-[#388e3c] flex items-center justify-center text-white font-bold text-lg">
+                                        H</div>
                                     <div>
-                                        <div class="font-bold text-[#202124] text-[15px] leading-tight font-sans">Hasna Kp</div>
+                                        <div class="font-bold text-[#202124] text-[15px] leading-tight font-sans">Hasna Kp
+                                        </div>
                                         <div class="text-[#5f6368] text-[13px] mt-0.5 font-sans">2024-08-12</div>
                                     </div>
                                 </div>
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="w-5 h-5 mt-1">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                                    alt="Google" class="w-5 h-5 mt-1">
                             </div>
                             <div class="flex items-center gap-1 mb-3">
                                 <div class="flex gap-0.5">
-                                    @for($i=0; $i<5; $i++)
-                                    <svg viewBox="0 0 24 24" fill="#FBBC04" class="w-4 h-4"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    @for($i = 0; $i < 5; $i++)
+                                        <svg viewBox="0 0 24 24" fill="#FBBC04" class="w-4 h-4">
+                                            <path
+                                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                        </svg>
                                     @endfor
                                 </div>
-                                <svg class="w-4 h-4 text-[#1a73e8] ml-1" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1.8 14.6L6 12.4l1.4-1.4 2.8 2.8 6.4-7.8 1.4 1.4-7.8 9.2z"/></svg>
+                                <svg class="w-4 h-4 text-[#1a73e8] ml-1" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1.8 14.6L6 12.4l1.4-1.4 2.8 2.8 6.4-7.8 1.4 1.4-7.8 9.2z" />
+                                </svg>
                             </div>
                             <p class="text-[#3c4043] text-[14px] leading-[1.6] line-clamp-4 font-sans">
-                                We are extremely happy with the therapy services provide by gems clinic. We have seen a remarkable improvement in our child over time. He has started trying to speak, his hyperactivity has reduced significantly, and his eye contact with people has improved a lot
+                                We are extremely happy with the therapy services provide by gems clinic. We have seen a
+                                remarkable improvement in our child over time. He has started trying to speak, his
+                                hyperactivity has reduced significantly, and his eye contact with people has improved a lot
                             </p>
-                            <a href="javascript:void(0)" class="text-[#5f6368] hover:text-gray-900 text-[13px] mt-2 inline-block font-sans">Read more</a>
+                            <a href="javascript:void(0)"
+                                class="text-[#5f6368] hover:text-gray-900 text-[13px] mt-2 inline-block font-sans">Read
+                                more</a>
                         </div>
 
                         {{-- Card 2 --}}
-                        <div class="bg-[#f8f9fa] rounded-[16px] p-6 shrink-0 w-[85%] sm:w-[320px] lg:w-[calc(100%/3-1rem)] snap-center text-left border border-gray-50 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-shadow">
+                        <div
+                            class="bg-[#f8f9fa] rounded-[16px] p-6 shrink-0 w-[85%] sm:w-[320px] lg:w-[calc(100%/3-1rem)] snap-center text-left border border-gray-50 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-shadow">
                             <div class="flex justify-between items-start mb-4">
                                 <div class="flex items-center gap-3">
-                                    <div class="w-10 h-10 rounded-full bg-[#1976d2] flex items-center justify-center text-white font-bold text-lg">F</div>
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-[#1976d2] flex items-center justify-center text-white font-bold text-lg">
+                                        F</div>
                                     <div>
-                                        <div class="font-bold text-[#202124] text-[15px] leading-tight font-sans">Fathima va.</div>
+                                        <div class="font-bold text-[#202124] text-[15px] leading-tight font-sans">Fathima
+                                            va.</div>
                                         <div class="text-[#5f6368] text-[13px] mt-0.5 font-sans">2024-11-04</div>
                                     </div>
                                 </div>
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="w-5 h-5 mt-1">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                                    alt="Google" class="w-5 h-5 mt-1">
                             </div>
                             <div class="flex items-center gap-1 mb-3">
                                 <div class="flex gap-0.5">
-                                    @for($i=0; $i<5; $i++)
-                                    <svg viewBox="0 0 24 24" fill="#FBBC04" class="w-4 h-4"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    @for($i = 0; $i < 5; $i++)
+                                        <svg viewBox="0 0 24 24" fill="#FBBC04" class="w-4 h-4">
+                                            <path
+                                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                        </svg>
                                     @endfor
                                 </div>
-                                <svg class="w-4 h-4 text-[#1a73e8] ml-1" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1.8 14.6L6 12.4l1.4-1.4 2.8 2.8 6.4-7.8 1.4 1.4-7.8 9.2z"/></svg>
+                                <svg class="w-4 h-4 text-[#1a73e8] ml-1" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1.8 14.6L6 12.4l1.4-1.4 2.8 2.8 6.4-7.8 1.4 1.4-7.8 9.2z" />
+                                </svg>
                             </div>
                             <p class="text-[#3c4043] text-[14px] leading-[1.6] line-clamp-4 font-sans">
-                                One of the best child development centres in Calicut! Only after reaching here did I truly feel that my son has received the right guidance and support. The staff are very professional, caring, and patient.
+                                One of the best child development centres in Calicut! Only after reaching here did I truly
+                                feel that my son has received the right guidance and support. The staff are very
+                                professional, caring, and patient.
                             </p>
-                            <a href="javascript:void(0)" class="text-[#5f6368] hover:text-gray-900 text-[13px] mt-2 inline-block font-sans">Read more</a>
+                            <a href="javascript:void(0)"
+                                class="text-[#5f6368] hover:text-gray-900 text-[13px] mt-2 inline-block font-sans">Read
+                                more</a>
                         </div>
 
                         {{-- Card 3 --}}
-                        <div class="bg-[#f8f9fa] rounded-[16px] p-6 shrink-0 w-[85%] sm:w-[320px] lg:w-[calc(100%/3-1rem)] snap-center text-left border border-gray-50 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-shadow">
+                        <div
+                            class="bg-[#f8f9fa] rounded-[16px] p-6 shrink-0 w-[85%] sm:w-[320px] lg:w-[calc(100%/3-1rem)] snap-center text-left border border-gray-50 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-shadow">
                             <div class="flex justify-between items-start mb-4">
                                 <div class="flex items-center gap-3">
-                                    <div class="w-10 h-10 rounded-full bg-[#fbc02d] flex items-center justify-center text-white font-bold text-lg">A</div>
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-[#fbc02d] flex items-center justify-center text-white font-bold text-lg">
+                                        A</div>
                                     <div>
-                                        <div class="font-bold text-[#202124] text-[15px] leading-tight font-sans">Aneesh meladath.</div>
+                                        <div class="font-bold text-[#202124] text-[15px] leading-tight font-sans">Aneesh
+                                            meladath.</div>
                                         <div class="text-[#5f6368] text-[13px] mt-0.5 font-sans">2025-01-15</div>
                                     </div>
                                 </div>
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="w-5 h-5 mt-1">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                                    alt="Google" class="w-5 h-5 mt-1">
                             </div>
                             <div class="flex items-center gap-1 mb-3">
                                 <div class="flex gap-0.5">
-                                    @for($i=0; $i<5; $i++)
-                                    <svg viewBox="0 0 24 24" fill="#FBBC04" class="w-4 h-4"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    @for($i = 0; $i < 5; $i++)
+                                        <svg viewBox="0 0 24 24" fill="#FBBC04" class="w-4 h-4">
+                                            <path
+                                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                        </svg>
                                     @endfor
                                 </div>
-                                <svg class="w-4 h-4 text-[#1a73e8] ml-1" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1.8 14.6L6 12.4l1.4-1.4 2.8 2.8 6.4-7.8 1.4 1.4-7.8 9.2z"/></svg>
+                                <svg class="w-4 h-4 text-[#1a73e8] ml-1" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1.8 14.6L6 12.4l1.4-1.4 2.8 2.8 6.4-7.8 1.4 1.4-7.8 9.2z" />
+                                </svg>
                             </div>
                             <p class="text-[#3c4043] text-[14px] leading-[1.6] line-clamp-4 font-sans">
-                                The best therapy centre for developmental delayed kids. Excellent teaching and skill development methods using Kids are very happy because of friendly atmosphere.
+                                The best therapy centre for developmental delayed kids. Excellent teaching and skill
+                                development methods using Kids are very happy because of friendly atmosphere.
                             </p>
-                            <a href="javascript:void(0)" class="text-[#5f6368] hover:text-gray-900 text-[13px] mt-2 inline-block font-sans">Read more</a>
+                            <a href="javascript:void(0)"
+                                class="text-[#5f6368] hover:text-gray-900 text-[13px] mt-2 inline-block font-sans">Read
+                                more</a>
                         </div>
-                        
+
                         {{-- Card 4 --}}
-                        <div class="bg-[#f8f9fa] rounded-[16px] p-6 shrink-0 w-[85%] sm:w-[320px] lg:w-[calc(100%/3-1rem)] snap-center text-left border border-gray-50 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-shadow">
+                        <div
+                            class="bg-[#f8f9fa] rounded-[16px] p-6 shrink-0 w-[85%] sm:w-[320px] lg:w-[calc(100%/3-1rem)] snap-center text-left border border-gray-50 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-shadow">
                             <div class="flex justify-between items-start mb-4">
                                 <div class="flex items-center gap-3">
-                                    <div class="w-10 h-10 rounded-full bg-[#d32f2f] flex items-center justify-center text-white font-bold text-lg">R</div>
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-[#d32f2f] flex items-center justify-center text-white font-bold text-lg">
+                                        R</div>
                                     <div>
-                                        <div class="font-bold text-[#202124] text-[15px] leading-tight font-sans">Rahul K.</div>
+                                        <div class="font-bold text-[#202124] text-[15px] leading-tight font-sans">Rahul K.
+                                        </div>
                                         <div class="text-[#5f6368] text-[13px] mt-0.5 font-sans">2025-02-28</div>
                                     </div>
                                 </div>
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="w-5 h-5 mt-1">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                                    alt="Google" class="w-5 h-5 mt-1">
                             </div>
                             <div class="flex items-center gap-1 mb-3">
                                 <div class="flex gap-0.5">
-                                    @for($i=0; $i<5; $i++)
-                                    <svg viewBox="0 0 24 24" fill="#FBBC04" class="w-4 h-4"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    @for($i = 0; $i < 5; $i++)
+                                        <svg viewBox="0 0 24 24" fill="#FBBC04" class="w-4 h-4">
+                                            <path
+                                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                        </svg>
                                     @endfor
                                 </div>
-                                <svg class="w-4 h-4 text-[#1a73e8] ml-1" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1.8 14.6L6 12.4l1.4-1.4 2.8 2.8 6.4-7.8 1.4 1.4-7.8 9.2z"/></svg>
+                                <svg class="w-4 h-4 text-[#1a73e8] ml-1" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1.8 14.6L6 12.4l1.4-1.4 2.8 2.8 6.4-7.8 1.4 1.4-7.8 9.2z" />
+                                </svg>
                             </div>
                             <p class="text-[#3c4043] text-[14px] leading-[1.6] line-clamp-4 font-sans">
-                                Truly grateful for the progress we've seen. The staff is like family. They've supported us as much as they've supported our son. Excellent environment.
+                                Truly grateful for the progress we've seen. The staff is like family. They've supported us
+                                as much as they've supported our son. Excellent environment.
                             </p>
-                            <a href="javascript:void(0)" class="text-[#5f6368] hover:text-gray-900 text-[13px] mt-2 inline-block font-sans">Read more</a>
+                            <a href="javascript:void(0)"
+                                class="text-[#5f6368] hover:text-gray-900 text-[13px] mt-2 inline-block font-sans">Read
+                                more</a>
                         </div>
 
                     </div>
                 </div>
             </div>
-            
+
             <style>
                 .hide-scrollbar::-webkit-scrollbar {
                     display: none;
                 }
+
                 .hide-scrollbar {
                     -ms-overflow-style: none;
                     scrollbar-width: none;
                 }
             </style>
-            
+
             <script>
                 document.addEventListener('DOMContentLoaded', function () {
                     const container = document.getElementById('reviews-container');
                     const prevBtn = document.getElementById('prev-review');
                     const nextBtn = document.getElementById('next-review');
-                    
+
                     if (!container) return;
-                    
+
                     // Arrow buttons clicking
                     if (prevBtn) {
                         prevBtn.addEventListener('click', () => {
@@ -2173,12 +2260,12 @@
                             container.scrollBy({ left: 350, behavior: 'smooth' });
                         });
                     }
-                    
+
                     // Mouse drag to scroll
                     let isDown = false;
                     let startX;
                     let scrollLeft;
-                    
+
                     container.addEventListener('mousedown', (e) => {
                         isDown = true;
                         container.style.scrollSnapType = 'none'; // disable snap while dragging
@@ -2201,7 +2288,7 @@
                         e.preventDefault();
                         const x = e.pageX - container.offsetLeft;
                         // Scroll-fast logic
-                        const walk = (x - startX) * 2; 
+                        const walk = (x - startX) * 2;
                         container.scrollLeft = scrollLeft - walk;
                     });
                 });
@@ -2261,19 +2348,25 @@
                 style="background-color: #EA6F71;" data-aos="zoom-in">
 
                 {{-- Faint Lightbulb Doodle Background --}}
-                <div class="absolute left-1/2 lg:left-[25%] top-1/2 -translate-x-1/2 -translate-y-1/2 text-white opacity-[0.08] pointer-events-none z-0">
-                    <svg class="w-[300px] h-[300px] lg:w-[450px] lg:h-[450px]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round">
+                <div
+                    class="absolute left-1/2 lg:left-[25%] top-1/2 -translate-x-1/2 -translate-y-1/2 text-white opacity-[0.08] pointer-events-none z-0">
+                    <svg class="w-[300px] h-[300px] lg:w-[450px] lg:h-[450px]" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="0.3" stroke-linecap="round"
+                        stroke-linejoin="round">
                         <path d="M9 18h6" />
                         <path d="M10 21h4" />
-                        <path d="M12 2a7 7 0 0 0-7 7c0 2 1 3.5 2 5 .7.7 1.3 2 1.5 3h5c.2-1 1-2.3 1.5-3 1-1.5 2-3 2-5a7 7 0 0 0-7-7z" />
+                        <path
+                            d="M12 2a7 7 0 0 0-7 7c0 2 1 3.5 2 5 .7.7 1.3 2 1.5 3h5c.2-1 1-2.3 1.5-3 1-1.5 2-3 2-5a7 7 0 0 0-7-7z" />
                         <!-- Subtle rays -->
-                        <path stroke-width="0.3" d="M12 0v2 M4.5 4.5l1.5 1.5 M0 12h2 M4.5 19.5l1.5-1.5 M19.5 4.5l-1.5 1.5 M24 12h-2 M19.5 19.5l-1.5-1.5" />
+                        <path stroke-width="0.3"
+                            d="M12 0v2 M4.5 4.5l1.5 1.5 M0 12h2 M4.5 19.5l1.5-1.5 M19.5 4.5l-1.5 1.5 M24 12h-2 M19.5 19.5l-1.5-1.5" />
                     </svg>
                 </div>
 
                 {{-- Left Text Content --}}
                 <div class="lg:w-1/2 relative z-10 w-full text-center lg:text-left px-4 lg:pl-16 py-10 lg:py-16">
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-8 leading-[1.15] tracking-tight" style="font-family: 'Fredoka', sans-serif;">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-8 leading-[1.15] tracking-tight"
+                        style="font-family: 'Fredoka', sans-serif;">
                         Let's Connect and<br class="hidden lg:block"> Create Possibilities
                     </h2>
                     <a href="/contact"
@@ -2283,20 +2376,27 @@
                 </div>
 
                 {{-- Right Graphics Content --}}
-                <div class="lg:w-1/2 relative h-[300px] sm:h-[350px] lg:h-[400px] w-full flex items-end justify-center lg:justify-end overflow-hidden mt-6 lg:mt-0 z-10">
-                    
+                <div
+                    class="lg:w-1/2 relative h-[300px] sm:h-[350px] lg:h-[400px] w-full flex items-end justify-center lg:justify-end overflow-hidden mt-6 lg:mt-0 z-10">
+
                     {{-- Graphic Mask Circle Background --}}
-                    <div class="absolute bottom-0 right-0 w-[350px] h-[350px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px] rounded-full translate-y-[20%] translate-x-[10%] transition-transform duration-700 hover:scale-105 overflow-hidden" style="background-color: rgba(255,255,255,0.15);">
-                        <img src="{{ asset('images/image1.jpg') }}" alt="Student" class="w-full h-full object-cover opacity-90 transition-all duration-700 mix-blend-overlay hover:mix-blend-normal hover:opacity-100">
+                    <div class="absolute bottom-0 right-0 w-[350px] h-[350px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px] rounded-full translate-y-[20%] translate-x-[10%] transition-transform duration-700 hover:scale-105 overflow-hidden"
+                        style="background-color: rgba(255,255,255,0.15);">
+                        <img src="{{ asset('images/image1.jpg') }}" alt="Student"
+                            class="w-full h-full object-cover opacity-90 transition-all duration-700 mix-blend-overlay hover:mix-blend-normal hover:opacity-100">
                     </div>
 
                     {{-- Green Bubble AIMS CDC --}}
-                    <div class="absolute top-[15%] left-[5%] lg:left-[10%] z-20 animate-bounce" style="animation-duration: 4s;">
-                        <div class="bg-[#97B41A] text-white font-bold text-lg px-0 py-0 rounded-full shadow-xl relative w-24 h-24 lg:w-28 lg:h-28 flex flex-col items-center justify-center transform -rotate-3 border-4 border-white backdrop-blur-sm">
+                    <div class="absolute top-[15%] left-[5%] lg:left-[10%] z-20 animate-bounce"
+                        style="animation-duration: 4s;">
+                        <div
+                            class="bg-[#97B41A] text-white font-bold text-lg px-0 py-0 rounded-full shadow-xl relative w-24 h-24 lg:w-28 lg:h-28 flex flex-col items-center justify-center transform -rotate-3 border-4 border-white backdrop-blur-sm">
                             <span>GEMS</span>
                             <span>CDC</span>
                             <!-- Bubble pointer tail -->
-                            <div class="absolute -bottom-1.5 right-5 w-5 h-5 bg-[#97B41A] transform rotate-45 rounded-sm shadow-sm z-[-1] border-b-4 border-r-4 border-white"></div>
+                            <div
+                                class="absolute -bottom-1.5 right-5 w-5 h-5 bg-[#97B41A] transform rotate-45 rounded-sm shadow-sm z-[-1] border-b-4 border-r-4 border-white">
+                            </div>
                         </div>
                     </div>
 

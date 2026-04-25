@@ -48,10 +48,6 @@
             <div class="lg:col-span-2" data-aos="fade-up" data-aos-delay="100">
                 <div class="flex items-center gap-3 mb-6">
                     <img src="{{ asset('images/Logo.png') }}" alt="AIMS CDC Logo" class="h-20 w-auto">
-                    <div>
-                        <h2 class="text-xl font-bold text-white uppercase tracking-wider">GEMS</h2>
-                        <p class="text-sm font-medium text-[#32A8B8]">Child Development Centre</p>
-                    </div>
                 </div>
                 <p class="text-gray-300 leading-relaxed mb-6 max-w-lg">
                     Kerala's premier child development center providing comprehensive therapies,
@@ -176,9 +172,9 @@
                         </div>
                         <div>
                             <p class="text-white font-medium">Call Us</p>
-                            <a href="tel:+917994502501"
+                            <a href="tel:+918086497941"
                                 class="text-gray-400 text-sm hover:text-[#32A8B8] transition-colors">
-                                +91 7994502501
+                                +91 8086497941
                             </a>
                         </div>
                     </li>

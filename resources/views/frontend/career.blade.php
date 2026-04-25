@@ -150,7 +150,7 @@
             <div class="mt-12 text-center">
                 <p class="text-gray-600 mb-4">Don't see a matching role? We are always looking for talent.</p>
                 <a href="mailto:careers@aimscdc.com" class="text-[#32A8B8] font-semibold hover:text-[#288a99]">Send your CV
-                    to careers@aimscdc.com →</a>
+                    to careeratgemscdc@gmail.com →</a>
             </div>
         </div>
     </section>
