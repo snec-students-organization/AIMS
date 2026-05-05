@@ -39,7 +39,7 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
             {{-- Psychological Assessment --}}
-            <a href="/contact" class="group block bg-white rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.08)] overflow-hidden text-center relative flex flex-col items-center pb-8 transform transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] active:scale-[0.97] active:shadow-md cursor-pointer" data-aos="fade-up">
+            <a id="psychological-assessment" href="/contact" class="group block bg-white rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.08)] overflow-hidden text-center relative flex flex-col items-center pb-8 transform transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] active:scale-[0.97] active:shadow-md cursor-pointer" data-aos="fade-up">
                 <div class="relative w-full h-[220px] overflow-hidden">
                     <img src="{{ asset('images/image12.jpg') }}" alt="Psychological Assessment" class="w-full h-full object-cover transform transition-transform duration-700 ease-in-out group-hover:scale-110">
                     <div class="absolute bottom-[-1px] left-0 w-full overflow-hidden leading-none z-10 transition-transform duration-500 group-hover:translate-y-1">
@@ -63,7 +63,7 @@
             </a>
 
             {{-- Behavioural Therapy --}}
-            <a href="/contact" class="group block bg-white rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.08)] overflow-hidden text-center relative flex flex-col items-center pb-8 transform transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] active:scale-[0.97] active:shadow-md cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+            <a id="behaviour-therapy" href="/contact" class="group block bg-white rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.08)] overflow-hidden text-center relative flex flex-col items-center pb-8 transform transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] active:scale-[0.97] active:shadow-md cursor-pointer" data-aos="fade-up" data-aos-delay="100">
                 <div class="relative w-full h-[220px] overflow-hidden">
                     <img src="{{ asset('images/image6.jpg') }}" alt="Behavioural Therapy" class="w-full h-full object-cover transform transition-transform duration-700 ease-in-out group-hover:scale-110">
                     <div class="absolute bottom-[-1px] left-0 w-full overflow-hidden leading-none z-10 transition-transform duration-500 group-hover:translate-y-1">
@@ -87,7 +87,7 @@
             </a>
 
             {{-- Speech Therapy --}}
-            <a href="/contact" class="group block bg-white rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.08)] overflow-hidden text-center relative flex flex-col items-center pb-8 transform transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] active:scale-[0.97] active:shadow-md cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+            <a id="speech-therapy" href="/contact" class="group block bg-white rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.08)] overflow-hidden text-center relative flex flex-col items-center pb-8 transform transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] active:scale-[0.97] active:shadow-md cursor-pointer" data-aos="fade-up" data-aos-delay="200">
                 <div class="relative w-full h-[220px] overflow-hidden">
                     <img src="{{ asset('images/image15.jpg') }}" alt="Speech Therapy" class="w-full h-full object-cover transform transition-transform duration-700 ease-in-out group-hover:scale-110">
                     <div class="absolute bottom-[-1px] left-0 w-full overflow-hidden leading-none z-10 transition-transform duration-500 group-hover:translate-y-1">
@@ -111,7 +111,7 @@
             </a>
 
             {{-- Occupational Therapy --}}
-            <a href="/contact" class="group block bg-white rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.08)] overflow-hidden text-center relative flex flex-col items-center pb-8 transform transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] active:scale-[0.97] active:shadow-md cursor-pointer" data-aos="fade-up">
+            <a id="occupational-therapy" href="/contact" class="group block bg-white rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.08)] overflow-hidden text-center relative flex flex-col items-center pb-8 transform transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] active:scale-[0.97] active:shadow-md cursor-pointer" data-aos="fade-up">
                 <div class="relative w-full h-[220px] overflow-hidden">
                     <img src="{{ asset('images/image14.jpg') }}" alt="Occupational Therapy" class="w-full h-full object-cover transform transition-transform duration-700 ease-in-out group-hover:scale-110">
                     <div class="absolute bottom-[-1px] left-0 w-full overflow-hidden leading-none z-10 transition-transform duration-500 group-hover:translate-y-1">
@@ -135,7 +135,7 @@
             </a>
 
             {{-- Special Education --}}
-            <a href="/contact" class="group block bg-white rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.08)] overflow-hidden text-center relative flex flex-col items-center pb-8 transform transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] active:scale-[0.97] active:shadow-md cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+            <a id="special-education" href="/contact" class="group block bg-white rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.08)] overflow-hidden text-center relative flex flex-col items-center pb-8 transform transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] active:scale-[0.97] active:shadow-md cursor-pointer" data-aos="fade-up" data-aos-delay="100">
                 <div class="relative w-full h-[220px] overflow-hidden">
                     <img src="{{ asset('images/image4.jpg') }}" alt="Special Education" class="w-full h-full object-cover transform transition-transform duration-700 ease-in-out group-hover:scale-110">
                     <div class="absolute bottom-[-1px] left-0 w-full overflow-hidden leading-none z-10 transition-transform duration-500 group-hover:translate-y-1">
@@ -159,7 +159,7 @@
             </a>
 
             {{-- Psychotherapy & Counselling --}}
-            <a href="/contact" class="group block bg-white rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.08)] overflow-hidden text-center relative flex flex-col items-center pb-8 transform transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] active:scale-[0.97] active:shadow-md cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+            <a id="psychotherapy-counselling" href="/contact" class="group block bg-white rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.08)] overflow-hidden text-center relative flex flex-col items-center pb-8 transform transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] active:scale-[0.97] active:shadow-md cursor-pointer" data-aos="fade-up" data-aos-delay="200">
                 <div class="relative w-full h-[220px] overflow-hidden">
                     <img src="{{ asset('images/image13.jpg') }}" alt="Psychotherapy & Counselling" class="w-full h-full object-cover transform transition-transform duration-700 ease-in-out group-hover:scale-110" onerror="this.src='{{ asset('images/image2.jpg') }}'">
                     <div class="absolute bottom-[-1px] left-0 w-full overflow-hidden leading-none z-10 transition-transform duration-500 group-hover:translate-y-1">
@@ -187,28 +187,48 @@
 </section>
 
 {{-- ================= PROCESS SECTION ================= --}}
-<section class="py-16 lg:py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-gray-900">How It Works</h2>
-            <p class="mt-4 text-gray-600">A structured approach to ensure the right care at the right time.</p>
+<section class="py-16 lg:py-24 bg-[#f8fafc] relative overflow-hidden">
+    {{-- Doodle background --}}
+    <div class="absolute inset-0 opacity-[0.04] pointer-events-none" style="background-image: url('data:image/svg+xml,%3Csvg width=\'400\' height=\'400\' viewBox=\'0 0 400 400\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' stroke=\'%2332A8B8\' stroke-width=\'1.5\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3E%3Cpath d=\'M50 50 Q 70 30 90 50 T 130 50\'/%3E%3Ccircle cx=\'300\' cy=\'100\' r=\'15\'/%3E%3Cpath d=\'M350 300 l 15 15 m -15 0 l 15 -15\'/%3E%3Crect x=\'100\' y=\'300\' width=\'25\' height=\'25\' rx=\'5\'/%3E%3Cpath d=\'M200 150 c 15 0 15 20 30 20 s 15 -20 30 -20\'/%3E%3Ccircle cx=\'50\' cy=\'350\' r=\'5\' fill=\'%2332A8B8\'/%3E%3Cpath d=\'M300 50 l 20 0 m -10 -10 l 0 20\'/%3E%3Cpath d=\'M150 100 q 10 -10 20 0 t 20 0\'/%3E%3C/g%3E%3C/svg%3E'); background-size: 300px;"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16" data-aos="fade-down">
+            <span class="inline-block px-5 py-2 rounded-full bg-white text-[#32A8B8] font-bold text-sm mb-4 tracking-wider border border-teal-100 shadow-sm">
+                ✦ Our Process ✦
+            </span>
+            <h2 class="text-4xl lg:text-5xl font-extrabold text-[#1a2b4b] mb-4" style="font-family: 'Fredoka', sans-serif;">How It Works</h2>
+            <p class="mt-4 text-gray-500 max-w-2xl mx-auto text-lg font-medium">A structured, caring approach to ensure the right care at the right time.</p>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            @foreach ([
-                ['1','Initial Consultation','Discuss concerns and developmental history.','#32A8B8'],
-                ['2','Assessment','Comprehensive evaluation to identify needs.','#97B41A'],
-                ['3','Therapy Plan','Personalized intervention strategy.','#EA6F71'],
-                ['4','Progress Review','Continuous monitoring and goal updates.','#E99D1D']
-            ] as [$step,$title,$desc,$color])
-            <div class="text-center" data-aos="fade-up">
-                <div class="w-20 h-20 mx-auto text-white rounded-full flex items-center justify-center text-3xl font-bold mb-6 shadow-xl border-4 border-white" style="background: {{ $color }};">
-                    {{ $step }}
+        <div class="relative">
+            {{-- Connecting Dashed Line (Desktop Only) --}}
+            <div class="hidden lg:block absolute top-[50px] left-[12.5%] w-[75%] h-[2px] border-t-2 border-dashed border-gray-300 z-0"></div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 relative z-10">
+                @foreach ([
+                    ['1', 'Initial Consultation', 'We begin with a warm, welcoming conversation to understand your child\'s unique history, your specific concerns, and the goals you have for their development.', '#32A8B8'],
+                    ['2', 'Assessment', 'Our specialists conduct thorough, play-based evaluations using evidence-based tools to accurately identify your child\'s strengths and areas for growth.', '#97B41A'],
+                    ['3', 'Therapy Plan', 'We craft a highly personalized, step-by-step intervention strategy designed specifically to nurture your child\'s abilities and build their confidence.', '#EA6F71'],
+                    ['4', 'Progress Review', 'We continuously monitor milestones and adapt our strategies, keeping you fully informed and involved in every step of your child\'s journey.', '#E99D1D']
+                ] as [$step, $title, $desc, $color])
+                <div class="relative group" data-aos="fade-up" data-aos-delay="{{ $loop->index * 150 }}">
+                    {{-- Card --}}
+                    <div class="bg-white rounded-[2rem] p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] transition-all duration-500 hover:-translate-y-2 h-full flex flex-col items-center text-center border border-gray-100 relative overflow-hidden cursor-pointer">
+                        
+                        {{-- Background Decoration --}}
+                        <div class="absolute -right-6 -top-6 w-32 h-32 rounded-full opacity-[0.06] transition-transform duration-700 ease-out group-hover:scale-[2.5]" style="background-color: {{ $color }};"></div>
+                        
+                        {{-- Number Badge --}}
+                        <div class="w-16 h-16 rounded-[1.25rem] flex items-center justify-center text-2xl font-black mb-6 shadow-lg relative z-10 transition-all duration-500 group-hover:rotate-[10deg] group-hover:scale-110 text-white" style="background-color: {{ $color }}; font-family: 'Fredoka', sans-serif;">
+                            {{ $step }}
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 relative z-10 transition-colors duration-300 group-hover:text-gray-800" style="font-family: 'Fredoka', sans-serif;">{{ $title }}</h3>
+                        <p class="text-gray-500 text-sm font-medium leading-relaxed relative z-10">{{ $desc }}</p>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2">{{ $title }}</h3>
-                <p class="text-gray-600 text-sm">{{ $desc }}</p>
+                @endforeach
             </div>
-            @endforeach
         </div>
     </div>
 </section>

@@ -250,7 +250,7 @@
         {{-- Phone Call --}}
         <a href="tel:+917994502501" style="background-color:#97B41A"
             class="group flex items-center gap-3 hover:bg-[#e45f62] text-white p-4 rounded-full shadow-xl transition-all duration-300 hover:shadow-2xl hover:scale-105"
-            aria-label="Call AIMS CDC">
+            aria-label="Call GEMS CDC">
 
 
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

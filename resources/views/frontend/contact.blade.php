@@ -60,10 +60,10 @@
                             📞</div>
                         <h3 class="font-bold text-gray-900 text-lg mb-2">Call Us</h3>
                         <p class="text-gray-600 mb-3">Mon-Sat from 9am to 6pm</p>
-                        <a href="tel:+918086497941" class="text-lg font-bold text-teal-600 hover:text-teal-700 block">+91
-                            80864 97 941</a>
                         <a href="tel:+917994502501" class="text-lg font-bold text-teal-600 hover:text-teal-700 block">+91
-                            7994 502 501</a>
+                            7994502501</a>
+                        <a href="tel:+918086497941" class="text-lg font-bold text-teal-600 hover:text-teal-700 block">+91
+                            8086497941</a>
                     </div>
 
                     {{-- Email --}}

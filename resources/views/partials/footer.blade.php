@@ -216,11 +216,8 @@
                 <div class="flex items-center gap-6 text-sm text-gray-400">
                     <a href="/privacy-policy" class="hover:text-[#32A8B8] transition-colors">Privacy Policy</a>
                     <a href="/terms" class="hover:text-[#32A8B8] transition-colors">Terms of Service</a>
-                    <a href="/sitemap" class="hover:text-[#32A8B8] transition-colors">Sitemap</a>
-                    <div class="flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                        <span>Made with ❤️ in Kerala</span>
-                    </div>
+                    <a href="/contact" class="hover:text-[#32A8B8] transition-colors">Sitemap</a>
+                    
                 </div>
             </div>
 
@@ -256,7 +253,7 @@
                 </div>
                 <div>
                     <p class="text-sm font-medium">Need Help?</p>
-                    <a href="tel:+918891810022" class="text-lg font-bold">Call Now</a>
+                    <a href="tel:+917994502501" class="text-lg font-bold">Call Now</a>
                 </div>
             </div>
             <a href="/contact"

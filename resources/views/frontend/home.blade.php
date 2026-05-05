@@ -1248,18 +1248,18 @@
             <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-6 lg:gap-8 justify-center">
                 @php
                     $featureServices = [
-                        ['icon' => 'psychological-assessment.svg', 'title' => 'PSYCHOLOGICAL ASSESSMENT', 'bgColor' => '#F4F9FA', 'iconColor' => '#006684', 'delay' => '100'],
-                        ['icon' => 'behavioural-therapy.svg', 'title' => 'BEHAVIOURAL THERAPY', 'bgColor' => '#E8F5E9', 'iconColor' => '#2E7D32', 'delay' => '200'],
-                        ['icon' => 'speech-therapy.svg', 'title' => 'SPEECH THERAPY', 'bgColor' => '#FCE4EC', 'iconColor' => '#C2185B', 'delay' => '300'],
-                        ['icon' => 'special-education.svg', 'title' => 'SPECIAL EDUCATION', 'bgColor' => '#FFF3E0', 'iconColor' => '#E65100', 'delay' => '400'],
-                        ['icon' => 'occupational-therapy.svg', 'title' => 'OCCUPATIONAL THERAPY', 'bgColor' => '#E3F2FD', 'iconColor' => '#1565C0', 'delay' => '500'],
-                        ['icon' => 'psychotherapy-counselling.svg', 'title' => 'PSYCHOTHERAPY & COUNSELLING', 'bgColor' => '#F3E5F5', 'iconColor' => '#6A1B9A', 'delay' => '600'],
+                        ['icon' => 'psychological-assessment.svg', 'title' => 'PSYCHOLOGICAL ASSESSMENT', 'bgColor' => '#F4F9FA', 'iconColor' => '#006684', 'delay' => '100', 'link' => '/services#psychological-assessment'],
+                        ['icon' => 'behavioural-therapy.svg', 'title' => 'BEHAVIOURAL THERAPY', 'bgColor' => '#E8F5E9', 'iconColor' => '#2E7D32', 'delay' => '200', 'link' => '/services#behaviour-therapy'],
+                        ['icon' => 'speech-therapy.svg', 'title' => 'SPEECH THERAPY', 'bgColor' => '#FCE4EC', 'iconColor' => '#C2185B', 'delay' => '300', 'link' => '/services#speech-therapy'],
+                        ['icon' => 'special-education.svg', 'title' => 'SPECIAL EDUCATION', 'bgColor' => '#FFF3E0', 'iconColor' => '#E65100', 'delay' => '400', 'link' => '/services#special-education'],
+                        ['icon' => 'occupational-therapy.svg', 'title' => 'OCCUPATIONAL THERAPY', 'bgColor' => '#E3F2FD', 'iconColor' => '#1565C0', 'delay' => '500', 'link' => '/services#occupational-therapy'],
+                        ['icon' => 'psychotherapy-counselling.svg', 'title' => 'PSYCHOTHERAPY & COUNSELLING', 'bgColor' => '#F3E5F5', 'iconColor' => '#6A1B9A', 'delay' => '600', 'link' => '/services#psychotherapy-counselling'],
                     ];
                 @endphp
 
                 @foreach($featureServices as $index => $service)
                     <div data-aos="fade-up" data-aos-delay="{{ $service['delay'] }}" data-aos-duration="800" class="h-full">
-                        <a href="/services" class="service-card-modern" style="text-decoration: none;">
+                        <a href="{{ $service['link'] ?? '/services' }}" class="service-card-modern" style="text-decoration: none;">
                             <div class="service-icon-wrapper"
                                 style="background-color: {{ $service['bgColor'] }}; border: 1px solid rgba(0,0,0,0.03);">
                                 {{-- We apply a css filter hack or specific styled icon if needed, for now we load the SVG and
@@ -1306,6 +1306,7 @@
                             'color' => '#32A8B8',
                             'bgColor' => '#ffffff',
                             'borderColor' => 'rgba(50, 168, 184, 0.2)',
+                            'link' => '/services#speech-therapy',
                         ],
                         [
                             'title' => 'Special Education',
@@ -1315,6 +1316,7 @@
                             'color' => '#EA6F71',
                             'bgColor' => '#ffffff',
                             'borderColor' => 'rgba(234, 111, 113, 0.2)',
+                            'link' => '/services#special-education',
                         ],
                         [
                             'title' => 'Behaviour Therapy',
@@ -1324,6 +1326,7 @@
                             'color' => '#97B41A',
                             'bgColor' => '#ffffff',
                             'borderColor' => 'rgba(151, 180, 26, 0.2)',
+                            'link' => '/services#behaviour-therapy',
                         ],
                         [
                             'title' => 'Occupational Therapy',
@@ -1333,6 +1336,7 @@
                             'color' => '#E99D1D',
                             'bgColor' => '#ffffff',
                             'borderColor' => 'rgba(233, 157, 29, 0.2)',
+                            'link' => '/services#occupational-therapy',
                         ],
                         [
                             'title' => 'Psychological Assessment',
@@ -1342,6 +1346,7 @@
                             'color' => '#32A8B8',
                             'bgColor' => '#ffffff',
                             'borderColor' => 'rgba(50, 168, 184, 0.2)',
+                            'link' => '/services#psychological-assessment',
                         ],
                         [
                             'title' => 'Counselling & Psychotherapy',
@@ -1351,6 +1356,7 @@
                             'color' => '#EA6F71',
                             'bgColor' => '#ffffff',
                             'borderColor' => 'rgba(234, 111, 113, 0.2)',
+                            'link' => '/services#psychotherapy-counselling',
                         ]
                     ];
                 @endphp
@@ -1372,7 +1378,7 @@
                                         <h3 class="card-title-v2">{{ $service['title'] }}</h3>
                                         <p class="card-text-v2">{!! nl2br(e($service['description'])) !!}</p>
 
-                                        <a href="/services" class="card-btn-v2"
+                                        <a href="{{ $service['link'] ?? '/services' }}" class="card-btn-v2"
                                             style="background-color: {{ $service['color'] }}">
                                             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
