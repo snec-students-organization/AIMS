@@ -565,6 +565,72 @@
                 z-index: 5;
             }
 
+            .vision-mission-band {
+                background: linear-gradient(180deg, #ffffff 0%, #f7fbfc 100%);
+                position: relative;
+                overflow: hidden;
+            }
+
+            .vision-mission-card {
+                background: rgba(255, 255, 255, 0.92);
+                border: 1px solid rgba(50, 168, 184, 0.14);
+                border-radius: 8px;
+                box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+                padding: 1.5rem;
+                height: 100%;
+            }
+
+            .vision-mission-label {
+                color: #EA6F71;
+                font-family: 'Fredoka', sans-serif;
+                font-size: 0.9rem;
+                font-weight: 700;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                margin-bottom: 0.65rem;
+            }
+
+            .vision-mission-title {
+                color: #1a2b4b;
+                font-family: 'Fredoka', sans-serif;
+                font-size: 1.75rem;
+                font-weight: 700;
+                line-height: 1.15;
+                margin-bottom: 0.8rem;
+            }
+
+            .vision-mission-text {
+                color: #4b5563;
+                font-size: 1rem;
+                line-height: 1.7;
+                margin: 0;
+            }
+
+            .stats-card {
+                background: #ffffff;
+                border: 1px solid rgba(151, 180, 26, 0.16);
+                border-radius: 8px;
+                box-shadow: 0 14px 30px rgba(15, 23, 42, 0.06);
+                padding: 1.25rem;
+                text-align: center;
+                height: 100%;
+            }
+
+            .stats-number {
+                color: #32A8B8;
+                font-family: 'Fredoka', sans-serif;
+                font-size: 2.4rem;
+                font-weight: 700;
+                line-height: 1;
+                margin-bottom: 0.45rem;
+            }
+
+            .stats-label {
+                color: #475569;
+                font-size: 0.95rem;
+                font-weight: 700;
+            }
+
             /* Add to your existing styles */
             .organic-image-mask-mobile {
                 border-radius: 24px;
@@ -1145,6 +1211,141 @@
         </div>
     </section>
 
+    {{-- ================= VISION, MISSION & STATS ================= --}}
+    <section class="vision-mission-band py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-8">
+                <div class="vision-mission-card" data-aos="fade-up">
+                    <div class="vision-mission-label">Our Vision</div>
+                    <h2 class="vision-mission-title">Helping every child grow with confidence.</h2>
+                    <p class="vision-mission-text">
+                        To create a nurturing space where children receive the right support, families feel guided, and
+                        every child is encouraged to reach their fullest potential.
+                    </p>
+                </div>
+
+                <div class="vision-mission-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="vision-mission-label">Our Mission</div>
+                    <h2 class="vision-mission-title">Personalized care for meaningful progress.</h2>
+                    <p class="vision-mission-text">
+                        We provide evidence-based therapies, compassionate guidance, and consistent family support to help
+                        children build essential skills for everyday life.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 lg:gap-6">
+                <div class="stats-card" data-aos="zoom-in">
+                    <div class="stats-number"><span class="stats-count" data-target="10">0</span>+</div>
+                    <div class="stats-label">Years Experience</div>
+                </div>
+
+                <div class="stats-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="stats-number"><span class="stats-count" data-target="1000">0</span>+</div>
+                    <div class="stats-label">Happy Customers</div>
+                </div>
+
+                <div class="stats-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="stats-number"><span class="stats-count" data-target="25">0</span>+</div>
+                    <div class="stats-label">Expert Staffs</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- ================= MISSION & CTA SECTION ================= --}}
+    <section class="py-12 lg:py-16 relative overflow-hidden bg-white">
+        <div class="doodle-bg-dark"></div>
+        {{-- Animated background elements (Scaled down) --}}
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div
+                class="absolute -top-20 -right-20 w-64 h-64 bg-teal-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse-slow">
+            </div>
+            <div
+                class="absolute -bottom-20 -left-20 w-64 h-64 bg-pink-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse-slow animation-delay-2000">
+            </div>
+        </div>
+
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 relative z-10">
+            {{-- Founder card with sliding entrance --}}
+            <div class="relative bg-white/90 backdrop-blur-lg p-6 lg:p-10 rounded-3xl shadow-lg border border-gray-100 transform hover:scale-[1.01] transition-all duration-500 text-center"
+                data-aos="zoom-in" data-aos-duration="800">
+
+                {{-- Avatar & Meta Data --}}
+                <div class="flex flex-col items-center mb-6">
+                    <div class="relative inline-block mb-3">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-tr from-teal-400 to-pink-400 rounded-full blur-md opacity-40">
+                        </div>
+                        <div
+                            class="relative w-24 h-24 rounded-full bg-white p-1 border border-gray-100 shadow-sm relative z-10">
+                            <img src="{{ asset('images/Logo.png') }}" class="w-full h-full object-cover rounded-full"
+                                alt="Mushtaq - Founder & CEO">
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-gray-900 text-xl tracking-tight">Mushtaq</h3>
+                    <span
+                        class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-50 text-teal-700 text-xs font-semibold mt-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-teal-500 animate-pulse"></span>
+                        Founder & CEO
+                    </span>
+                </div>
+
+                {{-- Quote content --}}
+                <div class="relative max-w-2xl mx-auto">
+                    <div class="absolute -top-4 -left-2 text-teal-100 transform -scale-x-100">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M14 11H19L17 19H12L14 11ZM5 11H10L8 19H3L5 11Z" />
+                        </svg>
+                    </div>
+
+                    <p class="text-base lg:text-lg text-gray-600 leading-relaxed font-serif italic relative z-10 px-6">
+                        "To be a beacon of hope and excellence in child development, creating a world where every child is
+                        understood, valued, and empowered to achieve their fullest potential."
+                    </p>
+
+                    <div class="absolute -bottom-4 -right-2 text-pink-100">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M14 11H19L17 19H12L14 11ZM5 11H10L8 19H3L5 11Z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            {{-- CTA Buttons --}}
+            <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                <a href="/services"
+                    class="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-teal-500 to-teal-600 px-8 py-3.5 text-white font-semibold text-sm shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <span
+                        class="absolute inset-0 bg-gradient-to-r from-teal-600 to-teal-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <span class="relative flex items-center gap-2">
+                        View All Services
+                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </span>
+                </a>
+
+                <a href="/contact"
+                    class="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full border border-teal-500 bg-white px-8 py-3.5 text-teal-600 font-semibold text-sm hover:bg-teal-50 transform hover:-translate-y-1 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <span class="relative flex items-center gap-2">
+                        Book Consultation
+                        <svg class="w-5 h-5 transform group-hover:rotate-12 transition-transform duration-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
 
 
     @push('scripts')
@@ -1195,6 +1396,30 @@
                         },
                     },
                     speed: 800,
+                });
+
+                document.querySelectorAll('.stats-count').forEach(function (counter) {
+                    var target = Number(counter.dataset.target || 0);
+                    var duration = 1600;
+                    var startTime = null;
+
+                    function updateCount(timestamp) {
+                        if (!startTime) {
+                            startTime = timestamp;
+                        }
+
+                        var progress = Math.min((timestamp - startTime) / duration, 1);
+                        var easedProgress = 1 - Math.pow(1 - progress, 3);
+                        counter.textContent = Math.floor(easedProgress * target).toLocaleString();
+
+                        if (progress < 1) {
+                            requestAnimationFrame(updateCount);
+                        } else {
+                            counter.textContent = target.toLocaleString();
+                        }
+                    }
+
+                    requestAnimationFrame(updateCount);
                 });
 
             });
@@ -1400,101 +1625,6 @@
                     </a>
                 </div>
             </div>
-    </section>
-
-    {{-- ================= MISSION & CTA SECTION ================= --}}
-    <section class="py-12 lg:py-16 relative overflow-hidden bg-white">
-        <div class="doodle-bg-dark"></div>
-        {{-- Animated background elements (Scaled down) --}}
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-            <div
-                class="absolute -top-20 -right-20 w-64 h-64 bg-teal-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse-slow">
-            </div>
-            <div
-                class="absolute -bottom-20 -left-20 w-64 h-64 bg-pink-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse-slow animation-delay-2000">
-            </div>
-        </div>
-
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 relative z-10">
-            {{-- Founder card with sliding entrance --}}
-            <div class="relative bg-white/90 backdrop-blur-lg p-6 lg:p-10 rounded-3xl shadow-lg border border-gray-100 transform hover:scale-[1.01] transition-all duration-500 text-center"
-                data-aos="zoom-in" data-aos-duration="800">
-
-                {{-- Avatar & Meta Data --}}
-                <div class="flex flex-col items-center mb-6">
-                    <div class="relative inline-block mb-3">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-tr from-teal-400 to-pink-400 rounded-full blur-md opacity-40">
-                        </div>
-                        <div
-                            class="relative w-24 h-24 rounded-full bg-white p-1 border border-gray-100 shadow-sm relative z-10">
-                            <img src="{{ asset('images/Logo.png') }}" class="w-full h-full object-cover rounded-full"
-                                alt="Mushtaq - Founder & CEO">
-                        </div>
-                    </div>
-
-                    <h3 class="font-bold text-gray-900 text-xl tracking-tight">Mushtaq</h3>
-                    <span
-                        class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-50 text-teal-700 text-xs font-semibold mt-1">
-                        <span class="w-1.5 h-1.5 rounded-full bg-teal-500 animate-pulse"></span>
-                        Founder & CEO
-                    </span>
-                </div>
-
-                {{-- Quote content --}}
-                <div class="relative max-w-2xl mx-auto">
-                    <div class="absolute -top-4 -left-2 text-teal-100 transform -scale-x-100">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M14 11H19L17 19H12L14 11ZM5 11H10L8 19H3L5 11Z" />
-                        </svg>
-                    </div>
-
-                    <p class="text-base lg:text-lg text-gray-600 leading-relaxed font-serif italic relative z-10 px-6">
-                        "To be a beacon of hope and excellence in child development, creating a world where every child is
-                        understood, valued, and empowered to achieve their fullest potential."
-                    </p>
-
-                    <div class="absolute -bottom-4 -right-2 text-pink-100">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M14 11H19L17 19H12L14 11ZM5 11H10L8 19H3L5 11Z" />
-                        </svg>
-                    </div>
-                </div>
-            </div>
-
-            {{-- CTA Buttons --}}
-            <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-                <a href="/services"
-                    class="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-teal-500 to-teal-600 px-8 py-3.5 text-white font-semibold text-sm shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
-                    data-aos="fade-up" data-aos-delay="200">
-                    <span
-                        class="absolute inset-0 bg-gradient-to-r from-teal-600 to-teal-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                    <span class="relative flex items-center gap-2">
-                        <span class="transform group-hover:scale-110 transition-transform duration-300">✦</span>
-                        View All Services
-                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300"
-                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                    </span>
-                </a>
-
-                <a href="/contact"
-                    class="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full border border-teal-500 bg-white px-8 py-3.5 text-teal-600 font-semibold text-sm hover:bg-teal-50 transform hover:-translate-y-1 transition-all duration-300"
-                    data-aos="fade-up" data-aos-delay="300">
-                    <span class="relative flex items-center gap-2">
-                        <span class="transform group-hover:rotate-12 transition-transform duration-300">📅</span>
-                        Book Consultation
-                        <svg class="w-5 h-5 transform group-hover:rotate-12 transition-transform duration-500" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
-                    </span>
-                </a>
-            </div>
-        </div>
     </section>
 
     <style>
