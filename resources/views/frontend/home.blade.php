@@ -1525,7 +1525,7 @@
                     $v2Services = [
                         [
                             'title' => 'Speech Therapy',
-                            'description' => "Helping every child find their voice.\n\nWe offer the best speech therapy to improve speech clarity, language development, and social interaction. Our paediatric therapy team ensures that \"every voice matters.\"",
+                            'description' => "Helping every child find their voice.\n  We provide expert speech therapy to improve communication, language, and social skills — because every voice matters",
                             'image' => 'images/image15.jpg',
                             'icon' => 'speech-therapy.svg',
                             'color' => '#32A8B8',
@@ -1535,7 +1535,7 @@
                         ],
                         [
                             'title' => 'Special Education',
-                            'description' => "Making learning easy and fun.\n\nAt our child development centre, we unlock learning potential. We support children with reading, writing, and math difficulties through Individualised Education Plans (IEPs) and multisensory teaching tools, ensuring no child is left behind.",
+                            'description' => "Making learning easy and fun.\n\nWe help children overcome learning challenges through personalised support, multisensory teaching, and IEP-based learning.",
                             'image' => 'images/image4.jpg',
                             'icon' => 'special-education.svg',
                             'color' => '#EA6F71',
@@ -1545,7 +1545,7 @@
                         ],
                         [
                             'title' => 'Behaviour Therapy',
-                            'description' => "Better skills for a happier life.\n\nWe provide the best behaviour therapy to improve cognitive, social, and emotional skills. Our ABA therapy and evidence-based methods ensure that every child receives the best autism support.",
+                            'description' => "Better skills for a happier life.\n\nWe provide expert behaviour therapy and ABA support to improve cognitive, social, and emotional skills for every child.",
                             'image' => 'images/image6.jpg',
                             'icon' => 'behavioural-therapy.svg',
                             'color' => '#97B41A',
@@ -1555,7 +1555,7 @@
                         ],
                         [
                             'title' => 'Occupational Therapy',
-                            'description' => "Building independence for daily life.\n\nOur occupational therapy focuses on building independence. We help children improve motor skills and sensory processing. This vital paediatric therapy helps children perform daily tasks such as writing, playing, and self-care with confidence.",
+                            'description' => "Building independence for daily life.\n\nOur occupational therapy helps children build independence by improving motor skills, sensory processing, and daily life activities with confidence.",
                             'image' => 'images/image14.jpg',
                             'icon' => 'occupational-therapy.svg',
                             'color' => '#E99D1D',
@@ -1565,7 +1565,7 @@
                         ],
                         [
                             'title' => 'Psychological Assessment',
-                            'description' => "Understanding your child’s unique mind.\n\nOur expert child psychologists conduct professional IQ tests, comprehensive learning evaluations, and personality assessments. As a leading child development centre, we craft personalised support plans to help every student reach their full potential.",
+                            'description' => "Understanding your child’s unique mind.\n\nOur expert psychologists provide IQ tests, learning evaluations, and personalised support plans to help every child reach their full potential.",
                             'image' => 'images/image12.jpg',
                             'icon' => 'psychological-assessment.svg',
                             'color' => '#32A8B8',
@@ -1575,7 +1575,7 @@
                         ],
                         [
                             'title' => 'Counselling & Psychotherapy',
-                            'description' => "Caring for mental health.\n\nOur expert team offers child counselling and psychotherapy for anxiety, depression, personality disorders, relationship issues, low confidence, and emotional hurdles, helping them build resilience and achieve overall well-being.",
+                            'description' => "Caring for mental health.\n\nOur expert team provides child counselling and psychotherapy to support emotional well-being, confidence, and resilience.",
                             'image' => 'images/image13.jpg',
                             'icon' => 'psychotherapy-counselling.svg',
                             'color' => '#EA6F71',
@@ -1951,70 +1951,67 @@
 
                 <h2 class="text-4xl lg:text-6xl font-extrabold mb-6 tracking-tight"
                     style="text-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);">
-                    Why Parents Trust GEMS
+                    Why Parents Trust GEMS?
                 </h2>
 
                 <p class="text-lg opacity-90">
-                    We go beyond traditional therapy to provide a holistic ecosystem
-                    for your child's growth.
+                    We combine clinical expertise with a heart-centered approach to ensure
+                    the best possible start for your child.
                 </p>
 
             </div>
 
             {{-- CARDS --}}
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
 
-                {{-- CARD --}}
-                <div class="why-card-premium">
+                {{-- CARD 1 --}}
+                <div class="why-card-premium tilt-card">
                     <div class="icon-box" style="background-color: #32A8B8;">
                         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
                                 d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                         </svg>
                     </div>
-                    <h3>Expert Team</h3>
+                    <h3>Licensed Therapist</h3>
                     <p>
-                        Highly qualified and RCI certified professionals dedicated
-                        to your child.
+                        Expert care from certified professionals dedicated to pediatric excellence.
                     </p>
                 </div>
 
 
-                {{-- CARD --}}
-                <div class="why-card-premium">
+                {{-- CARD 2 --}}
+                <div class="why-card-premium tilt-card">
                     <div class="icon-box" style="background-color: #E99D1D;">
                         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                                d="M12 8v8m-4-4h8m6 0a10 10 0 11-20 0 10 10 0 0120 0z" />
                         </svg>
                     </div>
-                    <h3>Evidence Based</h3>
+                    <h3>Precision in Diagnosis</h3>
                     <p>
-                        Scientific approach to therapy with proven methodologies
-                        and tracking.
+                        Accurate assessments that form the foundation for highly tailored interventions.
                     </p>
                 </div>
 
 
-                {{-- CARD --}}
-                <div class="why-card-premium">
-                    <div class="icon-box" style="background-color: #EA6F71;">
+                {{-- CARD 3 --}}
+                <div class="why-card-premium tilt-card">
+                    <div class="icon-box" style="background-color: #97B41A;">
                         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8m14 10v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
                         </svg>
                     </div>
-                    <h3>World Class Facility</h3>
+                    <h3>Multidisciplinary Team</h3>
                     <p>
-                        Child-friendly, safe, and stimulating environment
-                        for optimal learning.
+                        A collaborative approach involving specialists across multiple therapeutic disciplines.
                     </p>
                 </div>
 
 
-                {{-- CARD --}}
-                <div class="why-card-premium">
-                    <div class="icon-box" style="background-color: #32A8B8;">
+                {{-- CARD 4 --}}
+                <div class="why-card-premium tilt-card">
+                    <div class="icon-box" style="background-color: #EA6F71;">
                         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
                                 d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
@@ -2022,8 +2019,22 @@
                     </div>
                     <h3>Parent Support</h3>
                     <p>
-                        Regular counseling, training workshops,
-                        and support groups for families.
+                        Empowering families with tools, education, and emotional guidance throughout the journey.
+                    </p>
+                </div>
+
+
+                {{-- CARD 5 --}}
+                <div class="why-card-premium tilt-card">
+                    <div class="icon-box" style="background-color: #32A8B8;">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M6 9H4.5a2.5 2.5 0 010-5H6m12 5h1.5a2.5 2.5 0 000-5H18M4 22h16m-10-7.34V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22m7-7.34V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22M18 2H6v7a6 6 0 0012 0V2z" />
+                        </svg>
+                    </div>
+                    <h3>Assured Result</h3>
+                    <p>
+                        Committed to measurable progress and positive functional outcomes for every child.
                     </p>
                 </div>
 
@@ -2103,15 +2114,27 @@
             padding: 35px;
             border-radius: 24px;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-            transition: 0.4s;
+            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease;
             text-align: left;
             position: relative;
             overflow: hidden;
+            cursor: pointer;
+            transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
+            transform-style: preserve-3d;
         }
 
         .why-card-premium:hover {
             transform: translateY(-12px) scale(1.03);
             box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18);
+        }
+
+        .why-card-premium:active {
+            transition: transform 0.1s ease !important;
+            transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(0.95, 0.95, 0.95) !important;
+        }
+
+        .why-card-premium.is-moving {
+            transition: none;
         }
 
         /* icon */
@@ -2146,6 +2169,34 @@
             line-height: 1.6;
         }
     </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tiltCards = document.querySelectorAll('.why-section .tilt-card');
+
+            tiltCards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    card.classList.add('is-moving');
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+
+                    const rotateX = ((y - centerY) / centerY) * -10;
+                    const rotateY = ((x - centerX) / centerX) * 10;
+
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.classList.remove('is-moving');
+                    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+                });
+            });
+        });
+    </script>
 
     {{-- ================= TESTIMONIALS ================= --}}
     <section class="py-16 lg:py-24 relative overflow-hidden bg-white">
