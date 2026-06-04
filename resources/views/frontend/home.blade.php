@@ -1000,13 +1000,12 @@
                                     <h1 class="hero-title text-5xl lg:text-7xl mb-8">
                                         Precision Care for<br>
                                         the Human<br>
-                                        Experience
+                                        Well Being
                                     </h1>
 
                                     <p
                                         class="hero-description text-gray-600 text-lg lg:text-xl leading-relaxed mb-10 max-w-lg">
-                                        Betterly Wellness reimagines wellbeing through a thoughtful blend of
-                                        advanced science and genuine emotional understanding.
+                                        Combining clinical expertise with human connection to create meaningful pathways toward emotional balance, personal growth, and holistic wellbeing.
                                     </p>
 
                                     <a href="/contact" class="btn-custom-teal text-lg mx-auto lg:mx-0">
@@ -1316,10 +1315,10 @@
             {{-- CTA Buttons --}}
             <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
                 <a href="/services"
-                    class="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-teal-500 to-teal-600 px-8 py-3.5 text-white font-semibold text-sm shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
+                    class="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-[#32A8B8] px-8 py-3.5 text-white font-semibold text-sm shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
                     data-aos="fade-up" data-aos-delay="200">
                     <span
-                        class="absolute inset-0 bg-gradient-to-r from-teal-600 to-teal-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                        class="absolute inset-0 bg-[#2d96a5] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                     <span class="relative flex items-center gap-2">
                         View All Services
                         <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300"
@@ -2066,6 +2065,7 @@
             border-radius: 50%;
             opacity: 0.25;
             animation: floatShape 8s infinite ease-in-out;
++
         }
 
         .shape1 {

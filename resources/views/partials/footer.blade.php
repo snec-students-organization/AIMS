@@ -106,6 +106,7 @@
                             ['name' => 'About Us', 'url' => '/about', 'icon' => '👥'],
                             ['name' => 'Our Team', 'url' => '/team', 'icon' => '🤝'],
                             ['name' => 'Services', 'url' => '/services', 'icon' => '🎯'],
+                            ['name' => 'Training', 'url' => '/training', 'icon' => '🎓'],
                             ['name' => 'Testimonials', 'url' => '/testimonials', 'icon' => '⭐'],
                             ['name' => 'Gallery', 'url' => '/gallery', 'icon' => '🖼️'],
                             ['name' => 'Careers', 'url' => '/career', 'icon' => '💼'],

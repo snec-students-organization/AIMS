@@ -22,6 +22,11 @@ class PageController extends Controller
         return view('frontend.services');
     }
 
+    public function training()
+    {
+        return view('frontend.training');
+    }
+
     public function gallery()
 {
     $galleries = Gallery::latest()->get(); // ✅ FETCH DATA

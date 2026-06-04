@@ -17,6 +17,7 @@
                         ['name' => 'Home', 'url' => '/'],
                         ['name' => 'About', 'url' => '/about'],
                         ['name' => 'Services', 'url' => '/services'],
+                        ['name' => 'Training', 'url' => '/training'],
                         ['name' => 'Team', 'url' => '/team'],
                         ['name' => 'Gallery', 'url' => '/gallery'],
                         ['name' => 'Blog', 'url' => '/blog'],
