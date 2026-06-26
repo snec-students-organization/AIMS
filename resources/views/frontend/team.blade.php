@@ -52,7 +52,7 @@
                     data-aos="fade-up">
                     <div
                         class="w-48 h-48 lg:w-64 lg:h-64 rounded-[2rem] overflow-hidden flex-shrink-0 shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-500">
-                        <img src="{{ asset('images/image2.jpg') }}" alt="Mushtaq" class="w-full h-full object-cover">
+                        <img src="{{ asset('images/Mushthaq.P.PNG') }}" alt="Mushtaq" class="w-full h-full object-cover">
                     </div>
                     <div class="flex-1 space-y-6">
                         <div>
@@ -89,98 +89,117 @@
                     specialized care in every domain.</p>
             </div>
 
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                {{-- Specialist 1: Psychologist --}}
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center max-w-6xl mx-auto">
+                {{-- Specialist 1: Narmada Soman --}}
                 <div class="group" data-aos="fade-up" data-aos-delay="100">
                     <div class="p-6 rounded-[2rem] h-full shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 border"
                         style="background-color: rgba(50, 168, 184, 0.05); border-color: rgba(50, 168, 184, 0.2);">
                         <div class="aspect-square rounded-[1.5rem] overflow-hidden mb-6 relative shadow-md">
-                            <img src="{{ asset('images/image3.jpg') }}" alt="Specialist"
+                            <img src="{{ asset('images/Narmada Soman .PNG') }}" alt="Narmada Soman"
                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                onerror="this.src='https://ui-avatars.com/api/?name=Psychologist&background=32A8B8&color=fff&size=300'">
+                                onerror="this.src='https://ui-avatars.com/api/?name=Narmada+Soman&background=32A8B8&color=fff&size=300'">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-[#32A8B8]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                             </div>
                         </div>
                         <div class="text-center space-y-2">
-                            <h4 class="text-xl font-bold text-gray-900 uppercase">Expert Psychologist</h4>
-                            <p class="text-[#32A8B8] text-sm font-bold uppercase tracking-wide">Psychological Assessment</p>
+                            <h4 class="text-xl font-bold text-gray-900 uppercase">Narmada Soman</h4>
+                            <p class="text-[#32A8B8] text-sm font-bold uppercase tracking-wide">Psychologist</p>
                             <div class="pt-2">
                                 <span
-                                    class="px-3 py-1 bg-white rounded-full text-xs font-medium text-gray-500 border border-gray-100">M.Phil
-                                    in Clinical Psychology</span>
+                                    class="px-3 py-1 bg-white rounded-full text-xs font-medium text-gray-500 border border-gray-100">Clinical Psychology</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                {{-- Specialist 2: Speech Therapist --}}
+                {{-- Specialist 2: Manjima K. --}}
                 <div class="group" data-aos="fade-up" data-aos-delay="200">
                     <div class="p-6 rounded-[2rem] h-full shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 border"
                         style="background-color: rgba(234, 111, 113, 0.05); border-color: rgba(234, 111, 113, 0.2);">
                         <div class="aspect-square rounded-[1.5rem] overflow-hidden mb-6 relative shadow-md">
-                            <img src="{{ asset('images/image4.jpg') }}" alt="Specialist"
+                            <img src="{{ asset('images/Manjima K.PNG') }}" alt="Manjima K."
                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                onerror="this.src='https://ui-avatars.com/api/?name=Therapist&background=EA6F71&color=fff&size=300'">
+                                onerror="this.src='https://ui-avatars.com/api/?name=Manjima+K&background=EA6F71&color=fff&size=300'">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-[#EA6F71]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                             </div>
                         </div>
                         <div class="text-center space-y-2">
-                            <h4 class="text-xl font-bold text-gray-900 uppercase">Speech Pathologist</h4>
-                            <p class="text-[#EA6F71] text-sm font-bold uppercase tracking-wide">Speech Therapy</p>
+                            <h4 class="text-xl font-bold text-gray-900 uppercase">Manjima K.</h4>
+                            <p class="text-[#EA6F71] text-sm font-bold uppercase tracking-wide">Speech Language Pathologist</p>
                             <div class="pt-2">
                                 <span
-                                    class="px-3 py-1 bg-white rounded-full text-xs font-medium text-gray-500 border border-gray-100">BASLP
-                                    Registered Clinician</span>
+                                    class="px-3 py-1 bg-white rounded-full text-xs font-medium text-gray-500 border border-gray-100">Speech & Language Therapy</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                {{-- Specialist 3: Special Educator --}}
+                {{-- Specialist 3: Prarthana.P P --}}
                 <div class="group" data-aos="fade-up" data-aos-delay="300">
                     <div class="p-6 rounded-[2rem] h-full shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 border"
                         style="background-color: rgba(233, 157, 29, 0.05); border-color: rgba(233, 157, 29, 0.2);">
                         <div class="aspect-square rounded-[1.5rem] overflow-hidden mb-6 relative shadow-md">
-                            <img src="{{ asset('images/image5.jpg') }}" alt="Specialist"
+                            <img src="{{ asset('images/Prarthana.P P.PNG') }}" alt="Prarthana.P P"
                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                onerror="this.src='https://ui-avatars.com/api/?name=Educator&background=E99D1D&color=fff&size=300'">
+                                onerror="this.src='https://ui-avatars.com/api/?name=Prarthana+P+P&background=E99D1D&color=fff&size=300'">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-[#E99D1D]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                             </div>
                         </div>
                         <div class="text-center space-y-2">
-                            <h4 class="text-xl font-bold text-gray-900 uppercase">Special Educator</h4>
-                            <p class="text-[#E99D1D] text-sm font-bold uppercase tracking-wide">Special Education</p>
+                            <h4 class="text-xl font-bold text-gray-900 uppercase">Prarthana.P P</h4>
+                            <p class="text-[#E99D1D] text-sm font-bold uppercase tracking-wide">Psychologist</p>
                             <div class="pt-2">
                                 <span
-                                    class="px-3 py-1 bg-white rounded-full text-xs font-medium text-gray-500 border border-gray-100">B.Ed
-                                    Special Education</span>
+                                    class="px-3 py-1 bg-white rounded-full text-xs font-medium text-gray-500 border border-gray-100">Clinical Psychology</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                {{-- Specialist 4: Occupational Therapist --}}
+                {{-- Specialist 4: Malavika K. --}}
                 <div class="group" data-aos="fade-up" data-aos-delay="400">
                     <div class="p-6 rounded-[2rem] h-full shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 border"
                         style="background-color: rgba(151, 180, 26, 0.05); border-color: rgba(151, 180, 26, 0.2);">
                         <div class="aspect-square rounded-[1.5rem] overflow-hidden mb-6 relative shadow-md">
-                            <img src="{{ asset('images/image6.jpg') }}" alt="Specialist"
+                            <img src="{{ asset('images/Malavika K.PNG') }}" alt="Malavika K."
                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                onerror="this.src='https://ui-avatars.com/api/?name=OT&background=97B41A&color=fff&size=300'">
+                                onerror="this.src='https://ui-avatars.com/api/?name=Malavika+K&background=97B41A&color=fff&size=300'">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-[#97B41A]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                             </div>
                         </div>
                         <div class="text-center space-y-2">
-                            <h4 class="text-xl font-bold text-gray-900 uppercase">Occupational Therapist</h4>
-                            <p class="text-[#97B41A] text-sm font-bold uppercase tracking-wide">Occupational Therapy</p>
+                            <h4 class="text-xl font-bold text-gray-900 uppercase">Malavika K.</h4>
+                            <p class="text-[#97B41A] text-sm font-bold uppercase tracking-wide">Special Educator</p>
                             <div class="pt-2">
                                 <span
-                                    class="px-3 py-1 bg-white rounded-full text-xs font-medium text-gray-500 border border-gray-100">BOT
-                                    Certified Specialist</span>
+                                    class="px-3 py-1 bg-white rounded-full text-xs font-medium text-gray-500 border border-gray-100">Special Education</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Specialist 5: Thara Ranveendran --}}
+                <div class="group" data-aos="fade-up" data-aos-delay="500">
+                    <div class="p-6 rounded-[2rem] h-full shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 border"
+                        style="background-color: rgba(50, 168, 184, 0.05); border-color: rgba(50, 168, 184, 0.2);">
+                        <div class="aspect-square rounded-[1.5rem] overflow-hidden mb-6 relative shadow-md">
+                            <img src="{{ asset('images/Thara Ranveendran.PNG') }}" alt="Thara Ranveendran"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                onerror="this.src='https://ui-avatars.com/api/?name=Thara+Ranveendran&background=32A8B8&color=fff&size=300'">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-[#32A8B8]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                            </div>
+                        </div>
+                        <div class="text-center space-y-2">
+                            <h4 class="text-xl font-bold text-gray-900 uppercase">Thara Ranveendran</h4>
+                            <p class="text-[#32A8B8] text-sm font-bold uppercase tracking-wide">Coordinator</p>
+                            <div class="pt-2">
+                                <span
+                                    class="px-3 py-1 bg-white rounded-full text-xs font-medium text-gray-500 border border-gray-100">Administration</span>
                             </div>
                         </div>
                     </div>
