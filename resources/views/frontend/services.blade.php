@@ -12,11 +12,11 @@
         <div class="absolute top-0 right-0 w-1/2 h-full bg-white/5 skew-x-12 transform translate-x-20"></div>
     </div>
 
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 text-center">
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6" data-aos="fade-up">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 text-center">
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6" data-aos="fade-up">
             Our Services
         </h1>
-        <p class="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+        <p class="text-base sm:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="100">
             Comprehensive, evidence-based therapies designed to maximise your child’s potential in a supportive and nurturing environment.
         </p>
     </div>

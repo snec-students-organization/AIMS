@@ -12,11 +12,11 @@
         <div class="absolute top-0 right-0 w-1/2 h-full bg-white/5 skew-x-12 transform translate-x-20"></div>
     </div>
 
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 text-center z-10">
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6" data-aos="fade-up">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 text-center z-10">
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6" data-aos="fade-up">
             Training &amp; Empowerment
         </h1>
-        <p class="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+        <p class="text-base sm:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="100">
             Equipping parents, educators, and rehabilitation professionals with evidence-based strategies to champion child development and inclusive education.
         </p>
     </div>
@@ -222,13 +222,13 @@
 <section class="py-16 lg:py-24 bg-slate-50 relative" id="inquiry-form-section">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-white rounded-[3rem] shadow-[0_20px_50px_rgba(0,0,0,0.08)] overflow-hidden border border-gray-100" data-aos="zoom-in">
-            <div class="grid md:grid-cols-5">
+            <div class="grid grid-cols-1 md:grid-cols-5">
                 {{-- Banner Panel --}}
-                <div class="md:col-span-2 bg-[#EA6F71] p-8 lg:p-12 text-white flex flex-col justify-between relative overflow-hidden">
+                <div class="md:col-span-2 bg-[#EA6F71] p-6 sm:p-8 lg:p-12 text-white flex flex-col justify-between relative overflow-hidden">
                     <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-white/10 rounded-full"></div>
                     <div>
                         <span class="text-sm font-bold uppercase tracking-widest text-rose-100 block mb-2">Join Us</span>
-                        <h3 class="text-3xl font-extrabold mb-4" style="font-family: 'Fredoka', sans-serif;">Request Admission</h3>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold mb-4" style="font-family: 'Fredoka', sans-serif;">Request Admission</h3>
                         <p class="text-rose-50/95 text-sm leading-relaxed mb-6 font-medium">
                             Ready to upskill or seek help? Fill out this quick inquiry, and let’s start.
                         </p>
@@ -242,7 +242,7 @@
                 </div>
 
                 {{-- Form Panel --}}
-                <div class="md:col-span-3 p-8 lg:p-12">
+                <div class="md:col-span-3 p-6 sm:p-8 lg:p-12">
                     @if(session('success'))
                         <div class="mb-6 p-4 bg-emerald-50 text-emerald-800 border border-emerald-200 rounded-2xl text-sm font-semibold flex items-center gap-3">
                             <span>✓</span>

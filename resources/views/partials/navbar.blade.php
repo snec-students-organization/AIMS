@@ -5,7 +5,7 @@
             <div class="flex items-center flex-shrink-0">
                 <a href="/" class="group block">
                     <img src="{{ asset('images/Logo.png') }}" alt="GEMS Logo"
-                        class="h-12 lg:h-15 w-auto object-contain transition-all duration-300 group-hover:scale-105"
+                        class="h-10 sm:h-12 lg:h-15 w-auto object-contain transition-all duration-300 group-hover:scale-105"
                         style="image-rendering: -webkit-optimize-contrast; will-change: transform;">
                 </a>
             </div>
@@ -192,13 +192,13 @@
     /* Mobile menu animation styles */
     .mobile-menu-open {
         height: auto !important;
-        max-height: calc(100vh - 4rem) !important;
+        max-height: calc(100vh - 4.5rem) !important;
         overflow-y: auto;
     }
 
     /* Animated hamburger menu */
     #mobile-menu-button.active #bar1 {
-        transform: translateY(9px) rotate(45deg);
+        transform: translateY(7.5px) rotate(45deg);
     }
 
     #mobile-menu-button.active #bar2 {
@@ -207,7 +207,7 @@
     }
 
     #mobile-menu-button.active #bar3 {
-        transform: translateY(-9px) rotate(-45deg);
+        transform: translateY(-7.5px) rotate(-45deg);
     }
 
     #mobile-menu-button.active {

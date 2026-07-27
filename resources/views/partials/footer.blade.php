@@ -10,26 +10,26 @@
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {{-- Newsletter section --}}
-        <div class="relative bg-gradient-to-r from-[#32A8B826] to-[#EA6F7126] backdrop-blur-sm rounded-2xl p-8 mb-16 border border-[#32A8B833]"
+        <div class="relative bg-gradient-to-r from-[#32A8B826] to-[#EA6F7126] backdrop-blur-sm rounded-2xl p-5 sm:p-8 mb-10 sm:mb-16 border border-[#32A8B833]"
             data-aos="fade-up">
             <div
-                class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-[#32A8B8] to-[#EA6F71] text-white px-6 py-2 rounded-full font-semibold text-sm">
+                class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-[#32A8B8] to-[#EA6F71] text-white px-4 sm:px-6 py-1.5 sm:py-2 rounded-full font-semibold text-xs sm:text-sm whitespace-nowrap">
                 Stay Updated
             </div>
 
-            <div class="grid lg:grid-cols-2 gap-8 items-center">
+            <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 items-center mt-2 sm:mt-0">
                 <div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Subscribe to Our Newsletter</h3>
-                    <p class="text-gray-300">Get the latest updates on child development, parenting tips, and center
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 sm:mb-3">Subscribe to Our Newsletter</h3>
+                    <p class="text-gray-300 text-sm sm:text-base">Get the latest updates on child development, parenting tips, and center
                         news.</p>
                 </div>
 
                 <form id="newsletter-form" class="relative">
                     <div class="flex flex-col sm:flex-row gap-3">
                         <input type="email" placeholder="Your email address" required
-                            class="flex-1 bg-white/10 border border-gray-600 text-white placeholder-gray-400 rounded-xl px-5 py-3 focus:outline-none focus:ring-2 focus:ring-[#32A8B8] focus:border-transparent">
+                            class="flex-1 bg-white/10 border border-gray-600 text-white placeholder-gray-400 rounded-xl px-4 sm:px-5 py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#32A8B8] focus:border-transparent">
                         <button type="submit"
-                            class="bg-gradient-to-r from-[#32A8B8] to-[#2d96a5] hover:from-[#2d96a5] hover:to-[#288492] text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2">
+                            class="bg-gradient-to-r from-[#32A8B8] to-[#2d96a5] hover:from-[#2d96a5] hover:to-[#288492] text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 text-sm sm:text-base">
                             <span>Subscribe</span>
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -43,7 +43,7 @@
         </div>
 
         {{-- Main footer content --}}
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 mb-16">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10 lg:gap-8 mb-10 sm:mb-16">
             {{-- Brand & Description --}}
             <div class="lg:col-span-2" data-aos="fade-up" data-aos-delay="100">
                 <div class="flex items-center gap-3 mb-6">

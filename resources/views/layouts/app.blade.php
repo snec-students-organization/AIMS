@@ -228,50 +228,45 @@
     @include('partials.footer')
 
     {{-- Floating Action Buttons --}}
-    <div class="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3">
+    <div class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end gap-2.5 sm:gap-3">
         {{-- WhatsApp --}}
         <a href="https://wa.me/917994502501?text=Hello%20GEMS%2C%20I%20need%20information%20about%20your%20services"
             target="_blank" rel="noopener noreferrer" style="background-color:#EA6F71"
-            class="group flex items-center gap-3 text-white p-4 rounded-full shadow-xl transition-all duration-300 hover:shadow-2xl hover:scale-105"
+            class="group flex items-center gap-2 sm:gap-3 text-white p-3 sm:p-4 rounded-full shadow-xl transition-all duration-300 hover:shadow-2xl hover:scale-105"
             aria-label="Chat on WhatsApp">
 
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path
                     d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347" />
             </svg>
 
-            <span class="hidden group-hover:inline-block font-medium pr-2">
+            <span class="hidden sm:group-hover:inline-block font-medium pr-2 text-sm">
                 Chat Now
             </span>
         </a>
 
-
-
         {{-- Phone Call --}}
         <a href="tel:+917994502501" style="background-color:#97B41A"
-            class="group flex items-center gap-3 hover:bg-[#e45f62] text-white p-4 rounded-full shadow-xl transition-all duration-300 hover:shadow-2xl hover:scale-105"
+            class="group flex items-center gap-2 sm:gap-3 hover:bg-[#e45f62] text-white p-3 sm:p-4 rounded-full shadow-xl transition-all duration-300 hover:shadow-2xl hover:scale-105"
             aria-label="Call GEMS CDC">
 
-
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
 
-            <span class="hidden group-hover:inline-block font-medium pr-2">Call Us</span>
+            <span class="hidden sm:group-hover:inline-block font-medium pr-2 text-sm">Call Us</span>
         </a>
-
 
         {{-- Back to top --}}
         <button onclick="scrollToTop()" id="back-to-top" style="background-color:#32A8B8"
-            class="hover:opacity-100 text-white p-4 rounded-full shadow-xl transition-all duration-300 opacity-0 translate-y-4 hover:shadow-2xl hover:scale-105"
+            class="hover:opacity-100 text-white p-3 sm:p-4 rounded-full shadow-xl transition-all duration-300 opacity-0 translate-y-4 hover:shadow-2xl hover:scale-105"
             aria-label="Back to top">
 
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
             </svg>
         </button>
-
     </div>
 
     {{-- AOS Animation --}}
